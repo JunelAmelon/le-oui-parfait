@@ -11,7 +11,7 @@ export default function TarifsPage() {
       <main className="pt-20">
         <PageHero
           title="Nos Tarifs"
-          backgroundImage="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          backgroundImage="wedding (5).jpg"
         />
 
         <PricingSection />

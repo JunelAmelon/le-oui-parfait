@@ -11,7 +11,7 @@ export default function PortfolioPage() {
       <main className="pt-20">
         <PageHero
           title="Portfolio"
-          backgroundImage="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          backgroundImage="wedding (3).jpg"
         />
 
         <PortfolioSection />

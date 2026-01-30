@@ -11,7 +11,7 @@ export default function ServicesPage() {
       <main className="pt-20">
         <PageHero
           title="Services"
-          backgroundImage="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          backgroundImage="wedding (4).jpg"
         />
 
         <ServicesSection />

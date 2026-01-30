@@ -12,7 +12,7 @@ export default function AProposPage() {
       <main className="pt-20">
         <PageHero
           title="À Propos"
-          backgroundImage="https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          backgroundImage="wedding (1).jpg"
         />
 
         <AboutSection />

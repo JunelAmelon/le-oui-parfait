@@ -10,7 +10,7 @@ export default function ContactPage() {
       <main className="pt-20">
         <PageHero
           title="Contact"
-          backgroundImage="https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          backgroundImage="wedding (2).jpg"
         />
 
         <PlanningSection />

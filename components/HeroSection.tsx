@@ -43,7 +43,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="absolute left-1/2 top-[100%] -translate-x-1/2 -translate-y-[48%] w-[90%] lg:w-[800px] z-20 bg-white py-8 px-8 lg:px-16 border border-gray-200">
+          <div className="absolute left-1/2 top-[100%] -translate-x-1/2 -translate-y-[28%] w-[90%] lg:w-[800px] z-20 bg-white py-8 px-8 lg:px-16 border border-gray-200">
             <div className="flex flex-col items-center text-center relative">
               <div className="flex justify-center items-center gap-2 mb-6">
                 <div className="flex -space-x-2">

@@ -18,8 +18,8 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <AboutSection />
         <ServicesSection />
+        <AboutSection />
         <VideoPresentationSection />
         <PortfolioSection />
         <TeamSection />

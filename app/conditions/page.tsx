@@ -1,5 +1,6 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { HeroPage } from '@/components/HeroPage';
 import { FileText, AlertCircle, CheckCircle } from 'lucide-react';
 
 export default function Conditions() {
@@ -7,18 +8,11 @@ export default function Conditions() {
     <div className="min-h-screen">
       <Header />
       <main>
-        {/* Hero Section */}
-        <section className="bg-[#FAF9F7] py-20 px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="w-20 h-20 bg-[#88b7b5]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <FileText className="w-10 h-10 text-[#88b7b5]" />
-            </div>
-            <h1 className="heading-main mb-6">Conditions Générales de Vente</h1>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Les présentes conditions générales régissent les relations contractuelles entre Le Oui Parfait et ses clients.
-            </p>
-          </div>
-        </section>
+        <HeroPage 
+          title="Conditions Générales de Vente"
+          subtitle="Les présentes conditions générales régissent les relations contractuelles entre Le Oui Parfait et ses clients."
+          backgroundImage="https://images.pexels.com/photos/6476778/pexels-photo-6476778.jpeg"
+        />
 
         {/* Important Notice */}
         <section className="py-12 px-6 bg-white">

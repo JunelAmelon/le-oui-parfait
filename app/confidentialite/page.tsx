@@ -1,5 +1,6 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { HeroPage } from '@/components/HeroPage';
 import { Shield, Lock, Eye, UserCheck, Database, FileText } from 'lucide-react';
 
 export default function Confidentialite() {
@@ -7,18 +8,11 @@ export default function Confidentialite() {
     <div className="min-h-screen">
       <Header />
       <main>
-        {/* Hero Section */}
-        <section className="bg-[#FAF9F7] py-20 px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="w-20 h-20 bg-[#88b7b5]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Shield className="w-10 h-10 text-[#88b7b5]" />
-            </div>
-            <h1 className="heading-main mb-6">Politique de Confidentialité</h1>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Nous prenons la protection de vos données personnelles très au sérieux. Découvrez comment nous collectons, utilisons et protégeons vos informations.
-            </p>
-          </div>
-        </section>
+        <HeroPage 
+          title="Politique de Confidentialité"
+          subtitle="Nous prenons la protection de vos données personnelles très au sérieux. Découvrez comment nous collectons, utilisons et protégeons vos informations."
+          backgroundImage="https://images.pexels.com/photos/6476589/pexels-photo-6476589.jpeg"
+        />
 
         {/* Quick Info Cards */}
         <section className="py-12 px-6 bg-white">

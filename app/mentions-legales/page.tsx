@@ -1,20 +1,17 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { HeroPage } from '@/components/HeroPage';
 
 export default function MentionsLegales() {
   return (
     <div className="min-h-screen">
       <Header />
       <main>
-        {/* Hero Section */}
-        <section className="bg-[#FAF9F7] py-20 px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="heading-main mb-6">Mentions Légales</h1>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Informations légales concernant le site web Le Oui Parfait
-            </p>
-          </div>
-        </section>
+        <HeroPage 
+          title="Mentions Légales"
+          subtitle="Informations légales concernant le site web Le Oui Parfait"
+          backgroundImage="https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg"
+        />
 
         {/* Content */}
         <section className="py-20 px-6">

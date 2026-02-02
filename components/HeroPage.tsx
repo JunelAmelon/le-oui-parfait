@@ -25,24 +25,6 @@ export function HeroPage({ title, subtitle, backgroundImage }: HeroPageProps) {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute top-10 right-10 w-32 h-32 opacity-20">
-        <Image
-          src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-R89NSWD.png"
-          alt="Décoration florale"
-          fill
-          className="object-contain"
-        />
-      </div>
-      <div className="absolute bottom-10 left-10 w-24 h-24 opacity-20 hidden lg:block">
-        <Image
-          src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG02-R89NSWD.png"
-          alt="Décoration florale"
-          fill
-          className="object-contain"
-        />
-      </div>
-
       {/* Content */}
       <div className="relative h-full flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-6 text-center">

@@ -7,7 +7,7 @@ export function VideoPresentationSection() {
   return (
     <section className="relative w-full py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-6 max-w-6xl">
-        <div className="relative w-full aspect-[21/9] rounded-lg overflow-hidden shadow-2xl border-2 border-[#88b7b5]">
+        <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl border-2 border-[#88b7b5]">
           <div className="absolute inset-0">
             <img
               src="mairie.jpg"

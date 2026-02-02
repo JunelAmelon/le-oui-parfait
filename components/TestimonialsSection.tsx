@@ -39,7 +39,7 @@ export function TestimonialsSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
-        prevIndex >= testimonials.length - 2 ? 0 : prevIndex + 1
+        prevIndex >= testimonials.length - 1 ? 0 : prevIndex + 1
       );
     }, 4000);
 
@@ -80,15 +80,15 @@ export function TestimonialsSection() {
               {/* Sliding container */}
               <div
                 className="flex transition-transform duration-700 ease-in-out"
-                style={{ transform: `translateX(-${currentIndex * 50}%)` }}
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
               >
                 {testimonials.map((testimonial, index) => (
                   <div
                     key={index}
-                    className="min-w-[50%] px-3"
+                    className="min-w-full lg:min-w-[50%] px-3"
                   >
-                    <div className="bg-white p-10 rounded-sm shadow-sm aspect-square flex flex-col justify-between">
-                      <p className="text-gray-700 text-[17px] leading-relaxed mb-auto">
+                    <div className="bg-white p-8 lg:p-10 rounded-sm shadow-sm min-h-[400px] flex flex-col justify-between">
+                      <p className="text-gray-700 text-base lg:text-[17px] leading-relaxed mb-auto">
                         "{testimonial.quote}"
                       </p>
                       <div className="mt-8 flex items-center gap-4">
@@ -100,10 +100,10 @@ export function TestimonialsSection() {
                           />
                         </div>
                         <div>
-                          <p className="font-serif text-[19px] text-[#5A5A5A] mb-1 font-normal">
+                          <p className="font-serif text-lg lg:text-[19px] text-[#5A5A5A] mb-1 font-normal">
                             {testimonial.author}
                           </p>
-                          <p className="text-[14px] text-gray-500">
+                          <p className="text-sm lg:text-[14px] text-gray-500">
                             {testimonial.location}
                           </p>
                         </div>
@@ -116,7 +116,7 @@ export function TestimonialsSection() {
 
             {/* Pagination Dots */}
             <div className="flex justify-center gap-2 mt-8">
-              {Array.from({ length: testimonials.length - 1 }).map((_, index) => (
+              {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToTestimonial(index)}

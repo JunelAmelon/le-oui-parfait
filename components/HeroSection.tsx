@@ -9,7 +9,22 @@ export function HeroSection() {
       <div className="container mx-auto px-6">
         <div className="relative max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative">
-            <div className="relative h-[500px] lg:h-[550px]">
+            {/* Vidéo - Affichée en premier sur mobile, au milieu sur desktop */}
+            <div className="relative h-[500px] lg:h-[550px] order-1 lg:order-2">
+              <div className="relative h-full w-full overflow-hidden shadow-lg">
+                <video
+                  src="mariage.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Image 1 - Deuxième sur mobile, première sur desktop */}
+            <div className="relative h-[500px] lg:h-[550px] order-2 lg:order-1">
               <div className="relative h-full w-full overflow-hidden shadow-lg">
                 <Image
                   src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-UN4DQU3.jpg"
@@ -20,18 +35,8 @@ export function HeroSection() {
               </div>
             </div>
 
-            <div className="relative h-[500px] lg:h-[550px]">
-              <div className="relative h-full w-full overflow-hidden shadow-lg">
-                <Image
-                  src="https://images.pexels.com/photos/2959192/pexels-photo-2959192.jpeg"
-                  alt="Couple élégant"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-
-            <div className="relative h-[500px] lg:h-[550px]">
+            {/* Image 2 - Troisième sur mobile et desktop */}
+            <div className="relative h-[500px] lg:h-[550px] order-3">
               <div className="relative h-full w-full overflow-hidden shadow-lg">
               <Image
                   src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-LU9VY7U.jpg"
@@ -43,7 +48,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="absolute left-1/2 top-[100%] -translate-x-1/2 -translate-y-[28%] w-[90%] lg:w-[800px] z-20 bg-white py-8 px-8 lg:px-16 border border-gray-200">
+          <div className="absolute left-1/2 top-[100%] -translate-x-1/2 -translate-y-[13%] w-[90%] lg:w-[800px] z-20 bg-white py-8 px-8 lg:px-16 border border-gray-200">
             <div className="flex flex-col items-center text-center relative">
               <div className="flex justify-center items-center gap-2 mb-6">
                 <div className="flex -space-x-2">

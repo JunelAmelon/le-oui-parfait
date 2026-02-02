@@ -55,7 +55,7 @@ export function PortfolioSection() {
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <h3 className="font-serif text-2xl text-gray-900 mb-2">{item.title}</h3>
+              <h3 className="font-serif text-2xl text-gray-900 mb-2 group-hover:text-[#88b7b5] transition-colors duration-300">{item.title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
             </div>
           ))}
@@ -63,8 +63,8 @@ export function PortfolioSection() {
 
         <div className="text-center mt-12">
           <Button
-            variant="outline"
-            className="uppercase tracking-wider border-[#88b7b5] text-gray-900 hover:bg-[#88b7b5] hover:text-white px-8 transition-all"
+            variant="link"
+            className="uppercase tracking-[0.15em] text-[11px] text-[#88b7b5] hover:text-[#6a9a98] px-6 py-5 font-medium underline underline-offset-4"
           >
             Tout le Portfolio
           </Button>

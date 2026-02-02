@@ -121,7 +121,7 @@ export function PlanningSection() {
           {/* IMAGE — DÉBORDE SUR LE FORMULAIRE */}
           <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 left-[52%] w-[50%] z-30">
             <img
-              src="https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg"
+              src="couple.jpg"
               alt=""
               className="w-full h-[720px] object-cover"
             />

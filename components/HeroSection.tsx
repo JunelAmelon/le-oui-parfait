@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export function HeroSection() {
   return (
-    <section id="accueil" className="relative bg-[#FAF9F7] pt-20 pb-48 mb-24 overflow-hidden">
+    <section id="accueil" className="relative bg-[#FAF9F7] pt-24 pb-64 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="relative max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative">
@@ -23,8 +23,8 @@ export function HeroSection() {
             <div className="relative h-[500px] lg:h-[550px]">
               <div className="relative h-full w-full overflow-hidden shadow-lg">
                 <Image
-                  src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-LU9VY7U.jpg"
-                  alt="Portrait de mariée"
+                  src="https://images.pexels.com/photos/2959192/pexels-photo-2959192.jpeg"
+                  alt="Couple élégant"
                   fill
                   className="object-cover"
                 />
@@ -33,9 +33,9 @@ export function HeroSection() {
 
             <div className="relative h-[500px] lg:h-[550px]">
               <div className="relative h-full w-full overflow-hidden shadow-lg">
-                <Image
-                  src="https://images.pexels.com/photos/2959192/pexels-photo-2959192.jpeg"
-                  alt="Couple élégant"
+              <Image
+                  src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-LU9VY7U.jpg"
+                  alt="Portrait de mariée"
                   fill
                   className="object-cover"
                 />
@@ -43,7 +43,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="absolute left-1/2 top-[100%] -translate-x-1/2 -translate-y-1/2 w-[90%] lg:w-[650px] z-20 bg-white shadow-2xl py-8 px-8 lg:px-16">
+          <div className="absolute left-1/2 top-[100%] -translate-x-1/2 -translate-y-[48%] w-[90%] lg:w-[800px] z-20 bg-white py-8 px-8 lg:px-16 border border-gray-200">
             <div className="flex flex-col items-center text-center relative">
               <div className="flex justify-center items-center gap-2 mb-6">
                 <div className="flex -space-x-2">
@@ -88,7 +88,7 @@ export function HeroSection() {
                 </Button>
               </div>
 
-              <div className="absolute -bottom-10 -right-10 w-36 h-36 pointer-events-none">
+              <div className="absolute -bottom-8 -right-40 w-28 h-28 pointer-events-none">
                 <Image
                   src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG02-R89NSWD.png"
                   alt="Fleurs décoratives"

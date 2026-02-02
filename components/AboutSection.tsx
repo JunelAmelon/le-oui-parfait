@@ -6,8 +6,8 @@ export function AboutSection() {
     <section id="apropos" className="relative py-12 lg:py-0 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-0">
-          <div className="lg:col-span-7 relative h-[400px] lg:h-[600px] order-2 lg:order-1">
-            <div className="absolute bottom-4 left-4 w-24 h-24 z-30 hidden lg:block">
+          <div className="lg:col-span-7 relative h-[500px] lg:h-[700px] order-2 lg:order-1">
+            <div className="absolute bottom-[-56px] left-[-45px] w-72 h-72 z-30 hidden lg:block">
               <Image
                 src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-R89NSWD.png"
                 alt="Décoration florale"
@@ -18,7 +18,7 @@ export function AboutSection() {
 
             <div className="relative h-full w-full rounded-lg lg:rounded-none overflow-hidden">
               <Image
-                src="https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg"
+                src="alliance.jpg"
                 alt="Échange d'alliances"
                 fill
                 className="object-cover"

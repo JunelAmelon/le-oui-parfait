@@ -5,7 +5,7 @@ export default function MentionsLegales() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-20">
+      <main>
         {/* Hero Section */}
         <section className="bg-[#FAF9F7] py-20 px-6">
           <div className="max-w-4xl mx-auto text-center">

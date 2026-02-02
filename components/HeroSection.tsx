@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Star, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function HeroSection() {
   return (
@@ -78,19 +79,23 @@ export function HeroSection() {
               </h1>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full mb-4">
-                <Button
-                  size="lg"
-                  className="uppercase tracking-[0.15em] text-[11px] bg-transparent text-[#5A5A5A] border-2 border-[#88b7b5] hover:bg-[#88b7b5] hover:text-white px-10 py-6 rounded-full font-medium transition-all"
-                >
-                  Commencer la Planification
-                </Button>
-                <Button
-                  size="lg"
-                  variant="link"
-                  className="uppercase tracking-[0.15em] text-[11px] text-[#88b7b5] hover:text-[#6a9a98] px-6 py-5 font-medium underline underline-offset-4"
-                >
-                  Voir les Forfaits <ArrowRight className="ml-2 h-3.5 w-3.5" />
-                </Button>
+                <Link href="/contact">
+                  <Button
+                    size="lg"
+                    className="uppercase tracking-[0.15em] text-[11px] bg-transparent text-[#5A5A5A] border-2 border-[#88b7b5] hover:bg-[#88b7b5] hover:text-white px-10 py-6 rounded-full font-medium transition-all"
+                  >
+                    Commencer la Planification
+                  </Button>
+                </Link>
+                <Link href="/tarifs">
+                  <Button
+                    size="lg"
+                    variant="link"
+                    className="uppercase tracking-[0.15em] text-[11px] text-[#88b7b5] hover:text-[#6a9a98] px-6 py-5 font-medium underline underline-offset-4"
+                  >
+                    Voir les Forfaits <ArrowRight className="ml-2 h-3.5 w-3.5" />
+                  </Button>
+                </Link>
               </div>
 
               <div className="absolute -bottom-8 -right-40 w-28 h-28 pointer-events-none">

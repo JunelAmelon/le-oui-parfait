@@ -51,7 +51,7 @@
   }
 
   .heading-main {
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Libre Baskerville', serif !important;
     font-size: 40px;
     line-height: 1.2;
     color: var(--brand-gray);

@@ -3,6 +3,7 @@ import { Footer } from '@/components/Footer';
 import { HeroSection } from '@/components/HeroSection';
 import { ServicesSection } from '@/components/ServicesSection';
 import { AboutSection } from '@/components/AboutSection';
+import { ValuesSection } from '@/components/ValuesSection';
 import { TeamSection } from '@/components/TeamSection';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { VideoPresentationSection } from '@/components/VideoPresentationSection';
@@ -20,6 +21,7 @@ export default function Home() {
         <HeroSection />
         <ServicesSection />
         <AboutSection />
+     
         <VideoPresentationSection />
         <PortfolioSection />
         <TeamSection />

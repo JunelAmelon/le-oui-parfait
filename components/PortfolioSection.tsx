@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const portfolioItems = [
   {
@@ -62,12 +63,14 @@ export function PortfolioSection() {
         </div>
 
         <div className="text-center mt-12">
-          <Button
-            variant="link"
-            className="uppercase tracking-[0.15em] text-[11px] text-[#88b7b5] hover:text-[#6a9a98] px-6 py-5 font-medium underline underline-offset-4"
-          >
-            Tout le Portfolio
-          </Button>
+          <Link href="/portfolio">
+            <Button
+              variant="link"
+              className="uppercase tracking-[0.15em] text-[11px] text-[#88b7b5] hover:text-[#6a9a98] px-6 py-5 font-medium underline underline-offset-4"
+            >
+              Tout le Portfolio
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

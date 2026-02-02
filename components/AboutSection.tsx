@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function AboutSection() {
   return (
@@ -92,12 +93,14 @@ export function AboutSection() {
                 </div>
               </div>
 
-              <Button
-                variant="outline"
-                className="uppercase tracking-[0.15em] text-xs px-6 py-5 border border-[#88b7b5] text-gray-900 hover:bg-[#88b7b5] hover:text-white transition-all duration-300 rounded-full font-medium"
-              >
-                EN SAVOIR PLUS
-              </Button>
+              <Link href="/a-propos">
+                <Button
+                  variant="outline"
+                  className="uppercase tracking-[0.15em] text-xs px-6 py-5 border border-[#88b7b5] text-gray-900 hover:bg-[#88b7b5] hover:text-white transition-all duration-300 rounded-full font-medium"
+                >
+                  EN SAVOIR PLUS
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Check } from 'lucide-react';
+import Link from 'next/link';
 
 export function PricingSection() {
   return (
@@ -52,12 +53,14 @@ export function PricingSection() {
               </ul>
             </div>
 
-            <Button
-              variant="outline"
-              className="uppercase tracking-[0.2em] text-[11px] border border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white px-8 py-6 rounded-full font-normal transition-all"
-            >
-              CHOISIR CE FORFAIT
-            </Button>
+            <Link href="/contact">
+              <Button
+                variant="outline"
+                className="uppercase tracking-[0.2em] text-[11px] border border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white px-8 py-6 rounded-full font-normal transition-all"
+              >
+                CHOISIR CE FORFAIT
+              </Button>
+            </Link>
           </Card>
 
           {/* Signature Package - Popular */}
@@ -103,12 +106,14 @@ export function PricingSection() {
               </ul>
             </div>
 
-            <Button
-              variant="outline"
-              className="uppercase tracking-[0.2em] text-[11px] border border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white px-8 py-6 rounded-full font-normal transition-all"
-            >
-              CHOISIR CE FORFAIT
-            </Button>
+            <Link href="/contact">
+              <Button
+                variant="outline"
+                className="uppercase tracking-[0.2em] text-[11px] border border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white px-8 py-6 rounded-full font-normal transition-all"
+              >
+                CHOISIR CE FORFAIT
+              </Button>
+            </Link>
           </Card>
 
           {/* Luxury Package */}
@@ -154,12 +159,14 @@ export function PricingSection() {
               </ul>
             </div>
 
-            <Button
-              variant="outline"
-              className="uppercase tracking-[0.2em] text-[11px] border border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white px-8 py-6 rounded-full font-normal transition-all"
-            >
-              CHOISIR CE FORFAIT
-            </Button>
+            <Link href="/contact">
+              <Button
+                variant="outline"
+                className="uppercase tracking-[0.2em] text-[11px] border border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white px-8 py-6 rounded-full font-normal transition-all"
+              >
+                CHOISIR CE FORFAIT
+              </Button>
+            </Link>
           </Card>
         </div>
       </div>

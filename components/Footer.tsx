@@ -115,22 +115,22 @@ export function Footer() {
             <h4 className="font-medium text-gray-800 mb-4 text-lg">Entreprise</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-800 transition text-sm">
+                <Link href="/a-propos" className="text-gray-600 hover:text-gray-800 transition text-sm">
                   Notre Histoire
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-800 transition text-sm">
+                <Link href="/a-propos" className="text-gray-600 hover:text-gray-800 transition text-sm">
                   Équipe d'Experts
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-800 transition text-sm">
+                <Link href="/a-propos" className="text-gray-600 hover:text-gray-800 transition text-sm">
                   Avis Clients
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-800 transition text-sm">
+                <Link href="/contact" className="text-gray-600 hover:text-gray-800 transition text-sm">
                   Travailler Avec Nous
                 </Link>
               </li>

@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Check, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function ServicesSection() {
   const services = [
@@ -13,7 +14,8 @@ export function ServicesSection() {
         'Touche de planification personnalisée'
       ],
       image: 'https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg',
-      alt: 'Cérémonie de mariage'
+      alt: 'Cérémonie de mariage',
+      link: '/services/planification-mariage'
     },
     {
       title: 'Stylisme de Fiançailles',
@@ -24,7 +26,8 @@ export function ServicesSection() {
         'Design d\'ambiance réfléchi'
       ],
       image: 'https://images.pexels.com/photos/3171736/pexels-photo-3171736.jpeg',
-      alt: 'Dîner romantique'
+      alt: 'Dîner romantique',
+      link: '/services/stylisme-fiancailles'
     },
     {
       title: 'Gestion d\'Événements',
@@ -35,7 +38,8 @@ export function ServicesSection() {
         'Exécution sans stress'
       ],
       image: 'https://images.pexels.com/photos/7012244/pexels-photo-7012244.jpeg',
-      alt: 'Organisation d\'événement'
+      alt: 'Organisation d\'événement',
+      link: '/services/gestion-evenements'
     }
   ];
 
@@ -52,12 +56,14 @@ export function ServicesSection() {
               </h2>
             </div>
             <div className="mt-6 lg:mt-0">
-              <Button
-                variant="link"
-                className="text-[#5A5A5A] uppercase tracking-[0.15em] text-xs hover:text-gray-900 px-0 underline underline-offset-4 font-medium"
-              >
-                Plus de Services <ArrowRight className="ml-2 h-3.5 w-3.5" />
-              </Button>
+              <Link href="/services">
+                <Button
+                  variant="link"
+                  className="text-[#5A5A5A] uppercase tracking-[0.15em] text-xs hover:text-gray-900 px-0 underline underline-offset-4 font-medium"
+                >
+                  Plus de Services <ArrowRight className="ml-2 h-3.5 w-3.5" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -88,12 +94,14 @@ export function ServicesSection() {
                     </li>
                   ))}
                 </ul>
-                <Button
-                  variant="outline"
-                  className="uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-8 py-6 font-medium transition-all"
-                >
-                  Voir les Détails
-                </Button>
+                <Link href={service.link}>
+                  <Button
+                    variant="outline"
+                    className="uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-8 py-6 font-medium transition-all"
+                  >
+                    Voir les Détails
+                  </Button>
+                </Link>
               </div>
             </div>
           ))}

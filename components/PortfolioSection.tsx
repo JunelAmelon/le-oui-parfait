@@ -34,20 +34,20 @@ export function PortfolioSection() {
     <section id="portfolio" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16">
-          <div>
+          <div className="text-center md:text-left w-full md:w-auto">
             <p className="text-sm uppercase tracking-widest text-gray-500 mb-4">Notre Portfolio</p>
             <h2 className="heading-main mb-4">
               Célébrations Intemporelles<br />Créées Avec Élégance
             </h2>
           </div>
-          <p className="text-gray-600 md:max-w-md mt-4 md:mt-0">
+          <p className="text-gray-600 md:max-w-md mt-4 md:mt-0 text-center md:text-left">
             Chaque célébration est soigneusement conçue pour créer des souvenirs qui durent toute une vie.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {portfolioItems.map((item) => (
-            <div key={item.id} className="group cursor-pointer">
+            <div key={item.id} className="group">
               <div className="relative h-[400px] rounded-lg overflow-hidden mb-4 shadow-lg">
                 <Image
                   src={item.image}
@@ -56,8 +56,16 @@ export function PortfolioSection() {
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <h3 className="font-serif text-2xl text-gray-900 mb-2 group-hover:text-[#88b7b5] transition-colors duration-300">{item.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+              <h3 className="font-serif text-2xl text-gray-900 mb-2 group-hover:text-[#88b7b5] transition-colors duration-300 text-center md:text-left">{item.title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4 text-center md:text-left">{item.description}</p>
+              <Link href="/contact">
+                <Button
+                  variant="outline"
+                  className="w-full uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-6 py-4 font-medium transition-all"
+                >
+                  Voir Détails
+                </Button>
+              </Link>
             </div>
           ))}
         </div>

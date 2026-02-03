@@ -6,13 +6,15 @@ import Link from 'next/link';
 
 export function HeroSection() {
   return (
-    <section id="accueil" className="relative bg-[#FAF9F7] pt-24 pb-[280px] sm:pb-[320px] lg:pb-64">
-      <div className="container mx-auto px-6">
-        <div className="relative max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative">
-            {/* Vidéo - Affichée en premier sur mobile, au milieu sur desktop */}
-            <div className="relative h-[500px] lg:h-[550px] order-1 lg:order-2">
-              <div className="relative h-full w-full overflow-hidden shadow-lg">
+    <section id="accueil" className="relative bg-[#FAF9F7] pt-24 pb-30 sm:pb-38 lg:pb-46">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="relative max-w-6xl mx-auto">
+          
+          {/* Mobile: Card avec vidéo en header */}
+          <div className="lg:hidden">
+            <div className="bg-white shadow-xl border-2 border-gray-300 overflow-hidden">
+              {/* Video Header */}
+              <div className="relative h-[280px] w-full">
                 <video
                   src="mariage.mp4"
                   autoPlay
@@ -22,34 +24,9 @@ export function HeroSection() {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </div>
-
-            {/* Image 1 - Deuxième sur mobile, première sur desktop */}
-            <div className="relative h-[500px] lg:h-[550px] order-2 lg:order-1">
-              <div className="relative h-full w-full overflow-hidden shadow-lg">
-                <Image
-                  src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-UN4DQU3.jpg"
-                  alt="Couple sur la plage"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Image 2 - Troisième sur mobile et desktop */}
-            <div className="relative h-[500px] lg:h-[550px] order-3">
-              <div className="relative h-full w-full overflow-hidden shadow-lg">
-              <Image
-                  src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-LU9VY7U.jpg"
-                  alt="Portrait de mariée"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="absolute left-1/2 top-[100%] -translate-x-1/2 -translate-y-[50px] sm:-translate-y-[60px] lg:-translate-y-[13%] w-[92%] sm:w-[85%] lg:w-[800px] z-20 bg-white py-6 sm:py-8 px-6 sm:px-8 lg:px-16 border-2 border-gray-300 shadow-xl">
+              
+              {/* Card Body */}
+              <div className="py-6 px-6">
             <div className="flex flex-col items-center text-center relative">
               <div className="flex justify-center items-center gap-2 mb-6">
                 <div className="flex -space-x-2">
@@ -96,13 +73,109 @@ export function HeroSection() {
                 </Link>
               </div>
 
-              <div className="absolute -bottom-8 -right-40 w-28 h-28 pointer-events-none">
-                <Image
-                  src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG02-R89NSWD.png"
-                  alt="Fleurs décoratives"
-                  fill
-                  className="object-contain opacity-90"
-                />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop: Images Grid avec carte overlay */}
+          <div className="hidden lg:block">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+              {/* Image 1 */}
+              <div className="relative h-[450px]">
+                <div className="relative h-full w-full overflow-hidden shadow-lg">
+                  <Image
+                    src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-UN4DQU3.jpg"
+                    alt="Couple sur la plage"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Vidéo */}
+              <div className="relative h-[450px]">
+                <div className="relative h-full w-full overflow-hidden shadow-lg">
+                  <video
+                    src="mariage.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Image 2 */}
+              <div className="relative h-[450px]">
+                <div className="relative h-full w-full overflow-hidden shadow-lg">
+                  <Image
+                    src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-LU9VY7U.jpg"
+                    alt="Portrait de mariée"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* White Card Overlay */}
+            <div className="relative -mt-40 mx-auto w-full max-w-[800px] z-20 bg-white py-8 px-16 border-2 border-gray-300 shadow-xl">
+              <div className="flex flex-col items-center text-center relative">
+                <div className="flex justify-center items-center gap-2 mb-6">
+                  <div className="flex -space-x-2">
+                    <Avatar className="border-2 border-white w-9 h-9">
+                      <AvatarImage src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg" />
+                      <AvatarFallback>C1</AvatarFallback>
+                    </Avatar>
+                    <Avatar className="border-2 border-white w-9 h-9">
+                      <AvatarImage src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" />
+                      <AvatarFallback>C2</AvatarFallback>
+                    </Avatar>
+                    <Avatar className="border-2 border-white w-9 h-9">
+                      <AvatarImage src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" />
+                      <AvatarFallback>C3</AvatarFallback>
+                    </Avatar>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Star className="w-4 h-4 fill-[#88b7b5] text-[#88b7b5]" />
+                    <span className="text-sm font-medium text-gray-900">4.8</span>
+                  </div>
+                  <span className="text-xs text-gray-600">par 12,6K couples</span>
+                </div>
+
+                <h1 className="heading-main text-[52px] mb-6 leading-tight">
+                  Organisateur de Mariage &<br />
+                  Fiançailles Élégant
+                </h1>
+
+                <div className="flex flex-row gap-4 justify-center items-center w-full mb-4">
+                  <Link href="/contact">
+                    <Button
+                      className="uppercase tracking-[0.12em] text-[11px] bg-transparent text-[#5A5A5A] border-2 border-[#88b7b5] hover:bg-[#88b7b5] hover:text-white px-8 py-5 rounded-full font-medium transition-all"
+                    >
+                      Commencer la Planification
+                    </Button>
+                  </Link>
+                  <Link href="/tarifs">
+                    <Button
+                      variant="link"
+                      className="uppercase tracking-[0.12em] text-[11px] text-[#88b7b5] hover:text-[#6a9a98] px-6 py-4 font-medium underline underline-offset-4"
+                    >
+                      Voir les Forfaits <ArrowRight className="ml-2 h-3.5 w-3.5" />
+                    </Button>
+                  </Link>
+                </div>
+
+                <div className="absolute -bottom-8 -right-40 w-28 h-28 pointer-events-none">
+                  <Image
+                    src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG02-R89NSWD.png"
+                    alt="Fleurs décoratives"
+                    fill
+                    className="object-contain opacity-90"
+                  />
+                </div>
               </div>
             </div>
           </div>

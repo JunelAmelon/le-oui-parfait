@@ -1,7 +1,10 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
 import { Check, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export function ServicesSection() {
   const services = [
@@ -43,9 +46,19 @@ export function ServicesSection() {
     }
   ];
 
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % services.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + services.length) % services.length);
+  };
+
   return (
     <section id="services" className="py-20 bg-[#FAF9F7]">
-      <div className="container mx-auto px-6 max-w-7xl">
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         <div className="mb-16">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12">
             <div>
@@ -68,7 +81,87 @@ export function ServicesSection() {
           </div>
         </div>
 
-        <div className="space-y-16">
+        {/* Mobile Carousel */}
+        <div className="lg:hidden relative">
+          <div className="overflow-hidden">
+            <div 
+              className="flex transition-transform duration-500 ease-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {services.map((service, index) => (
+                <div key={index} className="w-full flex-shrink-0 px-2">
+                  <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div className="relative h-[250px] w-full">
+                      <Image
+                        src={service.image}
+                        alt={service.alt}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="font-serif text-[24px] text-[#5A5A5A] mb-3 leading-tight font-normal">
+                        {service.title}
+                      </h3>
+                      <p className="text-[#5A5A5A] leading-relaxed mb-4 text-sm">
+                        {service.description}
+                      </p>
+                      <ul className="space-y-2 mb-6">
+                        {service.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-start gap-2">
+                            <Check className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
+                            <span className="text-[#5A5A5A] text-sm">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <Link href={service.link}>
+                        <Button
+                          variant="outline"
+                          className="w-full uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-6 py-5 font-medium transition-all"
+                        >
+                          Voir les Détails
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Carousel Controls */}
+          <div className="flex justify-center items-center gap-4 mt-6">
+            <button
+              onClick={prevSlide}
+              className="w-10 h-10 rounded-full border-2 border-[#88b7b5] text-[#88b7b5] hover:bg-[#88b7b5] hover:text-white transition-all flex items-center justify-center"
+              aria-label="Service précédent"
+            >
+              ←
+            </button>
+            <div className="flex gap-2">
+              {services.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                    currentSlide === index ? 'bg-[#88b7b5] w-6' : 'bg-gray-300'
+                  }`}
+                  aria-label={`Aller au service ${index + 1}`}
+                />
+              ))}
+            </div>
+            <button
+              onClick={nextSlide}
+              className="w-10 h-10 rounded-full border-2 border-[#88b7b5] text-[#88b7b5] hover:bg-[#88b7b5] hover:text-white transition-all flex items-center justify-center"
+              aria-label="Service suivant"
+            >
+              →
+            </button>
+          </div>
+        </div>
+
+        {/* Desktop Grid */}
+        <div className="hidden lg:block space-y-16">
           {services.map((service, index) => (
             <div key={index} className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-5 relative h-[400px] lg:h-[450px] overflow-hidden">

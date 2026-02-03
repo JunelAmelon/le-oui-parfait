@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export function HeroSection() {
   return (
-    <section id="accueil" className="relative bg-[#FAF9F7] pt-24 pb-64 overflow-hidden">
+    <section id="accueil" className="relative bg-[#FAF9F7] pt-24 pb-[280px] sm:pb-[320px] lg:pb-64">
       <div className="container mx-auto px-6">
         <div className="relative max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative">
@@ -49,7 +49,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="absolute left-1/2 top-[100%] -translate-x-1/2 -translate-y-[13%] w-[90%] lg:w-[800px] z-20 bg-white py-8 px-8 lg:px-16 border border-gray-200">
+          <div className="absolute left-1/2 top-[100%] -translate-x-1/2 -translate-y-[50px] sm:-translate-y-[60px] lg:-translate-y-[13%] w-[92%] sm:w-[85%] lg:w-[800px] z-20 bg-white py-6 sm:py-8 px-6 sm:px-8 lg:px-16 border-2 border-gray-300 shadow-xl">
             <div className="flex flex-col items-center text-center relative">
               <div className="flex justify-center items-center gap-2 mb-6">
                 <div className="flex -space-x-2">
@@ -73,7 +73,7 @@ export function HeroSection() {
                 <span className="text-xs text-gray-600">par 12,6K couples</span>
               </div>
 
-              <h1 className="heading-main text-[52px] mb-6">
+              <h1 className="heading-main text-[32px] sm:text-[42px] lg:text-[52px] mb-4 sm:mb-6 leading-tight">
                 Organisateur de Mariage &<br />
                 Fiançailles Élégant
               </h1>

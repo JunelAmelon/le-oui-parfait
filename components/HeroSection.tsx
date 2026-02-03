@@ -78,22 +78,20 @@ export function HeroSection() {
                 Fiançailles Élégant
               </h1>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full mb-4">
-                <Link href="/contact">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center items-center w-full mb-4">
+                <Link href="/contact" className="w-full sm:w-auto">
                   <Button
-                    size="lg"
-                    className="uppercase tracking-[0.15em] text-[11px] bg-transparent text-[#5A5A5A] border-2 border-[#88b7b5] hover:bg-[#88b7b5] hover:text-white px-10 py-6 rounded-full font-medium transition-all"
+                    className="w-full sm:w-auto uppercase tracking-[0.12em] text-[10px] sm:text-[11px] bg-transparent text-[#5A5A5A] border-2 border-[#88b7b5] hover:bg-[#88b7b5] hover:text-white px-6 sm:px-8 py-4 sm:py-5 rounded-full font-medium transition-all"
                   >
                     Commencer la Planification
                   </Button>
                 </Link>
-                <Link href="/tarifs">
+                <Link href="/tarifs" className="w-full sm:w-auto">
                   <Button
-                    size="lg"
                     variant="link"
-                    className="uppercase tracking-[0.15em] text-[11px] text-[#88b7b5] hover:text-[#6a9a98] px-6 py-5 font-medium underline underline-offset-4"
+                    className="w-full sm:w-auto uppercase tracking-[0.12em] text-[10px] sm:text-[11px] text-[#88b7b5] hover:text-[#6a9a98] px-4 sm:px-6 py-3 sm:py-4 font-medium underline underline-offset-4"
                   >
-                    Voir les Forfaits <ArrowRight className="ml-2 h-3.5 w-3.5" />
+                    Voir les Forfaits <ArrowRight className="ml-1 sm:ml-2 h-3 w-3 sm:h-3.5 sm:w-3.5" />
                   </Button>
                 </Link>
               </div>

@@ -123,7 +123,7 @@ export function ValuesSection() {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-serif text-xl text-gray-800 mb-3">
+                      <h3 className="font-baskerville text-xl text-gray-800 mb-3">
                         {feature.title}
                       </h3>
                       <p className="text-gray-600 leading-relaxed">

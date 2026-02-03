@@ -43,8 +43,8 @@
     @apply border-border;
   }
   body {
-    @apply text-foreground;
-    background-color: #6E6876;
+    background-color: #E3DCEB;
+    color: #4B4456;
     overflow-x: hidden;
   }
   
@@ -54,13 +54,15 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Libre Baskerville', serif;
+    color: #4B4456;
   }
 
   .heading-main {
-    font-family: 'Libre Baskerville', serif !important;
-    font-size: 40px;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
     line-height: 1.2;
-    color: var(--brand-gray);
+    color: #4B4456;
+    font-size: 50px;
   }
 }
 

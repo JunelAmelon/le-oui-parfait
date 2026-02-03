@@ -100,7 +100,7 @@ export function TestimonialsSection() {
                           />
                         </div>
                         <div>
-                          <p className="font-serif text-lg lg:text-[19px] text-[#5A5A5A] mb-1 font-normal">
+                          <p className="font-baskerville text-lg lg:text-[19px] text-[#5A5A5A] mb-1 font-normal">
                             {testimonial.author}
                           </p>
                           <p className="text-sm lg:text-[14px] text-gray-500">

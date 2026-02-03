@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import Image from 'next/image';
+import { AnimatedSection } from './AnimatedSection';
 
 import { useState } from 'react';
 
@@ -64,7 +65,7 @@ export function PlanningSection() {
               CONTACTEZ-NOUS
             </p>
 
-            <h2 className="font-serif text-[42px] text-[#3B3B3B] leading-[1.15] font-normal mb-10">
+            <h2 className="font-baskerville text-[42px] text-[#3B3B3B] leading-[1.15] font-normal mb-10">
               Planifions Ensemble<br />Le Jour de Vos Rêves
             </h2>
 

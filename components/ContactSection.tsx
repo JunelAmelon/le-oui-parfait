@@ -75,7 +75,7 @@ export function ContactSection() {
 
           <div className="space-y-8">
             <div>
-              <h3 className="font-serif text-2xl text-gray-900 mb-6">
+              <h3 className="font-baskerville text-2xl text-gray-900 mb-6">
                 Informations de Contact
               </h3>
               <div className="space-y-4">

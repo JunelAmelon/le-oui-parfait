@@ -3,6 +3,7 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Star, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { AnimatedSection } from './AnimatedSection';
 
 export function HeroSection() {
   return (
@@ -14,7 +15,7 @@ export function HeroSection() {
           <div className="lg:hidden">
             <div className="bg-white shadow-xl border-2 border-gray-300 overflow-hidden">
               {/* Video Header */}
-              <div className="relative h-[280px] w-full">
+              <div className="relative w-full aspect-video">
                 <video
                   src="mariage.mp4"
                   autoPlay
@@ -28,6 +29,7 @@ export function HeroSection() {
               {/* Card Body */}
               <div className="py-6 px-6">
             <div className="flex flex-col items-center text-center relative">
+              <AnimatedSection delay={0.2} direction="fade">
               <div className="flex justify-center items-center gap-2 mb-6">
                 <div className="flex -space-x-2">
                   <Avatar className="border-2 border-white w-9 h-9">
@@ -49,12 +51,16 @@ export function HeroSection() {
                 </div>
                 <span className="text-xs text-gray-600">par 12,6K couples</span>
               </div>
+              </AnimatedSection>
 
+              <AnimatedSection delay={0.4} direction="up">
               <h1 className="heading-main text-[32px] sm:text-[42px] lg:text-[52px] mb-4 sm:mb-6 leading-tight">
                 Organisateur de Mariage &<br />
                 Fiançailles Élégant
               </h1>
+              </AnimatedSection>
 
+              <AnimatedSection delay={0.6} direction="up">
               <div className="flex flex-col sm:flex-row gap-3 justify-center items-center w-full mb-4">
                 <Link href="/contact" className="w-full sm:w-auto">
                   <Button
@@ -72,6 +78,7 @@ export function HeroSection() {
                   </Button>
                 </Link>
               </div>
+              </AnimatedSection>
 
                 </div>
               </div>

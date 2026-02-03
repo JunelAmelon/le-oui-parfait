@@ -68,25 +68,56 @@ export default function PlanificationMariagePage() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center">
-          <div className="absolute inset-0">
-            <Image
-              src="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg"
-              alt="Planification de Mariage"
-              fill
-              className="object-cover brightness-75"
-              priority
-            />
-          </div>
-          <div className="relative z-10 text-center text-white px-6">
-            <p className="text-xs uppercase tracking-[0.2em] mb-4">Service Premium</p>
-            <h1 className="font-serif text-5xl lg:text-6xl mb-6">
-              Planification de Mariage
-            </h1>
-            <p className="text-lg lg:text-xl max-w-2xl mx-auto font-light">
-              Un service de coordination complet qui garantit que votre journée spéciale<br className="hidden lg:block" />
-              se déroule magnifiquement du début à la fin
-            </p>
+        <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 bg-[#FAF9F7] overflow-hidden">
+          <div className="container mx-auto px-6 max-w-7xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Text Content */}
+              <div>
+                {/* Breadcrumb */}
+                <nav className="flex items-center gap-2 text-sm text-[#5A5A5A] mb-6">
+                  <Link href="/" className="hover:text-[#88b7b5] transition">
+                    Accueil
+                  </Link>
+                  <span className="text-[#88b7b5]">/</span>
+                  <Link href="/services" className="hover:text-[#88b7b5] transition">
+                    Services
+                  </Link>
+                  <span className="text-[#88b7b5]">/</span>
+                  <span className="text-[#88b7b5] font-medium">Planification de Mariage</span>
+                </nav>
+
+                <p className="text-xs uppercase tracking-[0.25em] text-[#88b7b5] mb-4 font-medium">Service Premium</p>
+                <h1 className="font-baskerville text-4xl lg:text-5xl text-[#4B4456] mb-6 leading-tight">
+                  Planification de Mariage
+                </h1>
+                <p className="text-lg text-[#5A5A5A] leading-relaxed mb-8 max-w-xl">
+                  Un service de coordination complet qui garantit que votre journée spéciale se déroule magnifiquement du début à la fin.
+                </p>
+                
+                {/* CTA Button */}
+                <Link href="/contact">
+                  <Button className="uppercase tracking-[0.15em] text-xs bg-[#88b7b5] text-white hover:bg-[#6a9a98] rounded-full px-8 py-6 font-medium transition-all shadow-lg">
+                    Réserver une Consultation <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+
+              {/* Image */}
+              <div className="relative">
+                <div className="relative h-[350px] lg:h-[450px] rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg"
+                    alt="Planification de Mariage"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                {/* Decorative element */}
+                <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-[#88b7b5]/20 rounded-full blur-xl" />
+                <div className="absolute -top-4 -right-4 w-32 h-32 bg-[#88b7b5]/10 rounded-full blur-2xl" />
+              </div>
+            </div>
           </div>
         </section>
 
@@ -218,31 +249,52 @@ export default function PlanificationMariagePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-[#88b7b5] text-white">
-          <div className="container mx-auto px-6 max-w-4xl text-center">
-            <h2 className="font-serif text-4xl lg:text-5xl mb-6">
-              Votre Mariage de Rêve Commence Ici
-            </h2>
-            <p className="text-lg mb-8 opacity-90">
-              Planifions ensemble votre journée parfaite. Contactez-nous pour une consultation<br className="hidden lg:block" />
-              gratuite et créons le mariage dont vous avez toujours rêvé
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
-                <Button
-                  className="uppercase tracking-[0.15em] text-xs bg-white text-[#88b7b5] hover:bg-gray-100 rounded-full px-8 py-6 font-medium transition-all"
-                >
-                  Nous Contacter
-                </Button>
-              </Link>
-              <Link href="/services">
-                <Button
-                  variant="outline"
-                  className="uppercase tracking-[0.15em] text-xs border-2 border-white bg-white text-[#88b7b5] hover:bg-gray-100 rounded-full px-8 py-6 font-medium transition-all"
-                >
-                  Voir Tous les Services
-                </Button>
-              </Link>
+        <section className="relative py-20 lg:py-28 overflow-hidden">
+          {/* Background Video */}
+          <div className="absolute inset-0">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src="/mariage.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-black/60" />
+          </div>
+          
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-[#88b7b5] mb-4 font-medium">
+                Prêt à Commencer ?
+              </p>
+              <h2 className="font-baskerville text-3xl sm:text-4xl lg:text-5xl text-white mb-6 leading-tight px-2">
+                Votre Mariage de Rêve Commence Ici
+              </h2>
+              <p className="text-base sm:text-lg text-white/80 mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed px-2">
+                Planifions ensemble votre journée parfaite. Contactez-nous pour une consultation
+                gratuite et créons le mariage dont vous avez toujours rêvé.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
+                <Link href="/contact" className="w-full sm:w-auto">
+                  <Button className="w-full sm:w-auto uppercase tracking-[0.1em] text-xs sm:text-sm bg-[#88b7b5] text-white hover:bg-[#6a9a98] rounded-full px-6 sm:px-8 py-4 sm:py-6 font-medium transition-all shadow-lg hover:shadow-xl">
+                    Réserver Ma Consultation
+                  </Button>
+                </Link>
+                <Link href="tel:+33123456789" className="w-full sm:w-auto">
+                  <Button className="w-full sm:w-auto uppercase tracking-[0.1em] text-xs sm:text-sm bg-white text-[#4B4456] hover:bg-gray-100 rounded-full px-6 sm:px-8 py-4 sm:py-6 font-medium transition-all shadow-lg">
+                    Appeler Maintenant
+                  </Button>
+                </Link>
+              </div>
+              
+              <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-white/70 text-xs sm:text-sm">
+                <span>✓ Consultation gratuite</span>
+                <span>✓ Réponse sous 24h</span>
+                <span>✓ Sans engagement</span>
+              </div>
             </div>
           </div>
         </section>

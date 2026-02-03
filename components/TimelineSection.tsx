@@ -59,7 +59,7 @@ export function TimelineSection() {
               )}
 
               {/* Année */}
-              <div className="text-5xl lg:text-[3.5rem] text-[#6b9b9e] mb-5 font-normal" style={{ fontFamily: "'Libre Baskerville', serif" }}>
+              <div className="font-baskerville text-5xl lg:text-[3.5rem] text-[#6b9b9e] mb-5 font-normal">
                 {item.year}
               </div>
 

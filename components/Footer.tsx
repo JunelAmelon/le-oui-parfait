@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Facebook, Instagram, Linkedin, Youtube, ArrowUp } from 'lucide-react';
 
 export function Footer() {
@@ -21,7 +22,16 @@ export function Footer() {
     <footer className="bg-[#F5F3F1]">
       <div className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-serif text-gray-800 mb-6 leading-tight">
+          <div className="flex justify-center mb-8">
+            <Image
+              src="/logo-horizontal.png"
+              alt="Le Oui Parfait"
+              width={200}
+              height={60}
+              className="h-12 w-auto"
+            />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-baskerville text-gray-800 mb-6 leading-tight">
             Restez Inspiré Avec Les Moments<br />Mariage & Fiançailles Le Oui Parfait
           </h2>
           <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-3">
@@ -49,14 +59,14 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-1 mb-4">
-              <h3 className="font-serif text-3xl text-gray-800">Le Oui Parfait</h3>
-              <svg width="20" height="20" viewBox="0 0 24 24" className="text-purple-300">
-                <path
-                  fill="currentColor"
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-                />
-              </svg>
+            <div className="mb-4">
+              <Image
+                src="/logo-horizontal.png"
+                alt="Le Oui Parfait"
+                width={180}
+                height={50}
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-gray-600 text-sm mb-6">
               930 Palma Lane Suite 500 Larkinhaven

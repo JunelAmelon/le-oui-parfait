@@ -5,6 +5,7 @@ import { Check, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { AnimatedSection } from './AnimatedSection';
 
 export function ServicesSection() {
   const services = [
@@ -60,6 +61,7 @@ export function ServicesSection() {
     <section id="services" className="py-20 bg-[#FAF9F7]">
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         <div className="mb-16">
+          <AnimatedSection direction="up">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12">
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-[#5A5A5A] mb-4">Nos Services</p>
@@ -79,6 +81,7 @@ export function ServicesSection() {
               </Link>
             </div>
           </div>
+          </AnimatedSection>
         </div>
 
         {/* Mobile Carousel */}
@@ -100,7 +103,7 @@ export function ServicesSection() {
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className="font-serif text-[24px] text-[#5A5A5A] mb-3 leading-tight font-normal">
+                      <h3 className="font-baskerville text-[24px] text-[#5A5A5A] mb-3 leading-tight font-normal">
                         {service.title}
                       </h3>
                       <p className="text-[#5A5A5A] leading-relaxed mb-4 text-sm">
@@ -163,7 +166,8 @@ export function ServicesSection() {
         {/* Desktop Grid */}
         <div className="hidden lg:block space-y-16">
           {services.map((service, index) => (
-            <div key={index} className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <AnimatedSection key={index} delay={0.2 * index} direction="up">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-5 relative h-[400px] lg:h-[450px] overflow-hidden">
                 <Image
                   src={service.image}
@@ -173,7 +177,7 @@ export function ServicesSection() {
                 />
               </div>
               <div className="lg:col-span-7 lg:pl-8">
-                <h3 className="font-serif text-[30px] text-[#5A5A5A] mb-5 leading-tight font-normal">
+                <h3 className="font-baskerville text-[30px] text-[#5A5A5A] mb-5 leading-tight font-normal">
                   {service.title}
                 </h3>
                 <p className="text-[#5A5A5A] leading-relaxed mb-6 text-base">
@@ -197,6 +201,7 @@ export function ServicesSection() {
                 </Link>
               </div>
             </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
+import { AnimatedSection } from './AnimatedSection';
 
 export function AboutSection() {
   return (
@@ -9,6 +10,7 @@ export function AboutSection() {
         
         {/* Mobile: Card Layout */}
         <div className="lg:hidden">
+          <AnimatedSection direction="up">
           <div className="bg-white shadow-xl border-2 border-gray-300 overflow-hidden">
             {/* Image Header with Decorations */}
             <div className="relative h-[400px] w-full">
@@ -105,6 +107,7 @@ export function AboutSection() {
               </Link>
             </div>
           </div>
+          </AnimatedSection>
         </div>
 
         {/* Desktop: Original Grid Layout */}

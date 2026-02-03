@@ -4,49 +4,70 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#FAF9F7]/95 backdrop-blur-sm border-b border-gray-200">
       <div className="container mx-auto px-4 sm:px-6 py-4 max-w-full">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-1">
-            <span className="text-2xl font-serif text-[#5A5A5A]">Le Oui Parfait</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" className="text-[#88b7b5] mt-1">
-              <circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.3" />
-            </svg>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo-horizontal.png"
+              alt="Le Oui Parfait"
+              width={180}
+              height={50}
+              className="h-10 w-auto"
+              priority
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-xs uppercase tracking-wider text-[#5A5A5A] hover:text-[#88b7b5] transition">
+            <Link href="/" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
+              pathname === '/' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
+            }`}>
               Accueil
             </Link>
-            <Link href="/a-propos" className="text-xs uppercase tracking-wider text-[#5A5A5A] hover:text-[#88b7b5] transition">
+            <Link href="/a-propos" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
+              pathname === '/a-propos' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
+            }`}>
               À Propos
             </Link>
-            <Link href="/services" className="text-xs uppercase tracking-wider text-[#5A5A5A] hover:text-[#88b7b5] transition">
+            <Link href="/services" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
+              pathname === '/services' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
+            }`}>
               Services
             </Link>
-            <Link href="/portfolio" className="text-xs uppercase tracking-wider text-[#5A5A5A] hover:text-[#88b7b5] transition">
+            <Link href="/portfolio" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
+              pathname === '/portfolio' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
+            }`}>
               Portfolio
             </Link>
-            <Link href="/tarifs" className="text-xs uppercase tracking-wider text-[#5A5A5A] hover:text-[#88b7b5] transition">
+            <Link href="/tarifs" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
+              pathname === '/tarifs' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
+            }`}>
               Tarifs
             </Link>
-            <Link href="/contact" className="text-xs uppercase tracking-wider text-[#5A5A5A] hover:text-[#88b7b5] transition">
+            <Link href="/contact" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
+              pathname === '/contact' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
+            }`}>
               Contact
             </Link>
           </nav>
 
           <div className="hidden lg:block">
-            <Button
-              variant="outline"
-              className="uppercase tracking-wider text-xs border-[#88b7b5] text-[#88b7b5] hover:bg-[#88b7b5] hover:text-white rounded-full px-8 transition-all"
-            >
-              Réserver
-            </Button>
+            <Link href="/contact">
+              <Button
+                variant="outline"
+                className="uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-8 py-5 font-medium transition-all"
+              >
+                Réserver
+              </Button>
+            </Link>
           </div>
 
           <button
@@ -74,11 +95,14 @@ export function Header() {
       }`}>
         {/* Menu Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-200 min-h-[80px] flex-shrink-0">
-          <div className="flex items-center gap-1">
-            <span className="text-[26px] font-serif text-[#1a1a1a] tracking-wide">Le Oui Parfait</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" className="text-[#88b7b5] mt-1">
-              <circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.3" />
-            </svg>
+          <div className="flex items-center">
+            <Image
+              src="/logo-horizontal.png"
+              alt="Le Oui Parfait"
+              width={150}
+              height={40}
+              className="h-8 w-auto"
+            />
           </div>
           <button
             onClick={() => setMobileMenuOpen(false)}
@@ -97,7 +121,7 @@ export function Header() {
             }`} style={{ transitionDelay: mobileMenuOpen ? '100ms' : '0ms' }}>
               <Link 
                 href="/" 
-                className="flex justify-between items-center px-6 py-[18px] text-[13px] font-medium tracking-[1.5px] uppercase text-[#333] hover:bg-gray-50 transition-colors"
+                className="flex justify-between items-center px-6 py-[18px] text-[12px] font-sans font-medium tracking-[1.5px] uppercase text-[#4B4456] hover:bg-gray-50 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span>Accueil</span>
@@ -108,7 +132,7 @@ export function Header() {
             }`} style={{ transitionDelay: mobileMenuOpen ? '150ms' : '0ms' }}>
               <Link 
                 href="/a-propos" 
-                className="flex justify-between items-center px-6 py-[18px] text-[13px] font-medium tracking-[1.5px] uppercase text-[#333] hover:bg-gray-50 transition-colors"
+                className="flex justify-between items-center px-6 py-[18px] text-[12px] font-sans font-medium tracking-[1.5px] uppercase text-[#4B4456] hover:bg-gray-50 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span>À Propos</span>
@@ -119,7 +143,7 @@ export function Header() {
             }`} style={{ transitionDelay: mobileMenuOpen ? '200ms' : '0ms' }}>
               <Link 
                 href="/services" 
-                className="flex justify-between items-center px-6 py-[18px] text-[13px] font-medium tracking-[1.5px] uppercase text-[#333] hover:bg-gray-50 transition-colors"
+                className="flex justify-between items-center px-6 py-[18px] text-[12px] font-sans font-medium tracking-[1.5px] uppercase text-[#4B4456] hover:bg-gray-50 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span>Services</span>
@@ -131,7 +155,7 @@ export function Header() {
             }`} style={{ transitionDelay: mobileMenuOpen ? '250ms' : '0ms' }}>
               <Link 
                 href="/portfolio" 
-                className="flex justify-between items-center px-6 py-[18px] text-[13px] font-medium tracking-[1.5px] uppercase text-[#333] hover:bg-gray-50 transition-colors"
+                className="flex justify-between items-center px-6 py-[18px] text-[12px] font-sans font-medium tracking-[1.5px] uppercase text-[#4B4456] hover:bg-gray-50 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span>Portfolio</span>
@@ -142,7 +166,7 @@ export function Header() {
             }`} style={{ transitionDelay: mobileMenuOpen ? '300ms' : '0ms' }}>
               <Link 
                 href="/tarifs" 
-                className="flex justify-between items-center px-6 py-[18px] text-[13px] font-medium tracking-[1.5px] uppercase text-[#333] hover:bg-gray-50 transition-colors"
+                className="flex justify-between items-center px-6 py-[18px] text-[12px] font-sans font-medium tracking-[1.5px] uppercase text-[#4B4456] hover:bg-gray-50 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span>Tarifs</span>
@@ -153,7 +177,7 @@ export function Header() {
             }`} style={{ transitionDelay: mobileMenuOpen ? '350ms' : '0ms' }}>
               <Link 
                 href="/contact" 
-                className="flex justify-between items-center px-6 py-[18px] text-[13px] font-medium tracking-[1.5px] uppercase text-[#333] hover:bg-gray-50 transition-colors"
+                className="flex justify-between items-center px-6 py-[18px] text-[12px] font-sans font-medium tracking-[1.5px] uppercase text-[#4B4456] hover:bg-gray-50 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span>Contact</span>

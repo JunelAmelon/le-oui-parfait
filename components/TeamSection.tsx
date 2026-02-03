@@ -52,7 +52,7 @@ export function TeamSection() {
               </div>
 
               <div className="flex items-center justify-center gap-2 mb-2">
-                <h3 className="font-serif text-[19px] text-[#5A5A5A]">
+                <h3 className="font-baskerville text-[19px] text-[#5A5A5A]">
                   {member.name}
                 </h3>
                 <div className="flex gap-1">

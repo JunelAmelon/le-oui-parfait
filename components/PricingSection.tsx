@@ -3,11 +3,13 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Check } from 'lucide-react';
 import Link from 'next/link';
+import { AnimatedSection } from './AnimatedSection';
 
 export function PricingSection() {
   return (
     <section className="py-20 bg-[#FAF9F7]">
       <div className="container mx-auto px-6 max-w-7xl">
+        <AnimatedSection direction="up">
         <div className="text-center mb-16">
           <p className="text-[11px] tracking-[0.25em] text-gray-500 uppercase mb-4">
             FORFAITS FLEXIBLES
@@ -16,13 +18,15 @@ export function PricingSection() {
             Forfaits Sur Mesure Pour<br />Chaque Histoire d'Amour
           </h2>
         </div>
+        </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Essential Package */}
+          <AnimatedSection delay={0.1} direction="up">
           <Card className="bg-white p-10 shadow-sm border-none">
-            <h3 className="font-serif text-[28px] text-[#4A4A4A] mb-1 font-normal">Forfait Essentiel</h3>
+            <h3 className="font-baskerville text-[28px] text-[#4A4A4A] mb-1 font-normal">Forfait Essentiel</h3>
             <div className="mb-2">
-              <span className="font-serif text-[56px] text-[#4A4A4A] leading-none">3 299€</span>
+              <span className="font-baskerville text-[56px] text-[#4A4A4A] leading-none">3 299€</span>
             </div>
             <p className="text-gray-500 text-[13px] mb-8">
               / forfait
@@ -32,7 +36,7 @@ export function PricingSection() {
             </p>
 
             <div className="mb-10">
-              <p className="font-serif text-[17px] text-[#4A4A4A] mb-6">Qu'est-ce qui est Inclus?</p>
+              <p className="font-baskerville text-[17px] text-[#4A4A4A] mb-6">Qu'est-ce qui est Inclus?</p>
               <ul className="space-y-3">
                 <li className="flex items-start text-[14px] text-gray-600 leading-relaxed">
                   <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mr-3 mt-0.5" />
@@ -62,16 +66,18 @@ export function PricingSection() {
               </Button>
             </Link>
           </Card>
+          </AnimatedSection>
 
           {/* Signature Package - Popular */}
+          <AnimatedSection delay={0.2} direction="up">
           <Card className="bg-white p-10 shadow-sm border-none relative">
             <Badge className="absolute top-8 right-8 bg-[#88b7b5] hover:bg-[#88b7b5] text-white text-[10px] tracking-wider px-3 py-1 rounded-full font-normal">
               POPULAIRE
             </Badge>
 
-            <h3 className="font-serif text-[28px] text-[#4A4A4A] mb-1 font-normal">Forfait Signature</h3>
+            <h3 className="font-baskerville text-[28px] text-[#4A4A4A] mb-1 font-normal">Forfait Signature</h3>
             <div className="mb-2">
-              <span className="font-serif text-[56px] text-[#4A4A4A] leading-none">5 499€</span>
+              <span className="font-baskerville text-[56px] text-[#4A4A4A] leading-none">5 499€</span>
             </div>
             <p className="text-gray-500 text-[13px] mb-8">
               / forfait
@@ -81,7 +87,7 @@ export function PricingSection() {
             </p>
 
             <div className="mb-10">
-              <p className="font-serif text-[17px] text-[#4A4A4A] mb-6">Qu'est-ce qui est Inclus?</p>
+              <p className="font-baskerville text-[17px] text-[#4A4A4A] mb-6">Qu'est-ce qui est Inclus?</p>
               <ul className="space-y-3">
                 <li className="flex items-start text-[14px] text-gray-600 leading-relaxed">
                   <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mr-3 mt-0.5" />
@@ -115,12 +121,14 @@ export function PricingSection() {
               </Button>
             </Link>
           </Card>
+          </AnimatedSection>
 
           {/* Luxury Package */}
+          <AnimatedSection delay={0.3} direction="up">
           <Card className="bg-white p-10 shadow-sm border-none">
-            <h3 className="font-serif text-[28px] text-[#4A4A4A] mb-1 font-normal">Forfait Luxe</h3>
+            <h3 className="font-baskerville text-[28px] text-[#4A4A4A] mb-1 font-normal">Forfait Luxe</h3>
             <div className="mb-2">
-              <span className="font-serif text-[56px] text-[#4A4A4A] leading-none">8 999€</span>
+              <span className="font-baskerville text-[56px] text-[#4A4A4A] leading-none">8 999€</span>
             </div>
             <p className="text-gray-500 text-[13px] mb-8">
               / forfait
@@ -130,7 +138,7 @@ export function PricingSection() {
             </p>
 
             <div className="mb-10">
-              <p className="font-serif text-[17px] text-[#4A4A4A] mb-6">Qu'est-ce qui est Inclus?</p>
+              <p className="font-baskerville text-[17px] text-[#4A4A4A] mb-6">Qu'est-ce qui est Inclus?</p>
               <ul className="space-y-3">
                 <li className="flex items-start text-[14px] text-gray-600 leading-relaxed">
                   <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mr-3 mt-0.5" />
@@ -168,6 +176,7 @@ export function PricingSection() {
               </Button>
             </Link>
           </Card>
+          </AnimatedSection>
         </div>
       </div>
     </section>

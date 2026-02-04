@@ -1,27 +1,52 @@
 'use client';
 
-import { Play } from 'lucide-react';
+import { Play, Pause } from 'lucide-react';
 import Image from 'next/image';
+import { useState, useRef } from 'react';
 
 export function VideoPresentationSection() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handlePlayPause = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
     <section className="relative w-full py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-6 max-w-6xl">
-        <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl border-2 border-[#88b7b5]">
+        <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl">
           <div className="absolute inset-0">
-            <img
-              src="mairie.jpg"
-              alt="Présentation couple mariage"
+            <video
+              ref={videoRef}
+              src="/presentation.mp4"
+              loop
+              muted
+              playsInline
               className="w-full h-full object-cover"
             />
           </div>
 
-          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <div 
+            className={`absolute inset-0 bg-black/50 flex items-center justify-center transition-opacity duration-300 ${isPlaying ? 'opacity-0 hover:opacity-100' : 'opacity-100'}`}
+            onClick={handlePlayPause}
+          >
             <button
               className="group relative w-24 h-24 rounded-full bg-white/20 backdrop-blur-md border-2 border-[#88b7b5] flex items-center justify-center transition-all duration-300 hover:bg-[#88b7b5]/80 hover:scale-110 hover:border-white"
-              aria-label="Lire la vidéo"
+              aria-label={isPlaying ? "Pause la vidéo" : "Lire la vidéo"}
             >
-              <Play className="w-8 h-8 text-white fill-white ml-1 group-hover:scale-110 transition-transform" />
+              {isPlaying ? (
+                <Pause className="w-8 h-8 text-white fill-white group-hover:scale-110 transition-transform" />
+              ) : (
+                <Play className="w-8 h-8 text-white fill-white ml-1 group-hover:scale-110 transition-transform" />
+              )}
             </button>
           </div>
         </div>

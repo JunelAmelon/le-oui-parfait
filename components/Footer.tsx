@@ -176,7 +176,7 @@ export function Footer() {
 
         <div className="relative pt-8 border-t border-gray-300">
           <p className="text-sm text-gray-600 text-center md:text-left">
-            Copyright &copy; 2025 Le Oui Parfait Template Kit | Designed by Deverust Studio
+            Copyright &copy; 2025 Le Oui Parfait
           </p>
           <button
             onClick={scrollToTop}
@@ -193,42 +193,42 @@ export function Footer() {
           <div className="flex gap-0 flex-shrink-0">
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-G8JWY7N.jpg"
                 alt="Moment mariage 1"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG01-Q3YLD3X.jpg"
                 alt="Moment mariage 2"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-7W6NNW9.jpg"
                 alt="Moment mariage 3"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/1616113/pexels-photo-1616113.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-G8JWY7N.jpg"
                 alt="Moment mariage 4"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/1488313/pexels-photo-1488313.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-G8JWY7N.jpg"
                 alt="Moment mariage 5"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-5S5N8JH.jpg"
                 alt="Moment mariage 6"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
@@ -237,43 +237,22 @@ export function Footer() {
           <div className="flex gap-0 flex-shrink-0" aria-hidden="true">
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="Moment mariage 1"
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-              />
-            </div>
-            <div className="w-64 h-64 overflow-hidden">
-              <img
-                src="https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG01-Q3YLD3X.jpg"
                 alt="Moment mariage 2"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-7W6NNW9.jpg"
                 alt="Moment mariage 3"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/1616113/pexels-photo-1616113.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-G8JWY7N.jpg"
                 alt="Moment mariage 4"
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-              />
-            </div>
-            <div className="w-64 h-64 overflow-hidden">
-              <img
-                src="https://images.pexels.com/photos/1488313/pexels-photo-1488313.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="Moment mariage 5"
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-              />
-            </div>
-            <div className="w-64 h-64 overflow-hidden">
-              <img
-                src="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="Moment mariage 6"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>

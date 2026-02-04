@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { Star, ArrowRight } from 'lucide-react';
+import { Star, ArrowRight, Play } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AnimatedSection } from './AnimatedSection';
@@ -15,15 +15,23 @@ export function HeroSection() {
           <div className="lg:hidden">
             <div className="bg-white shadow-xl overflow-hidden">
               {/* Video Header */}
-              <div className="relative w-full h-[70vh]">
+              <div className="relative w-full h-[60vh]">
                 <video
-                  src="/hero.mp4"
+                  src="/presentation.mp4"
                   autoPlay
                   loop
                   muted
                   playsInline
                   className="w-full h-full object-cover"
                 />
+                {/* Light overlay */}
+                <div className="absolute inset-0 bg-white/30" />
+                {/* Play button overlay */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-20 h-20 rounded-full border-2 border-[#88b7b5] bg-white/80 flex items-center justify-center cursor-pointer hover:bg-white hover:scale-110 transition-all shadow-lg">
+                    <Play className="w-8 h-8 text-[#88b7b5] ml-1" fill="#88b7b5" />
+                  </div>
+                </div>
               </div>
               
               {/* Card Body */}
@@ -104,13 +112,21 @@ export function HeroSection() {
               <div className="relative h-[450px]">
                 <div className="relative h-full w-full overflow-hidden shadow-lg">
                   <video
-                    src="/hero.mp4"
+                    src="/presentation.mp4"
                     autoPlay
                     loop
                     muted
                     playsInline
                     className="w-full h-full object-cover"
                   />
+                  {/* Light overlay */}
+                  <div className="absolute inset-0 bg-white/30" />
+                  {/* Play button overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-full border-2 border-[#88b7b5] bg-white/80 flex items-center justify-center cursor-pointer hover:bg-white hover:scale-110 transition-all shadow-lg">
+                      <Play className="w-6 h-6 text-[#88b7b5] ml-1" fill="#88b7b5" />
+                    </div>
+                  </div>
                 </div>
               </div>
 

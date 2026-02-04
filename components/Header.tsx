@@ -52,6 +52,11 @@ export function Header() {
             }`}>
               Tarifs
             </Link>
+            <Link href="/blog" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
+              pathname === '/blog' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
+            }`}>
+              Blog
+            </Link>
             <Link href="/contact" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
               pathname === '/contact' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
             }`}>
@@ -175,6 +180,17 @@ export function Header() {
             <li className={`border-b border-gray-100 transition-all duration-300 ${
               mobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'
             }`} style={{ transitionDelay: mobileMenuOpen ? '350ms' : '0ms' }}>
+              <Link 
+                href="/blog" 
+                className="flex justify-between items-center px-6 py-[18px] text-[12px] font-sans font-medium tracking-[1.5px] uppercase text-[#4B4456] hover:bg-gray-50 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span>Blog</span>
+              </Link>
+            </li>
+            <li className={`border-b border-gray-100 transition-all duration-300 ${
+              mobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'
+            }`} style={{ transitionDelay: mobileMenuOpen ? '400ms' : '0ms' }}>
               <Link 
                 href="/contact" 
                 className="flex justify-between items-center px-6 py-[18px] text-[12px] font-sans font-medium tracking-[1.5px] uppercase text-[#4B4456] hover:bg-gray-50 transition-colors"

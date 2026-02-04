@@ -13,11 +13,11 @@ export function HeroSection() {
           
           {/* Mobile: Card avec vidéo en header */}
           <div className="lg:hidden">
-            <div className="bg-white shadow-xl border-2 border-gray-300 overflow-hidden">
+            <div className="bg-white shadow-xl overflow-hidden">
               {/* Video Header */}
-              <div className="relative w-full aspect-video">
+              <div className="relative w-full h-[70vh]">
                 <video
-                  src="mariage.mp4"
+                  src="/hero.mp4"
                   autoPlay
                   loop
                   muted
@@ -27,44 +27,44 @@ export function HeroSection() {
               </div>
               
               {/* Card Body */}
-              <div className="py-6 px-6">
+              <div className="py-4 px-4">
             <div className="flex flex-col items-center text-center relative">
               <AnimatedSection delay={0.2} direction="fade">
-              <div className="flex justify-center items-center gap-2 mb-6">
+              <div className="flex justify-center items-center gap-2 mb-3">
                 <div className="flex -space-x-2">
-                  <Avatar className="border-2 border-white w-9 h-9">
+                  <Avatar className="border-2 border-white w-7 h-7">
                     <AvatarImage src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg" />
                     <AvatarFallback>C1</AvatarFallback>
                   </Avatar>
-                  <Avatar className="border-2 border-white w-9 h-9">
+                  <Avatar className="border-2 border-white w-7 h-7">
                     <AvatarImage src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" />
                     <AvatarFallback>C2</AvatarFallback>
                   </Avatar>
-                  <Avatar className="border-2 border-white w-9 h-9">
+                  <Avatar className="border-2 border-white w-7 h-7">
                     <AvatarImage src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" />
                     <AvatarFallback>C3</AvatarFallback>
                   </Avatar>
                 </div>
                 <div className="flex items-center gap-1">
-                  <Star className="w-4 h-4 fill-[#88b7b5] text-[#88b7b5]" />
-                  <span className="text-sm font-medium text-gray-900">4.8</span>
+                  <Star className="w-3 h-3 fill-[#88b7b5] text-[#88b7b5]" />
+                  <span className="text-xs font-medium text-gray-900">4.8</span>
                 </div>
-                <span className="text-xs text-gray-600">par 12,6K couples</span>
+                <span className="text-[10px] text-gray-600">par 12,6K couples</span>
               </div>
               </AnimatedSection>
 
               <AnimatedSection delay={0.4} direction="up">
-              <h1 className="heading-main text-[32px] sm:text-[42px] lg:text-[52px] mb-4 sm:mb-6 leading-tight">
+              <h1 className="heading-main text-[26px] sm:text-[42px] lg:text-[52px] mb-3 sm:mb-6 leading-tight">
                 Organisateur de Mariage &<br />
                 Fiançailles Élégant
               </h1>
               </AnimatedSection>
 
               <AnimatedSection delay={0.6} direction="up">
-              <div className="flex flex-col sm:flex-row gap-3 justify-center items-center w-full mb-4">
+              <div className="flex flex-col sm:flex-row gap-2 justify-center items-center w-full mb-2">
                 <Link href="/contact" className="w-full sm:w-auto">
                   <Button
-                    className="w-full sm:w-auto uppercase tracking-[0.12em] text-[10px] sm:text-[11px] bg-transparent text-[#5A5A5A] border-2 border-[#88b7b5] hover:bg-[#88b7b5] hover:text-white px-6 sm:px-8 py-4 sm:py-5 rounded-full font-medium transition-all"
+                    className="w-full sm:w-auto uppercase tracking-[0.12em] text-[9px] sm:text-[11px] bg-transparent text-[#5A5A5A] border-2 border-[#88b7b5] hover:bg-[#88b7b5] hover:text-white px-5 sm:px-8 py-3 sm:py-5 rounded-full font-medium transition-all"
                   >
                     Commencer la Planification
                   </Button>
@@ -72,7 +72,7 @@ export function HeroSection() {
                 <Link href="/tarifs" className="w-full sm:w-auto">
                   <Button
                     variant="link"
-                    className="w-full sm:w-auto uppercase tracking-[0.12em] text-[10px] sm:text-[11px] text-[#88b7b5] hover:text-[#6a9a98] px-4 sm:px-6 py-3 sm:py-4 font-medium underline underline-offset-4"
+                    className="w-full sm:w-auto uppercase tracking-[0.12em] text-[9px] sm:text-[11px] text-[#88b7b5] hover:text-[#6a9a98] px-3 sm:px-6 py-2 sm:py-4 font-medium underline underline-offset-4"
                   >
                     Voir les Forfaits <ArrowRight className="ml-1 sm:ml-2 h-3 w-3 sm:h-3.5 sm:w-3.5" />
                   </Button>
@@ -104,7 +104,7 @@ export function HeroSection() {
               <div className="relative h-[450px]">
                 <div className="relative h-full w-full overflow-hidden shadow-lg">
                   <video
-                    src="mariage.mp4"
+                    src="/hero.mp4"
                     autoPlay
                     loop
                     muted
@@ -128,7 +128,7 @@ export function HeroSection() {
             </div>
 
             {/* White Card Overlay */}
-            <div className="relative -mt-40 mx-auto w-full max-w-[800px] z-20 bg-white py-8 px-16 border-2 border-gray-300 shadow-xl">
+            <div className="relative -mt-40 mx-auto w-full max-w-[800px] z-20 bg-white py-8 px-16 shadow-xl">
               <div className="flex flex-col items-center text-center relative">
                 <div className="flex justify-center items-center gap-2 mb-6">
                   <div className="flex -space-x-2">

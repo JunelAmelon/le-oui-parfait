@@ -225,7 +225,7 @@ export function Footer() {
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-G8JWY7N.jpg"
+                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG01-Q3YLD3X.jpg"
                 alt="Moment mariage 5"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />

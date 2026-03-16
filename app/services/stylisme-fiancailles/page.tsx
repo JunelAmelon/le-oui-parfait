@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Check, ArrowRight, Palette, Camera, Lightbulb, Star } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ServiceHero } from '@/components/ServiceHero';
 
 export default function StylismeFiancaillesPage() {
   const features = [
@@ -62,59 +63,13 @@ export default function StylismeFiancaillesPage() {
     <div className="min-h-screen">
       <Header />
       <main>
-        {/* Hero Section */}
-        <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 bg-[#FAF9F7] overflow-hidden">
-          <div className="container mx-auto px-6 max-w-7xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Text Content */}
-              <div>
-                {/* Breadcrumb */}
-                <nav className="flex items-center gap-2 text-sm text-[#5A5A5A] mb-6">
-                  <Link href="/" className="hover:text-[#88b7b5] transition">
-                    Accueil
-                  </Link>
-                  <span className="text-[#88b7b5]">/</span>
-                  <Link href="/services" className="hover:text-[#88b7b5] transition">
-                    Services
-                  </Link>
-                  <span className="text-[#88b7b5]">/</span>
-                  <span className="text-[#88b7b5] font-medium">Stylisme de Fiançailles</span>
-                </nav>
-
-                <p className="text-xs uppercase tracking-[0.25em] text-[#88b7b5] mb-4 font-medium">Service Créatif</p>
-                <h1 className="font-baskerville text-4xl lg:text-5xl text-[#4B4456] mb-6 leading-tight">
-                  Stylisme de Fiançailles
-                </h1>
-                <p className="text-lg text-[#5A5A5A] leading-relaxed mb-8 max-w-xl">
-                  Des moments de fiançailles romantiques remplis d'élégance, de créativité et d'une narration visuelle inoubliable.
-                </p>
-                
-                {/* CTA Button */}
-                <Link href="/contact">
-                  <Button className="uppercase tracking-[0.15em] text-xs bg-[#88b7b5] text-white hover:bg-[#6a9a98] rounded-full px-8 py-6 font-medium transition-all shadow-lg">
-                    Réserver une Consultation <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </div>
-
-              {/* Image */}
-              <div className="relative">
-                <div className="relative h-[350px] lg:h-[450px] rounded-2xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="https://images.pexels.com/photos/3171736/pexels-photo-3171736.jpeg"
-                    alt="Stylisme de Fiançailles"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-                {/* Decorative element */}
-                <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-[#88b7b5]/20 rounded-full blur-xl" />
-                <div className="absolute -top-4 -right-4 w-32 h-32 bg-[#88b7b5]/10 rounded-full blur-2xl" />
-              </div>
-            </div>
-          </div>
-        </section>
+        <ServiceHero
+          title="Stylisme de Fiançailles"
+          eyebrow="Service Créatif"
+          subtitle="Des moments de fiançailles romantiques remplis d'élégance, de créativité et d'une narration visuelle inoubliable."
+          image="https://images.pexels.com/photos/3171736/pexels-photo-3171736.jpeg"
+          breadcrumbLabel="Stylisme de Fiançailles"
+        />
 
         {/* Introduction */}
         <section className="py-20 bg-white">

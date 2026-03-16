@@ -10,40 +10,40 @@ import { AnimatedSection } from './AnimatedSection';
 export function ServicesSection() {
   const services = [
     {
-      title: 'Planification de Mariage',
-      description: 'Un service de coordination complet qui garantit que votre journée spéciale se déroule magnifiquement du début à la fin, sans stress et sans faille.',
+      title: '« Offre Signature » la Planification complète du mariage',
+      description: 'Une organisation complète et personnalisée, de la conception au jour J pour vous permettre de vivre votre engagement en toute sérénité sans stress et sans faille.',
       features: [
-        'Coordination élégante de l\'événement',
-        'Excellence de la gestion des fournisseurs',
-        'Touche de planification personnalisée'
+        'Conception et pilotage du projet de mariage',
+        'Organisation et coordination des prestataires',
+        'Coordination du Jour J'
       ],
       image: 'https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg',
-      alt: 'Cérémonie de mariage',
+      alt: 'Planification complète du mariage',
       link: '/services/planification-mariage'
     },
     {
-      title: 'Stylisme de Fiançailles',
-      description: 'Nous créons des moments de fiançailles romantiques qui vous appartiennent véritablement, remplis d\'élégance, de créativité et d\'une narration visuelle inoubliable.',
+      title: 'Le Oui Parfait Shooting Tour — L\'EVJF / EVG nouvelle génération à Paris',
+      description: 'Le Shooting Tour by Le Oui Parfait, c\'est une journée ou demi-journée sur mesure, pensée pour offrir à la future mariée ou au futur marié une expérience unique à vivre entre proches.',
       features: [
-        'Création de thème romantique',
-        'Stylisme visuel signature',
-        'Design d\'ambiance réfléchi'
+        'Navette avec chauffeur ou berline de luxe',
+        'Shooting photo & vidéo (extérieur et/ou studio)',
+        'Mise en beauté & souvenirs inoubliables'
       ],
-      image: 'https://images.pexels.com/photos/3171736/pexels-photo-3171736.jpeg',
-      alt: 'Dîner romantique',
-      link: '/services/stylisme-fiancailles'
+      image: '/evg.jpg',
+      alt: 'EVJF / EVG Shooting Tour à Paris',
+      link: '/services/shooting-tour'
     },
     {
-      title: 'Gestion d\'Événements',
-      description: 'De la logistique aux touches finales, nous nous assurons que chaque détail de l\'événement reflète la perfection, l\'harmonie et les émotions que vous souhaitez chérir.',
+      title: 'Demande en mariage By Le Oui Parfait',
+      description: 'Parce qu\'un "veux-tu m\'épouser ?" mérite bien plus qu\'un simple instant, Le Oui Parfait imagine et orchestre des demandes en fiançailles classiques ou scénarisées, pensées sur mesure selon votre histoire.',
       features: [
-        'Coordination sur site',
-        'Organisation professionnelle du calendrier',
-        'Exécution sans stress'
+        'Décoration & ambiance romantique sur mesure',
+        'Coordination discrète & effet de surprise',
+        'Photo & vidéo souvenir (optionnel)'
       ],
-      image: 'https://images.pexels.com/photos/7012244/pexels-photo-7012244.jpeg',
-      alt: 'Organisation d\'événement',
-      link: '/services/gestion-evenements'
+      image: '/veux-tu%20m%E2%80%99%C3%A9pouser.png',
+      alt: 'Demande en mariage',
+      link: '/services/demande-en-mariage'
     }
   ];
 

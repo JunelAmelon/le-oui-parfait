@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Check } from 'lucide-react';
+import { Check, Gift, Smartphone } from 'lucide-react';
 import Link from 'next/link';
 import { AnimatedSection } from './AnimatedSection';
 
@@ -12,171 +12,195 @@ export function PricingSection() {
         <AnimatedSection direction="up">
         <div className="text-center mb-16">
           <p className="text-[11px] tracking-[0.25em] text-gray-500 uppercase mb-4">
-            FORFAITS FLEXIBLES
+            NOS OFFRES
           </p>
           <h2 className="heading-main">
-            Forfaits Sur Mesure Pour<br />Chaque Histoire d'Amour
+            Une Offre Pour Chaque<br />Projet de Mariage
           </h2>
         </div>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Essential Package */}
+
+          {/* Offre Harmonie — 1er (le moins cher) */}
           <AnimatedSection delay={0.1} direction="up">
-          <Card className="bg-white p-10 shadow-sm border-none">
-            <h3 className="font-baskerville text-[28px] text-[#4A4A4A] mb-1 font-normal">Forfait Essentiel</h3>
-            <div className="mb-2">
-              <span className="font-baskerville text-[56px] text-[#4A4A4A] leading-none">3 299€</span>
+          <Card className="bg-white p-10 shadow-sm border-none flex flex-col h-full">
+            <h3 className="font-baskerville text-[26px] text-[#4A4A4A] mb-1 font-normal">Offre Harmonie</h3>
+            <p className="text-[11px] uppercase tracking-[0.15em] text-[#88b7b5] mb-3 font-medium">Coordination du Jour J</p>
+            <div className="mb-1">
+              <span className="text-[13px] text-gray-400">à partir de</span>
             </div>
-            <p className="text-gray-500 text-[13px] mb-8">
-              / forfait
-            </p>
-            <p className="text-gray-600 text-[15px] mb-10 leading-relaxed">
-              Pour les célébrations intimes et personnelles
+            <div className="mb-1">
+              <span className="font-baskerville text-[52px] text-[#4A4A4A] leading-none">1 190€</span>
+            </div>
+            <p className="text-gray-500 text-[13px] mb-5">/ forfait</p>
+            <p className="text-gray-600 text-[14px] mb-6 leading-relaxed">
+              Pour les couples ayant organisé leur mariage eux-mêmes, qui souhaitent profiter pleinement de leur journée en déléguant la gestion du jour J.
             </p>
 
-            <div className="mb-10">
-              <p className="font-baskerville text-[17px] text-[#4A4A4A] mb-6">Qu'est-ce qui est Inclus?</p>
-              <ul className="space-y-3">
-                <li className="flex items-start text-[14px] text-gray-600 leading-relaxed">
-                  <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mr-3 mt-0.5" />
-                  <span>Liste de contrôle et calendrier d'événement personnalisés</span>
-                </li>
-                <li className="flex items-start text-[14px] text-gray-600 leading-relaxed">
-                  <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mr-3 mt-0.5" />
-                  <span>Coordination et communication avec les fournisseurs</span>
-                </li>
-                <li className="flex items-start text-[14px] text-gray-600 leading-relaxed">
-                  <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mr-3 mt-0.5" />
-                  <span>Supervision et planification du jour J</span>
-                </li>
-                <li className="flex items-start text-[14px] text-gray-600 leading-relaxed">
-                  <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mr-3 mt-0.5" />
-                  <span>Installation du lieu et assistance au stylisme</span>
-                </li>
+            <div className="flex items-start gap-2 mb-6 p-3 bg-[#FAF9F7] rounded-lg">
+              <Smartphone className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
+              <p className="text-[12px] text-gray-500 leading-relaxed">Application mobile dédiée & suivi en temps réel</p>
+            </div>
+
+            <div className="mb-6">
+              <p className="font-baskerville text-[15px] text-[#4A4A4A] mb-4">Ce qui est inclus :</p>
+              <ul className="space-y-2.5">
+                {[
+                  'Reprise complète de votre organisation existante',
+                  'Structuration du planning détaillé du jour J',
+                  'Visite technique des lieux 2-3 mois avant',
+                  'Coordination logistique & accueil des invités',
+                  'Pilotage global & gestion des imprévus',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start text-[13px] text-gray-600 leading-relaxed">
+                    <Check className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mr-2.5 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
 
-            <Link href="/contact">
-              <Button
-                variant="outline"
-                className="uppercase tracking-[0.2em] text-[11px] border border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white px-8 py-6 rounded-full font-normal transition-all"
-              >
-                CHOISIR CE FORFAIT
-              </Button>
-            </Link>
+            <div className="flex items-start gap-2 mb-8 p-3 bg-[#FAF9F7] rounded-lg border-l-2 border-gray-200">
+              <p className="text-[12px] text-gray-500 leading-relaxed italic">Résultat : Vous vivez votre mariage pleinement, sans contraintes ni sollicitations.</p>
+            </div>
+
+            <div className="mt-auto flex flex-col gap-3">
+              <Link href="/tarifs/offre-harmonie">
+                <Button variant="outline" className="w-full uppercase tracking-[0.2em] text-[11px] border border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white px-8 py-6 rounded-full font-normal transition-all">
+                  DÉTAIL
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button className="w-full uppercase tracking-[0.2em] text-[11px] bg-[#4B4456] text-white hover:bg-[#3a3345] px-8 py-6 rounded-full font-normal transition-all">
+                  NOUS CONTACTER
+                </Button>
+              </Link>
+            </div>
           </Card>
           </AnimatedSection>
 
-          {/* Signature Package - Popular */}
+          {/* Offre Signature — 2ème (POPULAIRE, au milieu) */}
           <AnimatedSection delay={0.2} direction="up">
-          <Card className="bg-white p-10 shadow-sm border-none relative">
+          <Card className="bg-white p-10 shadow-sm border-none relative flex flex-col h-full">
             <Badge className="absolute top-8 right-8 bg-[#88b7b5] hover:bg-[#88b7b5] text-white text-[10px] tracking-wider px-3 py-1 rounded-full font-normal">
               POPULAIRE
             </Badge>
-
-            <h3 className="font-baskerville text-[28px] text-[#4A4A4A] mb-1 font-normal">Forfait Signature</h3>
-            <div className="mb-2">
-              <span className="font-baskerville text-[56px] text-[#4A4A4A] leading-none">5 499€</span>
+            <h3 className="font-baskerville text-[26px] text-[#4A4A4A] mb-1 font-normal">Offre Signature</h3>
+            <p className="text-[11px] uppercase tracking-[0.15em] text-[#88b7b5] mb-3 font-medium">Mariage clé en main</p>
+            <div className="mb-1">
+              <span className="text-[13px] text-gray-400">à partir de</span>
             </div>
-            <p className="text-gray-500 text-[13px] mb-8">
-              / forfait
-            </p>
-            <p className="text-gray-600 text-[15px] mb-10 leading-relaxed">
-              Pour une expérience de planification complète
+            <div className="mb-1">
+              <span className="font-baskerville text-[52px] text-[#4A4A4A] leading-none">3 490€</span>
+            </div>
+            <p className="text-gray-500 text-[13px] mb-5">/ forfait</p>
+            <p className="text-gray-600 text-[14px] mb-6 leading-relaxed">
+              Formule clé en main pour ceux qui souhaitent confier l'intégralité de l'organisation à un professionnel.
             </p>
 
-            <div className="mb-10">
-              <p className="font-baskerville text-[17px] text-[#4A4A4A] mb-6">Qu'est-ce qui est Inclus?</p>
-              <ul className="space-y-3">
-                <li className="flex items-start text-[14px] text-gray-600 leading-relaxed">
-                  <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mr-3 mt-0.5" />
-                  <span>Concept complet et direction de design du mariage</span>
-                </li>
-                <li className="flex items-start text-[14px] text-gray-600 leading-relaxed">
-                  <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mr-3 mt-0.5" />
-                  <span>Négociation et gestion des fournisseurs</span>
-                </li>
-                <li className="flex items-start text-[14px] text-gray-600 leading-relaxed">
-                  <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mr-3 mt-0.5" />
-                  <span>Planification budgétaire et suivi transparent</span>
-                </li>
-                <li className="flex items-start text-[14px] text-gray-600 leading-relaxed">
-                  <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mr-3 mt-0.5" />
-                  <span>Coordination de la répétition et de la cérémonie</span>
-                </li>
-                <li className="flex items-start text-[14px] text-gray-600 leading-relaxed">
-                  <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mr-3 mt-0.5" />
-                  <span>Supervision et gestion sur site</span>
-                </li>
+            <div className="flex items-start gap-2 mb-6 p-3 bg-[#FAF9F7] rounded-lg">
+              <Smartphone className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
+              <p className="text-[12px] text-gray-500 leading-relaxed">Application mobile dédiée & suivi en temps réel</p>
+            </div>
+
+            <div className="mb-6">
+              <p className="font-baskerville text-[15px] text-[#4A4A4A] mb-4">Ce qui est inclus :</p>
+              <ul className="space-y-2.5">
+                {[
+                  'Gestion administrative & planning complet',
+                  'Recherche & sélection des prestataires',
+                  'Visites des lieux & rendez-vous accompagnés',
+                  'Conception décoration & scénographie',
+                  'Coordination logistique complète du jour J',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start text-[13px] text-gray-600 leading-relaxed">
+                    <Check className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mr-2.5 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
 
-            <Link href="/contact">
-              <Button
-                variant="outline"
-                className="uppercase tracking-[0.2em] text-[11px] border border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white px-8 py-6 rounded-full font-normal transition-all"
-              >
-                CHOISIR CE FORFAIT
-              </Button>
-            </Link>
+            <div className="flex items-start gap-2 mb-8 p-3 bg-[#f0f7f7] rounded-lg border-l-2 border-[#88b7b5]">
+              <Gift className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
+              <p className="text-[12px] text-[#4B4456] leading-relaxed font-medium">6 privilèges exclusifs offerts (photobooth, faire-part digital, vidéo STD, site mariage, voyage de noces, personal shopper)</p>
+            </div>
+
+            <div className="mt-auto flex flex-col gap-3">
+              <Link href="/tarifs/offre-signature">
+                <Button variant="outline" className="w-full uppercase tracking-[0.2em] text-[11px] border border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white px-8 py-6 rounded-full font-normal transition-all">
+                  DÉTAIL
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button className="w-full uppercase tracking-[0.2em] text-[11px] bg-[#4B4456] text-white hover:bg-[#3a3345] px-8 py-6 rounded-full font-normal transition-all">
+                  NOUS CONTACTER
+                </Button>
+              </Link>
+            </div>
           </Card>
           </AnimatedSection>
 
-          {/* Luxury Package */}
+          {/* Offre Élégance — 3ème (1890€) */}
           <AnimatedSection delay={0.3} direction="up">
-          <Card className="bg-white p-10 shadow-sm border-none">
-            <h3 className="font-baskerville text-[28px] text-[#4A4A4A] mb-1 font-normal">Forfait Luxe</h3>
-            <div className="mb-2">
-              <span className="font-baskerville text-[56px] text-[#4A4A4A] leading-none">8 999€</span>
+          <Card className="bg-white p-10 shadow-sm border-none flex flex-col h-full">
+            <h3 className="font-baskerville text-[26px] text-[#4A4A4A] mb-1 font-normal">Offre Élégance</h3>
+            <p className="text-[11px] uppercase tracking-[0.15em] text-[#88b7b5] mb-3 font-medium">Organisation partielle</p>
+            <div className="mb-1">
+              <span className="text-[13px] text-gray-400">à partir de</span>
             </div>
-            <p className="text-gray-500 text-[13px] mb-8">
-              / forfait
-            </p>
-            <p className="text-gray-600 text-[15px] mb-10 leading-relaxed">
-              Pour des grandes célébrations inoubliables
+            <div className="mb-1">
+              <span className="font-baskerville text-[52px] text-[#4A4A4A] leading-none">1 890€</span>
+            </div>
+            <p className="text-gray-500 text-[13px] mb-5">/ forfait</p>
+            <p className="text-gray-600 text-[14px] mb-6 leading-relaxed">
+              Un accompagnement structuré sur des pôles précis, pour vous laisser la maîtrise de votre projet tout en bénéficiant d'un cadre professionnel.
             </p>
 
-            <div className="mb-10">
-              <p className="font-baskerville text-[17px] text-[#4A4A4A] mb-6">Qu'est-ce qui est Inclus?</p>
-              <ul className="space-y-3">
-                <li className="flex items-start text-[14px] text-gray-600 leading-relaxed">
-                  <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mr-3 mt-0.5" />
-                  <span>Thème personnalisé et direction de stylisme</span>
-                </li>
-                <li className="flex items-start text-[14px] text-gray-600 leading-relaxed">
-                  <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mr-3 mt-0.5" />
-                  <span>Coordination de planification complète</span>
-                </li>
-                <li className="flex items-start text-[14px] text-gray-600 leading-relaxed">
-                  <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mr-3 mt-0.5" />
-                  <span>Décor haut de gamme et arrangements floraux</span>
-                </li>
-                <li className="flex items-start text-[14px] text-gray-600 leading-relaxed">
-                  <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mr-3 mt-0.5" />
-                  <span>Gestion du budget et de la logistique</span>
-                </li>
-                <li className="flex items-start text-[14px] text-gray-600 leading-relaxed">
-                  <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mr-3 mt-0.5" />
-                  <span>Supervision de la répétition et de la cérémonie</span>
-                </li>
-                <li className="flex items-start text-[14px] text-gray-600 leading-relaxed">
-                  <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mr-3 mt-0.5" />
-                  <span>Équipe de planification dédiée sur site</span>
-                </li>
+            <div className="flex items-start gap-2 mb-6 p-3 bg-[#FAF9F7] rounded-lg">
+              <Smartphone className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
+              <p className="text-[12px] text-gray-500 leading-relaxed">Application mobile dédiée & suivi en temps réel</p>
+            </div>
+
+            <div className="mb-6">
+              <p className="font-baskerville text-[15px] text-[#4A4A4A] mb-4">Ce qui est inclus :</p>
+              <ul className="space-y-2.5">
+                {[
+                  'Analyse & cadrage de votre organisation',
+                  'Structuration administrative & planning ciblé',
+                  'Accompagnement prestataires sur pôles définis',
+                  'Conseils et rendez-vous accompagnés',
+                  'Coordination sur 3 à 5 pôles de votre choix',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start text-[13px] text-gray-600 leading-relaxed">
+                    <Check className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mr-2.5 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
 
-            <Link href="/contact">
-              <Button
-                variant="outline"
-                className="uppercase tracking-[0.2em] text-[11px] border border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white px-8 py-6 rounded-full font-normal transition-all"
-              >
-                CHOISIR CE FORFAIT
-              </Button>
-            </Link>
+            <div className="flex items-start gap-2 mb-8 p-3 bg-[#f0f7f7] rounded-lg border-l-2 border-[#88b7b5]">
+              <Gift className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
+              <p className="text-[12px] text-[#4B4456] leading-relaxed font-medium">3 privilèges offerts (livre d'or audio, faire-part digital, voyage de noces)</p>
+            </div>
+
+            <div className="mt-auto flex flex-col gap-3">
+              <Link href="/tarifs/offre-elegance">
+                <Button variant="outline" className="w-full uppercase tracking-[0.2em] text-[11px] border border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white px-8 py-6 rounded-full font-normal transition-all">
+                  DÉTAIL
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button className="w-full uppercase tracking-[0.2em] text-[11px] bg-[#4B4456] text-white hover:bg-[#3a3345] px-8 py-6 rounded-full font-normal transition-all">
+                  NOUS CONTACTER
+                </Button>
+              </Link>
+            </div>
           </Card>
           </AnimatedSection>
+
         </div>
       </div>
     </section>

@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Check, ArrowRight, Calendar, Users, Heart, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ServiceHero } from '@/components/ServiceHero';
 
 export default function PlanificationMariagePage() {
   const features = [
@@ -67,59 +68,13 @@ export default function PlanificationMariagePage() {
     <div className="min-h-screen">
       <Header />
       <main>
-        {/* Hero Section */}
-        <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 bg-[#FAF9F7] overflow-hidden">
-          <div className="container mx-auto px-6 max-w-7xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Text Content */}
-              <div>
-                {/* Breadcrumb */}
-                <nav className="flex items-center gap-2 text-sm text-[#5A5A5A] mb-6">
-                  <Link href="/" className="hover:text-[#88b7b5] transition">
-                    Accueil
-                  </Link>
-                  <span className="text-[#88b7b5]">/</span>
-                  <Link href="/services" className="hover:text-[#88b7b5] transition">
-                    Services
-                  </Link>
-                  <span className="text-[#88b7b5]">/</span>
-                  <span className="text-[#88b7b5] font-medium">Planification de Mariage</span>
-                </nav>
-
-                <p className="text-xs uppercase tracking-[0.25em] text-[#88b7b5] mb-4 font-medium">Service Premium</p>
-                <h1 className="font-baskerville text-4xl lg:text-5xl text-[#4B4456] mb-6 leading-tight">
-                  Planification de Mariage
-                </h1>
-                <p className="text-lg text-[#5A5A5A] leading-relaxed mb-8 max-w-xl">
-                  Un service de coordination complet qui garantit que votre journée spéciale se déroule magnifiquement du début à la fin.
-                </p>
-                
-                {/* CTA Button */}
-                <Link href="/contact">
-                  <Button className="uppercase tracking-[0.15em] text-xs bg-[#88b7b5] text-white hover:bg-[#6a9a98] rounded-full px-8 py-6 font-medium transition-all shadow-lg">
-                    Réserver une Consultation <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </div>
-
-              {/* Image */}
-              <div className="relative">
-                <div className="relative h-[350px] lg:h-[450px] rounded-2xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg"
-                    alt="Planification de Mariage"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-                {/* Decorative element */}
-                <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-[#88b7b5]/20 rounded-full blur-xl" />
-                <div className="absolute -top-4 -right-4 w-32 h-32 bg-[#88b7b5]/10 rounded-full blur-2xl" />
-              </div>
-            </div>
-          </div>
-        </section>
+        <ServiceHero
+          title="Planification de Mariage"
+          eyebrow="Service Premium"
+          subtitle="Un service de coordination complet qui garantit que votre journée spéciale se déroule magnifiquement du début à la fin."
+          image="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg"
+          breadcrumbLabel="Planification de Mariage"
+        />
 
         {/* Introduction */}
         <section className="py-20 bg-white">

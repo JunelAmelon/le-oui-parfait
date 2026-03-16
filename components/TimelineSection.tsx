@@ -3,31 +3,31 @@ import Image from 'next/image';
 export function TimelineSection() {
   const timelineData = [
     {
-      year: "2015",
-      title: "Le Bellavue Entame Son Voyage",
-      description: "Nous avons commencé à aider les couples à s'y retrouver dans la complexité de l'organisation de leur mariage.",
-      image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80",
+      year: "2020",
+      title: "Les Premières Bases D'Une Vision",
+      description: "Formée aux exigences de l'univers du mariage et de l'événementiel, la fondatrice développe très tôt une sensibilité particulière pour l'esthétique, l'émotion et l'expérience client.",
+      image: "https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg",
       imagePosition: "top"
     },
     {
-      year: "2018",
-      title: "Le Meilleur Urbaniste Régional Remporte Un Prix",
-      description: "Notre équipe a reçu un prix majeur de l'industrie du design pour son excellence créative.",
-      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
+      year: "2022",
+      title: "Au Cœur D'Une Première Aventure Entrepreneuriale",
+      description: "Elle rejoint ensuite, aux côtés de plusieurs associés, une première structure dans l'univers du mariage. Cette expérience de terrain, à la fois riche et formatrice, contribue à affiner sa méthode et sa vision.",
+      image: "https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg",
       imagePosition: "bottom"
     },
     {
-      year: "2021",
-      title: "L'événement Destination Events A Été Lancé",
-      description: "Nous avons lancé des services pour les lieux romantiques à travers l'Europe.",
-      image: "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&q=80",
+      year: "2024",
+      title: "Une Signature Plus Personnelle S'Affirme",
+      description: "Animée par l'envie d'aller plus loin, la fondatrice poursuit son évolution à travers de nouveaux perfectionnements, notamment dans l'univers du wedding design, afin de développer une approche encore plus raffinée, cohérente et actuelle.",
+      image: "https://images.pexels.com/photos/2959192/pexels-photo-2959192.jpeg",
       imagePosition: "top"
     },
     {
-      year: "2024",
-      title: "Mille Mariages Construits",
-      description: "Nous continuons d'innover tout en restant fidèles à notre engagement de vous servir avec amour.",
-      image: "https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=800&q=80",
+      year: "2026",
+      title: "Naissance Du Oui Parfait",
+      description: "Forte de son parcours, la fondatrice choisit en 2026 de donner vie à « Le Oui Parfait ». Implantée avec des bureaux à Paris et un showroom dans l'Essonne, la marque est pensée pour offrir un accompagnement élégant, humain et parfaitement structuré. Cette même année marque également le lancement de son réseau de franchisés.",
+      image: "https://images.pexels.com/photos/1456613/pexels-photo-1456613.jpeg",
       imagePosition: "bottom"
     }
   ];
@@ -38,7 +38,7 @@ export function TimelineSection() {
         {/* Titre principal */}
         <div className="text-center mb-16 lg:mb-20">
           <h2 className="heading-main" style={{ fontFamily: "'Libre Baskerville', serif" }}>
-            Créer Des Souvenirs<br className="hidden lg:block" /> Intemporels Depuis 2015
+            Créer Des Souvenirs<br className="hidden lg:block" /> Intemporels Depuis 2020
           </h2>
         </div>
 

@@ -31,9 +31,12 @@ export function Footer() {
               className="h-12 w-auto"
             />
           </div>
-          <h2 className="text-3xl md:text-4xl font-baskerville text-gray-800 mb-6 leading-tight">
-            Restez Inspiré Avec Les Moments<br />Mariage & Fiançailles Le Oui Parfait
+          <h2 className="text-3xl md:text-4xl font-baskerville text-gray-800 mb-4 leading-tight">
+            Restez Inspirés Par Le Oui Parfait
           </h2>
+          <p className="text-gray-500 text-[15px] mb-4 leading-relaxed max-w-xl mx-auto">
+            Recevez en avant-première nos conseils, nos inspirations et nos offres exclusives pour imaginer un mariage à votre image.
+          </p>
           <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-3">
             <input
               type="email"

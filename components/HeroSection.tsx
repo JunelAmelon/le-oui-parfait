@@ -153,8 +153,8 @@ export function HeroSection() {
                 </div>
 
                 <h1 className="heading-main text-[52px] mb-6 leading-tight">
-                  Organisateur de Mariage &<br />
-                  Fiançailles Élégant
+                  Organisatrice de mariage &<br />
+                  coordination du jour J
                 </h1>
 
                 <div className="flex flex-row gap-4 justify-center items-center w-full mb-4">

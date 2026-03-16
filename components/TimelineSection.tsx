@@ -64,12 +64,12 @@ export function TimelineSection() {
               </div>
 
               {/* Titre */}
-              <h3 className="text-xl lg:text-[1.4rem] text-gray-800 leading-snug mb-4 font-normal" style={{ fontFamily: "'Libre Baskerville', serif" }}>
+              <h3 className="text-[22px] text-gray-800 leading-snug mb-4 font-normal" style={{ fontFamily: "'Libre Baskerville', serif" }}>
                 {item.title}
               </h3>
 
               {/* Description */}
-              <p className="text-sm lg:text-[0.95rem] text-gray-600 leading-relaxed mb-5" style={{ fontFamily: "'Libre Baskerville', serif" }}>
+              <p className="text-[16px] text-gray-600 leading-relaxed mb-5" style={{ fontFamily: "'Libre Baskerville', serif" }}>
                 {item.description}
               </p>
 

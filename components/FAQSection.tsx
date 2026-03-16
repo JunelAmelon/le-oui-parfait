@@ -51,7 +51,7 @@ function FAQAccordionItem({ question, answer, isOpen, onClick }: FAQItem & { isO
         className="w-full py-6 flex items-center justify-between text-left transition-all duration-200 hover:text-gray-600"
         aria-expanded={isOpen}
       >
-        <span className="text-lg font-baskerville text-gray-700 pr-4">{question}</span>
+        <span className="text-[20px] font-baskerville text-gray-700 pr-4">{question}</span>
         {isOpen ? (
           <Minus className="w-5 h-5 text-[#88b7b5] flex-shrink-0" />
         ) : (
@@ -59,7 +59,7 @@ function FAQAccordionItem({ question, answer, isOpen, onClick }: FAQItem & { isO
         )}
       </button>
       {isOpen && (
-        <div className="pb-6 pr-8 text-gray-600 leading-relaxed animate-in fade-in slide-in-from-top-2 duration-300">
+        <div className="pb-6 pr-8 text-[16px] text-gray-600 leading-relaxed animate-in fade-in slide-in-from-top-2 duration-300">
           {answer}
         </div>
       )}

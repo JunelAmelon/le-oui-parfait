@@ -1,62 +1,28 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Check, ArrowRight, Palette, Camera, Lightbulb, Star } from 'lucide-react';
+import { Check, Palette, Camera, Lightbulb, Star } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ServiceHero } from '@/components/ServiceHero';
+import { TestimonialsSection } from '@/components/TestimonialsSection';
 
 export default function StylismeFiancaillesPage() {
-  const features = [
-    {
-      icon: Palette,
-      title: 'Création de Thème Romantique',
-      description: 'Des concepts uniques qui reflètent votre histoire d\'amour et votre personnalité'
-    },
-    {
-      icon: Camera,
-      title: 'Stylisme Visuel Signature',
-      description: 'Des mises en scène photographiques qui capturent l\'essence de votre engagement'
-    },
-    {
-      icon: Lightbulb,
-      title: 'Design d\'Ambiance Réfléchi',
-      description: 'Création d\'atmosphères intimes et mémorables pour votre célébration'
-    },
-    {
-      icon: Star,
-      title: 'Expérience Personnalisée',
-      description: 'Chaque détail est pensé pour raconter votre histoire unique'
-    }
+  const specs = [
+    { icon: Palette, title: "Thème Romantique Sur Mesure" },
+    { icon: Camera, title: "Stylisme Visuel Signature" },
+    { icon: Lightbulb, title: "Design d'Ambiance Réfléchi" },
+    { icon: Star, title: "Expérience Entièrement Personnalisée" },
   ];
-
-  const services = [
-    'Consultation créative et développement du concept',
-    'Sélection de la palette de couleurs et des matériaux',
-    'Coordination avec photographe et vidéaste',
-    'Stylisme floral et décoration',
-    'Mise en place et installation complète',
-    'Accessoires et éléments décoratifs personnalisés',
-    'Création de tableaux de mariage',
-    'Coordination le jour de l\'événement'
+  const keyFeatures = [
+    "Consultation créative",
+    "Stylisme floral & décoration",
+    "Coordination photographe",
+    "Installation complète",
   ];
-
-  const inspirations = [
-    {
-      title: 'Romantique Classique',
-      description: 'Élégance intemporelle avec des touches délicates',
-      image: 'https://images.pexels.com/photos/3171736/pexels-photo-3171736.jpeg'
-    },
-    {
-      title: 'Moderne Minimaliste',
-      description: 'Lignes épurées et sophistication contemporaine',
-      image: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&q=80'
-    },
-    {
-      title: 'Bohème Chic',
-      description: 'Naturel et décontracté avec une touche d\'élégance',
-      image: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80'
-    }
+  const otherServices = [
+    { title: 'Planification de Mariage', description: 'Un service de coordination complet qui garantit que votre journée spéciale se déroule magnifiquement.', image: 'https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg', features: ['Conception et pilotage global', 'Sélection des prestataires', 'Coordination Jour J'], link: '/services/planification-mariage' },
+    { title: "Gestion d'Événements", description: 'De la logistique aux touches finales, chaque détail reflète la perfection et les émotions que vous souhaitez chérir.', image: 'https://images.pexels.com/photos/7012244/pexels-photo-7012244.jpeg', features: ['Coordination sur site', 'Organisation du calendrier', 'Exécution sans stress'], link: '/services/gestion-evenements' },
   ];
 
   return (
@@ -71,134 +37,90 @@ export default function StylismeFiancaillesPage() {
           breadcrumbLabel="Stylisme de Fiançailles"
         />
 
-        {/* Introduction */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6 max-w-6xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="relative h-[500px]">
-                <Image
-                  src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80"
-                  alt="Décoration de fiançailles"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-[0.2em] text-[#5A5A5A] mb-4">Notre Vision</p>
-                <h2 className="heading-main mb-6">
-                  Racontez Votre Histoire<br />
-                  Avec Élégance
-                </h2>
-                <p className="text-[#5A5A5A] leading-relaxed mb-6">
-                  Vos fiançailles marquent le début d'un nouveau chapitre. Nous créons des expériences 
-                  visuelles qui capturent l'essence de votre amour et créent des souvenirs que vous 
-                  chérirez pour toujours.
-                </p>
-                <p className="text-[#5A5A5A] leading-relaxed">
-                  Notre approche combine créativité artistique et attention aux détails pour concevoir 
-                  des célébrations de fiançailles qui vous ressemblent vraiment. Chaque élément est 
-                  soigneusement sélectionné pour raconter votre histoire unique.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Grid */}
+        {/* Intro — Image 1 style */}
         <section className="py-20 bg-[#FAF9F7]">
           <div className="container mx-auto px-6 max-w-6xl">
-            <div className="text-center mb-16">
-              <h2 className="heading-main mb-4">
-                Notre Expertise Créative
-              </h2>
-              <p className="text-[#5A5A5A] max-w-2xl mx-auto">
-                Des services de stylisme qui transforment vos rêves en réalité visuelle
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white p-8 hover:shadow-lg transition-shadow">
-                  <feature.icon className="h-10 w-10 text-[#88b7b5] mb-4" />
-                  <h3 className="font-serif text-2xl text-[#5A5A5A] mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-[#5A5A5A] leading-relaxed">
-                    {feature.description}
-                  </p>
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+              <div className="lg:col-span-2">
+                <div className="relative h-[420px] overflow-hidden mb-4">
+                  <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+                    <source src="/mariage.mp4" type="video/mp4" />
+                  </video>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Inspirations Gallery */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6 max-w-6xl">
-            <div className="text-center mb-16">
-              <h2 className="heading-main mb-4">
-                Styles & Inspirations
-              </h2>
-              <p className="text-[#5A5A5A] max-w-2xl mx-auto">
-                Découvrez quelques-uns de nos styles signature pour votre célébration
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {inspirations.map((item, index) => (
-                <div key={index} className="group">
-                  <div className="relative h-[400px] mb-4 overflow-hidden">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+                <div className="bg-white p-5">
+                  <p className="text-[15px] font-semibold text-[#4B4456] mb-4">Caractéristiques clés :</p>
+                  <div className="grid grid-cols-2 gap-3">
+                    {keyFeatures.map((f, i) => (
+                      <div key={i} className="flex items-start gap-2 text-[16px] text-[#5A5A5A]">
+                        <Check className="w-4 h-4 text-[#88b7b5] flex-shrink-0 mt-0.5" /><span>{f}</span>
+                      </div>
+                    ))}
                   </div>
-                  <h3 className="font-serif text-2xl text-[#5A5A5A] mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-[#5A5A5A]">
-                    {item.description}
-                  </p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Services Included */}
-        <section className="py-20 bg-[#FAF9F7]">
-          <div className="container mx-auto px-6 max-w-6xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="heading-main mb-8">
-                  Services Inclus
+              </div>
+              <div className="lg:col-span-3 lg:pt-4">
+                <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Service Créatif</p>
+                <h2 className="font-baskerville text-[32px] text-[#4B4456] leading-tight mb-5">
+                  Racontez Votre Histoire<br />Avec Élégance
                 </h2>
-                <div className="space-y-4">
-                  {services.map((item, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <Check className="h-6 w-6 text-[#88b7b5] flex-shrink-0 mt-0.5" />
-                      <span className="text-[#5A5A5A]">{item}</span>
+                <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-4">
+                  Vos fiançailles marquent le début d'un nouveau chapitre. Nous créons des expériences visuelles qui capturent l'essence de votre amour et créent des souvenirs que vous chérirez pour toujours.
+                </p>
+                <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-8">
+                  Notre approche combine créativité artistique et attention aux détails pour concevoir des célébrations de fiançailles qui vous ressemblent vraiment. Chaque élément est soigneusement sélectionné pour raconter votre histoire unique.
+                </p>
+                <p className="text-[15px] font-semibold text-[#4B4456] mb-4">Spécifications du Service</p>
+                <div className="grid grid-cols-2 gap-3 mb-8">
+                  {specs.map((s, i) => (
+                    <div key={i} className="bg-white border border-[#e8e0dc] p-5 flex flex-col items-start gap-3">
+                      <s.icon className="w-8 h-8 text-[#88b7b5]" />
+                      <span className="font-baskerville text-[20px] text-[#4B4456] leading-snug">{s.title}</span>
                     </div>
                   ))}
                 </div>
-                <div className="mt-10">
-                  <Link href="/contact">
-                    <Button
-                      className="uppercase tracking-[0.15em] text-xs bg-[#88b7b5] text-white hover:bg-[#6a9a98] rounded-full px-8 py-6 font-medium transition-all"
-                    >
-                      Demander un Devis <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
+                <Link href="/contact">
+                  <button className="uppercase tracking-[0.2em] text-[11px] bg-white border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-8 py-3 rounded-full transition-all">
+                    Réserver maintenant
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <TestimonialsSection />
+
+        {/* Other Services */}
+        <section className="py-20 bg-[#F5F3F1]">
+          <div className="container mx-auto px-6 max-w-6xl">
+            <div className="text-center mb-12">
+              <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Autres Services</p>
+              <h2 className="heading-main">Créer des Moments Inoubliables<br />Avec Le Oui Parfait</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {otherServices.map((s, i) => (
+                <div key={i} className="bg-white">
+                  <div className="relative h-[260px] overflow-hidden">
+                    <Image src={s.image} alt={s.title} fill className="object-cover" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-baskerville text-2xl text-[#4B4456] mb-2">{s.title}</h3>
+                    <p className="text-sm text-[#5A5A5A] leading-relaxed mb-4">{s.description}</p>
+                    <ul className="space-y-1 mb-5">
+                      {s.features.map((f, j) => (
+                        <li key={j} className="flex items-center gap-2 text-sm text-[#5A5A5A]">
+                          <Check className="w-3.5 h-3.5 text-[#88b7b5] flex-shrink-0" />{f}
+                        </li>
+                      ))}
+                    </ul>
+                    <Link href={s.link}>
+                      <button className="uppercase tracking-[0.15em] text-[11px] border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-6 py-2.5 rounded-full transition-all">
+                        Voir le Détail
+                      </button>
+                    </Link>
+                  </div>
                 </div>
-              </div>
-              <div className="relative h-[600px]">
-                <Image
-                  src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80"
-                  alt="Stylisme créatif"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              ))}
             </div>
           </div>
         </section>

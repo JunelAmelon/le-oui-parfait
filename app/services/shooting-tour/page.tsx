@@ -1,8 +1,9 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { ServiceHero } from '@/components/ServiceHero';
+import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { Button } from '@/components/ui/button';
-import { Check, Users } from 'lucide-react';
+import { Check, Users, Car, Camera, Video, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -37,29 +38,56 @@ export default function ShootingTourPage() {
           breadcrumbLabel="Shooting Tour"
         />
 
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-[#FAF9F7]">
           <div className="container mx-auto px-6 max-w-6xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="heading-main mb-6">
-                  Une Parenthèse Élégante,
-                  <br />
-                  Festive et Orchestrée
-                </h2>
-                <p className="text-[#5A5A5A] leading-relaxed mb-5">
-                  À bord d’une navette avec chauffeur ou d’une berline de luxe, le groupe parcourt Paris et ses plus beaux spots pour profiter d’un moment fort mêlant shooting photo & vidéo, mise en beauté et souvenirs inoubliables.
-                </p>
-                <p className="text-[#5A5A5A] leading-relaxed">
-                  Pensé comme une parenthèse élégante, festive et parfaitement orchestrée, le Shooting Tour transforme l’EVJF ou l’EVG en une expérience mémorable, avec la possibilité de prolonger la journée vers un restaurant, un rooftop ou une soirée.
-                </p>
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+              <div className="lg:col-span-2">
+                <div className="relative h-[420px] overflow-hidden mb-4">
+                  <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+                    <source src="/mariage.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div className="bg-white p-5">
+                  <p className="text-[15px] font-semibold text-[#4B4456] mb-4">Caractéristiques clés :</p>
+                  <div className="grid grid-cols-2 gap-3">
+                    {['Navette avec chauffeur', 'Shooting photo & vidéo', 'Mise en beauté incluse', 'Teaser vidéo souvenir'].map((f, i) => (
+                      <div key={i} className="flex items-start gap-2 text-[16px] text-[#5A5A5A]">
+                        <Check className="w-4 h-4 text-[#88b7b5] flex-shrink-0 mt-0.5" /><span>{f}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <div className="relative h-[520px] overflow-hidden">
-                <Image
-                  src="/evg.jpg"
-                  alt="Shooting Tour"
-                  fill
-                  className="object-cover"
-                />
+              <div className="lg:col-span-3 lg:pt-4">
+                <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">L'EVJF / EVG Nouvelle Génération</p>
+                <h2 className="font-baskerville text-[32px] text-[#4B4456] leading-tight mb-5">
+                  Une Parenthèse Élégante,<br />Festive et Orchestrée
+                </h2>
+                <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-4">
+                  À bord d'une navette avec chauffeur ou d'une berline de luxe, le groupe parcourt Paris et ses plus beaux spots pour profiter d'un moment fort mêlant shooting photo & vidéo, mise en beauté et souvenirs inoubliables.
+                </p>
+                <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-8">
+                  Pensé comme une parenthèse élégante, festive et parfaitement orchestrée, le Shooting Tour transforme l'EVJF ou l'EVG en une expérience mémorable, avec la possibilité de prolonger la journée vers un restaurant, un rooftop ou une soirée.
+                </p>
+                <p className="text-[15px] font-semibold text-[#4B4456] mb-4">Spécifications du Service</p>
+                <div className="grid grid-cols-2 gap-3 mb-8">
+                  {[
+                    { icon: Car,      title: 'Navette de Luxe' },
+                    { icon: Camera,   title: 'Shooting Photo' },
+                    { icon: Sparkles, title: 'Mise en Beauté' },
+                    { icon: Video,    title: 'Teaser Vidéo Souvenir' },
+                  ].map((s, i) => (
+                    <div key={i} className="bg-white border border-[#e8e0dc] p-5 flex flex-col items-start gap-3">
+                      <s.icon className="w-8 h-8 text-[#88b7b5]" />
+                      <span className="font-baskerville text-[20px] text-[#4B4456] leading-snug">{s.title}</span>
+                    </div>
+                  ))}
+                </div>
+                <Link href="/contact">
+                  <button className="uppercase tracking-[0.2em] text-[11px] bg-white border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-8 py-3 rounded-full transition-all">
+                    Réserver maintenant
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -112,6 +140,54 @@ export default function ShootingTourPage() {
                 <div className="mt-4">
                   <Link href="/tarifs" className="text-white/70 underline underline-offset-4 text-sm hover:text-white transition">
                     Voir les offres
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <TestimonialsSection />
+
+        {/* Other Services */}
+        <section className="py-20 bg-[#F5F3F1]">
+          <div className="container mx-auto px-6 max-w-6xl">
+            <div className="text-center mb-12">
+              <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Autres Services</p>
+              <h2 className="heading-main">Créer des Moments Inoubliables<br />Avec Le Oui Parfait</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white">
+                <div className="relative h-[260px] overflow-hidden">
+                  <Image src="/veux-tu%20m%E2%80%99%C3%A9pouser.png" alt="Demande en mariage" fill className="object-cover" />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-baskerville text-2xl text-[#4B4456] mb-2">Demande en Mariage</h3>
+                  <p className="text-sm text-[#5A5A5A] leading-relaxed mb-4">Une demande en mariage sur mesure, inédite et inoubliable, orchestrée dans les moindres détails pour un oui parfait.</p>
+                  <ul className="space-y-1 mb-5">
+                    {['Scénario personnalisé', 'Cadre décoratif', 'Photo & vidéo'].map((f, j) => (
+                      <li key={j} className="flex items-center gap-2 text-sm text-[#5A5A5A]"><Check className="w-3.5 h-3.5 text-[#88b7b5] flex-shrink-0" />{f}</li>
+                    ))}
+                  </ul>
+                  <Link href="/services/demande-en-mariage">
+                    <button className="uppercase tracking-[0.15em] text-[11px] border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-6 py-2.5 rounded-full transition-all">Voir le Détail</button>
+                  </Link>
+                </div>
+              </div>
+              <div className="bg-white">
+                <div className="relative h-[260px] overflow-hidden">
+                  <Image src="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg" alt="Planification mariage" fill className="object-cover" />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-baskerville text-2xl text-[#4B4456] mb-2">Planification de Mariage</h3>
+                  <p className="text-sm text-[#5A5A5A] leading-relaxed mb-4">Un service de coordination complet qui garantit que votre journée spéciale se déroule magnifiquement du début à la fin.</p>
+                  <ul className="space-y-1 mb-5">
+                    {['Conception et pilotage global', 'Sélection des prestataires', 'Coordination Jour J'].map((f, j) => (
+                      <li key={j} className="flex items-center gap-2 text-sm text-[#5A5A5A]"><Check className="w-3.5 h-3.5 text-[#88b7b5] flex-shrink-0" />{f}</li>
+                    ))}
+                  </ul>
+                  <Link href="/services/planification-mariage">
+                    <button className="uppercase tracking-[0.15em] text-[11px] border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-6 py-2.5 rounded-full transition-all">Voir le Détail</button>
                   </Link>
                 </div>
               </div>

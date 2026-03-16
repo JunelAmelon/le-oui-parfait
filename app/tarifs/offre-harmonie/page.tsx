@@ -2,7 +2,9 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Check, Smartphone } from 'lucide-react';
+import { Check, Smartphone, Calendar, Users, Heart } from 'lucide-react';
+import { AccordionInclus } from '@/components/AccordionInclus';
+import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { Button } from '@/components/ui/button';
 
 const sections = [
@@ -109,29 +111,57 @@ export default function OffreHarmoniePage() {
           </div>
         </section>
 
-        {/* Intro */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <p className="text-xs uppercase tracking-[0.2em] text-[#88b7b5] mb-4">POUR QUI ?</p>
-                <h2 className="font-baskerville text-3xl lg:text-4xl text-[#4A4A4A] mb-6 leading-tight">
+        {/* Intro — Image 1 style */}
+        <section className="py-20 bg-[#FAF9F7]">
+          <div className="container mx-auto px-6 max-w-6xl">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+              <div className="lg:col-span-2">
+                <div className="relative h-[420px] overflow-hidden mb-4">
+                  <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+                    <source src="/mariage.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div className="bg-white p-5">
+                  <p className="text-[15px] font-semibold text-[#4B4456] mb-4">Caractéristiques clés :</p>
+                  <div className="grid grid-cols-2 gap-3">
+                    {['Reprise de votre organisation', 'Planning Jour J détaillé', 'Coordination prestataires', 'Application mobile dédiée'].map((f, i) => (
+                      <div key={i} className="flex items-start gap-2 text-[16px] text-[#5A5A5A]">
+                        <Check className="w-4 h-4 text-[#88b7b5] flex-shrink-0 mt-0.5" /><span>{f}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="lg:col-span-3 lg:pt-4">
+                <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Coordination du Jour J</p>
+                <h2 className="font-baskerville text-[32px] text-[#4B4456] leading-tight mb-5">
                   Vous Avez Tout Organisé,<br />On S'Occupe du Reste
                 </h2>
-                <p className="text-[#5A5A5A] leading-relaxed mb-4">
+                <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-4">
                   Profitez de notre application mobile dédiée, suivez en temps réel chaque étape de l'organisation, l'avancement de votre dossier ainsi que les acomptes et paiements des prestataires.
                 </p>
-                <p className="text-[#5A5A5A] leading-relaxed italic border-l-4 border-[#88b7b5] pl-4">
-                  Résultat pour vous : Vous vivez votre mariage pleinement sans contraintes ni sollicitations, avec l'assurance que tout est coordonné dans les meilleures conditions.
+                <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-8">
+                  Vous vivez votre mariage pleinement sans contraintes ni sollicitations, avec l'assurance que tout est coordonné dans les meilleures conditions.
                 </p>
-              </div>
-              <div className="relative h-[350px]">
-                <Image
-                  src="https://images.pexels.com/photos/1488315/pexels-photo-1488315.jpeg"
-                  alt="Offre Harmonie Jour J"
-                  fill
-                  className="object-cover"
-                />
+                <p className="text-[15px] font-semibold text-[#4B4456] mb-4">Spécifications de l'Offre</p>
+                <div className="grid grid-cols-2 gap-3 mb-8">
+                  {[
+                    { icon: Calendar,   title: 'Planning Jour J Détaillé' },
+                    { icon: Users,      title: 'Coordination Prestataires' },
+                    { icon: Smartphone, title: 'Application Mobile Dédiée' },
+                    { icon: Heart,      title: 'Supervision Complète' },
+                  ].map((s, i) => (
+                    <div key={i} className="bg-white border border-[#e8e0dc] p-5 flex flex-col items-start gap-3">
+                      <s.icon className="w-8 h-8 text-[#88b7b5]" />
+                      <span className="font-baskerville text-[20px] text-[#4B4456] leading-snug">{s.title}</span>
+                    </div>
+                  ))}
+                </div>
+                <Link href="/contact">
+                  <button className="uppercase tracking-[0.2em] text-[11px] bg-white border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-8 py-3 rounded-full transition-all">
+                    Réserver maintenant
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -146,29 +176,7 @@ export default function OffreHarmoniePage() {
                 Une Coordination Totale<br />Le Jour de Votre Mariage
               </h2>
             </div>
-            <div className="space-y-10">
-              {sections.map((section, index) => (
-                <div key={index} className="bg-white p-8 lg:p-10">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-8 h-8 rounded-full bg-[#88b7b5] flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-white text-sm font-medium">{index + 1}</span>
-                    </div>
-                    <div>
-                      <h3 className="font-baskerville text-xl lg:text-2xl text-[#4A4A4A] mb-1">{section.title}</h3>
-                      <p className="text-[#88b7b5] text-sm italic">{section.subtitle}</p>
-                    </div>
-                  </div>
-                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 ml-12">
-                    {section.items.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2.5 text-[14px] text-[#5A5A5A] leading-relaxed">
-                        <Check className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+            <AccordionInclus sections={sections} />
           </div>
         </section>
 
@@ -181,6 +189,56 @@ export default function OffreHarmoniePage() {
             <p className="text-white/90 text-lg leading-relaxed max-w-2xl mx-auto">
               Vous vivez votre mariage pleinement sans contraintes ni sollicitations, avec l'assurance que tout est coordonné dans les meilleures conditions.
             </p>
+          </div>
+        </section>
+
+        <TestimonialsSection />
+
+        {/* Autres Offres */}
+        <section className="py-20 bg-[#F5F3F1]">
+          <div className="container mx-auto px-6 max-w-6xl">
+            <div className="text-center mb-12">
+              <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Nos Offres</p>
+              <h2 className="font-baskerville text-3xl text-[#4B4456]">Découvrez Aussi Nos Autres Formules</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white">
+                <div className="relative h-[240px] overflow-hidden">
+                  <Image src="/wedding (1).jpg" alt="Offre Signature" fill className="object-cover" />
+                </div>
+                <div className="p-6">
+                  <p className="text-[11px] uppercase tracking-[0.2em] text-[#88b7b5] mb-2">Offre Signature</p>
+                  <h3 className="font-baskerville text-2xl text-[#4B4456] mb-2">Mariage Clé en Main</h3>
+                  <p className="text-sm text-[#5A5A5A] leading-relaxed mb-4">Formule complète pour ceux qui souhaitent confier l’intégralité de l’organisation à un professionnel.</p>
+                  <ul className="space-y-1 mb-5">
+                    {['Planification complète', 'Sélection prestataires', 'Application mobile'].map((f, j) => (
+                      <li key={j} className="flex items-center gap-2 text-sm text-[#5A5A5A]"><Check className="w-3.5 h-3.5 text-[#88b7b5] flex-shrink-0" />{f}</li>
+                    ))}
+                  </ul>
+                  <Link href="/tarifs/offre-signature">
+                    <button className="uppercase tracking-[0.15em] text-[11px] border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-6 py-2.5 rounded-full transition-all">Voir l’Offre</button>
+                  </Link>
+                </div>
+              </div>
+              <div className="bg-white">
+                <div className="relative h-[240px] overflow-hidden">
+                  <Image src="/wedding (2).jpg" alt="Offre Élégance" fill className="object-cover" />
+                </div>
+                <div className="p-6">
+                  <p className="text-[11px] uppercase tracking-[0.2em] text-[#88b7b5] mb-2">Offre Élégance</p>
+                  <h3 className="font-baskerville text-2xl text-[#4B4456] mb-2">Organisation Partielle</h3>
+                  <p className="text-sm text-[#5A5A5A] leading-relaxed mb-4">Vous gardez le contrôle, nous intervenons sur les pôles où vous avez besoin d’un expert.</p>
+                  <ul className="space-y-1 mb-5">
+                    {['Accompagnement ciblé', 'Pôles au choix', 'Conseils professionnels'].map((f, j) => (
+                      <li key={j} className="flex items-center gap-2 text-sm text-[#5A5A5A]"><Check className="w-3.5 h-3.5 text-[#88b7b5] flex-shrink-0" />{f}</li>
+                    ))}
+                  </ul>
+                  <Link href="/tarifs/offre-elegance">
+                    <button className="uppercase tracking-[0.15em] text-[11px] border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-6 py-2.5 rounded-full transition-all">Voir l’Offre</button>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

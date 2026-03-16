@@ -1,8 +1,9 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { ServiceHero } from '@/components/ServiceHero';
+import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { Button } from '@/components/ui/button';
-import { Check, Sparkles } from 'lucide-react';
+import { Check, Sparkles, Heart, Camera, MapPin, Video } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -31,29 +32,56 @@ export default function DemandeEnMariagePage() {
           breadcrumbLabel="Demande en mariage"
         />
 
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-[#FAF9F7]">
           <div className="container mx-auto px-6 max-w-6xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="heading-main mb-6">
-                  Une Expérience Élégante,
-                  <br />
-                  Intime et Mémorable
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+              <div className="lg:col-span-2">
+                <div className="relative h-[420px] overflow-hidden mb-4">
+                  <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+                    <source src="/mariage.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div className="bg-white p-5">
+                  <p className="text-[15px] font-semibold text-[#4B4456] mb-4">Caractéristiques clés :</p>
+                  <div className="grid grid-cols-2 gap-3">
+                    {['Lieu sur mesure ou privatisé', 'Décoration romantique', 'Coordination discrète', 'Photo & vidéo souvenir'].map((f, i) => (
+                      <div key={i} className="flex items-start gap-2 text-[16px] text-[#5A5A5A]">
+                        <Check className="w-4 h-4 text-[#88b7b5] flex-shrink-0 mt-0.5" /><span>{f}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="lg:col-span-3 lg:pt-4">
+                <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Demande en Mariage By Le Oui Parfait</p>
+                <h2 className="font-baskerville text-[32px] text-[#4B4456] leading-tight mb-5">
+                  Une Expérience Élégante,<br />Intime et Mémorable
                 </h2>
-                <p className="text-[#5A5A5A] leading-relaxed mb-6">
-                  Parce qu’un « veux-tu m’épouser ? » mérite bien plus qu’un simple instant, Le Oui Parfait imagine et orchestre des demandes en fiançailles classiques ou scénarisées, pensées sur mesure selon votre histoire, votre personnalité et l’émotion que vous souhaitez créer.
+                <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-4">
+                  Parce qu'un « veux-tu m'épouser ? » mérite bien plus qu'un simple instant, Le Oui Parfait imagine et orchestre des demandes en fiançailles classiques ou scénarisées, pensées sur mesure selon votre histoire, votre personnalité et l'émotion que vous souhaitez créer.
                 </p>
-                <p className="text-[#5A5A5A] leading-relaxed">
+                <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-8">
                   Dans un lieu soigneusement sélectionné ou entièrement mis en scène, nous concevons pour vous une expérience élégante, intime et mémorable : décoration, ambiance, coordination, timing, effet de surprise, captation photo et vidéo… chaque détail est imaginé pour sublimer ce moment unique.
                 </p>
-              </div>
-              <div className="relative h-[520px] overflow-hidden">
-                <Image
-                  src="/veux-tu%20m%E2%80%99%C3%A9pouser.png"
-                  alt="Demande en mariage"
-                  fill
-                  className="object-cover"
-                />
+                <p className="text-[15px] font-semibold text-[#4B4456] mb-4">Spécifications du Service</p>
+                <div className="grid grid-cols-2 gap-3 mb-8">
+                  {[
+                    { icon: MapPin,   title: 'Lieu Sur Mesure' },
+                    { icon: Sparkles, title: 'Décoration Romantique' },
+                    { icon: Heart,    title: 'Coordination Discrète' },
+                    { icon: Camera,   title: 'Captation Photo & Vidéo' },
+                  ].map((s, i) => (
+                    <div key={i} className="bg-white border border-[#e8e0dc] p-5 flex flex-col items-start gap-3">
+                      <s.icon className="w-8 h-8 text-[#88b7b5]" />
+                      <span className="font-baskerville text-[20px] text-[#4B4456] leading-snug">{s.title}</span>
+                    </div>
+                  ))}
+                </div>
+                <Link href="/contact">
+                  <button className="uppercase tracking-[0.2em] text-[11px] bg-white border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-8 py-3 rounded-full transition-all">
+                    Réserver maintenant
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -112,6 +140,54 @@ export default function DemandeEnMariagePage() {
           </div>
         </section>
 
+        <TestimonialsSection />
+
+        {/* Other Services */}
+        <section className="py-20 bg-[#F5F3F1]">
+          <div className="container mx-auto px-6 max-w-6xl">
+            <div className="text-center mb-12">
+              <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Autres Services</p>
+              <h2 className="heading-main">Créer des Moments Inoubliables<br />Avec Le Oui Parfait</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white">
+                <div className="relative h-[260px] overflow-hidden">
+                  <Image src="/evg.jpg" alt="Shooting Tour" fill className="object-cover" />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-baskerville text-2xl text-[#4B4456] mb-2">Le Shooting Tour</h3>
+                  <p className="text-sm text-[#5A5A5A] leading-relaxed mb-4">Une journée ou demi-journée sur mesure à Paris, mêlant shooting photo, mise en beauté et souvenirs inoubliables entre proches.</p>
+                  <ul className="space-y-1 mb-5">
+                    {['Navette avec chauffeur', 'Photographe professionnel', 'Mis en beauté incluse'].map((f, j) => (
+                      <li key={j} className="flex items-center gap-2 text-sm text-[#5A5A5A]"><Check className="w-3.5 h-3.5 text-[#88b7b5] flex-shrink-0" />{f}</li>
+                    ))}
+                  </ul>
+                  <Link href="/services/shooting-tour">
+                    <button className="uppercase tracking-[0.15em] text-[11px] border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-6 py-2.5 rounded-full transition-all">Voir le Détail</button>
+                  </Link>
+                </div>
+              </div>
+              <div className="bg-white">
+                <div className="relative h-[260px] overflow-hidden">
+                  <Image src="https://images.pexels.com/photos/3171736/pexels-photo-3171736.jpeg" alt="Stylisme fiançailles" fill className="object-cover" />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-baskerville text-2xl text-[#4B4456] mb-2">Stylisme de Fiançailles</h3>
+                  <p className="text-sm text-[#5A5A5A] leading-relaxed mb-4">Des moments romantiques remplis d'élégance, de créativité et d'une narration visuelle inoubliable.</p>
+                  <ul className="space-y-1 mb-5">
+                    {['Thème romantique sur mesure', 'Stylisme visuel', 'Coordination complète'].map((f, j) => (
+                      <li key={j} className="flex items-center gap-2 text-sm text-[#5A5A5A]"><Check className="w-3.5 h-3.5 text-[#88b7b5] flex-shrink-0" />{f}</li>
+                    ))}
+                  </ul>
+                  <Link href="/services/stylisme-fiancailles">
+                    <button className="uppercase tracking-[0.15em] text-[11px] border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-6 py-2.5 rounded-full transition-all">Voir le Détail</button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="relative py-20 lg:py-28 overflow-hidden">
           <div className="absolute inset-0">
@@ -130,7 +206,7 @@ export default function DemandeEnMariagePage() {
           <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-[#88b7b5] mb-4 font-medium">
-                Prêt à Commencer ?
+                Prêt à Commencer ?
               </p>
               <h2 className="font-baskerville text-3xl sm:text-4xl lg:text-5xl text-white mb-6 leading-tight px-2">
                 Créez le Plus Beau des « Oui »

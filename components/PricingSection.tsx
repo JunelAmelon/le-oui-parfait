@@ -34,13 +34,13 @@ export function PricingSection() {
               <span className="font-baskerville text-[52px] text-[#4A4A4A] leading-none">1 190€</span>
             </div>
             <p className="text-gray-500 text-[13px] mb-5">/ forfait</p>
-            <p className="text-gray-600 text-[14px] mb-6 leading-relaxed">
+            <p className="text-gray-600 text-[16px] mb-6 leading-relaxed">
               Pour les couples ayant organisé leur mariage eux-mêmes, qui souhaitent profiter pleinement de leur journée en déléguant la gestion du jour J.
             </p>
 
             <div className="flex items-start gap-2 mb-6 p-3 bg-[#FAF9F7] rounded-lg">
               <Smartphone className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
-              <p className="text-[12px] text-gray-500 leading-relaxed">Application mobile dédiée & suivi en temps réel</p>
+              <p className="text-[13px] text-gray-500 leading-relaxed">Application mobile dédiée & suivi en temps réel</p>
             </div>
 
             <div className="mb-6">
@@ -53,7 +53,7 @@ export function PricingSection() {
                   'Coordination logistique & accueil des invités',
                   'Pilotage global & gestion des imprévus',
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start text-[13px] text-gray-600 leading-relaxed">
+                  <li key={i} className="flex items-start text-[15px] text-gray-600 leading-relaxed">
                     <Check className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mr-2.5 mt-0.5" />
                     <span>{item}</span>
                   </li>
@@ -95,13 +95,13 @@ export function PricingSection() {
               <span className="font-baskerville text-[52px] text-[#4A4A4A] leading-none">3 490€</span>
             </div>
             <p className="text-gray-500 text-[13px] mb-5">/ forfait</p>
-            <p className="text-gray-600 text-[14px] mb-6 leading-relaxed">
+            <p className="text-gray-600 text-[16px] mb-6 leading-relaxed">
               Formule clé en main pour ceux qui souhaitent confier l'intégralité de l'organisation à un professionnel.
             </p>
 
             <div className="flex items-start gap-2 mb-6 p-3 bg-[#FAF9F7] rounded-lg">
               <Smartphone className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
-              <p className="text-[12px] text-gray-500 leading-relaxed">Application mobile dédiée & suivi en temps réel</p>
+              <p className="text-[13px] text-gray-500 leading-relaxed">Application mobile dédiée & suivi en temps réel</p>
             </div>
 
             <div className="mb-6">
@@ -114,7 +114,7 @@ export function PricingSection() {
                   'Conception décoration & scénographie',
                   'Coordination logistique complète du jour J',
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start text-[13px] text-gray-600 leading-relaxed">
+                  <li key={i} className="flex items-start text-[15px] text-gray-600 leading-relaxed">
                     <Check className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mr-2.5 mt-0.5" />
                     <span>{item}</span>
                   </li>
@@ -124,7 +124,7 @@ export function PricingSection() {
 
             <div className="flex items-start gap-2 mb-8 p-3 bg-[#f0f7f7] rounded-lg border-l-2 border-[#88b7b5]">
               <Gift className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
-              <p className="text-[12px] text-[#4B4456] leading-relaxed font-medium">6 privilèges exclusifs offerts (photobooth, faire-part digital, vidéo STD, site mariage, voyage de noces, personal shopper)</p>
+              <p className="text-[13px] text-[#4B4456] leading-relaxed font-medium">6 privilèges exclusifs offerts (photobooth, faire-part digital, vidéo STD, site mariage, voyage de noces, personal shopper)</p>
             </div>
 
             <div className="mt-auto flex flex-col gap-3">
@@ -154,13 +154,13 @@ export function PricingSection() {
               <span className="font-baskerville text-[52px] text-[#4A4A4A] leading-none">1 890€</span>
             </div>
             <p className="text-gray-500 text-[13px] mb-5">/ forfait</p>
-            <p className="text-gray-600 text-[14px] mb-6 leading-relaxed">
+            <p className="text-gray-600 text-[16px] mb-6 leading-relaxed">
               Un accompagnement structuré sur des pôles précis, pour vous laisser la maîtrise de votre projet tout en bénéficiant d'un cadre professionnel.
             </p>
 
             <div className="flex items-start gap-2 mb-6 p-3 bg-[#FAF9F7] rounded-lg">
               <Smartphone className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
-              <p className="text-[12px] text-gray-500 leading-relaxed">Application mobile dédiée & suivi en temps réel</p>
+              <p className="text-[13px] text-gray-500 leading-relaxed">Application mobile dédiée & suivi en temps réel</p>
             </div>
 
             <div className="mb-6">
@@ -173,7 +173,7 @@ export function PricingSection() {
                   'Conseils et rendez-vous accompagnés',
                   'Coordination sur 3 à 5 pôles de votre choix',
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start text-[13px] text-gray-600 leading-relaxed">
+                  <li key={i} className="flex items-start text-[15px] text-gray-600 leading-relaxed">
                     <Check className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mr-2.5 mt-0.5" />
                     <span>{item}</span>
                   </li>
@@ -183,7 +183,7 @@ export function PricingSection() {
 
             <div className="flex items-start gap-2 mb-8 p-3 bg-[#f0f7f7] rounded-lg border-l-2 border-[#88b7b5]">
               <Gift className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
-              <p className="text-[12px] text-[#4B4456] leading-relaxed font-medium">3 privilèges offerts (livre d'or audio, faire-part digital, voyage de noces)</p>
+              <p className="text-[13px] text-[#4B4456] leading-relaxed font-medium">3 privilèges offerts (livre d'or audio, faire-part digital, voyage de noces)</p>
             </div>
 
             <div className="mt-auto flex flex-col gap-3">

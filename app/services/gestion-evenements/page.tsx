@@ -1,67 +1,28 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Check, ArrowRight, ClipboardList, Clock, Shield, Zap } from 'lucide-react';
+import { Check, ClipboardList, Clock, Shield, Zap } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ServiceHero } from '@/components/ServiceHero';
+import { TestimonialsSection } from '@/components/TestimonialsSection';
 
 export default function GestionEvenementsPage() {
-  const features = [
-    {
-      icon: ClipboardList,
-      title: 'Coordination Sur Site',
-      description: 'Présence et gestion complète de tous les aspects logistiques le jour de l\'événement'
-    },
-    {
-      icon: Clock,
-      title: 'Organisation du Calendrier',
-      description: 'Planification minutieuse et respect du timing pour un déroulement parfait'
-    },
-    {
-      icon: Shield,
-      title: 'Exécution Sans Stress',
-      description: 'Gestion proactive des imprévus pour une tranquillité d\'esprit totale'
-    },
-    {
-      icon: Zap,
-      title: 'Réactivité Professionnelle',
-      description: 'Solutions rapides et efficaces pour tous les défis qui peuvent survenir'
-    }
+  const specs = [
+    { icon: ClipboardList, title: 'Coordination Sur Site' },
+    { icon: Clock,         title: 'Organisation du Calendrier' },
+    { icon: Shield,        title: 'Exécution Sans Stress' },
+    { icon: Zap,           title: 'Réactivité Professionnelle' },
   ];
-
-  const eventTypes = [
-    {
-      title: 'Mariages',
-      description: 'Coordination complète de votre journée de mariage',
-      image: 'https://images.pexels.com/photos/7012244/pexels-photo-7012244.jpeg'
-    },
-    {
-      title: 'Réceptions',
-      description: 'Organisation de réceptions élégantes et mémorables',
-      image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80'
-    },
-    {
-      title: 'Événements Corporatifs',
-      description: 'Gestion professionnelle d\'événements d\'entreprise',
-      image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80'
-    },
-    {
-      title: 'Célébrations Privées',
-      description: 'Coordination d\'événements familiaux et célébrations',
-      image: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80'
-    }
+  const keyFeatures = [
+    "Supervision complète le jour J",
+    "Coordination des fournisseurs",
+    "Gestion du timing précis",
+    "Installation & mise en place",
   ];
-
-  const responsibilities = [
-    'Supervision complète le jour de l\'événement',
-    'Coordination de tous les fournisseurs',
-    'Gestion du calendrier et du timing',
-    'Installation et mise en place',
-    'Résolution de problèmes en temps réel',
-    'Communication avec les invités et prestataires',
-    'Coordination de la cérémonie et réception',
-    'Démontage et coordination post-événement'
+  const otherServices = [
+    { title: 'Planification de Mariage', description: 'Un service de coordination complet qui garantit que votre journée spéciale se déroule magnifiquement.', image: 'https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg', features: ['Conception et pilotage global', 'Sélection des prestataires', 'Coordination Jour J'], link: '/services/planification-mariage' },
+    { title: 'Stylisme de Fiançailles',  description: "Des moments romantiques remplis d'élégance et d'une narration visuelle inoubliable.",                    image: 'https://images.pexels.com/photos/3171736/pexels-photo-3171736.jpeg', features: ['Création de thème romantique', 'Stylisme visuel signature', "Design d'ambiance"],      link: '/services/stylisme-fiancailles'  },
   ];
 
   return (
@@ -76,153 +37,91 @@ export default function GestionEvenementsPage() {
           breadcrumbLabel="Gestion d'Événements"
         />
 
-        {/* Introduction */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6 max-w-6xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <p className="text-xs uppercase tracking-[0.2em] text-[#5A5A5A] mb-4">Excellence Opérationnelle</p>
-                <h2 className="heading-main mb-6">
-                  Une Exécution<br />
-                  Impeccable
-                </h2>
-                <p className="text-[#5A5A5A] leading-relaxed mb-6">
-                  La gestion d'événements requiert une expertise professionnelle, une attention aux 
-                  détails et une capacité à anticiper et résoudre les défis. Notre équipe expérimentée 
-                  assure que chaque aspect de votre événement se déroule sans accroc.
-                </p>
-                <p className="text-[#5A5A5A] leading-relaxed">
-                  Nous coordonnons tous les éléments logistiques, gérons les fournisseurs et veillons 
-                  à ce que votre vision devienne réalité, vous permettant de profiter pleinement de 
-                  votre événement sans aucun souci.
-                </p>
-              </div>
-              <div className="relative h-[500px]">
-                <Image
-                  src="wedding (1).jpg"
-                  alt="Coordination d'événement"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Grid */}
+        {/* Intro — Image 1 style */}
         <section className="py-20 bg-[#FAF9F7]">
           <div className="container mx-auto px-6 max-w-6xl">
-            <div className="text-center mb-16">
-              <h2 className="heading-main mb-4">
-                Notre Approche Professionnelle
-              </h2>
-              <p className="text-[#5A5A5A] max-w-2xl mx-auto">
-                Une gestion complète pour des événements parfaitement orchestrés
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white p-8 hover:shadow-lg transition-shadow">
-                  <feature.icon className="h-10 w-10 text-[#88b7b5] mb-4" />
-                  <h3 className="font-serif text-2xl text-[#5A5A5A] mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-[#5A5A5A] leading-relaxed">
-                    {feature.description}
-                  </p>
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+              <div className="lg:col-span-2">
+                <div className="relative h-[420px] overflow-hidden mb-4">
+                  <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+                    <source src="/mariage.mp4" type="video/mp4" />
+                  </video>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Event Types */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6 max-w-6xl">
-            <div className="text-center mb-16">
-              <h2 className="heading-main mb-4">
-                Types d'Événements
-              </h2>
-              <p className="text-[#5A5A5A] max-w-2xl mx-auto">
-                Nous gérons une variété d'événements avec la même excellence
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {eventTypes.map((type, index) => (
-                <div key={index} className="group">
-                  <div className="relative h-[300px] mb-4 overflow-hidden">
-                    <Image
-                      src={type.image}
-                      alt={type.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+                <div className="bg-white p-5">
+                  <p className="text-[15px] font-semibold text-[#4B4456] mb-4">Caractéristiques clés :</p>
+                  <div className="grid grid-cols-2 gap-3">
+                    {keyFeatures.map((f, i) => (
+                      <div key={i} className="flex items-start gap-2 text-[16px] text-[#5A5A5A]">
+                        <Check className="w-4 h-4 text-[#88b7b5] flex-shrink-0 mt-0.5" /><span>{f}</span>
+                      </div>
+                    ))}
                   </div>
-                  <h3 className="font-serif text-2xl text-[#5A5A5A] mb-2">
-                    {type.title}
-                  </h3>
-                  <p className="text-[#5A5A5A]">
-                    {type.description}
-                  </p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Responsibilities */}
-        <section className="py-20 bg-[#FAF9F7]">
-          <div className="container mx-auto px-6 max-w-6xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="relative h-[600px]">
-                <Image
-                  src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=800&q=80"
-                  alt="Gestion professionnelle"
-                  fill
-                  className="object-cover"
-                />
               </div>
-              <div>
-                <h2 className="heading-main mb-8">
-                  Nos Responsabilités
+              <div className="lg:col-span-3 lg:pt-4">
+                <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Service Professionnel</p>
+                <h2 className="font-baskerville text-[32px] text-[#4B4456] leading-tight mb-5">
+                  Une Exécution<br />Impeccable de A à Z
                 </h2>
-                <div className="space-y-4">
-                  {responsibilities.map((item, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <Check className="h-6 w-6 text-[#88b7b5] flex-shrink-0 mt-0.5" />
-                      <span className="text-[#5A5A5A]">{item}</span>
+                <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-4">
+                  La gestion d'événements requiert une expertise professionnelle, une attention aux détails et une capacité à anticiper et résoudre les défis. Notre équipe expérimentée assure que chaque aspect se déroule sans accroc.
+                </p>
+                <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-8">
+                  Nous coordonnons tous les éléments logistiques, gérons les fournisseurs et veillons à ce que votre vision devienne réalité, vous permettant de profiter pleinement sans aucun souci.
+                </p>
+                <p className="text-[15px] font-semibold text-[#4B4456] mb-4">Spécifications du Service</p>
+                <div className="grid grid-cols-2 gap-3 mb-8">
+                  {specs.map((s, i) => (
+                    <div key={i} className="bg-white border border-[#e8e0dc] p-5 flex flex-col items-start gap-3">
+                      <s.icon className="w-8 h-8 text-[#88b7b5]" />
+                      <span className="font-baskerville text-[20px] text-[#4B4456] leading-snug">{s.title}</span>
                     </div>
                   ))}
                 </div>
-                <div className="mt-10">
-                  <Link href="/contact">
-                    <Button
-                      className="uppercase tracking-[0.15em] text-xs bg-[#88b7b5] text-white hover:bg-[#6a9a98] rounded-full px-8 py-6 font-medium transition-all"
-                    >
-                      Demander un Devis <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </div>
+                <Link href="/contact">
+                  <button className="uppercase tracking-[0.2em] text-[11px] bg-white border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-8 py-3 rounded-full transition-all">
+                    Réserver maintenant
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Testimonial */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6 max-w-4xl text-center">
-            <div className="mb-8">
-              <svg className="h-12 w-12 text-[#88b7b5] mx-auto" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-              </svg>
+        <TestimonialsSection />
+
+        {/* Other Services */}
+        <section className="py-20 bg-[#F5F3F1]">
+          <div className="container mx-auto px-6 max-w-6xl">
+            <div className="text-center mb-12">
+              <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Autres Services</p>
+              <h2 className="heading-main">Créer des Moments Inoubliables<br />Avec Le Oui Parfait</h2>
             </div>
-            <p className="font-serif text-2xl text-[#5A5A5A] mb-6 leading-relaxed">
-              "L'équipe de Le Oui Parfait a géré notre mariage avec une telle professionnalisme 
-              et attention aux détails. Nous avons pu profiter pleinement de notre journée sans 
-              aucun stress. Tout était parfait !"
-            </p>
-            <p className="text-[#5A5A5A] font-medium">Sophie & Marc</p>
-            <p className="text-sm text-[#5A5A5A]">Mariage - Juin 2024</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {otherServices.map((s, i) => (
+                <div key={i} className="bg-white">
+                  <div className="relative h-[260px] overflow-hidden">
+                    <Image src={s.image} alt={s.title} fill className="object-cover" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-baskerville text-2xl text-[#4B4456] mb-2">{s.title}</h3>
+                    <p className="text-sm text-[#5A5A5A] leading-relaxed mb-4">{s.description}</p>
+                    <ul className="space-y-1 mb-5">
+                      {s.features.map((f, j) => (
+                        <li key={j} className="flex items-center gap-2 text-sm text-[#5A5A5A]">
+                          <Check className="w-3.5 h-3.5 text-[#88b7b5] flex-shrink-0" />{f}
+                        </li>
+                      ))}
+                    </ul>
+                    <Link href={s.link}>
+                      <button className="uppercase tracking-[0.15em] text-[11px] border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-6 py-2.5 rounded-full transition-all">
+                        Voir le Détail
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

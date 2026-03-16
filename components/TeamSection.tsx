@@ -8,7 +8,7 @@ const teamMembers = [
   {
     name: 'Kathy',
     title: 'Wedding Planner & Designer Principal',
-    image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg',
+    image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg',
   },
   {
     name: 'Amelia',
@@ -98,7 +98,7 @@ export function TeamSection() {
                 >
                   <div className="group cursor-default">
                     {/* Photo */}
-                    <div className="relative overflow-hidden mb-5 bg-[#C5B8C1]">
+                    <div className="relative overflow-hidden bg-[#C5B8C1]">
                       <div className="aspect-[3/4] relative">
                         <Image
                           src={member.image}
@@ -106,35 +106,33 @@ export function TeamSection() {
                           fill
                           className="object-cover grayscale-[20%] opacity-90 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500"
                         />
-                        {/* Hover overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#4B4456]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        {/* Social links on hover */}
-                        <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                          <a
-                            href="#"
-                            className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center hover:bg-[#88b7b5] transition-colors"
-                            aria-label={`${member.name} Instagram`}
-                          >
-                            <Instagram className="w-4 h-4 text-white" />
-                          </a>
-                          <a
-                            href="#"
-                            className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center hover:bg-[#88b7b5] transition-colors"
-                            aria-label={`${member.name} LinkedIn`}
-                          >
-                            <Linkedin className="w-4 h-4 text-white" />
-                          </a>
-                        </div>
                       </div>
                     </div>
 
-                    {/* Name & title */}
-                    <div className="text-center">
-                      <h3 className="font-baskerville text-[19px] text-[#4B4456] mb-1">
-                        {member.name}
-                      </h3>
-                      <div className="w-6 h-[2px] bg-[#88b7b5] mx-auto mb-2" />
-                      <p className="text-[12px] text-gray-500 uppercase tracking-[0.12em]">
+                    {/* Name, title & social */}
+                    <div className="pt-4 pb-1">
+                      <div className="flex items-center justify-between mb-1">
+                        <h3 className="font-baskerville text-[20px] text-[#4B4456] leading-snug">
+                          {member.name}
+                        </h3>
+                        <div className="flex gap-1.5 flex-shrink-0 ml-2">
+                          <a
+                            href="#"
+                            className="w-8 h-8 rounded-full border border-[#d1c8cf] text-[#4B4456] flex items-center justify-center hover:border-[#88b7b5] hover:text-[#88b7b5] transition-colors"
+                            aria-label={`${member.name} Instagram`}
+                          >
+                            <Instagram className="w-3.5 h-3.5" />
+                          </a>
+                          <a
+                            href="#"
+                            className="w-8 h-8 rounded-full border border-[#d1c8cf] text-[#4B4456] flex items-center justify-center hover:border-[#88b7b5] hover:text-[#88b7b5] transition-colors"
+                            aria-label={`${member.name} LinkedIn`}
+                          >
+                            <Linkedin className="w-3.5 h-3.5" />
+                          </a>
+                        </div>
+                      </div>
+                      <p className="text-[13px] text-gray-500 leading-snug">
                         {member.title}
                       </p>
                     </div>

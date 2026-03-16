@@ -106,14 +106,14 @@ export function ServicesSection() {
                       <h3 className="font-baskerville text-[24px] text-[#5A5A5A] mb-3 leading-tight font-normal">
                         {service.title}
                       </h3>
-                      <p className="text-[#5A5A5A] leading-relaxed mb-4 text-sm">
+                      <p className="text-[#5A5A5A] leading-relaxed mb-4 text-[16px]">
                         {service.description}
                       </p>
                       <ul className="space-y-2 mb-6">
                         {service.features.map((feature, idx) => (
                           <li key={idx} className="flex items-start gap-2">
                             <Check className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
-                            <span className="text-[#5A5A5A] text-sm">{feature}</span>
+                            <span className="text-[#5A5A5A] text-[15px]">{feature}</span>
                           </li>
                         ))}
                       </ul>
@@ -180,14 +180,14 @@ export function ServicesSection() {
                 <h3 className="font-baskerville text-[30px] text-[#5A5A5A] mb-5 leading-tight font-normal">
                   {service.title}
                 </h3>
-                <p className="text-[#5A5A5A] leading-relaxed mb-6 text-base">
+                <p className="text-[#5A5A5A] leading-relaxed mb-6 text-[17px]">
                   {service.description}
                 </p>
                 <ul className="space-y-3 mb-8">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mt-0.5" />
-                      <span className="text-[#5A5A5A]">{feature}</span>
+                      <span className="text-[#5A5A5A] text-[16px]">{feature}</span>
                     </li>
                   ))}
                 </ul>

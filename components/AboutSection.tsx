@@ -51,7 +51,7 @@ export function AboutSection() {
                 Transformer des Moments en Souvenirs Impérissables
               </h2>
 
-              <p className="text-gray-600 leading-relaxed mb-8 text-sm lg:text-base">
+              <p className="text-gray-600 leading-relaxed mb-8 text-[16px]">
                 Le Oui Parfait est bien plus qu'un organisateur de mariage — nous sommes des conteurs d'amour et de détails. Nous apportons émotion, beauté et équilibre parfait à chaque célébration.
               </p>
 
@@ -74,7 +74,7 @@ export function AboutSection() {
                   <h4 className="heading-main text-xl mb-2">
                     Planification Élégante
                   </h4>
-                  <p className="text-gray-500 text-xs lg:text-sm leading-relaxed">
+                  <p className="text-gray-500 text-[15px] leading-relaxed">
                     Créer des événements qui capturent magnifiquement des histoires sincères.
                   </p>
                 </div>
@@ -91,7 +91,7 @@ export function AboutSection() {
                   <h4 className="heading-main text-xl mb-2">
                     Équipe Passionnée
                   </h4>
-                  <p className="text-gray-500 text-xs lg:text-sm leading-relaxed">
+                  <p className="text-gray-500 text-[15px] leading-relaxed">
                     Dédiée à créer des souvenirs avec amour et professionnalisme.
                   </p>
                 </div>
@@ -152,7 +152,7 @@ export function AboutSection() {
                 Transformer des Moments en Souvenirs Impérissables
               </h2>
 
-              <p className="text-gray-600 leading-relaxed mb-8 text-base">
+              <p className="text-gray-600 leading-relaxed mb-8 text-[16px]">
                 Le Oui Parfait est bien plus qu'un organisateur de mariage — nous sommes des conteurs d'amour et de détails. Nous apportons émotion, beauté et équilibre parfait à chaque célébration.
               </p>
 
@@ -175,7 +175,7 @@ export function AboutSection() {
                   <h4 className="heading-main text-xl mb-2">
                     Planification Élégante
                   </h4>
-                  <p className="text-gray-500 text-sm leading-relaxed">
+                  <p className="text-gray-500 text-[15px] leading-relaxed">
                     Créer des événements qui capturent magnifiquement des histoires sincères.
                   </p>
                 </div>
@@ -192,7 +192,7 @@ export function AboutSection() {
                   <h4 className="heading-main text-xl mb-2">
                     Équipe Passionnée
                   </h4>
-                  <p className="text-gray-500 text-sm leading-relaxed">
+                  <p className="text-gray-500 text-[15px] leading-relaxed">
                     Dédiée à créer des souvenirs avec amour et professionnalisme.
                   </p>
                 </div>

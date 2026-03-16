@@ -38,7 +38,7 @@ export default function GestionEvenementsPage() {
         />
 
         {/* Intro — Image 1 style */}
-        <section className="py-20 bg-[#FAF9F7]">
+        <section className="py-20 bg-[#f4f1f7]">
           <div className="container mx-auto px-6 max-w-6xl">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
               <div className="lg:col-span-2">

@@ -43,12 +43,13 @@
     @apply border-border;
   }
   body {
-    background-color: #E3DCEB;
+    background-color: #f4f1f7;
     color: #4B4456;
     overflow-x: hidden;
   }
   
   html {
+    background-color: #f4f1f7;
     overflow-x: hidden;
   }
 

@@ -130,7 +130,7 @@ export default function BlogPage() {
         />
 
         {/* Blog Section - Design similaire à l'image de référence */}
-        <section className="py-20 bg-[#FAF9F7]">
+        <section className="py-20 bg-[#f4f1f7]">
           <div className="container mx-auto px-4 sm:px-6">
             
             {/* Section Header */}

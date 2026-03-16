@@ -10,7 +10,7 @@ interface HeroPageProps {
 
 export function HeroPage({ title, subtitle, backgroundImage }: HeroPageProps) {
   return (
-    <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 bg-[#FAF9F7] overflow-hidden">
+    <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 bg-[#f4f1f7] overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-20 right-0 w-64 h-64 opacity-20">
         <div className="w-full h-full rounded-full bg-[#88b7b5]/30 blur-3xl" />

@@ -20,7 +20,7 @@ export function AccordionInclus({ sections }: { sections: Section[] }) {
           <div key={index} className="border border-[#e8e0dc] bg-white overflow-hidden">
             <button
               onClick={() => setOpenIndex(isOpen ? null : index)}
-              className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-[#FAF9F7] transition-colors"
+              className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-[#f4f1f7] transition-colors"
             >
               <div>
                 <p className="font-baskerville text-[17px] text-[#4B4456]">{section.title}</p>

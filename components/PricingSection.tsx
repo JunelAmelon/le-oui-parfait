@@ -7,7 +7,7 @@ import { AnimatedSection } from './AnimatedSection';
 
 export function PricingSection() {
   return (
-    <section className="py-20 bg-[#FAF9F7]">
+    <section className="py-20 bg-[#f4f1f7]">
       <div className="container mx-auto px-6 max-w-7xl">
         <AnimatedSection direction="up">
         <div className="text-center mb-16">
@@ -38,7 +38,7 @@ export function PricingSection() {
               Pour les couples ayant organisé leur mariage eux-mêmes, qui souhaitent profiter pleinement de leur journée en déléguant la gestion du jour J.
             </p>
 
-            <div className="flex items-start gap-2 mb-6 p-3 bg-[#FAF9F7] rounded-lg">
+            <div className="flex items-start gap-2 mb-6 p-3 bg-[#f4f1f7] rounded-lg">
               <Smartphone className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
               <p className="text-[13px] text-gray-500 leading-relaxed">Application mobile dédiée & suivi en temps réel</p>
             </div>
@@ -61,7 +61,7 @@ export function PricingSection() {
               </ul>
             </div>
 
-            <div className="flex items-start gap-2 mb-8 p-3 bg-[#FAF9F7] rounded-lg border-l-2 border-gray-200">
+            <div className="flex items-start gap-2 mb-8 p-3 bg-[#f4f1f7] rounded-lg border-l-2 border-gray-200">
               <p className="text-[12px] text-gray-500 leading-relaxed italic">Résultat : Vous vivez votre mariage pleinement, sans contraintes ni sollicitations.</p>
             </div>
 
@@ -99,7 +99,7 @@ export function PricingSection() {
               Formule clé en main pour ceux qui souhaitent confier l'intégralité de l'organisation à un professionnel.
             </p>
 
-            <div className="flex items-start gap-2 mb-6 p-3 bg-[#FAF9F7] rounded-lg">
+            <div className="flex items-start gap-2 mb-6 p-3 bg-[#f4f1f7] rounded-lg">
               <Smartphone className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
               <p className="text-[13px] text-gray-500 leading-relaxed">Application mobile dédiée & suivi en temps réel</p>
             </div>
@@ -158,7 +158,7 @@ export function PricingSection() {
               Un accompagnement structuré sur des pôles précis, pour vous laisser la maîtrise de votre projet tout en bénéficiant d'un cadre professionnel.
             </p>
 
-            <div className="flex items-start gap-2 mb-6 p-3 bg-[#FAF9F7] rounded-lg">
+            <div className="flex items-start gap-2 mb-6 p-3 bg-[#f4f1f7] rounded-lg">
               <Smartphone className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
               <p className="text-[13px] text-gray-500 leading-relaxed">Application mobile dédiée & suivi en temps réel</p>
             </div>

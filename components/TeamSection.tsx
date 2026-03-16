@@ -54,7 +54,7 @@ export function TeamSection() {
   const visibleCount = 4;
 
   return (
-    <section className="py-20 bg-[#F5F3F1]" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+    <section className="py-20 bg-[#f4f1f7]" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-16">
           <p className="text-[11px] tracking-[0.25em] text-gray-500 uppercase mb-4">

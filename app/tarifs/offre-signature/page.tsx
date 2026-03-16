@@ -220,7 +220,7 @@ export default function OffreSignaturePage() {
         </section>
 
         {/* Sections détaillées */}
-        <section className="py-20 bg-[#FAF9F7]">
+        <section className="py-20 bg-[#f4f1f7]">
           <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
             <div className="text-center mb-16">
               <p className="text-xs uppercase tracking-[0.2em] text-[#88b7b5] mb-3">CE QUI EST INCLUS</p>
@@ -273,7 +273,7 @@ export default function OffreSignaturePage() {
         <TestimonialsSection />
 
         {/* Autres Offres */}
-        <section className="py-20 bg-[#F5F3F1]">
+        <section className="py-20 bg-[#f4f1f7]">
           <div className="container mx-auto px-6 max-w-6xl">
             <div className="text-center mb-12">
               <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Nos Offres</p>

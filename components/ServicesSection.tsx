@@ -58,7 +58,7 @@ export function ServicesSection() {
   };
 
   return (
-    <section id="services" className="py-20 bg-[#FAF9F7]">
+    <section id="services" className="py-20 bg-[#f4f1f7]">
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         <div className="mb-16">
           <AnimatedSection direction="up">

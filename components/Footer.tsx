@@ -7,6 +7,7 @@ import { Facebook, Instagram, Linkedin, Youtube, ArrowUp } from 'lucide-react';
 
 export function Footer() {
   const [email, setEmail] = useState('');
+  const currentYear = new Date().getFullYear();
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,7 +20,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#F5F3F1]">
+    <footer className="bg-[#f4f1f7]">
       <div className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex justify-center mb-8">

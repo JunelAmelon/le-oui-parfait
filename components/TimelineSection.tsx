@@ -33,7 +33,7 @@ export function TimelineSection() {
   ];
 
   return (
-    <section className="py-16 lg:py-20 bg-[#f5f3f0]">
+    <section className="py-16 lg:py-20 bg-[#f4f1f7]">
       <div className="container mx-auto px-6 lg:px-10 max-w-7xl">
         {/* Titre principal */}
         <div className="text-center mb-16 lg:mb-20">

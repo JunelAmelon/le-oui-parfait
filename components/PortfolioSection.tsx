@@ -20,13 +20,13 @@ const portfolioItems = [
     id: 3,
     title: 'Éveline & Lucas',
     description: 'Romance pastel douce avec décor à la bougie et élégance florale raffinée.',
-    image: 'https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg',
+    image: 'https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-5WTSLUV.jpg',
   },
   {
     id: 4,
     title: 'Clara & Jacques',
     description: 'Cérémonie côtière avec simplicité moderne et tons dorés inspirés océan.',
-    image: 'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg',
+    image: 'https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-5S5N8JH.jpg',
   },
 ];
 

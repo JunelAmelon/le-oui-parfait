@@ -192,7 +192,7 @@ export default function MentionsLegales() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-[#FAF9F7] py-16 px-6">
+        <section className="bg-[#f4f1f7] py-16 px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl font-serif text-gray-800 mb-4">
               Des Questions ?

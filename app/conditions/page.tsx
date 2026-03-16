@@ -84,7 +84,7 @@ export default function Conditions() {
                     La commande devient définitive après signature du devis par le client et réception de l'acompte. La signature du devis vaut acceptation des présentes CGV.
                   </p>
                 </div>
-                <div className="bg-[#FAF9F7] p-5 rounded-lg">
+                <div className="bg-[#f4f1f7] p-5 rounded-lg">
                   <div className="flex gap-3">
                     <CheckCircle className="w-5 h-5 text-[#88b7b5] flex-shrink-0 mt-1" />
                     <p className="text-sm">
@@ -164,7 +164,7 @@ export default function Conditions() {
                   <li>Informer Le Oui Parfait de tout changement concernant le projet</li>
                   <li>Respecter les conseils et recommandations de Le Oui Parfait</li>
                 </ul>
-                <div className="bg-[#FAF9F7] p-5 rounded-lg mt-4">
+                <div className="bg-[#f4f1f7] p-5 rounded-lg mt-4">
                   <p className="text-sm">
                     <strong>Note :</strong> Le non-respect de ces obligations par le client peut entraîner des retards dans l'organisation et dégage la responsabilité de Le Oui Parfait.
                   </p>
@@ -208,7 +208,7 @@ export default function Conditions() {
                   <div className="overflow-x-auto mt-3">
                     <table className="w-full border-collapse">
                       <thead>
-                        <tr className="bg-[#FAF9F7]">
+                        <tr className="bg-[#f4f1f7]">
                           <th className="border border-gray-200 px-4 py-3 text-left font-serif text-gray-800">Délai d'Annulation</th>
                           <th className="border border-gray-200 px-4 py-3 text-left font-serif text-gray-800">Montant Retenu</th>
                         </tr>
@@ -218,7 +218,7 @@ export default function Conditions() {
                           <td className="border border-gray-200 px-4 py-3">Plus de 6 mois avant l'événement</td>
                           <td className="border border-gray-200 px-4 py-3">30% du montant total (acompte)</td>
                         </tr>
-                        <tr className="bg-[#FAF9F7]">
+                        <tr className="bg-[#f4f1f7]">
                           <td className="border border-gray-200 px-4 py-3">Entre 3 et 6 mois avant l'événement</td>
                           <td className="border border-gray-200 px-4 py-3">50% du montant total</td>
                         </tr>
@@ -351,7 +351,7 @@ export default function Conditions() {
                   <p>
                     En cas de litige, le client peut recourir gratuitement au service de médiation de la consommation dont Le Oui Parfait dépend :
                   </p>
-                  <p className="mt-2 text-sm bg-[#FAF9F7] p-4 rounded">
+                  <p className="mt-2 text-sm bg-[#f4f1f7] p-4 rounded">
                     <strong>Médiateur de la Consommation :</strong> Centre de Médiation et d'Arbitrage de Paris (CMAP)<br />
                     <strong>Adresse :</strong> 39 avenue Franklin D. Roosevelt, 75008 Paris<br />
                     <strong>Site web :</strong> <a href="https://www.cmap.fr" className="text-[#88b7b5] hover:underline">www.cmap.fr</a>
@@ -389,7 +389,7 @@ export default function Conditions() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-[#FAF9F7] py-16 px-6">
+        <section className="bg-[#f4f1f7] py-16 px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl font-serif text-gray-800 mb-4">
               Questions sur nos Conditions ?

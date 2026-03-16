@@ -18,21 +18,21 @@ export default function Confidentialite() {
         <section className="py-12 px-6 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="flex items-start gap-4 p-6 bg-[#FAF9F7] rounded-lg">
+              <div className="flex items-start gap-4 p-6 bg-[#f4f1f7] rounded-lg">
                 <Lock className="w-8 h-8 text-[#88b7b5] flex-shrink-0" />
                 <div>
                   <h3 className="font-serif text-lg text-gray-800 mb-2">Données Sécurisées</h3>
                   <p className="text-sm text-gray-600">Vos informations sont cryptées et stockées en toute sécurité</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 p-6 bg-[#FAF9F7] rounded-lg">
+              <div className="flex items-start gap-4 p-6 bg-[#f4f1f7] rounded-lg">
                 <Eye className="w-8 h-8 text-[#88b7b5] flex-shrink-0" />
                 <div>
                   <h3 className="font-serif text-lg text-gray-800 mb-2">Transparence Totale</h3>
                   <p className="text-sm text-gray-600">Vous savez toujours ce que nous faisons de vos données</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 p-6 bg-[#FAF9F7] rounded-lg">
+              <div className="flex items-start gap-4 p-6 bg-[#f4f1f7] rounded-lg">
                 <UserCheck className="w-8 h-8 text-[#88b7b5] flex-shrink-0" />
                 <div>
                   <h3 className="font-serif text-lg text-gray-800 mb-2">Vos Droits Protégés</h3>
@@ -59,7 +59,7 @@ export default function Confidentialite() {
                   Dans le cadre de nos services de wedding planning, nous sommes amenés à collecter les données personnelles suivantes :
                 </p>
 
-                <div className="bg-[#FAF9F7] p-6 rounded-lg">
+                <div className="bg-[#f4f1f7] p-6 rounded-lg">
                   <h3 className="font-serif text-lg text-gray-800 mb-3">Données d'Identité</h3>
                   <ul className="list-disc pl-6 space-y-2 text-gray-600">
                     <li>Nom et prénom</li>
@@ -70,7 +70,7 @@ export default function Confidentialite() {
                   </ul>
                 </div>
 
-                <div className="bg-[#FAF9F7] p-6 rounded-lg">
+                <div className="bg-[#f4f1f7] p-6 rounded-lg">
                   <h3 className="font-serif text-lg text-gray-800 mb-3">Données Relatives à votre Événement</h3>
                   <ul className="list-disc pl-6 space-y-2 text-gray-600">
                     <li>Date et lieu du mariage</li>
@@ -81,7 +81,7 @@ export default function Confidentialite() {
                   </ul>
                 </div>
 
-                <div className="bg-[#FAF9F7] p-6 rounded-lg">
+                <div className="bg-[#f4f1f7] p-6 rounded-lg">
                   <h3 className="font-serif text-lg text-gray-800 mb-3">Données de Navigation</h3>
                   <ul className="list-disc pl-6 space-y-2 text-gray-600">
                     <li>Adresse IP</li>
@@ -199,7 +199,7 @@ export default function Confidentialite() {
                 <div className="overflow-x-auto">
                   <table className="w-full border-collapse">
                     <thead>
-                      <tr className="bg-[#FAF9F7]">
+                      <tr className="bg-[#f4f1f7]">
                         <th className="border border-gray-200 px-4 py-3 text-left font-serif text-gray-800">Type de Données</th>
                         <th className="border border-gray-200 px-4 py-3 text-left font-serif text-gray-800">Durée</th>
                       </tr>
@@ -209,7 +209,7 @@ export default function Confidentialite() {
                         <td className="border border-gray-200 px-4 py-3">Données du projet de mariage</td>
                         <td className="border border-gray-200 px-4 py-3">3 ans après la fin de la prestation</td>
                       </tr>
-                      <tr className="bg-[#FAF9F7]">
+                      <tr className="bg-[#f4f1f7]">
                         <td className="border border-gray-200 px-4 py-3">Données contractuelles et comptables</td>
                         <td className="border border-gray-200 px-4 py-3">10 ans (obligation légale)</td>
                       </tr>
@@ -217,7 +217,7 @@ export default function Confidentialite() {
                         <td className="border border-gray-200 px-4 py-3">Données marketing (newsletter)</td>
                         <td className="border border-gray-200 px-4 py-3">3 ans sans interaction</td>
                       </tr>
-                      <tr className="bg-[#FAF9F7]">
+                      <tr className="bg-[#f4f1f7]">
                         <td className="border border-gray-200 px-4 py-3">Cookies de navigation</td>
                         <td className="border border-gray-200 px-4 py-3">13 mois maximum</td>
                       </tr>

@@ -95,7 +95,7 @@ export default function PlanificationMariagePage() {
         </section>
 
         {/* Process */}
-        <section className="py-20 bg-[#FAF9F7]">
+        <section className="py-20 bg-[#f4f1f7]">
           <div className="container mx-auto px-6 max-w-6xl">
             <div className="text-center mb-16">
               <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Notre Démarche</p>
@@ -116,7 +116,7 @@ export default function PlanificationMariagePage() {
         <TestimonialsSection />
 
         {/* Other Services — Image 2 style */}
-        <section className="py-20 bg-[#F5F3F1]">
+        <section className="py-20 bg-[#f4f1f7]">
           <div className="container mx-auto px-6 max-w-6xl">
             <div className="text-center mb-12">
               <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Autres Services</p>

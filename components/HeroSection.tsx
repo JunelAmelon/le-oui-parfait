@@ -7,7 +7,7 @@ import { AnimatedSection } from './AnimatedSection';
 
 export function HeroSection() {
   return (
-    <section id="accueil" className="relative bg-[#FAF9F7] pt-24 pb-30 sm:pb-38 lg:pb-46">
+    <section id="accueil" className="relative bg-[#f4f1f7] pt-24 pb-30 sm:pb-38 lg:pb-46">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="relative max-w-6xl mx-auto">
           

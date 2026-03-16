@@ -256,7 +256,7 @@ export default function BlogArticlePage({ params }: { params: { slug: string } }
         </section>
 
         {/* Main Content */}
-        <section className="py-12 bg-[#FAF9F7]">
+        <section className="py-12 bg-[#f4f1f7]">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               

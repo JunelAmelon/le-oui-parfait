@@ -127,7 +127,7 @@ export default function OffreHarmoniePage() {
               </div>
               <div className="relative h-[350px]">
                 <Image
-                  src="https://images.pexels.com/photos/1488315/pexels-photo-1488315.jpeg"
+                  src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-S5QBJNG.jpg"
                   alt="Offre Harmonie Jour J"
                   fill
                   className="object-cover"

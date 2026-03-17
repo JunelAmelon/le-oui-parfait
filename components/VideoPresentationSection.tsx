@@ -22,11 +22,12 @@ export function VideoPresentationSection() {
   return (
     <section className="relative w-full py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-6 max-w-6xl">
-        <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl">
+        <div className="relative w-full aspect-video lg:aspect-[2/1] overflow-hidden">
           <div className="absolute inset-0">
             <video
               ref={videoRef}
               src="/presentation.mp4"
+              poster="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/11/IMG-GY8WHY5-1536x864.jpg"
               loop
               muted
               playsInline
@@ -39,13 +40,13 @@ export function VideoPresentationSection() {
             onClick={handlePlayPause}
           >
             <button
-              className="group relative w-24 h-24 rounded-full bg-white/20 backdrop-blur-md border-2 border-[#88b7b5] flex items-center justify-center transition-all duration-300 hover:bg-[#88b7b5]/80 hover:scale-110 hover:border-white"
+              className="group relative w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center transition-all duration-300 hover:bg-[#88b7b5]/80 hover:scale-110"
               aria-label={isPlaying ? "Pause la vidéo" : "Lire la vidéo"}
             >
               {isPlaying ? (
-                <Pause className="w-8 h-8 text-white fill-white group-hover:scale-110 transition-transform" />
+                <Pause className="w-6 h-6 text-white fill-white group-hover:scale-110 transition-transform" />
               ) : (
-                <Play className="w-8 h-8 text-white fill-white ml-1 group-hover:scale-110 transition-transform" />
+                <Play className="w-6 h-6 text-white fill-white ml-0.5 group-hover:scale-110 transition-transform" />
               )}
             </button>
           </div>

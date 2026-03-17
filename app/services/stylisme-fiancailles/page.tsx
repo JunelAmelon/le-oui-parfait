@@ -41,10 +41,10 @@ export default function StylismeFiancaillesPage() {
         <section className="py-20 bg-[#f4f1f7]">
           <div className="container mx-auto px-6 max-w-6xl">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
-              <div className="lg:col-span-2">
-                <div className="relative h-[420px] overflow-hidden mb-4">
+              <div className="lg:col-span-3">
+                <div className="relative h-[500px] overflow-hidden mb-4">
                   <video autoPlay muted loop playsInline className="w-full h-full object-cover">
-                    <source src="/mariage.mp4" type="video/mp4" />
+                    <source src="/presentation.mp4" type="video/mp4" />
                   </video>
                 </div>
                 <div className="bg-white p-5">
@@ -58,7 +58,7 @@ export default function StylismeFiancaillesPage() {
                   </div>
                 </div>
               </div>
-              <div className="lg:col-span-3 lg:pt-4">
+              <div className="lg:col-span-2 lg:pt-4">
                 <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Service Créatif</p>
                 <h2 className="font-baskerville text-[32px] text-[#4B4456] leading-tight mb-5">
                   Racontez Votre Histoire<br />Avec Élégance

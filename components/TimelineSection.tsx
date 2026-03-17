@@ -6,7 +6,7 @@ export function TimelineSection() {
       year: "2020",
       title: "Les Premières Bases D'Une Vision",
       description: "Formée aux exigences de l'univers du mariage et de l'événementiel, la fondatrice développe très tôt une sensibilité particulière pour l'esthétique, l'émotion et l'expérience client.",
-      image: "https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg",
+      image: "/alliance.jpg",
       imagePosition: "top"
     },
     {
@@ -27,7 +27,7 @@ export function TimelineSection() {
       year: "2026",
       title: "Naissance Du Oui Parfait",
       description: "Forte de son parcours, la fondatrice choisit en 2026 de donner vie à « Le Oui Parfait ». Implantée avec des bureaux à Paris et un showroom dans l'Essonne, la marque est pensée pour offrir un accompagnement élégant, humain et parfaitement structuré. Cette même année marque également le lancement de son réseau de franchisés.",
-      image: "https://images.pexels.com/photos/1456613/pexels-photo-1456613.jpeg",
+      image: "/mairie.jpg",
       imagePosition: "bottom"
     }
   ];

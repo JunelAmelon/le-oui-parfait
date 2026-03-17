@@ -12,7 +12,7 @@ export default function TarifsPage() {
         <HeroPage
           title="Nos Tarifs"
           subtitle="Des forfaits adaptés à tous les budgets pour votre jour parfait"
-          backgroundImage="wedding (5).jpg"
+          backgroundImage="alliance.jpg"
         />
 
         <PricingSection />

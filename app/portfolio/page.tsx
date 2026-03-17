@@ -12,7 +12,7 @@ export default function PortfolioPage() {
         <HeroPage
           title="Portfolio"
           subtitle="Découvrez nos plus belles réalisations et laissez-vous inspirer"
-          backgroundImage="wedding (3).jpg"
+          backgroundImage="wedding (6).jpg"
         />
 
         <PortfolioSection />

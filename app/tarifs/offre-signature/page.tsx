@@ -165,9 +165,9 @@ export default function OffreSignaturePage() {
 
         {/* Intro — Image 1 style */}
         <section className="py-20 bg-[#f4f1f7]">
-          <div className="container mx-auto px-6 max-w-6xl">
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
-              <div className="lg:col-span-3">
+          <div className="container mx-auto px-6 lg:px-12 max-w-6xl">
+            <div className="grid grid-cols-1 lg:grid-cols-[2.479fr_2.5fr] gap-12 lg:gap-6 items-start">
+              <div className="lg:col-span-1">
                 <div className="relative h-[500px] overflow-hidden mb-4">
                   <video autoPlay muted loop playsInline className="w-full h-full object-cover">
                     <source src="/presentation.mp4" type="video/mp4" />
@@ -184,7 +184,7 @@ export default function OffreSignaturePage() {
                   </div>
                 </div>
               </div>
-              <div className="lg:col-span-2 lg:pt-4">
+              <div className="lg:col-span-1 lg:pt-4">
                 <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Mariage Clé en Main</p>
                 <h2 className="font-baskerville text-[32px] text-[#4B4456] leading-tight mb-5">
                   Votre Mariage Entre<br />de Bonnes Mains

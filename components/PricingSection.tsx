@@ -24,14 +24,14 @@ export function PricingSection() {
 
           {/* Offre Harmonie — 1er (le moins cher) */}
           <AnimatedSection delay={0.1} direction="up">
-          <Card className="bg-white p-10 shadow-sm border-none flex flex-col h-full">
-            <h3 className="font-baskerville text-[26px] text-[#4A4A4A] mb-1 font-normal">Offre Harmonie</h3>
+          <Card className="bg-white p-10 shadow-[0_10px_30px_rgba(75,68,86,0.08)] border border-[#e7e3ea] rounded-2xl flex flex-col h-full">
+            <h3 className="font-baskerville text-[26px] text-[#4B4456] mb-1 font-normal">Offre Harmonie</h3>
             <p className="text-[11px] uppercase tracking-[0.15em] text-[#88b7b5] mb-3 font-medium">Coordination du Jour J</p>
             <div className="mb-1">
               <span className="text-[13px] text-gray-400">à partir de</span>
             </div>
             <div className="mb-1">
-              <span className="font-baskerville text-[52px] text-[#4A4A4A] leading-none">1 190€</span>
+              <span className="font-baskerville text-[56px] text-[#4B4456] leading-none tracking-tight tabular-nums">1 190<span className="text-[28px] align-top">€</span></span>
             </div>
             <p className="text-gray-500 text-[13px] mb-5">/ forfait</p>
             <p className="text-gray-600 text-[16px] mb-6 leading-relaxed">
@@ -61,7 +61,7 @@ export function PricingSection() {
               </ul>
             </div>
 
-            <div className="flex items-start gap-2 mb-8 p-3 bg-[#f4f1f7] rounded-lg border-l-2 border-gray-200">
+            <div className="flex items-start gap-2 mb-8 p-3 bg-[#f4f1f7] rounded-lg border-l-2 border-[#e7e3ea]">
               <p className="text-[12px] text-gray-500 leading-relaxed italic">Résultat : Vous vivez votre mariage pleinement, sans contraintes ni sollicitations.</p>
             </div>
 
@@ -82,17 +82,17 @@ export function PricingSection() {
 
           {/* Offre Signature — 2ème (POPULAIRE, au milieu) */}
           <AnimatedSection delay={0.2} direction="up">
-          <Card className="bg-white p-10 shadow-sm border-none relative flex flex-col h-full">
-            <Badge className="absolute top-8 right-8 bg-[#88b7b5] hover:bg-[#88b7b5] text-white text-[10px] tracking-wider px-3 py-1 rounded-full font-normal">
+          <Card className="bg-white p-10 shadow-[0_10px_30px_rgba(75,68,86,0.08)] border border-[#e7e3ea] rounded-2xl relative flex flex-col h-full">
+            <Badge className="absolute top-8 right-8 bg-white hover:bg-white text-[#4B4456] text-[10px] tracking-wider px-3 py-1 rounded-full font-normal border border-[#88b7b5]">
               POPULAIRE
             </Badge>
-            <h3 className="font-baskerville text-[26px] text-[#4A4A4A] mb-1 font-normal">Offre Signature</h3>
+            <h3 className="font-baskerville text-[26px] text-[#4B4456] mb-1 font-normal">Offre Signature</h3>
             <p className="text-[11px] uppercase tracking-[0.15em] text-[#88b7b5] mb-3 font-medium">Mariage clé en main</p>
             <div className="mb-1">
               <span className="text-[13px] text-gray-400">à partir de</span>
             </div>
             <div className="mb-1">
-              <span className="font-baskerville text-[52px] text-[#4A4A4A] leading-none">3 490€</span>
+              <span className="font-baskerville text-[56px] text-[#4B4456] leading-none tracking-tight tabular-nums">3 490<span className="text-[28px] align-top">€</span></span>
             </div>
             <p className="text-gray-500 text-[13px] mb-5">/ forfait</p>
             <p className="text-gray-600 text-[16px] mb-6 leading-relaxed">
@@ -144,14 +144,14 @@ export function PricingSection() {
 
           {/* Offre Élégance — 3ème (1890€) */}
           <AnimatedSection delay={0.3} direction="up">
-          <Card className="bg-white p-10 shadow-sm border-none flex flex-col h-full">
-            <h3 className="font-baskerville text-[26px] text-[#4A4A4A] mb-1 font-normal">Offre Élégance</h3>
+          <Card className="bg-white p-10 shadow-[0_10px_30px_rgba(75,68,86,0.08)] border border-[#e7e3ea] rounded-2xl flex flex-col h-full">
+            <h3 className="font-baskerville text-[26px] text-[#4B4456] mb-1 font-normal">Offre Élégance</h3>
             <p className="text-[11px] uppercase tracking-[0.15em] text-[#88b7b5] mb-3 font-medium">Organisation partielle</p>
             <div className="mb-1">
               <span className="text-[13px] text-gray-400">à partir de</span>
             </div>
             <div className="mb-1">
-              <span className="font-baskerville text-[52px] text-[#4A4A4A] leading-none">1 890€</span>
+              <span className="font-baskerville text-[56px] text-[#4B4456] leading-none tracking-tight tabular-nums">1 890<span className="text-[28px] align-top">€</span></span>
             </div>
             <p className="text-gray-500 text-[13px] mb-5">/ forfait</p>
             <p className="text-gray-600 text-[16px] mb-6 leading-relaxed">

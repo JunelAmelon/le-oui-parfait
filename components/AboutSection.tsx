@@ -15,7 +15,7 @@ export function AboutSection() {
             {/* Image Header with Decorations */}
             <div className="relative h-[400px] w-full">
               <Image
-                src="alliance.jpg"
+                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/11/IMG-KGD9CHG-1536x1025.jpg"
                 alt="Échange d'alliances"
                 fill
                 className="object-cover"
@@ -124,7 +124,7 @@ export function AboutSection() {
 
             <div className="relative h-full w-full overflow-hidden">
               <Image
-                src="alliance.jpg"
+                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/11/IMG-KGD9CHG-1536x1025.jpg"
                 alt="Échange d'alliances"
                 fill
                 className="object-cover"

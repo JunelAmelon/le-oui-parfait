@@ -81,7 +81,7 @@ const privileges = [
     title: 'Animation Photobooth Classique Offerte',
     desc: 'Une animation photobooth classique offerte pour créer des souvenirs uniques et marquer les esprits de vos convives. (Mise en place et coordination)',
     media: 'video',
-    image: '/couple.jpg',
+    image: '/photoboot.png',
   },
   {
     title: 'Faire-Part Digital & Interactif',
@@ -111,7 +111,7 @@ const privileges = [
     title: 'Accompagnement Personal Shopper',
     desc: 'Un accompagnement personal shopper dédié à la recherche de vos tenues de mariés, afin de vous guider vers des choix élégants, harmonieux et parfaitement en accord avec votre style.',
     media: 'video',
-    image: '/alliance.jpg',
+    image: '/personal-shopper.png',
   },
 ];
 
@@ -252,7 +252,7 @@ export default function OffreSignaturePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {privileges.map((priv, index) => (
                 <div key={index} className="bg-white/5 border border-white/10 p-6 hover:bg-white/10 transition-all">
-                  <div className="relative h-48 mb-5 overflow-hidden">
+                  <a href={priv.image} target="_blank" rel="noreferrer" className="block relative h-48 mb-5 overflow-hidden cursor-zoom-in">
                     <Image src={priv.image} alt={priv.title} fill className="object-cover opacity-80" />
                     <div className="absolute inset-0 bg-[#4B4456]/40" />
                     <div className="absolute top-3 right-3">
@@ -260,7 +260,7 @@ export default function OffreSignaturePage() {
                         Inclus
                       </span>
                     </div>
-                  </div>
+                  </a>
                   <div className="flex items-start gap-2 mb-3">
                     <Star className="w-4 h-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
                     <h4 className="font-baskerville text-lg text-white leading-snug">{priv.title}</h4>

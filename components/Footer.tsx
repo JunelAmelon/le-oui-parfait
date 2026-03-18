@@ -73,7 +73,9 @@ export function Footer() {
               />
             </div>
             <p className="text-gray-600 text-sm mb-6">
-              930 Palma Lane Suite 500 Larkinhaven
+              Showroom Clientel : 19 rue Albert-Remy 91130 Ris-Orangis
+              <br />
+              Siège social : 25 rue de Ponthieu 75008 Paris
             </p>
             <div className="flex gap-3">
               <a

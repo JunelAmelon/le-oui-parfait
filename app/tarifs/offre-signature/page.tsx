@@ -124,7 +124,7 @@ export default function OffreSignaturePage() {
         <section className="relative min-h-[65vh] flex items-end overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/wedding (1).jpg"
+              src="/offre-signature.png"
               alt="Offre Signature — Mariage clé en main"
               fill
               className="object-cover"

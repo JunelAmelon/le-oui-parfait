@@ -2,6 +2,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { HeroPage } from '@/components/HeroPage';
 import { PortfolioSection } from '@/components/PortfolioSection';
+import { PortfolioMediaSection } from '@/components/PortfolioMediaSection';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
 
 export default function PortfolioPage() {
@@ -16,6 +17,8 @@ export default function PortfolioPage() {
         />
 
         <PortfolioSection />
+
+        <PortfolioMediaSection />
 
         <TestimonialsSection />
       </main>

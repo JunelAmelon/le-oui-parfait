@@ -49,7 +49,7 @@ export function HeroSection() {
                   <Star className="w-3 h-3 fill-[#88b7b5] text-[#88b7b5]" />
                   <span className="text-xs font-medium text-gray-900">4.8</span>
                 </div>
-                <span className="text-[10px] text-gray-600">par 12,6K couples</span>
+                <span className="text-[10px] text-gray-600">par 212 couples</span>
               </div>
               </AnimatedSection>
 
@@ -149,7 +149,7 @@ export function HeroSection() {
                     <Star className="w-4 h-4 fill-[#88b7b5] text-[#88b7b5]" />
                     <span className="text-sm font-medium text-gray-900">4.8</span>
                   </div>
-                  <span className="text-xs text-gray-600">par 12,6K couples</span>
+                  <span className="text-xs text-gray-600">par 212 couples</span>
                 </div>
 
                 <h1 className="heading-main text-[52px] mb-6 leading-tight">

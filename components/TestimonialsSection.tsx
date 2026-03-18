@@ -1,7 +1,11 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from '@/components/ui/carousel';
 import { useState, useEffect } from 'react';
 
 
@@ -10,25 +14,25 @@ const testimonials = [
   {
     quote: "Notre célébration de fiançailles était plus belle que nous l'avions imaginé. La créativité et le professionnalisme de Le Oui Parfait l'ont rendue vraiment inoubliable.",
     author: "Lydia & Charles",
-    location: "Budapest, Hongrie",
+    location: "Évry-Courcouronnes (91)",
     image: "https://images.unsplash.com/photo-1606663889134-b1dedb5ed8b7?w=100&h=100&fit=crop"
   },
   {
     quote: "Le Oui Parfait a rendu notre jour de mariage absolument magique et sans stress. Chaque détail était personnel, élégant et parfaitement planifié.",
     author: "Sarah & William",
-    location: "Brisbane, Australie",
+    location: "Boulogne-Billancourt (92)",
     image: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=100&h=100&fit=crop"
   },
   {
     quote: "L'attention aux détails et le dévouement de l'équipe ont dépassé toutes nos attentes. Notre mariage était un rêve devenu réalité.",
     author: "Marie & Alexandre",
-    location: "Paris, France",
+    location: "Paris 8e (75)",
     image: "https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=100&h=100&fit=crop"
   },
   {
     quote: "Un service exceptionnel du début à la fin. Le Oui Parfait a transformé notre vision en une célébration parfaite et mémorable.",
     author: "Sophie & Thomas",
-    location: "Lyon, France",
+    location: "Versailles (78)",
     image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=100&h=100&fit=crop"
   }
 ];
@@ -75,44 +79,49 @@ export function TestimonialsSection() {
 
           {/* Right Column - Testimonials Grid (60% width = 3/5) */}
           <div className="lg:col-span-3 relative">
-            {/* Overflow container */}
-            <div className="overflow-hidden">
-              {/* Sliding container */}
-              <div
-                className="flex transition-transform duration-700 ease-in-out"
-                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-              >
+            <Carousel
+              opts={{ loop: true, align: 'start' }}
+              setApi={(api) => {
+                if (!api) return;
+                api.scrollTo(currentIndex);
+                api.on('select', () => setCurrentIndex(api.selectedScrollSnap()));
+                api.on('reInit', () => setCurrentIndex(api.selectedScrollSnap()));
+              }}
+            >
+              <CarouselContent>
                 {testimonials.map((testimonial, index) => (
-                  <div
+                  <CarouselItem
                     key={index}
-                    className="min-w-full lg:min-w-[50%] px-3"
+                    className="basis-full lg:basis-1/2"
                   >
-                    <div className="bg-white p-8 lg:p-10 rounded-sm shadow-sm min-h-[400px] flex flex-col justify-between">
-                      <p className="text-gray-700 text-base lg:text-[17px] leading-relaxed mb-auto">
-                        "{testimonial.quote}"
-                      </p>
-                      <div className="mt-8 flex items-center gap-4">
-                        <div className="w-14 h-14 rounded-full bg-gray-200 flex-shrink-0 overflow-hidden">
-                          <img
-                            src={testimonial.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(testimonial.author)}&background=5A5A5A&color=fff&size=56`}
-                            alt={testimonial.author}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div>
-                          <p className="font-baskerville text-lg lg:text-[19px] text-[#5A5A5A] mb-1 font-normal">
-                            {testimonial.author}
-                          </p>
-                          <p className="text-sm lg:text-[14px] text-gray-500">
-                            {testimonial.location}
-                          </p>
+                    <div className="px-3 h-full">
+                      <div className="bg-white p-8 lg:p-10 rounded-sm shadow-sm min-h-[400px] flex flex-col justify-between h-full">
+                        <p className="text-gray-700 text-base lg:text-[17px] leading-relaxed mb-auto">
+                          "{testimonial.quote}"
+                        </p>
+                        <div className="mt-8 flex items-center gap-4">
+                          <div className="w-14 h-14 rounded-full bg-gray-200 flex-shrink-0 overflow-hidden">
+                            <img
+                              src={testimonial.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(testimonial.author)}&background=5A5A5A&color=fff&size=56`}
+                              alt={testimonial.author}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <div>
+                            <p className="font-baskerville text-lg lg:text-[19px] text-[#5A5A5A] mb-1 font-normal">
+                              {testimonial.author}
+                            </p>
+                            <p className="text-sm lg:text-[14px] text-gray-500">
+                              {testimonial.location}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </CarouselItem>
                 ))}
-              </div>
-            </div>
+              </CarouselContent>
+            </Carousel>
 
             {/* Pagination Dots */}
             <div className="flex justify-center gap-2 mt-8">

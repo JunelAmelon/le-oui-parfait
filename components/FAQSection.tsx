@@ -23,7 +23,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: 'Combien de Temps à l\'Avance Devrions-nous Réserver?',
-    answer: 'Nous recommandons de réserver 12 à 18 mois à l\'avance pour une planification complète. Cependant, nous pouvons accommoder des délais plus courts selon la disponibilité et l\'étendue de votre événement.',
+    answer: 'Nous recommandons de réserver entre 5 mois et 12 mois à l\'avance, selon votre date, vos disponibilités et l\'ampleur de votre projet.',
   },
   {
     question: 'Offrez-vous des Forfaits de Planification Partielle?',

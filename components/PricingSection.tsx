@@ -29,7 +29,11 @@ export function PricingSection() {
             <div className="flex items-start justify-between gap-6 mb-8">
               <div>
                 <h3 className="font-baskerville text-[28px] text-[#2f2a36] mb-2 font-normal">Offre Harmonie</h3>
-                <p className="text-[11px] uppercase tracking-[0.18em] text-[#88b7b5] font-medium">Coordination du Jour J</p>
+                <p className="text-[11px] uppercase tracking-[0.18em] text-[#88b7b5] font-medium">
+                  Coordination du
+                  <br />
+                  Jour J
+                </p>
               </div>
             </div>
 
@@ -90,19 +94,21 @@ export function PricingSection() {
 
           {/* Offre Signature — 2ème (POPULAIRE, au milieu) */}
           <AnimatedSection delay={0.2} direction="up">
-          <Card className="group relative bg-gradient-to-b from-white to-[#fbfafc] p-10 shadow-[0_10px_30px_rgba(75,68,86,0.06)] border border-[#88b7b5]/35 rounded-3xl flex flex-col h-full overflow-hidden transition-shadow duration-300 hover:shadow-[0_18px_50px_rgba(75,68,86,0.12)]">
+          <Card className="group relative bg-gradient-to-b from-white to-[#fbfafc] p-10 shadow-[0_10px_30px_rgba(75,68,86,0.06)] border border-[#88b7b5]/45 rounded-3xl flex flex-col h-full overflow-hidden transition-shadow duration-300 hover:shadow-[0_18px_50px_rgba(75,68,86,0.12)]">
+            <div className="absolute -inset-1 rounded-[28px] bg-[#88b7b5]/20 blur-2xl opacity-80 pointer-events-none" />
+            <div className="absolute inset-0 rounded-3xl ring-1 ring-[#88b7b5]/35 pointer-events-none" />
             <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#88b7b5] to-transparent" />
-            <Badge className="absolute top-8 right-8 bg-[#2f2a36] hover:bg-[#2f2a36] text-white text-[10px] tracking-wider px-3 py-1 rounded-full font-normal">
+            <Badge className="absolute top-8 right-8 bg-[#88b7b5] hover:bg-[#88b7b5] text-white text-[10px] tracking-wider px-3 py-1 rounded-full font-normal shadow-sm">
               POPULAIRE
             </Badge>
-            <div className="flex items-start justify-between gap-6 mb-8">
+            <div className="relative z-10 flex items-start justify-between gap-6 mb-8">
               <div>
                 <h3 className="font-baskerville text-[28px] text-[#2f2a36] mb-2 font-normal">Offre Signature</h3>
                 <p className="text-[11px] uppercase tracking-[0.18em] text-[#88b7b5] font-medium">Mariage clé en main</p>
               </div>
             </div>
 
-            <div className="mb-6">
+            <div className="relative z-10 mb-6">
               <p className="text-[11px] uppercase tracking-[0.22em] text-[#6b6573] mb-2">À partir de</p>
               <div className="flex items-end gap-2">
                 <span className="font-baskerville text-[64px] text-[#2f2a36] leading-[0.9] tracking-tight tabular-nums">3 490</span>
@@ -111,16 +117,16 @@ export function PricingSection() {
               <p className="text-[#6b6573] text-[12px] mt-2 uppercase tracking-[0.18em]">Forfait</p>
             </div>
 
-            <p className="text-gray-600 text-[16px] mb-6 leading-relaxed">
+            <p className="relative z-10 text-gray-600 text-[16px] mb-6 leading-relaxed">
               Formule clé en main pour ceux qui souhaitent confier l'intégralité de l'organisation à un professionnel.
             </p>
 
-            <div className="flex items-start gap-2 mb-6 p-4 bg-white/60 rounded-2xl border border-[#e7e3ea]/60">
+            <div className="relative z-10 flex items-start gap-2 mb-6 p-4 bg-white/60 rounded-2xl border border-[#e7e3ea]/60">
               <Smartphone className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
               <p className="text-[13px] text-gray-500 leading-relaxed">Application mobile dédiée & suivi en temps réel</p>
             </div>
 
-            <div className="mb-6">
+            <div className="relative z-10 mb-6">
               <p className="text-[11px] uppercase tracking-[0.22em] text-[#6b6573] mb-4">Inclus</p>
               <ul className="space-y-3">
                 {[
@@ -138,12 +144,12 @@ export function PricingSection() {
               </ul>
             </div>
 
-            <div className="flex items-start gap-2 mb-8 p-4 bg-[#f0f7f7] rounded-2xl border border-[#88b7b5]/25">
+            <div className="relative z-10 flex items-start gap-2 mb-8 p-4 bg-[#f0f7f7] rounded-2xl border border-[#88b7b5]/25">
               <Gift className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
               <p className="text-[13px] text-[#4B4456] leading-relaxed font-medium">6 privilèges exclusifs offerts (photobooth, faire-part digital, vidéo STD, site mariage, voyage de noces, personal shopper)</p>
             </div>
 
-            <div className="mt-auto flex flex-col gap-3">
+            <div className="relative z-10 mt-auto flex flex-col gap-3">
               <Link href="/tarifs/offre-signature">
                 <Button variant="outline" className="w-full uppercase tracking-[0.22em] text-[11px] border border-[#2f2a36]/15 text-[#2f2a36] hover:bg-[#2f2a36] hover:text-white px-8 py-6 rounded-full font-normal transition-all">
                   DÉTAIL

@@ -37,8 +37,8 @@ export function ValuesSection() {
       alt: "Couple de mariés"
     },
     {
-      src: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=300&fit=crop",
-      alt: "Détails de mariage"
+      src: "/table mariage.webp",
+      alt: "Table de mariage"
     }
   ];
 
@@ -67,7 +67,7 @@ export function ValuesSection() {
                     transform: translateX(0);
                   }
                   100% {
-                    transform: translateX(-50%);
+                    transform: translateX(-872px);
                   }
                 }
                 .scrolling-images {

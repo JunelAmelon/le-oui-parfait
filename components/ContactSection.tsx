@@ -105,7 +105,11 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Adresse</h4>
-                    <p className="text-gray-600">123 Avenue des Champs-Élysées<br />75008 Paris, France</p>
+                    <p className="text-gray-600">
+                      Showroom Clientel : 19 rue Albert-Remy 91130 Ris-Orangis
+                      <br />
+                      Siège social : 25 rue de Ponthieu 75008 Paris
+                    </p>
                   </div>
                 </div>
               </div>

@@ -29,7 +29,8 @@ export default function MentionsLegales() {
                   <p>
                     <strong>Le Oui Parfait</strong><br />
                     SARL au capital de 50 000 €<br />
-                    Siège social : 930 Palma Lane Suite 500, 75001 Paris, France<br />
+                    Showroom Clientel : 19 rue Albert-Remy 91130 Ris-Orangis<br />
+                    Siège social : 25 rue de Ponthieu 75008 Paris<br />
                     RCS Paris : 123 456 789<br />
                     SIRET : 123 456 789 00012<br />
                     TVA Intracommunautaire : FR 12 123456789
@@ -132,7 +133,7 @@ export default function MentionsLegales() {
                   <p>
                     Pour exercer ce droit, veuillez nous contacter à l'adresse suivante :<br />
                     <strong>Email :</strong> dpo@leouiparfait.fr<br />
-                    <strong>Courrier :</strong> Le Oui Parfait - Service DPO, 930 Palma Lane Suite 500, 75001 Paris
+                    <strong>Courrier :</strong> Le Oui Parfait - Service DPO, 25 rue de Ponthieu 75008 Paris
                   </p>
                   <p>
                     Pour plus d'informations sur la gestion de vos données personnelles, consultez notre <a href="/confidentialite" className="text-[#88b7b5] hover:underline">Politique de Confidentialité</a>.

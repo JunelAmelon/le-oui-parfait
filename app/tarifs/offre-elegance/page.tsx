@@ -94,7 +94,7 @@ export default function OffreElegancePage() {
         <section className="relative min-h-[65vh] flex items-end overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/wedding (2).jpg"
+              src="/offre-elegance.png"
               alt="Offre Élégance — Organisation partielle"
               fill
               className="object-cover"

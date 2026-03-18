@@ -8,27 +8,32 @@ const teamMembers = [
   {
     name: 'Kathy',
     title: 'Wedding Planner & Designer Principal',
-    image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg',
+    image: '/equipe/kathy.png',
   },
   {
     name: 'Amelia',
     title: 'Negafa',
-    image: 'https://images.pexels.com/photos/3756681/pexels-photo-3756681.jpeg',
+    image: '/equipe/amelia.png',
   },
   {
     name: 'Yann',
     title: 'Spécialiste Logistique & Commercial',
-    image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg',
+    image: '/equipe/yan.jpeg',
   },
   {
-    name: 'Myriam',
+    name: 'Miriam',
     title: 'Chargée Communication',
-    image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg',
+    image: '/equipe/miriam.png',
   },
   {
     name: 'Junel',
     title: 'Développement Web, Marketing & Vidéaste',
-    image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg',
+    image: '/equipe/junel.png',
+  },
+  {
+    name: 'Sam',
+    title: 'Responsable des opérations',
+    image: '/equipe/Sam.jpg',
   },
 ];
 

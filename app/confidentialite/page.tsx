@@ -270,7 +270,7 @@ export default function Confidentialite() {
                   </p>
                   <ul className="space-y-2">
                     <li><strong>Par email :</strong> dpo@leouiparfait.fr</li>
-                    <li><strong>Par courrier :</strong> Le Oui Parfait - Service DPO, 930 Palma Lane Suite 500, 75001 Paris</li>
+                    <li><strong>Par courrier :</strong> Le Oui Parfait - Service DPO, 25 rue de Ponthieu 75008 Paris</li>
                   </ul>
                   <p className="mt-3 text-sm">
                     Nous nous engageons à répondre à votre demande dans un délai d'un mois maximum.

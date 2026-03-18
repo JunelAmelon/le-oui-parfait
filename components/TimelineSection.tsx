@@ -13,7 +13,7 @@ export function TimelineSection() {
       year: "2022",
       title: "Au Cœur D'Une Première Aventure Entrepreneuriale",
       description: "Elle rejoint ensuite, aux côtés de plusieurs associés, une première structure dans l'univers du mariage. Cette expérience de terrain, à la fois riche et formatrice, contribue à affiner sa méthode et sa vision.",
-      image: "https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg",
+      image: "/equipe.png",
       imagePosition: "bottom"
     },
     {
@@ -59,7 +59,7 @@ export function TimelineSection() {
               )}
 
               {/* Année */}
-              <div className="font-baskerville text-5xl lg:text-[3.5rem] text-[#6b9b9e] mb-5 font-normal">
+              <div className="text-4xl lg:text-[3.25rem] text-[#6b9b9e] mb-5 font-medium tracking-tight">
                 {item.year}
               </div>
 

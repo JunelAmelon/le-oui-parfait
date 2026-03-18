@@ -29,7 +29,7 @@ export function ServicesSection() {
         'Shooting photo & vidéo (extérieur et/ou studio)',
         'Mise en beauté & souvenirs inoubliables'
       ],
-      image: '/evg.jpg',
+      image: '/evg.png',
       alt: 'EVJF / EVG Shooting Tour à Paris',
       link: '/services/shooting-tour'
     },
@@ -98,99 +98,55 @@ export function ServicesSection() {
           </AnimatedSection>
         </div>
 
-        {/* Mobile: Stacked List */}
-        <div className="md:hidden space-y-8">
-          {services.map((service, index) => (
-            <AnimatedSection key={index} delay={0.12 * index} direction="up">
-              <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-                <div className="relative h-[250px] w-full">
-                  <Image
-                    src={service.image}
-                    alt={service.alt}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-baskerville text-[24px] text-[#5A5A5A] mb-3 leading-tight font-normal">
-                    {service.title}
-                  </h3>
-                  <p className="text-[#5A5A5A] leading-relaxed mb-4 text-[16px]">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <Check className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#5A5A5A] text-[15px]">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link href={service.link}>
-                    <Button
-                      variant="outline"
-                      className="w-full uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-6 py-5 font-medium transition-all"
-                    >
-                      Voir les Détails
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            </AnimatedSection>
-          ))}
-        </div>
-
-        {/* Desktop/Tablet Auto Carousel */}
-        <div className="hidden md:block">
+        {/* Mobile: Auto Carousel */}
+        <div className="md:hidden relative">
           <div className="overflow-hidden">
             <div
-              className="flex transition-transform duration-700 ease-in-out"
+              className="flex transition-transform duration-500 ease-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {services.map((service, index) => (
-                <div key={index} className="w-full flex-shrink-0">
-                  <AnimatedSection direction="up">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                      <div className="lg:col-span-5 relative h-[400px] lg:h-[450px] overflow-hidden">
-                        <Image
-                          src={service.image}
-                          alt={service.alt}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <div className="lg:col-span-7 lg:pl-8">
-                        <h3 className="font-baskerville text-[30px] text-[#5A5A5A] mb-5 leading-tight font-normal">
-                          {service.title}
-                        </h3>
-                        <p className="text-[#5A5A5A] leading-relaxed mb-6 text-[17px]">
-                          {service.description}
-                        </p>
-                        <ul className="space-y-3 mb-8">
-                          {service.features.map((feature, idx) => (
-                            <li key={idx} className="flex items-start gap-3">
-                              <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mt-0.5" />
-                              <span className="text-[#5A5A5A] text-[16px]">{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                        <Link href={service.link}>
-                          <Button
-                            variant="outline"
-                            className="uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-8 py-6 font-medium transition-all"
-                          >
-                            Voir les Détails
-                          </Button>
-                        </Link>
-                      </div>
+                <div key={index} className="w-full flex-shrink-0 px-2">
+                  <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div className="relative h-[250px] w-full">
+                      <Image
+                        src={service.image}
+                        alt={service.alt}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
-                  </AnimatedSection>
+                    <div className="p-6">
+                      <h3 className="font-baskerville text-[24px] text-[#5A5A5A] mb-3 leading-tight font-normal">
+                        {service.title}
+                      </h3>
+                      <p className="text-[#5A5A5A] leading-relaxed mb-4 text-[16px]">
+                        {service.description}
+                      </p>
+                      <ul className="space-y-2 mb-6">
+                        {service.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-start gap-2">
+                            <Check className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
+                            <span className="text-[#5A5A5A] text-[15px]">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <Link href={service.link}>
+                        <Button
+                          variant="outline"
+                          className="w-full uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-6 py-5 font-medium transition-all"
+                        >
+                          Voir les Détails
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="flex justify-center gap-2 mt-10">
+          <div className="flex justify-center gap-2 mt-6">
             {services.map((_, index) => (
               <button
                 key={index}
@@ -204,6 +160,48 @@ export function ServicesSection() {
               />
             ))}
           </div>
+        </div>
+
+        {/* Tablet/Desktop: Stacked List */}
+        <div className="hidden md:block space-y-16">
+          {services.map((service, index) => (
+            <AnimatedSection key={index} delay={0.2 * index} direction="up">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div className="lg:col-span-5 relative h-[400px] lg:h-[450px] overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.alt}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="lg:col-span-7 lg:pl-8">
+                  <h3 className="font-baskerville text-[30px] text-[#5A5A5A] mb-5 leading-tight font-normal">
+                    {service.title}
+                  </h3>
+                  <p className="text-[#5A5A5A] leading-relaxed mb-6 text-[17px]">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-3 mb-8">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#5A5A5A] text-[16px]">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link href={service.link}>
+                    <Button
+                      variant="outline"
+                      className="uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-8 py-6 font-medium transition-all"
+                    >
+                      Voir les Détails
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </AnimatedSection>
+          ))}
         </div>
       </div>
     </section>

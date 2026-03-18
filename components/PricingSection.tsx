@@ -41,11 +41,14 @@ export function PricingSection() {
               <p className="text-[11px] uppercase tracking-[0.22em] text-[#6b6573] mb-2">À partir de</p>
               <div className="flex items-end gap-2">
                 <span className="font-baskerville text-[64px] text-[#2f2a36] leading-[0.9] tracking-tight tabular-nums">1 190</span>
-                <span className="font-baskerville text-[28px] text-[#2f2a36] leading-none">€</span>
+                <span className="font-baskerville text-[28px] text-[#2f2a36] leading-none w-4 text-right">€</span>
               </div>
-              <p className="text-[#6b6573] text-[12px] mt-2 uppercase tracking-[0.18em] flex items-center justify-center gap-2">
+              <p className="text-[#6b6573] text-[12px] mt-2 uppercase tracking-[0.18em] flex items-center justify-between">
                 <span>Forfait</span>
-                <span className="normal-case tracking-normal text-[11px] text-[#6b6573]">2-3 fois sans frais</span>
+                <span className="inline-grid grid-cols-[16px_auto] items-baseline justify-items-end gap-1 normal-case tracking-normal text-[11px] text-[#6b6573]">
+                  <span className="w-4 text-right">*</span>
+                  <span>Payer en 2X, 3X ou 4X Sans Frais</span>
+                </span>
               </p>
             </div>
 
@@ -115,11 +118,14 @@ export function PricingSection() {
               <p className="text-[11px] uppercase tracking-[0.22em] text-[#6b6573] mb-2">À partir de</p>
               <div className="flex items-end gap-2">
                 <span className="font-baskerville text-[64px] text-[#2f2a36] leading-[0.9] tracking-tight tabular-nums">3 490</span>
-                <span className="font-baskerville text-[28px] text-[#2f2a36] leading-none">€</span>
+                <span className="font-baskerville text-[28px] text-[#2f2a36] leading-none w-4 text-right">€</span>
               </div>
-              <p className="text-[#6b6573] text-[12px] mt-2 uppercase tracking-[0.18em] flex items-center justify-center gap-2">
+              <p className="text-[#6b6573] text-[12px] mt-2 uppercase tracking-[0.18em] flex items-center justify-between">
                 <span>Forfait</span>
-                <span className="normal-case tracking-normal text-[11px] text-[#6b6573]">2-3 fois sans frais</span>
+                <span className="inline-grid grid-cols-[16px_auto] items-baseline justify-items-end gap-1 normal-case tracking-normal text-[11px] text-[#6b6573]">
+                  <span className="w-4 text-right">*</span>
+                  <span>Payer en 2X, 3X ou 4X Sans Frais</span>
+                </span>
               </p>
             </div>
 
@@ -185,11 +191,14 @@ export function PricingSection() {
               <p className="text-[11px] uppercase tracking-[0.22em] text-[#6b6573] mb-2">À partir de</p>
               <div className="flex items-end gap-2">
                 <span className="font-baskerville text-[64px] text-[#2f2a36] leading-[0.9] tracking-tight tabular-nums">1 890</span>
-                <span className="font-baskerville text-[28px] text-[#2f2a36] leading-none">€</span>
+                <span className="font-baskerville text-[28px] text-[#2f2a36] leading-none w-4 text-right">€</span>
               </div>
-              <p className="text-[#6b6573] text-[12px] mt-2 uppercase tracking-[0.18em] flex items-center justify-center gap-2">
+              <p className="text-[#6b6573] text-[12px] mt-2 uppercase tracking-[0.18em] flex items-center justify-between">
                 <span>Forfait</span>
-                <span className="normal-case tracking-normal text-[11px] text-[#6b6573]">2-3 fois sans frais</span>
+                <span className="inline-grid grid-cols-[16px_auto] items-baseline justify-items-end gap-1 normal-case tracking-normal text-[11px] text-[#6b6573]">
+                  <span className="w-4 text-right">*</span>
+                  <span>Payer en 2X, 3X ou 4X Sans Frais</span>
+                </span>
               </p>
             </div>
 

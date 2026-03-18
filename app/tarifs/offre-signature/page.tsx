@@ -81,37 +81,37 @@ const privileges = [
     title: 'Animation Photobooth Classique Offerte',
     desc: 'Une animation photobooth classique offerte pour créer des souvenirs uniques et marquer les esprits de vos convives. (Mise en place et coordination)',
     media: 'video',
-    image: 'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg',
+    image: '/couple.jpg',
   },
   {
     title: 'Faire-Part Digital & Interactif',
     desc: 'Un faire-part de mariage digital et interactif, imaginé sur-mesure à votre image, pour partager votre annonce avec élégance, simplicité et modernité.',
     media: 'image',
-    image: 'https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg',
+    image: '/faire-part.png',
   },
   {
     title: 'Vidéo "Save the Date" Personnalisée',
     desc: 'La réalisation d\'une vidéo "Save the Date" fun et personnalisée, mettant en scène votre couple, conçue par notre vidéaste pour annoncer votre mariage de façon originale et mémorable.',
     media: 'video',
-    image: 'https://images.pexels.com/photos/2959192/pexels-photo-2959192.jpeg',
+    image: '/save-the-date.png',
   },
   {
     title: 'Site Internet de Mariage Personnalisé',
     desc: 'La création d\'un site internet de mariage entièrement personnalisé, pensé à l\'image de votre couple. Il permet d\'annoncer votre événement avec élégance, partager votre parcours, et informer vos invités.',
     media: 'image',
-    image: 'https://images.pexels.com/photos/1456613/pexels-photo-1456613.jpeg',
+    image: '/site-internet.png',
   },
   {
     title: 'Organisation de Votre Voyage de Noces',
     desc: 'L\'organisation sur-mesure de votre voyage de noces, pensé selon vos envies, votre budget et l\'expérience que vous souhaitez vivre, pour prolonger la magie de votre mariage.',
     media: 'image',
-    image: 'https://images.pexels.com/photos/1488315/pexels-photo-1488315.jpeg',
+    image: '/voyage-de-noce.PNG',
   },
   {
     title: 'Accompagnement Personal Shopper',
     desc: 'Un accompagnement personal shopper dédié à la recherche de vos tenues de mariés, afin de vous guider vers des choix élégants, harmonieux et parfaitement en accord avec votre style.',
     media: 'video',
-    image: 'https://images.pexels.com/photos/3171770/pexels-photo-3171770.jpeg',
+    image: '/alliance.jpg',
   },
 ];
 
@@ -185,7 +185,7 @@ export default function OffreSignaturePage() {
                 </div>
               </div>
               <div className="lg:col-span-1 lg:pt-4">
-                <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Mariage Clé en Main</p>
+                <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">« OFFRE SIGNATURE » Mariage Clé en Main</p>
                 <h2 className="font-baskerville text-[32px] text-[#4B4456] leading-tight mb-5">
                   Votre Mariage Entre<br />de Bonnes Mains
                 </h2>

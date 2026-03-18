@@ -133,7 +133,7 @@ export default function OffreHarmoniePage() {
                 </div>
               </div>
               <div className="lg:col-span-1 lg:pt-4">
-                <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Coordination du Jour J </p>
+                <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">« OFFRE HARMONIE » Coordination du Jour J</p>
                 <h2 className="font-baskerville text-[32px] text-[#4B4456] leading-tight mb-5">
                   Vous Avez Presque Tout Organisé,<br />On S'Occupe du Reste
                 </h2>

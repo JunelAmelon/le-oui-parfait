@@ -69,19 +69,19 @@ const privileges = [
     title: 'Livre d\'Or Audio',
     desc: 'Un livre d\'or audio au format téléphone, pour permettre à vos invités de vous laisser des messages vocaux authentiques, spontanés et remplis d\'émotion, que vous pourrez réécouter et conserver comme un souvenir unique.',
     media: 'video',
-    image: 'https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg',
+    image: '/livred’oraudio .png',
   },
   {
     title: 'Faire-Part Digital & Interactif',
     desc: 'Un faire-part de mariage digital et interactif, imaginé sur-mesure à votre image, pour partager votre annonce avec élégance, simplicité et modernité.',
     media: 'image',
-    image: 'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg',
+    image: '/faire-part.png',
   },
   {
     title: 'Organisation du Voyage de Noces',
     desc: 'L\'organisation sur-mesure de votre voyage de noces, pensé selon vos envies, votre budget et l\'expérience que vous souhaitez vivre, pour prolonger la magie de votre mariage par une parenthèse inoubliable.',
     media: 'image',
-    image: 'https://images.pexels.com/photos/2959192/pexels-photo-2959192.jpeg',
+    image: '/voyage-de-noce.PNG',
   },
 ];
 
@@ -156,7 +156,7 @@ export default function OffreElegancePage() {
                 </div>
               </div>
               <div className="lg:col-span-1 lg:pt-4">
-                <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Organisation Partielle Sur Mesure</p>
+                <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">« OFFRE ÉLÉGANCE » Organisation Partielle Sur Mesure</p>
                 <h2 className="font-baskerville text-[32px] text-[#4B4456] leading-tight mb-5">
                   Vous Gardez le Contrôle,<br />Nous Apportons l'Expert
                 </h2>

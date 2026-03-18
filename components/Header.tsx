@@ -32,30 +32,33 @@ export function Header() {
             }`}>
               Accueil
             </Link>
-            <Link href="/a-propos" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
-              pathname === '/a-propos' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
+            <Link href="/portfolio" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
+              pathname === '/portfolio' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
             }`}>
-              À Propos
+              Portfolio
             </Link>
             <Link href="/services" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
               pathname === '/services' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
             }`}>
               Services
             </Link>
-            <Link href="/portfolio" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
-              pathname === '/portfolio' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
-            }`}>
-              Portfolio
-            </Link>
             <Link href="/tarifs" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
               pathname === '/tarifs' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
             }`}>
               Tarifs
             </Link>
+            <Link href="/#animation" className="text-[12px] font-sans uppercase tracking-[0.15em] transition text-[#4B4456] hover:text-[#88b7b5]">
+              Animation
+            </Link>
             <Link href="/blog" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
               pathname === '/blog' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
             }`}>
               Blog
+            </Link>
+            <Link href="/a-propos" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
+              pathname === '/a-propos' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
+            }`}>
+              À Propos
             </Link>
             <Link href="/contact" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
               pathname === '/contact' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
@@ -134,29 +137,6 @@ export function Header() {
             </li>
             <li className={`border-b border-gray-100 transition-all duration-300 ${
               mobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'
-            }`} style={{ transitionDelay: mobileMenuOpen ? '150ms' : '0ms' }}>
-              <Link 
-                href="/a-propos" 
-                className="flex justify-between items-center px-6 py-[18px] text-[12px] font-sans font-medium tracking-[1.5px] uppercase text-[#4B4456] hover:bg-gray-50 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <span>À Propos</span>
-              </Link>
-            </li>
-            <li className={`border-b border-gray-100 transition-all duration-300 ${
-              mobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'
-            }`} style={{ transitionDelay: mobileMenuOpen ? '200ms' : '0ms' }}>
-              <Link 
-                href="/services" 
-                className="flex justify-between items-center px-6 py-[18px] text-[12px] font-sans font-medium tracking-[1.5px] uppercase text-[#4B4456] hover:bg-gray-50 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <span>Services</span>
-                <span className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center text-[12px] text-gray-400">›</span>
-              </Link>
-            </li>
-            <li className={`border-b border-gray-100 transition-all duration-300 ${
-              mobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'
             }`} style={{ transitionDelay: mobileMenuOpen ? '250ms' : '0ms' }}>
               <Link 
                 href="/portfolio" 
@@ -164,6 +144,18 @@ export function Header() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span>Portfolio</span>
+              </Link>
+            </li>
+            <li className={`border-b border-gray-100 transition-all duration-300 ${
+              mobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'
+            }`} style={{ transitionDelay: mobileMenuOpen ? '300ms' : '0ms' }}>
+              <Link 
+                href="/services" 
+                className="flex justify-between items-center px-6 py-[18px] text-[12px] font-sans font-medium tracking-[1.5px] uppercase text-[#4B4456] hover:bg-gray-50 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span>Services</span>
+                <span className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center text-[12px] text-gray-400">›</span>
               </Link>
             </li>
             <li className={`border-b border-gray-100 transition-all duration-300 ${
@@ -181,11 +173,33 @@ export function Header() {
               mobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'
             }`} style={{ transitionDelay: mobileMenuOpen ? '350ms' : '0ms' }}>
               <Link 
+                href="/#animation" 
+                className="flex justify-between items-center px-6 py-[18px] text-[12px] font-sans font-medium tracking-[1.5px] uppercase text-[#4B4456] hover:bg-gray-50 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span>Animation</span>
+              </Link>
+            </li>
+            <li className={`border-b border-gray-100 transition-all duration-300 ${
+              mobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'
+            }`} style={{ transitionDelay: mobileMenuOpen ? '350ms' : '0ms' }}>
+              <Link 
                 href="/blog" 
                 className="flex justify-between items-center px-6 py-[18px] text-[12px] font-sans font-medium tracking-[1.5px] uppercase text-[#4B4456] hover:bg-gray-50 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span>Blog</span>
+              </Link>
+            </li>
+            <li className={`border-b border-gray-100 transition-all duration-300 ${
+              mobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'
+            }`} style={{ transitionDelay: mobileMenuOpen ? '150ms' : '0ms' }}>
+              <Link 
+                href="/a-propos" 
+                className="flex justify-between items-center px-6 py-[18px] text-[12px] font-sans font-medium tracking-[1.5px] uppercase text-[#4B4456] hover:bg-gray-50 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span>À Propos</span>
               </Link>
             </li>
             <li className={`border-b border-gray-100 transition-all duration-300 ${

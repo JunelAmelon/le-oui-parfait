@@ -141,7 +141,7 @@ export default function OffreElegancePage() {
               <div className="lg:col-span-1 flex flex-col">
                 <div className="relative h-[650px] overflow-hidden mb-4">
                   <video autoPlay muted loop playsInline className="w-full h-full object-cover">
-                    <source src="/video-detail.mp4" type="video/mp4" />
+                    <source src="/video-élégance.mp4" type="video/mp4" />
                   </video>
                 </div>
                 <div className="bg-white p-5">

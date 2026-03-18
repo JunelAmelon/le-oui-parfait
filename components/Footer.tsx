@@ -73,7 +73,7 @@ export function Footer() {
               />
             </div>
             <p className="text-gray-600 text-sm mb-6">
-              Showroom Clientèl : 19 rue Albert-Remy 91130 Ris-Orangis
+              Showroom Clientèle : 19 rue Albert-Remy 91130 Ris-Orangis
               <br />
               Siège Social : 25 rue de Ponthieu 75008 Paris
             </p>

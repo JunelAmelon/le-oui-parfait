@@ -26,7 +26,7 @@ export function VideoPresentationSection() {
           <div className="absolute inset-0">
             <video
               ref={videoRef}
-              src="/presentation.mp4"
+              src="/video-detail.mp4"
               poster="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/11/IMG-GY8WHY5-1536x864.jpg"
               loop
               muted

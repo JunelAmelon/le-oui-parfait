@@ -38,13 +38,13 @@ export default function GestionEvenementsPage() {
         />
 
         {/* Intro — Image 1 style */}
-        <section className="py-20 bg-[#f4f1f7]">
+        <section className="py-12 bg-[#f4f1f7]">
           <div className="container mx-auto px-6 lg:px-12 max-w-6xl">
-            <div className="grid grid-cols-1 lg:grid-cols-[2.479fr_2.5fr] gap-12 lg:gap-6 items-start">
-              <div className="lg:col-span-1">
-                <div className="relative h-[500px] overflow-hidden mb-4">
+            <div className="grid grid-cols-1 lg:grid-cols-[2.603fr_2.5fr] gap-12 lg:gap-6 items-stretch">
+              <div className="lg:col-span-1 flex flex-col">
+                <div className="relative h-[650px] overflow-hidden mb-4">
                   <video autoPlay muted loop playsInline className="w-full h-full object-cover">
-                    <source src="/presentation.mp4" type="video/mp4" />
+                    <source src="/video-detail.mp4" type="video/mp4" />
                   </video>
                 </div>
                 <div className="bg-white p-5">
@@ -67,8 +67,14 @@ export default function GestionEvenementsPage() {
                   La gestion d'événements requiert une expertise professionnelle, une attention aux détails et une capacité à anticiper et résoudre les défis. Notre équipe expérimentée assure que chaque aspect se déroule sans accroc.
                 </p>
                 <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-8">
-                  Nous coordonnons tous les éléments logistiques, gérons les fournisseurs et veillons à ce que votre vision devienne réalité, vous permettant de profiter pleinement sans aucun souci.
+                  De la logistique aux touches finales, chaque détail reflète la perfection, l'harmonie et les émotions que vous souhaitez chérir.
                 </p>
+
+                <Link href="/contact">
+                  <button className="uppercase tracking-[0.2em] text-[11px] bg-white border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-8 py-3 rounded-full transition-all mb-8">
+                    Réserver maintenant
+                  </button>
+                </Link>
                 <p className="text-[15px] font-semibold text-[#4B4456] mb-4">Spécifications du Service</p>
                 <div className="grid grid-cols-2 gap-3 mb-8">
                   {specs.map((s, i) => (
@@ -78,11 +84,6 @@ export default function GestionEvenementsPage() {
                     </div>
                   ))}
                 </div>
-                <Link href="/contact">
-                  <button className="uppercase tracking-[0.2em] text-[11px] bg-white border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-8 py-3 rounded-full transition-all">
-                    Réserver maintenant
-                  </button>
-                </Link>
               </div>
             </div>
           </div>
@@ -91,7 +92,7 @@ export default function GestionEvenementsPage() {
         <TestimonialsSection />
 
         {/* Other Services */}
-        <section className="py-20 bg-[#f4f1f7]">
+        <section className="py-14 bg-[#f4f1f7]">
           <div className="container mx-auto px-6 max-w-6xl">
             <div className="text-center mb-12">
               <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Autres Services</p>
@@ -129,14 +130,8 @@ export default function GestionEvenementsPage() {
         <section className="relative py-20 lg:py-28 overflow-hidden">
           {/* Background Video */}
           <div className="absolute inset-0">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full h-full object-cover"
-            >
-              <source src="/presentation.mp4" type="video/mp4" />
+            <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+              <source src="/video-detail.mp4" type="video/mp4" />
             </video>
             <div className="absolute inset-0 bg-black/60" />
           </div>

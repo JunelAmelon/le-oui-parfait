@@ -100,7 +100,7 @@ export default function OffreElegancePage() {
               className="object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-black/80" />
+            <div className="absolute inset-0 bg-black/70" />
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 relative z-10 pb-16 pt-40">
@@ -135,13 +135,13 @@ export default function OffreElegancePage() {
         </section>
 
         {/* Intro — Image 1 style */}
-        <section className="py-20 bg-[#f4f1f7]">
+        <section className="py-12 bg-[#f4f1f7]">
           <div className="container mx-auto px-6 lg:px-12 max-w-6xl">
-            <div className="grid grid-cols-1 lg:grid-cols-[2.479fr_2.5fr] gap-12 lg:gap-6 items-start">
-              <div className="lg:col-span-1">
-                <div className="relative h-[500px] overflow-hidden mb-4">
+            <div className="grid grid-cols-1 lg:grid-cols-[2.603fr_2.5fr] gap-12 lg:gap-6 items-stretch">
+              <div className="lg:col-span-1 flex flex-col">
+                <div className="relative h-[650px] overflow-hidden mb-4">
                   <video autoPlay muted loop playsInline className="w-full h-full object-cover">
-                    <source src="/presentation.mp4" type="video/mp4" />
+                    <source src="/video-detail.mp4" type="video/mp4" />
                   </video>
                 </div>
                 <div className="bg-white p-5">
@@ -161,11 +161,19 @@ export default function OffreElegancePage() {
                   Vous Gardez le Contrôle,<br />Nous Apportons l'Expert
                 </h2>
                 <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-4">
-                  Profitez de notre application mobile dédiée, suivez en temps réel chaque étape de l'organisation, l'avancement de votre dossier ainsi que les acomptes et paiements des prestataires.
+                 Parce que chaque mariage n’a pas besoin du même niveau d’accompagnement, notre formule d’organisation partielle sur mesure s’adapte à votre projet avec précision et intelligence.
+                                 Vous gardez la main sur l’organisation déjà engagée, tandis que notre équipe vous apporte son expertise sur les pôles que vous souhaitez sécuriser, structurer ou déléguer. 
                 </p>
                 <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-8">
-                  Vous avancez dans l'organisation de votre mariage avec un cadre clair, des choix sécurisés et l'accompagnement d'un professionnel sur les points essentiels de votre choix.
+Vous avancez ainsi avec plus de clarté, de méthode et de confiance, tout en conservant la liberté de piloter votre mariage selon vos envies.
+                 En complément, notre application mobile dédiée vous permet de suivre en temps réel l’évolution de votre dossier, d’échanger facilement avec nos équipes et de garder une visibilité claire sur les étapes, les acomptes et les paiements prestataires.
                 </p>
+
+                <Link href="/contact">
+                  <button className="uppercase tracking-[0.2em] text-[11px] bg-white border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-8 py-3 rounded-full transition-all mb-8">
+                    Réserver maintenant
+                  </button>
+                </Link>
                 <p className="text-[15px] font-semibold text-[#4B4456] mb-4">Spécifications de l'Offre</p>
                 <div className="grid grid-cols-2 gap-3 mb-8">
                   {[
@@ -180,20 +188,15 @@ export default function OffreElegancePage() {
                     </div>
                   ))}
                 </div>
-                <Link href="/contact">
-                  <button className="uppercase tracking-[0.2em] text-[11px] bg-white border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-8 py-3 rounded-full transition-all">
-                    Réserver maintenant
-                  </button>
-                </Link>
               </div>
             </div>
           </div>
         </section>
 
         {/* Sections */}
-        <section className="py-20 bg-[#f4f1f7]">
+        <section className="py-12 bg-[#f4f1f7]">
           <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-            <div className="text-center mb-16">
+            <div className="text-center mb-8">
               <p className="text-xs uppercase tracking-[0.2em] text-[#88b7b5] mb-3">CE QUI EST INCLUS</p>
               <h2 className="font-baskerville text-3xl lg:text-4xl text-[#4A4A4A]">
                 Un Accompagnement<br />Sur les Pôles Qui Comptent
@@ -239,7 +242,7 @@ export default function OffreElegancePage() {
         <TestimonialsSection />
 
         {/* Autres Offres */}
-        <section className="py-20 bg-[#f4f1f7]">
+        <section className="py-14 bg-[#f4f1f7]">
           <div className="container mx-auto px-6 max-w-6xl">
             <div className="text-center mb-12">
               <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Nos Offres</p>
@@ -248,7 +251,7 @@ export default function OffreElegancePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white">
                 <div className="relative h-[240px] overflow-hidden">
-                  <Image src="/wedding (1).jpg" alt="Offre Signature" fill className="object-cover" />
+                  <Image src="/offre-signature.png" alt="Offre Signature" fill className="object-cover" />
                 </div>
                 <div className="p-6">
                   <p className="text-[11px] uppercase tracking-[0.2em] text-[#88b7b5] mb-2">Offre Signature</p>
@@ -266,7 +269,7 @@ export default function OffreElegancePage() {
               </div>
               <div className="bg-white">
                 <div className="relative h-[240px] overflow-hidden">
-                  <Image src="/wedding (4).jpg" alt="Offre Harmonie" fill className="object-cover" />
+                  <Image src="/offre-harmonie.png" alt="Offre Harmonie" fill className="object-cover" />
                 </div>
                 <div className="p-6">
                   <p className="text-[11px] uppercase tracking-[0.2em] text-[#88b7b5] mb-2">Offre Harmonie</p>
@@ -290,7 +293,7 @@ export default function OffreElegancePage() {
         <section className="relative py-20 lg:py-28 overflow-hidden">
           <div className="absolute inset-0">
             <video autoPlay muted loop playsInline className="w-full h-full object-cover">
-              <source src="/presentation.mp4" type="video/mp4" />
+              <source src="/video-detail.mp4" type="video/mp4" />
             </video>
             <div className="absolute inset-0 bg-black/60" />
           </div>

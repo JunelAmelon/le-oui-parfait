@@ -130,7 +130,7 @@ export default function OffreSignaturePage() {
               className="object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-black/80" />
+            <div className="absolute inset-0 bg-black/70" />
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 relative z-10 pb-16 pt-40">
@@ -164,13 +164,13 @@ export default function OffreSignaturePage() {
         </section>
 
         {/* Intro — Image 1 style */}
-        <section className="py-20 bg-[#f4f1f7]">
+        <section className="py-12 bg-[#f4f1f7]">
           <div className="container mx-auto px-6 lg:px-12 max-w-6xl">
-            <div className="grid grid-cols-1 lg:grid-cols-[2.479fr_2.5fr] gap-12 lg:gap-6 items-start">
-              <div className="lg:col-span-1">
-                <div className="relative h-[500px] overflow-hidden mb-4">
+            <div className="grid grid-cols-1 lg:grid-cols-[2.603fr_2.5fr] gap-12 lg:gap-6 items-stretch">
+              <div className="lg:col-span-1 flex flex-col">
+                <div className="relative h-[650px] overflow-hidden mb-4">
                   <video autoPlay muted loop playsInline className="w-full h-full object-cover">
-                    <source src="/presentation.mp4" type="video/mp4" />
+                    <source src="/video-detail.mp4" type="video/mp4" />
                   </video>
                 </div>
                 <div className="bg-white p-5">
@@ -190,11 +190,18 @@ export default function OffreSignaturePage() {
                   Votre Mariage Entre<br />de Bonnes Mains
                 </h2>
                 <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-4">
-                  Profitez de notre application mobile dédiée, suivez en temps réel chaque étape de l'organisation, l'avancement de votre dossier ainsi que les acomptes et paiements des prestataires.
+                  Parce qu’un mariage d’exception mérite bien plus qu’une simple organisation, notre offre Signature vous propose un accompagnement wedding planner complet, pensé pour vous faire vivre chaque préparation avec sérénité, clarté et confiance.
+À chaque étape, notre équipe vous guide, vous conseille et orchestre votre projet avec exigence, pour une expérience fluide, structurée et rassurante. 
                 </p>
                 <p className="text-[17px] text-[#5A5A5A] leading-relaxed mb-8">
-                  Résultat pour vous : la sérénité de vivre pleinement chaque instant, avec la certitude que votre mariage est pensé, orchestré et maîtrisé dans les moindres détails.
+                  En complément, notre application mobile dédiée vous permet de suivre en temps réel l’avancement de votre mariage, d’échanger facilement avec nos équipes et de conserver une visibilité claire sur votre dossier, les étapes clés, les acomptes et les paiements prestataires.
                 </p>
+
+                <Link href="/contact">
+                  <button className="uppercase tracking-[0.2em] text-[11px] bg-white border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-8 py-3 rounded-full transition-all mb-8">
+                    Réserver maintenant
+                  </button>
+                </Link>
                 <p className="text-[15px] font-semibold text-[#4B4456] mb-4">Spécifications de l'Offre</p>
                 <div className="grid grid-cols-2 gap-3 mb-8">
                   {[
@@ -209,20 +216,15 @@ export default function OffreSignaturePage() {
                     </div>
                   ))}
                 </div>
-                <Link href="/contact">
-                  <button className="uppercase tracking-[0.2em] text-[11px] bg-white border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-8 py-3 rounded-full transition-all">
-                    Réserver maintenant
-                  </button>
-                </Link>
               </div>
             </div>
           </div>
         </section>
 
         {/* Sections détaillées */}
-        <section className="py-20 bg-[#f4f1f7]">
+        <section className="py-12 bg-[#f4f1f7]">
           <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-            <div className="text-center mb-16">
+            <div className="text-center mb-8">
               <p className="text-xs uppercase tracking-[0.2em] text-[#88b7b5] mb-3">CE QUI EST INCLUS</p>
               <h2 className="font-baskerville text-3xl lg:text-4xl text-[#4A4A4A]">
                 Un Accompagnement Complet<br />de A à Z
@@ -273,7 +275,7 @@ export default function OffreSignaturePage() {
         <TestimonialsSection />
 
         {/* Autres Offres */}
-        <section className="py-20 bg-[#f4f1f7]">
+        <section className="py-14 bg-[#f4f1f7]">
           <div className="container mx-auto px-6 max-w-6xl">
             <div className="text-center mb-12">
               <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Nos Offres</p>
@@ -282,14 +284,14 @@ export default function OffreSignaturePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white">
                 <div className="relative h-[240px] overflow-hidden">
-                  <Image src="/wedding (3).jpg" alt="Offre Élégance" fill className="object-cover" />
+                  <Image src="/offre-elegance.png" alt="Offre Élégance" fill className="object-cover" />
                 </div>
                 <div className="p-6">
                   <p className="text-[11px] uppercase tracking-[0.2em] text-[#88b7b5] mb-2">Offre Élégance</p>
-                  <h3 className="font-baskerville text-2xl text-[#4B4456] mb-2">Coordination du Jour J</h3>
-                  <p className="text-sm text-[#5A5A5A] leading-relaxed mb-4">Pour ceux qui ont planifié et souhaitent confier la coordination parfaite de leur journée à un professionnel.</p>
+                  <h3 className="font-baskerville text-2xl text-[#4B4456] mb-2">Semi-Planification</h3>
+                  <p className="text-sm text-[#5A5A5A] leading-relaxed mb-4">Vous gardez la main sur votre organisation, nous intervenons sur les pôles où vous souhaitez être accompagné.</p>
                   <ul className="space-y-1 mb-5">
-                    {['Supervision complète', 'Coordination prestataires', 'Planning Jour J'].map((f, j) => (
+                    {['Accompagnement ciblé', 'Pôles au choix', 'Conseils professionnels'].map((f, j) => (
                       <li key={j} className="flex items-center gap-2 text-sm text-[#5A5A5A]"><Check className="w-3.5 h-3.5 text-[#88b7b5] flex-shrink-0" />{f}</li>
                     ))}
                   </ul>
@@ -300,14 +302,14 @@ export default function OffreSignaturePage() {
               </div>
               <div className="bg-white">
                 <div className="relative h-[240px] overflow-hidden">
-                  <Image src="/wedding (4).jpg" alt="Offre Harmonie" fill className="object-cover" />
+                  <Image src="/offre-harmonie.png" alt="Offre Harmonie" fill className="object-cover" />
                 </div>
                 <div className="p-6">
                   <p className="text-[11px] uppercase tracking-[0.2em] text-[#88b7b5] mb-2">Offre Harmonie</p>
-                  <h3 className="font-baskerville text-2xl text-[#4B4456] mb-2">Semi-Planification</h3>
-                  <p className="text-sm text-[#5A5A5A] leading-relaxed mb-4">Vous prenez les décisions, nous nous occupons de la mise en œuvre et de la coordination pour un résultat parfait.</p>
+                  <h3 className="font-baskerville text-2xl text-[#4B4456] mb-2">Coordination du Jour J</h3>
+                  <p className="text-sm text-[#5A5A5A] leading-relaxed mb-4">Pour les couples ayant tout organisé et qui souhaitent confier la gestion du Jour J à un expert.</p>
                   <ul className="space-y-1 mb-5">
-                    {['Accompagnement partiel', 'Gestion prestataires', 'Coordination Jour J'].map((f, j) => (
+                    {['Prise en charge complète', 'Coordination prestataires', 'Gestion imprévus'].map((f, j) => (
                       <li key={j} className="flex items-center gap-2 text-sm text-[#5A5A5A]"><Check className="w-3.5 h-3.5 text-[#88b7b5] flex-shrink-0" />{f}</li>
                     ))}
                   </ul>
@@ -324,7 +326,7 @@ export default function OffreSignaturePage() {
         <section className="relative py-20 lg:py-28 overflow-hidden">
           <div className="absolute inset-0">
             <video autoPlay muted loop playsInline className="w-full h-full object-cover">
-              <source src="/presentation.mp4" type="video/mp4" />
+              <source src="/video-detail.mp4" type="video/mp4" />
             </video>
             <div className="absolute inset-0 bg-black/60" />
           </div>

@@ -14,7 +14,7 @@ export function HeroPage({ title, subtitle, backgroundImage }: HeroPageProps) {
       {backgroundImage && (
         <div className="absolute inset-0">
           <Image src={backgroundImage} alt={title} fill className="object-cover" priority />
-          <div className="absolute inset-0 bg-black/80" />
+          <div className="absolute inset-0 bg-black/70" />
         </div>
       )}
 

@@ -14,7 +14,7 @@ export function ServiceHero({ title, eyebrow, subtitle, image, breadcrumbLabel }
     <section className="relative min-h-[65vh] flex items-end overflow-hidden">
       <div className="absolute inset-0">
         <Image src={image} alt={title} fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-black/80" />
+        <div className="absolute inset-0 bg-black/70" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10 pb-16 pt-40">

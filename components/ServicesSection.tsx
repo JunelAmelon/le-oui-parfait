@@ -6,6 +6,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { AnimatedSection } from './AnimatedSection';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from '@/components/ui/carousel';
 
 export function ServicesSection() {
   const services = [
@@ -49,22 +54,23 @@ export function ServicesSection() {
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const [paused, setPaused] = useState(false);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % services.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + services.length) % services.length);
-  };
+  const [api, setApi] = useState<any>(null);
 
   useEffect(() => {
+    if (!api) return;
+    setCurrentSlide(api.selectedScrollSnap());
+    api.on('select', () => setCurrentSlide(api.selectedScrollSnap()));
+    api.on('reInit', () => setCurrentSlide(api.selectedScrollSnap()));
+  }, [api]);
+
+  useEffect(() => {
+    if (!api) return;
     if (paused) return;
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % services.length);
+      api.scrollNext();
     }, 4500);
     return () => clearInterval(timer);
-  }, [paused, services.length]);
+  }, [api, paused]);
 
   return (
     <section
@@ -100,57 +106,59 @@ export function ServicesSection() {
 
         {/* Mobile: Auto Carousel */}
         <div className="md:hidden relative">
-          <div className="overflow-hidden">
-            <div
-              className="flex transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
+          <Carousel
+            opts={{ loop: true, align: 'start' }}
+            setApi={(emblaApi) => setApi(emblaApi)}
+          >
+            <CarouselContent>
               {services.map((service, index) => (
-                <div key={index} className="w-full flex-shrink-0 px-2">
-                  <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-                    <div className="relative h-[250px] w-full">
-                      <Image
-                        src={service.image}
-                        alt={service.alt}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <h3 className="font-baskerville text-[24px] text-[#5A5A5A] mb-3 leading-tight font-normal">
-                        {service.title}
-                      </h3>
-                      <p className="text-[#5A5A5A] leading-relaxed mb-4 text-[16px]">
-                        {service.description}
-                      </p>
-                      <ul className="space-y-2 mb-6">
-                        {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <Check className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
-                            <span className="text-[#5A5A5A] text-[15px]">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <Link href={service.link}>
-                        <Button
-                          variant="outline"
-                          className="w-full uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-6 py-5 font-medium transition-all"
-                        >
-                          Voir les Détails
-                        </Button>
-                      </Link>
+                <CarouselItem key={index} className="basis-full">
+                  <div className="px-2">
+                    <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+                      <div className="relative h-[250px] w-full">
+                        <Image
+                          src={service.image}
+                          alt={service.alt}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="p-6">
+                        <h3 className="font-baskerville text-[24px] text-[#5A5A5A] mb-3 leading-tight font-normal">
+                          {service.title}
+                        </h3>
+                        <p className="text-[#5A5A5A] leading-relaxed mb-4 text-[16px]">
+                          {service.description}
+                        </p>
+                        <ul className="space-y-2 mb-6">
+                          {service.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <Check className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
+                              <span className="text-[#5A5A5A] text-[15px]">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <Link href={service.link}>
+                          <Button
+                            variant="outline"
+                            className="w-full uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-6 py-5 font-medium transition-all"
+                          >
+                            Voir les Détails
+                          </Button>
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </CarouselItem>
               ))}
-            </div>
-          </div>
+            </CarouselContent>
+          </Carousel>
 
           <div className="flex justify-center gap-2 mt-6">
             {services.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentSlide(index)}
+                onClick={() => api?.scrollTo(index)}
                 className={`transition-all duration-300 rounded-full ${
                   currentSlide === index
                     ? 'w-10 h-2 bg-[#88b7b5]'

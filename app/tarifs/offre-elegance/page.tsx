@@ -293,7 +293,7 @@ Vous avancez ainsi avec plus de clarté, de méthode et de confiance, tout en co
         <section className="relative py-20 lg:py-28 overflow-hidden">
           <div className="absolute inset-0">
             <video autoPlay muted loop playsInline className="w-full h-full object-cover">
-              <source src="/video-detail.mp4" type="video/mp4" />
+              <source src="/presentation.mp4" type="video/mp4" />
             </video>
             <div className="absolute inset-0 bg-black/60" />
           </div>

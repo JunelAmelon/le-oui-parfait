@@ -32,7 +32,7 @@ const teamMembers = [
   },
   {
     name: 'Sam',
-    title: 'Responsable des opérations',
+    title: 'Responsable des Opérations',
     image: '/equipe/Sam.jpg',
   },
 ];
@@ -40,6 +40,7 @@ const teamMembers = [
 export function TeamSection() {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(4);
   const total = teamMembers.length;
 
   const next = useCallback(() => {
@@ -56,7 +57,18 @@ export function TeamSection() {
     return () => clearInterval(timer);
   }, [next, paused]);
 
-  const visibleCount = 4;
+  useEffect(() => {
+    const updateVisibleCount = () => {
+      const w = window.innerWidth;
+      if (w < 640) return setVisibleCount(1);
+      if (w < 1024) return setVisibleCount(2);
+      return setVisibleCount(4);
+    };
+
+    updateVisibleCount();
+    window.addEventListener('resize', updateVisibleCount);
+    return () => window.removeEventListener('resize', updateVisibleCount);
+  }, []);
 
   return (
     <section className="py-20 bg-[#f4f1f7]" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
@@ -74,7 +86,7 @@ export function TeamSection() {
           {/* Navigation arrows */}
           <button
             onClick={prev}
-            className="absolute -left-5 top-[40%] -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white border border-[#88b7b5] text-[#88b7b5] hover:bg-[#88b7b5] hover:text-white shadow-md transition-all flex items-center justify-center"
+            className="hidden lg:flex absolute -left-5 top-[40%] -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white border border-[#88b7b5] text-[#88b7b5] hover:bg-[#88b7b5] hover:text-white shadow-md transition-all items-center justify-center"
             aria-label="Membre précédent"
           >
             <ChevronLeft className="w-5 h-5" />
@@ -82,7 +94,7 @@ export function TeamSection() {
 
           <button
             onClick={next}
-            className="absolute -right-5 top-[40%] -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white border border-[#88b7b5] text-[#88b7b5] hover:bg-[#88b7b5] hover:text-white shadow-md transition-all flex items-center justify-center"
+            className="hidden lg:flex absolute -right-5 top-[40%] -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white border border-[#88b7b5] text-[#88b7b5] hover:bg-[#88b7b5] hover:text-white shadow-md transition-all items-center justify-center"
             aria-label="Membre suivant"
           >
             <ChevronRight className="w-5 h-5" />

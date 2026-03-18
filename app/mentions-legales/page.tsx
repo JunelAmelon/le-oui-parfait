@@ -29,8 +29,8 @@ export default function MentionsLegales() {
                   <p>
                     <strong>Le Oui Parfait</strong><br />
                     SARL au capital de 50 000 €<br />
-                    Showroom Clientel : 19 rue Albert-Remy 91130 Ris-Orangis<br />
-                    Siège social : 25 rue de Ponthieu 75008 Paris<br />
+                    Showroom Clientèl : 19 rue Albert-Remy 91130 Ris-Orangis<br />
+                    Siège Social : 25 rue de Ponthieu 75008 Paris<br />
                     RCS Paris : 123 456 789<br />
                     SIRET : 123 456 789 00012<br />
                     TVA Intracommunautaire : FR 12 123456789

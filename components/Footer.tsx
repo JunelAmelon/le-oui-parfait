@@ -73,9 +73,9 @@ export function Footer() {
               />
             </div>
             <p className="text-gray-600 text-sm mb-6">
-              Showroom Clientel : 19 rue Albert-Remy 91130 Ris-Orangis
+              Showroom Clientèl : 19 rue Albert-Remy 91130 Ris-Orangis
               <br />
-              Siège social : 25 rue de Ponthieu 75008 Paris
+              Siège Social : 25 rue de Ponthieu 75008 Paris
             </p>
             <div className="flex gap-3">
               <a

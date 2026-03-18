@@ -72,7 +72,7 @@ export default function OffreHarmoniePage() {
         <section className="relative min-h-[65vh] flex items-end overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-S5QBJNG.jpg"
+              src="offre-harmonie.png"
               alt="Offre Harmonie — Coordination du Jour J"
               fill
               className="object-cover"

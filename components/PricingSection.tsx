@@ -7,7 +7,7 @@ import { AnimatedSection } from './AnimatedSection';
 
 export function PricingSection() {
   return (
-    <section className="py-20 bg-[#f4f1f7]">
+    <section className="pt-14 pb-20 bg-[#f4f1f7]">
       <div className="container mx-auto px-6 max-w-7xl">
         <AnimatedSection direction="up">
         <div className="text-center mb-16">
@@ -43,11 +43,14 @@ export function PricingSection() {
                 <span className="font-baskerville text-[64px] text-[#2f2a36] leading-[0.9] tracking-tight tabular-nums">1 190</span>
                 <span className="font-baskerville text-[28px] text-[#2f2a36] leading-none">€</span>
               </div>
-              <p className="text-[#6b6573] text-[12px] mt-2 uppercase tracking-[0.18em]">Forfait</p>
+              <p className="text-[#6b6573] text-[12px] mt-2 uppercase tracking-[0.18em] flex items-center justify-center gap-2">
+                <span>Forfait</span>
+                <span className="normal-case tracking-normal text-[11px] text-[#6b6573]">2-3 fois sans frais</span>
+              </p>
             </div>
 
-            <p className="text-gray-600 text-[16px] mb-6 leading-relaxed">
-              Pour les couples ayant organisé leur mariage eux-mêmes, qui souhaitent profiter pleinement de leur journée en déléguant la gestion du jour J.
+            <p className="text-gray-600 text-[16px] mb-6 leading-relaxed text-center">
+              Pour les couples ayant organisé leur mariage eux-mêmes, qui souhaitent profiter pleinement de leur journée en déléguant la gestion du jour J à nos équipes.
             </p>
 
             <div className="flex items-start gap-2 mb-6 p-4 bg-white/60 rounded-2xl border border-[#e7e3ea]/60">
@@ -114,11 +117,14 @@ export function PricingSection() {
                 <span className="font-baskerville text-[64px] text-[#2f2a36] leading-[0.9] tracking-tight tabular-nums">3 490</span>
                 <span className="font-baskerville text-[28px] text-[#2f2a36] leading-none">€</span>
               </div>
-              <p className="text-[#6b6573] text-[12px] mt-2 uppercase tracking-[0.18em]">Forfait</p>
+              <p className="text-[#6b6573] text-[12px] mt-2 uppercase tracking-[0.18em] flex items-center justify-center gap-2">
+                <span>Forfait</span>
+                <span className="normal-case tracking-normal text-[11px] text-[#6b6573]">2-3 fois sans frais</span>
+              </p>
             </div>
 
-            <p className="relative z-10 text-gray-600 text-[16px] mb-6 leading-relaxed">
-              Formule clé en main pour ceux qui souhaitent confier l'intégralité de l'organisation à un professionnel.
+            <p className="relative z-10 text-gray-600 text-[16px] mb-6 leading-relaxed text-center">
+              Pour les couples qui souhaitent déléguer l'organisation de A à Z, avec une direction claire, un suivi rigoureux et une exécution fluide jusqu'au jour J.
             </p>
 
             <div className="relative z-10 flex items-start gap-2 mb-6 p-4 bg-white/60 rounded-2xl border border-[#e7e3ea]/60">
@@ -181,11 +187,14 @@ export function PricingSection() {
                 <span className="font-baskerville text-[64px] text-[#2f2a36] leading-[0.9] tracking-tight tabular-nums">1 890</span>
                 <span className="font-baskerville text-[28px] text-[#2f2a36] leading-none">€</span>
               </div>
-              <p className="text-[#6b6573] text-[12px] mt-2 uppercase tracking-[0.18em]">Forfait</p>
+              <p className="text-[#6b6573] text-[12px] mt-2 uppercase tracking-[0.18em] flex items-center justify-center gap-2">
+                <span>Forfait</span>
+                <span className="normal-case tracking-normal text-[11px] text-[#6b6573]">2-3 fois sans frais</span>
+              </p>
             </div>
 
-            <p className="text-gray-600 text-[16px] mb-6 leading-relaxed">
-              Un accompagnement structuré sur des pôles précis, pour vous laisser la maîtrise de votre projet tout en bénéficiant d'un cadre professionnel.
+            <p className="text-gray-600 text-[16px] mb-6 leading-relaxed text-center">
+              Pour les couples déjà lancés dans l'organisation, qui veulent être accompagnés sur des pôles clés (planning, prestataires, coordination) tout en gardant la main.
             </p>
 
             <div className="flex items-start gap-2 mb-6 p-4 bg-white/60 rounded-2xl border border-[#e7e3ea]/60">

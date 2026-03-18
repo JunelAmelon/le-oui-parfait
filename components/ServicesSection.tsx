@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Check, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AnimatedSection } from './AnimatedSection';
 
 export function ServicesSection() {
@@ -17,7 +17,7 @@ export function ServicesSection() {
         'Organisation et coordination des prestataires',
         'Coordination du Jour J'
       ],
-      image: 'https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg',
+      image: 'offre-signature.jpeg',
       alt: 'Planification complète du mariage',
       link: '/services/planification-mariage'
     },
@@ -48,6 +48,7 @@ export function ServicesSection() {
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [paused, setPaused] = useState(false);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % services.length);
@@ -57,8 +58,21 @@ export function ServicesSection() {
     setCurrentSlide((prev) => (prev - 1 + services.length) % services.length);
   };
 
+  useEffect(() => {
+    if (paused) return;
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % services.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, [paused, services.length]);
+
   return (
-    <section id="services" className="py-20 bg-[#f4f1f7]">
+    <section
+      id="services"
+      className="py-20 bg-[#f4f1f7]"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         <div className="mb-16">
           <AnimatedSection direction="up">
@@ -84,125 +98,112 @@ export function ServicesSection() {
           </AnimatedSection>
         </div>
 
-        {/* Mobile Carousel */}
-        <div className="lg:hidden relative">
+        {/* Mobile: Stacked List */}
+        <div className="md:hidden space-y-8">
+          {services.map((service, index) => (
+            <AnimatedSection key={index} delay={0.12 * index} direction="up">
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+                <div className="relative h-[250px] w-full">
+                  <Image
+                    src={service.image}
+                    alt={service.alt}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-baskerville text-[24px] text-[#5A5A5A] mb-3 leading-tight font-normal">
+                    {service.title}
+                  </h3>
+                  <p className="text-[#5A5A5A] leading-relaxed mb-4 text-[16px]">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <Check className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#5A5A5A] text-[15px]">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link href={service.link}>
+                    <Button
+                      variant="outline"
+                      className="w-full uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-6 py-5 font-medium transition-all"
+                    >
+                      Voir les Détails
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </AnimatedSection>
+          ))}
+        </div>
+
+        {/* Desktop/Tablet Auto Carousel */}
+        <div className="hidden md:block">
           <div className="overflow-hidden">
-            <div 
-              className="flex transition-transform duration-500 ease-out"
+            <div
+              className="flex transition-transform duration-700 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {services.map((service, index) => (
-                <div key={index} className="w-full flex-shrink-0 px-2">
-                  <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-                    <div className="relative h-[250px] w-full">
-                      <Image
-                        src={service.image}
-                        alt={service.alt}
-                        fill
-                        className="object-cover"
-                      />
+                <div key={index} className="w-full flex-shrink-0">
+                  <AnimatedSection direction="up">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                      <div className="lg:col-span-5 relative h-[400px] lg:h-[450px] overflow-hidden">
+                        <Image
+                          src={service.image}
+                          alt={service.alt}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="lg:col-span-7 lg:pl-8">
+                        <h3 className="font-baskerville text-[30px] text-[#5A5A5A] mb-5 leading-tight font-normal">
+                          {service.title}
+                        </h3>
+                        <p className="text-[#5A5A5A] leading-relaxed mb-6 text-[17px]">
+                          {service.description}
+                        </p>
+                        <ul className="space-y-3 mb-8">
+                          {service.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-start gap-3">
+                              <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mt-0.5" />
+                              <span className="text-[#5A5A5A] text-[16px]">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <Link href={service.link}>
+                          <Button
+                            variant="outline"
+                            className="uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-8 py-6 font-medium transition-all"
+                          >
+                            Voir les Détails
+                          </Button>
+                        </Link>
+                      </div>
                     </div>
-                    <div className="p-6">
-                      <h3 className="font-baskerville text-[24px] text-[#5A5A5A] mb-3 leading-tight font-normal">
-                        {service.title}
-                      </h3>
-                      <p className="text-[#5A5A5A] leading-relaxed mb-4 text-[16px]">
-                        {service.description}
-                      </p>
-                      <ul className="space-y-2 mb-6">
-                        {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <Check className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
-                            <span className="text-[#5A5A5A] text-[15px]">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <Link href={service.link}>
-                        <Button
-                          variant="outline"
-                          className="w-full uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-6 py-5 font-medium transition-all"
-                        >
-                          Voir les Détails
-                        </Button>
-                      </Link>
-                    </div>
-                  </div>
+                  </AnimatedSection>
                 </div>
               ))}
             </div>
           </div>
-          
-          {/* Carousel Controls */}
-          <div className="flex justify-center items-center gap-4 mt-6">
-            <button
-              onClick={prevSlide}
-              className="w-10 h-10 rounded-full border-2 border-[#88b7b5] text-[#88b7b5] hover:bg-[#88b7b5] hover:text-white transition-all flex items-center justify-center"
-              aria-label="Service précédent"
-            >
-              ←
-            </button>
-            <div className="flex gap-2">
-              {services.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    currentSlide === index ? 'bg-[#88b7b5] w-6' : 'bg-gray-300'
-                  }`}
-                  aria-label={`Aller au service ${index + 1}`}
-                />
-              ))}
-            </div>
-            <button
-              onClick={nextSlide}
-              className="w-10 h-10 rounded-full border-2 border-[#88b7b5] text-[#88b7b5] hover:bg-[#88b7b5] hover:text-white transition-all flex items-center justify-center"
-              aria-label="Service suivant"
-            >
-              →
-            </button>
-          </div>
-        </div>
 
-        {/* Desktop Grid */}
-        <div className="hidden lg:block space-y-16">
-          {services.map((service, index) => (
-            <AnimatedSection key={index} delay={0.2 * index} direction="up">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-5 relative h-[400px] lg:h-[450px] overflow-hidden">
-                <Image
-                  src={service.image}
-                  alt={service.alt}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="lg:col-span-7 lg:pl-8">
-                <h3 className="font-baskerville text-[30px] text-[#5A5A5A] mb-5 leading-tight font-normal">
-                  {service.title}
-                </h3>
-                <p className="text-[#5A5A5A] leading-relaxed mb-6 text-[17px]">
-                  {service.description}
-                </p>
-                <ul className="space-y-3 mb-8">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mt-0.5" />
-                      <span className="text-[#5A5A5A] text-[16px]">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link href={service.link}>
-                  <Button
-                    variant="outline"
-                    className="uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-8 py-6 font-medium transition-all"
-                  >
-                    Voir les Détails
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            </AnimatedSection>
-          ))}
+          <div className="flex justify-center gap-2 mt-10">
+            {services.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`transition-all duration-300 rounded-full ${
+                  currentSlide === index
+                    ? 'w-10 h-2 bg-[#88b7b5]'
+                    : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'
+                }`}
+                aria-label={`Aller au service ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

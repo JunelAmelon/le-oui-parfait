@@ -106,9 +106,9 @@ export function ContactSection() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Adresse</h4>
                     <p className="text-gray-600">
-                      Showroom Clientel : 19 rue Albert-Remy 91130 Ris-Orangis
+                      Showroom Clientèl : 19 rue Albert-Remy 91130 Ris-Orangis
                       <br />
-                      Siège social : 25 rue de Ponthieu 75008 Paris
+                      Siège Social : 25 rue de Ponthieu 75008 Paris
                     </p>
                   </div>
                 </div>

@@ -1,9 +1,7 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { HeroPage } from '@/components/HeroPage';
-import { PortfolioSection } from '@/components/PortfolioSection';
-import { PortfolioMediaSection } from '@/components/PortfolioMediaSection';
-import { TestimonialsSection } from '@/components/TestimonialsSection';
+import { PortfolioCreatorsShowcase } from '@/components/PortfolioCreatorsShowcase';
 
 export default function PortfolioPage() {
   return (
@@ -13,14 +11,10 @@ export default function PortfolioPage() {
         <HeroPage
           title="Portfolio"
           subtitle="Découvrez nos plus belles réalisations et laissez-vous inspirer"
-          backgroundImage="wedding (6).jpg"
+          backgroundImage="https://www.formation-photographe.net/wp-content/uploads/2020/11/Formation-Photo-Studio-Palle-180562225.jpg"
         />
 
-        <PortfolioSection />
-
-        <PortfolioMediaSection />
-
-        <TestimonialsSection />
+        <PortfolioCreatorsShowcase />
       </main>
       <Footer />
     </div>

@@ -47,7 +47,9 @@ export function Header() {
             }`}>
               Tarifs
             </Link>
-            <Link href="/#animation" className="text-[12px] font-sans uppercase tracking-[0.15em] transition text-[#4B4456] hover:text-[#88b7b5]">
+            <Link href="/animation" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
+              pathname === '/animation' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
+            }`}>
               Animation
             </Link>
             <Link href="/blog" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
@@ -173,7 +175,7 @@ export function Header() {
               mobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'
             }`} style={{ transitionDelay: mobileMenuOpen ? '350ms' : '0ms' }}>
               <Link 
-                href="/#animation" 
+                href="/animation" 
                 className="flex justify-between items-center px-6 py-[18px] text-[12px] font-sans font-medium tracking-[1.5px] uppercase text-[#4B4456] hover:bg-gray-50 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >

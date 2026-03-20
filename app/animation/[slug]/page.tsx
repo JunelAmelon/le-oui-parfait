@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { notFound } from 'next/navigation';
 import { AnimationImageCarousel } from '@/components/AnimationImageCarousel';
-import { Check, Sparkles, Users, Camera, Cocktail, Heart, Store } from 'lucide-react';
+import { Check, Sparkles, Users, Camera, Wine, Heart, Store } from 'lucide-react';
 
 type AnimationDetail = {
   slug: string;
@@ -270,7 +270,7 @@ export default async function AnimationDetailPage(props: { params: Promise<{ slu
     switch (data.slug) {
       case 'coin-chicha':
         return [
-          { icon: Cocktail, title: 'Ambiance Lounge' },
+          { icon: Wine, title: 'Ambiance Lounge' },
           { icon: Users, title: 'Espace Convivial' },
           { icon: Sparkles, title: 'Scénographie Chic' },
           { icon: Heart, title: 'Moment de Détente' },
@@ -312,7 +312,7 @@ export default async function AnimationDetailPage(props: { params: Promise<{ slu
         ];
       case 'maison-du-ti-punch':
         return [
-          { icon: Cocktail, title: 'Bar à Thème' },
+          { icon: Wine, title: 'Bar à Thème' },
           { icon: Sparkles, title: 'Décoration Exotique' },
           { icon: Users, title: 'Animation Festive' },
           { icon: Heart, title: 'Dégustation Conviviale' },

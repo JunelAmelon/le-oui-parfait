@@ -79,7 +79,7 @@ export default function AnimationPage() {
         <HeroPage
           title="Animations"
           subtitle="Des expériences pensées pour enrichir l’expérience de vos invités et créer des souvenirs mémorables"
-          backgroundImage="wedding (4).jpg"
+          backgroundImage="https://www.weddinggame.fr/top-8-animation-mariage-2025/feu-artifice-lanternes-mariage.jpg"
         />
 
         <section className="py-16 bg-[#f4f1f7]">

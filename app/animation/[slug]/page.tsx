@@ -102,7 +102,7 @@ const animations: AnimationDetail[] = [
     eyebrow: 'Animations Mariage',
     title: 'Photobooth 360',
     subtitle: 'Une animation immersive, élégante et résolument mémorable.',
-    heroImage: '/photboot-360 (1).jpg',
+    heroImage: '/photoboot.png',
     price: 'À partir de 549€ HT',
     paymentHint: 'Paiement en 3 ou 4 fois sans frais',
     highlights: ['Captation 360°', 'Effet slow motion', 'Partage rapide (QR, WhatsApp, AirDrop…)'],

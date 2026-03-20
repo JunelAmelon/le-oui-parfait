@@ -26,13 +26,6 @@ type AnimationDetail = {
   images: { src: string; alt: string }[];
 };
 
-const weddingBaseImages = [
-  { src: '/wedding (2).jpg', alt: 'Ambiance mariage' },
-  { src: '/wedding (3).jpg', alt: 'Ambiance mariage' },
-  { src: '/wedding (4).jpg', alt: 'Ambiance mariage' },
-  { src: '/wedding (5).jpg', alt: 'Ambiance mariage' },
-];
-
 const animations: AnimationDetail[] = [
   {
     slug: 'coin-chicha',
@@ -70,8 +63,6 @@ const animations: AnimationDetail[] = [
       { src: '/COINCHCHA (1).jpg', alt: 'Coin Chicha — mise en scène' },
       { src: '/COINCHCHA (2).jpg', alt: 'Coin Chicha — ambiance lounge' },
       { src: '/COINCHCHA (3).jpg', alt: 'Coin Chicha — détail' },
-      { src: '/coin-chicha-interieur.jpg', alt: 'Coin Chicha — intérieur' },
-      ...weddingBaseImages,
     ],
   },
   {
@@ -99,9 +90,10 @@ const animations: AnimationDetail[] = [
     notesTitle: 'À noter',
     notes: ['Au-delà de 100 personnes, un ajustement tarifaire sera appliqué selon le nombre de convives.'],
     images: [
-      { src: '/stand-oui-pancake.jpg', alt: 'Stand Oui Pancake' },
-      { src: '/stand-oui-pancake 2.jpg', alt: 'Stand Oui Pancake — service' },
-      ...weddingBaseImages,
+      { src: '/stand-pancake (1).jpg', alt: 'Stand Oui Pancake — présentation' },
+      { src: '/stand-pancake (2).jpg', alt: 'Stand Oui Pancake — service' },
+      { src: '/stand-pancake (3).jpg', alt: 'Stand Oui Pancake — détails' },
+      { src: '/stand-pancake (4).jpg', alt: 'Stand Oui Pancake — ambiance' },
     ],
   },
   {
@@ -132,8 +124,6 @@ const animations: AnimationDetail[] = [
     images: [
       { src: '/photboot-360 (1).jpg', alt: 'Photobooth 360 — animation' },
       { src: '/photboot-360 (2).jpg', alt: 'Photobooth 360 — souvenir' },
-      { src: '/photoboot.png', alt: 'Animation photobooth — souvenirs' },
-      ...weddingBaseImages,
     ],
   },
   {
@@ -165,8 +155,6 @@ const animations: AnimationDetail[] = [
     images: [
       { src: '/photobott-mirror (1).jpg', alt: 'Miroir Photobooth — animation' },
       { src: '/photobott-mirror (2).jpg', alt: 'Miroir Photobooth — souvenir' },
-      { src: '/mirroir-photoboot.png', alt: 'Miroir Photobooth' },
-      ...weddingBaseImages,
     ],
   },
   {
@@ -197,8 +185,6 @@ const animations: AnimationDetail[] = [
     images: [
       { src: '/photobbot-classique (1).jpg', alt: 'Photobooth Classique — animation' },
       { src: '/photobbot-classique (2).jpg', alt: 'Photobooth Classique — souvenir' },
-      { src: '/photoboot.png', alt: 'Photobooth — animation' },
-      ...weddingBaseImages,
     ],
   },
   {
@@ -231,8 +217,6 @@ const animations: AnimationDetail[] = [
     images: [
       { src: '/candy-bar (1).jpeg', alt: 'Candy Bar & Cup Cake — présentation' },
       { src: '/candy-bar (2).jpeg', alt: 'Candy Bar & Cup Cake — détails' },
-      { src: '/candy-bar.jpg', alt: 'Candy Bar & Cup Cake' },
-      ...weddingBaseImages,
     ],
   },
   {
@@ -267,8 +251,6 @@ const animations: AnimationDetail[] = [
       { src: '/bar-rhum (1).jpg', alt: 'La Maison du Ti’Punch — bar à rhum' },
       { src: '/bar-rhum (2).jpg', alt: 'La Maison du Ti’Punch — dégustation' },
       { src: '/bar-rhum (3).jpg', alt: 'La Maison du Ti’Punch — ambiance' },
-      { src: '/lamaisondu-tipuch.jpg', alt: 'La Maison du Ti’Punch' },
-      ...weddingBaseImages,
     ],
   },
 ];

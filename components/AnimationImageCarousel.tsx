@@ -36,7 +36,7 @@ export function AnimationImageCarousel({
 
   return (
     <div
-      className={className}
+      className={`relative ${className || ''}`}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -53,7 +53,7 @@ export function AnimationImageCarousel({
         </CarouselContent>
       </Carousel>
 
-      <div className="mt-4 flex justify-center gap-2">
+      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
         {images.map((_, idx) => (
           <button
             key={idx}

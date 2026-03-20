@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { notFound } from 'next/navigation';
 import { AnimationImageCarousel } from '@/components/AnimationImageCarousel';
+import { AccordionInclus } from '@/components/AccordionInclus';
 import { Check, Sparkles, Users, Camera, Wine, Heart, Store } from 'lucide-react';
 
 type AnimationDetail = {
@@ -266,6 +267,44 @@ export default async function AnimationDetailPage(props: { params: Promise<{ slu
   const data = animations.find((a) => a.slug === slug);
   if (!data) return notFound();
 
+  const notesIllustration = (() => {
+    switch (data.slug) {
+      case 'coin-chicha':
+        return { src: '/coin-chicha-interieur.jpg', alt: 'Coin Chicha — intérieur' };
+      case 'stand-oui-pancake':
+        return { src: '/stand-oui-pancake 2.jpg', alt: 'Stand Oui Pancake' };
+      case 'photobooth-360':
+        return { src: '/photoboot%20360.png.jpg', alt: 'Photobooth 360' };
+      case 'miroir-photobooth':
+        return { src: '/mirroir-photoboot.png', alt: 'Miroir Photobooth' };
+      case 'photobooth-classique':
+        return { src: '/photoboot-classique.jpg', alt: 'Photobooth Classique' };
+      case 'candy-bar-cup-cake':
+        return { src: '/candy-bar.jpg', alt: 'Candy Bar & Cup Cake' };
+      case 'maison-du-ti-punch':
+        return { src: '/lamaisondu-tipuch.jpg', alt: 'La Maison du Ti’Punch' };
+      default:
+        return { src: data.heroImage, alt: data.title };
+    }
+  })();
+
+  const includesSections = [
+    {
+      title: 'Ce qui est inclus',
+      subtitle: 'Tout est prévu pour une installation fluide et une expérience élégante.',
+      items: data.includes,
+    },
+    ...(data.notes?.length
+      ? [
+          {
+            title: data.notesTitle || 'Informations importantes',
+            subtitle: 'À connaître avant le jour J.',
+            items: data.notes,
+          },
+        ]
+      : []),
+  ];
+
   const specs = (() => {
     switch (data.slug) {
       case 'coin-chicha':
@@ -362,8 +401,8 @@ export default async function AnimationDetailPage(props: { params: Promise<{ slu
           <div className="container mx-auto px-6 lg:px-12 max-w-6xl">
             <div className="grid grid-cols-1 lg:grid-cols-[2.603fr_2.5fr] gap-12 lg:gap-6 items-stretch">
               <div className="lg:col-span-1 flex flex-col">
-                <div className="relative h-[650px] overflow-hidden mb-4">
-                  <AnimationImageCarousel images={data.images} className="h-[650px]" />
+                <div className="relative w-full aspect-[3/4] overflow-hidden mb-4">
+                  <AnimationImageCarousel images={data.images} className="h-full" />
                 </div>
                 <div className="bg-white p-5">
                   <p className="text-[15px] font-semibold text-[#4B4456] mb-4">Caractéristiques clés :</p>
@@ -419,47 +458,15 @@ export default async function AnimationDetailPage(props: { params: Promise<{ slu
           </div>
         </section>
 
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-6 max-w-5xl">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-              <div className="lg:col-span-7">
-                <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Détails</p>
-                <h2 className="font-baskerville text-3xl text-[#4B4456] mb-6">Une expérience pensée pour votre réception</h2>
-                <div className="space-y-4">
-                  {data.body.map((p, i) => (
-                    <p key={i} className="text-[17px] text-[#5A5A5A] leading-relaxed">
-                      {p}
-                    </p>
-                  ))}
-                </div>
-              </div>
-
-              <div className="lg:col-span-5">
-                <div className="bg-[#f4f1f7] p-7 border border-[#e8e0dc]">
-                  <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-4">{data.includesTitle}</p>
-                  <ul className="space-y-2">
-                    {data.includes.map((item, i) => (
-                      <li key={i} className="text-[#5A5A5A] text-[15px] leading-relaxed">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {data.notes?.length ? (
-                  <div className="bg-white p-7 border border-[#e8e0dc] mt-6">
-                    <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-4">{data.notesTitle || 'Informations'}</p>
-                    <ul className="space-y-2">
-                      {data.notes.map((item, i) => (
-                        <li key={i} className="text-[#5A5A5A] text-[15px] leading-relaxed">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ) : null}
-              </div>
+        <section className="py-12 bg-[#f4f1f7]">
+          <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+            <div className="text-center mb-8">
+              <p className="text-xs uppercase tracking-[0.2em] text-[#88b7b5] mb-3">CE QUI EST INCLUS</p>
+              <h2 className="font-baskerville text-3xl lg:text-4xl text-[#4A4A4A]">
+                Une Animation Orchestrée<br />Avec Rigueur et Élégance
+              </h2>
             </div>
+            <AccordionInclus sections={includesSections} />
           </div>
         </section>
 

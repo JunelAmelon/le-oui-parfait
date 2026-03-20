@@ -12,7 +12,7 @@ export default function ServicesPage() {
         <HeroPage
           title="Services"
           subtitle="Des prestations sur mesure pour faire de votre mariage un moment unique"
-          backgroundImage="wedding (4).jpg"
+          backgroundImage="https://media.abcsalles.com/images/1/articles/960x640/840709/comment-trouver-ses-prestataires-de-mariage.jpg"
         />
 
         <ServicesSection />

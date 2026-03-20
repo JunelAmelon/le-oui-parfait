@@ -158,6 +158,47 @@ export default function AnimationPage() {
                   </div>
                 </Link>
               ))}
+
+              <Link
+                href="/contact"
+                className="group block lg:col-span-2 bg-[#4B4456] shadow-[0_18px_55px_rgba(25,20,33,0.18)] overflow-hidden"
+              >
+                <div className="relative h-full">
+                  <div className="absolute inset-0">
+                    <Image
+                      src="/wedding (5).jpg"
+                      alt="Réserver une animation"
+                      fill
+                      className="object-cover opacity-40 transition-transform duration-1000 group-hover:scale-[1.03]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/50 to-black/35" />
+                  </div>
+
+                  <div className="relative z-10 p-10 lg:p-12 flex flex-col h-full justify-between min-h-[360px]">
+                    <div>
+                      <p className="text-[11px] uppercase tracking-[0.28em] text-white/70">Sur-mesure</p>
+                      <h3 className="font-baskerville text-3xl lg:text-4xl text-white mt-3 leading-tight">
+                        Vous ne trouvez pas
+                        <br />
+                        l’animation idéale ?
+                      </h3>
+                      <p className="text-white/80 text-[16px] leading-relaxed mt-5 max-w-2xl">
+                        Dites-nous l’ambiance que vous souhaitez créer (lounge, gourmandise, souvenirs, bar à thème…).
+                        Nous vous proposons une formule adaptée, élégante et parfaitement intégrée à votre réception.
+                      </p>
+                    </div>
+
+                    <div className="mt-8 flex items-center justify-between gap-6">
+                      <div className="text-white/70 text-[11px] uppercase tracking-[0.22em]">
+                        Réponse rapide — devis personnalisé
+                      </div>
+                      <Button className="uppercase tracking-[0.15em] text-[11px] bg-[#88b7b5] text-white hover:bg-[#6a9a98] rounded-full px-10 py-7 font-medium transition-all shadow-lg hover:shadow-xl">
+                        Nous contacter
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </Link>
             </div>
 
           </div>

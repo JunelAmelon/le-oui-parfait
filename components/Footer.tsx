@@ -199,42 +199,42 @@ export function Footer() {
           <div className="flex gap-0 flex-shrink-0">
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-G8JWY7N.jpg"
+                src="/wedding (1).jpg"
                 alt="Moment mariage 1"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG01-Q3YLD3X.jpg"
+                src="/wedding (2).jpg"
                 alt="Moment mariage 2"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-7W6NNW9.jpg"
+                src="/wedding (3).jpg"
                 alt="Moment mariage 3"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-G8JWY7N.jpg"
+                src="/wedding (4).jpg"
                 alt="Moment mariage 4"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG01-Q3YLD3X.jpg"
+                src="/wedding (5).jpg"
                 alt="Moment mariage 5"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-5S5N8JH.jpg"
+                src="/wedding (6).jpg"
                 alt="Moment mariage 6"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
@@ -243,21 +243,21 @@ export function Footer() {
           <div className="flex gap-0 flex-shrink-0" aria-hidden="true">
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG01-Q3YLD3X.jpg"
+                src="/wedding (2).jpg"
                 alt="Moment mariage 2"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-7W6NNW9.jpg"
+                src="/wedding (3).jpg"
                 alt="Moment mariage 3"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-G8JWY7N.jpg"
+                src="/wedding (4).jpg"
                 alt="Moment mariage 4"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />

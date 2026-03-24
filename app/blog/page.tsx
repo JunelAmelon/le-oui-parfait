@@ -175,7 +175,7 @@ export default function BlogPage() {
                     {/* Decorative leaf overlay */}
                     <div className="absolute top-0 left-0 w-32 h-32 opacity-30">
                       <Image
-                        src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG02-R89NSWD.png"
+                        src="/decoration-eucalyptus.PNG"
                         alt="Décoration"
                         fill
                         className="object-contain"

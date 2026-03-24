@@ -11,14 +11,14 @@ const videos = [
     title: 'Film de Mariage — Cinématique',
     description: 'Une narration élégante, un montage rythmé et une colorimétrie premium.',
     src: 'https://www.w3schools.com/html/mov_bbb.mp4',
-    poster: 'https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/11/IMG-GY8WHY5-1536x864.jpg',
+    poster: '/wedding (5).jpg',
   },
   {
     id: 2,
     title: 'Highlights — Émotions',
     description: 'Les moments forts capturés avec discrétion et intention.',
     src: 'https://www.w3schools.com/html/movie.mp4',
-    poster: 'https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/11/IMG-5EKSLH9-1536x1070.jpg',
+    poster: '/wedding (6).jpg',
   },
 ];
 

@@ -41,7 +41,7 @@ export function PlanningSection() {
       {/* Décoration eucalyptus */}
       <div className="absolute top-1/4 left-0 w-24 h-64 opacity-40 z-5">
         <img
-          src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG02-R89NSWD.png"
+          src="/decoration-eucalyptus.PNG"
           alt=""
           className="w-full h-full object-contain"
         />
@@ -50,7 +50,7 @@ export function PlanningSection() {
       {/* Décoration florale */}
       <div className="absolute bottom-8 right-8 w-40 h-40 opacity-90 z-5">
         <img
-          src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG02-R89NSWD.png"
+          src="/decoration-florale.PNG"
           alt=""
           className="w-full h-full object-contain"
         />

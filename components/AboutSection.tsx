@@ -15,7 +15,7 @@ export function AboutSection() {
             {/* Image Header with Decorations */}
             <div className="relative h-[400px] w-full">
               <Image
-                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/11/IMG-KGD9CHG-1536x1025.jpg"
+                src="/alliance.jpg"
                 alt="Échange d'alliances"
                 fill
                 className="object-cover"
@@ -24,7 +24,7 @@ export function AboutSection() {
               {/* Decorative element on image */}
               <div className="absolute bottom-4 left-4 w-32 h-32 z-10">
                 <Image
-                  src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-R89NSWD.png"
+                  src="/decoration-florale.PNG"
                   alt="Décoration florale"
                   fill
                   className="object-contain opacity-90"
@@ -36,7 +36,7 @@ export function AboutSection() {
             <div className="p-6">
               <div className="absolute -top-8 -right-4 w-20 h-32 z-20 hidden lg:block">
                 <Image
-                  src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG02-R89NSWD.png"
+                  src="/decoration-eucalyptus.PNG"
                   alt="Décoration eucalyptus"
                   fill
                   className="object-contain"
@@ -115,7 +115,7 @@ export function AboutSection() {
           <div className="lg:col-span-7 relative h-[700px]">
             <div className="absolute bottom-[-56px] left-[-45px] w-72 h-72 z-30">
               <Image
-                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-R89NSWD.png"
+                src="/decoration-florale.PNG"
                 alt="Décoration florale"
                 fill
                 className="object-contain"
@@ -124,7 +124,7 @@ export function AboutSection() {
 
             <div className="relative h-full w-full overflow-hidden">
               <Image
-                src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/11/IMG-KGD9CHG-1536x1025.jpg"
+                src="/alliance.jpg"
                 alt="Échange d'alliances"
                 fill
                 className="object-cover"
@@ -137,7 +137,7 @@ export function AboutSection() {
             <div className="bg-white p-12 shadow-2xl -ml-24 relative z-10 my-20">
               <div className="absolute -top-8 -right-4 w-20 h-32 z-20">
                 <Image
-                  src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG02-R89NSWD.png"
+                  src="/decoration-eucalyptus.PNG"
                   alt="Décoration eucalyptus"
                   fill
                   className="object-contain"

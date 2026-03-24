@@ -8,25 +8,25 @@ const portfolioItems = [
     id: 1,
     title: 'Sophie & Georges',
     description: 'Célébration de luxe en salle de bal avec éclairage cristal et floraux champagne.',
-    image: 'https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/11/IMG-BCHVF29-1536x1024.jpg',
+    image: '/wedding (1).jpg',
   },
   {
     id: 2,
     title: 'Olivia & Daniel',
     description: 'Mariage de jardin serein avec charme organique et détails florissants uniques.',
-    image: 'https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/11/IMG-5M4QEF8-1536x1025.jpg',
+    image: '/wedding (2).jpg',
   },
   {
     id: 3,
     title: 'Éveline & Lucas',
     description: 'Romance pastel douce avec décor à la bougie et élégance florale raffinée.',
-    image: 'https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-5WTSLUV.jpg',
+    image: '/wedding (3).jpg',
   },
   {
     id: 4,
     title: 'Clara & Jacques',
     description: 'Cérémonie côtière avec simplicité moderne et tons dorés inspirés océan.',
-    image: 'https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/11/IMG-5EKSLH9-1536x1070.jpg',
+    image: '/wedding (4).jpg',
   },
 ];
 

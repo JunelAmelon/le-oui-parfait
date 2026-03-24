@@ -27,7 +27,7 @@ export function VideoPresentationSection() {
             <video
               ref={videoRef}
               src="/video-detail.mp4"
-              poster="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/11/IMG-GY8WHY5-1536x864.jpg"
+              poster="/wedding (4).jpg"
               loop
               muted
               playsInline
@@ -54,7 +54,7 @@ export function VideoPresentationSection() {
 
         <div className="absolute -bottom-8 left-12 w-32 h-32 lg:w-40 lg:h-40 pointer-events-none opacity-60 hidden lg:block">
           <Image
-            src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-R89NSWD.png"
+            src="/decoration-florale.PNG"
             alt="Décoration florale"
             fill
             className="object-contain"

@@ -92,7 +92,7 @@ export function HeroSection() {
               <div className="relative h-[450px]">
                 <div className="relative h-full w-full overflow-hidden shadow-lg">
                   <Image
-                    src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-UN4DQU3.jpg"
+                    src="photo-couple.PNG"
                     alt="Couple sur la plage"
                     fill
                     className="object-cover"
@@ -118,7 +118,7 @@ export function HeroSection() {
               <div className="relative h-[450px]">
                 <div className="relative h-full w-full overflow-hidden shadow-lg">
                   <Image
-                    src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG-LU9VY7U.jpg"
+                    src="photo-couple-2.PNG"
                     alt="Portrait de mariée"
                     fill
                     className="object-cover"
@@ -175,9 +175,9 @@ export function HeroSection() {
                   </Link>
                 </div>
 
-                <div className="absolute -bottom-8 -right-40 w-28 h-28 pointer-events-none">
+                <div className="absolute -bottom-10 -right-20 w-40 h-40 lg:-bottom-14 lg:-right-28 lg:w-56 lg:h-56 pointer-events-none">
                   <Image
-                    src="https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/2025/10/IMG02-R89NSWD.png"
+                    src="/decoration-florale.PNG"
                     alt="Fleurs décoratives"
                     fill
                     className="object-contain opacity-90"

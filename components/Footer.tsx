@@ -248,20 +248,8 @@ export function Footer() {
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
-            <div className="w-64 h-64 overflow-hidden">
-              <img
-                src="/moment-mariage (8).jpg"
-                alt="Moment mariage 3"
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-              />
-            </div>
-            <div className="w-64 h-64 overflow-hidden">
-              <img
-                src="/moment-mariage (9).jpg"
-                alt="Moment mariage 4"
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-              />
-            </div>
+
+
           </div>
         </div>
       </div>

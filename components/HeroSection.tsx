@@ -128,63 +128,68 @@ export function HeroSection() {
             </div>
 
             {/* White Card Overlay */}
-            <div className="relative -mt-40 mx-auto w-full max-w-[800px] z-20 bg-white py-8 px-16 shadow-xl">
-              <div className="flex flex-col items-center text-center relative">
-                <div className="flex justify-center items-center gap-2 mb-6">
-                  <div className="flex -space-x-2">
-                    <Avatar className="border-2 border-white w-9 h-9">
-                      <AvatarImage src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg" />
-                      <AvatarFallback>C1</AvatarFallback>
-                    </Avatar>
-                    <Avatar className="border-2 border-white w-9 h-9">
-                      <AvatarImage src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" />
-                      <AvatarFallback>C2</AvatarFallback>
-                    </Avatar>
-                    <Avatar className="border-2 border-white w-9 h-9">
-                      <AvatarImage src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" />
-                      <AvatarFallback>C3</AvatarFallback>
-                    </Avatar>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Star className="w-4 h-4 fill-[#88b7b5] text-[#88b7b5]" />
-                    <span className="text-sm font-medium text-gray-900">4.8</span>
-                  </div>
-                  <span className="text-xs text-gray-600">par 212 couples</span>
-                </div>
+<div className="relative -mt-40 mx-auto w-full max-w-[800px] z-20 bg-white shadow-xl">
+  <div className="py-8 px-16">
+    <div className="flex flex-col items-center text-center relative">
+      <div className="flex justify-center items-center gap-2 mb-6">
+        <div className="flex -space-x-2">
+          <Avatar className="border-2 border-white w-9 h-9">
+            <AvatarImage src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg" />
+            <AvatarFallback>C1</AvatarFallback>
+          </Avatar>
+          <Avatar className="border-2 border-white w-9 h-9">
+            <AvatarImage src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" />
+            <AvatarFallback>C2</AvatarFallback>
+          </Avatar>
+          <Avatar className="border-2 border-white w-9 h-9">
+            <AvatarImage src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" />
+            <AvatarFallback>C3</AvatarFallback>
+          </Avatar>
+        </div>
+        <div className="flex items-center gap-1">
+          <Star className="w-4 h-4 fill-[#88b7b5] text-[#88b7b5]" />
+          <span className="text-sm font-medium text-gray-900">4.8</span>
+        </div>
+        <span className="text-xs text-gray-600">par 212 couples</span>
+      </div>
 
-                <h1 className="heading-main text-[52px] mb-6 leading-tight">
-                  Organisatrice de mariage &<br />
-                  coordination du jour J
-                </h1>
+      <h1 className="heading-main text-[52px] mb-6 leading-tight">
+        Organisatrice de mariage &<br />
+        coordination du jour J
+      </h1>
 
-                <div className="flex flex-row gap-4 justify-center items-center w-full mb-4">
-                  <Link href="/contact">
-                    <Button
-                      className="uppercase tracking-[0.12em] text-[11px] bg-transparent text-[#5A5A5A] border-2 border-[#88b7b5] hover:bg-[#88b7b5] hover:text-white px-8 py-5 rounded-full font-medium transition-all"
-                    >
-                      Commencer la Planification
-                    </Button>
-                  </Link>
-                  <Link href="/tarifs">
-                    <Button
-                      variant="link"
-                      className="uppercase tracking-[0.12em] text-[11px] text-[#88b7b5] hover:text-[#6a9a98] px-6 py-4 font-medium underline underline-offset-4"
-                    >
-                      Voir les Forfaits <ArrowRight className="ml-2 h-3.5 w-3.5" />
-                    </Button>
-                  </Link>
-                </div>
-
-                <div className="absolute -bottom-10 -right-20 w-40 h-40 lg:-bottom-14 lg:-right-28 lg:w-56 lg:h-56 pointer-events-none">
-                  <Image
-                    src="/decoration-florale.PNG"
-                    alt="Fleurs décoratives"
-                    fill
-                    className="object-contain opacity-90"
-                  />
-                </div>
-              </div>
-            </div>
+      <div className="flex flex-row gap-4 justify-center items-center w-full mb-4">
+        <Link href="/contact">
+          <Button
+            className="uppercase tracking-[0.12em] text-[11px] bg-transparent text-[#5A5A5A] border-2 border-[#88b7b5] hover:bg-[#88b7b5] hover:text-white px-8 py-5 rounded-full font-medium transition-all"
+          >
+            Commencer la Planification
+          </Button>
+        </Link>
+        <Link href="/tarifs">
+          <Button
+            variant="link"
+            className="uppercase tracking-[0.12em] text-[11px] text-[#88b7b5] hover:text-[#6a9a98] px-6 py-4 font-medium underline underline-offset-4"
+          >
+            Voir les Forfaits <ArrowRight className="ml-2 h-3.5 w-3.5" />
+          </Button>
+        </Link>
+      </div>
+    </div>
+  </div>
+  
+<Image
+  src="/decoration-florale.PNG"
+  alt="Fleurs décoratives"
+  fill
+  className="object-contain opacity-90 pointer-events-none"
+  style={{ 
+    objectPosition: "top 120px left 460px",
+    transform: "scale(1.4)",
+    
+  }}
+/>
+</div>
           </div>
 
         </div>

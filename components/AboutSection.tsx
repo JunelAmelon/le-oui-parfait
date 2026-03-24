@@ -24,7 +24,7 @@ export function AboutSection() {
               {/* Decorative element on image */}
               <div className="absolute bottom-4 left-4 w-32 h-32 z-10">
                 <Image
-                  src="/decoration-florale.PNG"
+                  src="/rose-verte.PNG"
                   alt="Décoration florale"
                   fill
                   className="object-contain opacity-90"

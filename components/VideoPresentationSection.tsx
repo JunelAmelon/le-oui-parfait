@@ -27,7 +27,7 @@ export function VideoPresentationSection() {
             <video
               ref={videoRef}
               src="/video-detail.mp4"
-              poster="/wedding (4).jpg"
+              poster="/présentation-video.jpg"
               loop
               muted
               playsInline

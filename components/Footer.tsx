@@ -199,42 +199,42 @@ export function Footer() {
           <div className="flex gap-0 flex-shrink-0">
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="/wedding (1).jpg"
+                src="/moment-mariage (1).jpg"
                 alt="Moment mariage 1"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="/wedding (2).jpg"
+                src="/moment-mariage (2).jpg"
                 alt="Moment mariage 2"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="/wedding (3).jpg"
+                src="moment-mariage (3).jpg"
                 alt="Moment mariage 3"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="/wedding (4).jpg"
+                src="/moment-mariage (4).jpg"
                 alt="Moment mariage 4"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="/wedding (5).jpg"
+                src="/moment-mariage (5).jpg"
                 alt="Moment mariage 5"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="/wedding (6).jpg"
+                src="/moment-mariage (6).jpg"
                 alt="Moment mariage 6"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
@@ -243,21 +243,21 @@ export function Footer() {
           <div className="flex gap-0 flex-shrink-0" aria-hidden="true">
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="/wedding (2).jpg"
+                src="/moment-mariage (7).jpg"
                 alt="Moment mariage 2"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="/wedding (3).jpg"
+                src="/moment-mariage (8).jpg"
                 alt="Moment mariage 3"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
               <img
-                src="/wedding (4).jpg"
+                src="/moment-mariage (9).jpg"
                 alt="Moment mariage 4"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               />

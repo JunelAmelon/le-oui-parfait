@@ -20,7 +20,7 @@ export function VideoPresentationSection() {
   };
 
   return (
-    <section className="relative w-full py-20 bg-white overflow-hidden">
+    <section className="relative py-20 bg-[#f4f1f7] w-full py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="relative w-full aspect-video lg:aspect-[2/1] overflow-hidden">
           <div className="absolute inset-0">
@@ -52,14 +52,14 @@ export function VideoPresentationSection() {
           </div>
         </div>
 
-        <div className="absolute -bottom-8 left-12 w-32 h-32 lg:w-40 lg:h-40 pointer-events-none opacity-60 hidden lg:block">
-          <Image
-            src="/decoration-florale.PNG"
-            alt="Décoration florale"
-            fill
-            className="object-contain"
-          />
-        </div>
+<div className="absolute -bottom-32 -left-10 w-96 h-96 lg:w-[480px] lg:h-[480px] pointer-events-none opacity-60 hidden lg:block">
+  <Image
+    src="/decoration-florale.PNG"
+    alt="Décoration florale"
+    fill
+    className="object-contain"
+  />
+</div>
       </div>
     </section>
   );

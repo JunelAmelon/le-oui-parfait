@@ -8,25 +8,25 @@ const portfolioItems = [
     id: 1,
     title: 'Sophie & Georges',
     description: 'Célébration de luxe en salle de bal avec éclairage cristal et floraux champagne.',
-    image: '/wedding (1).jpg',
+    image: '/mariage-réalisés (3).JPG',
   },
   {
     id: 2,
     title: 'Olivia & Daniel',
     description: 'Mariage de jardin serein avec charme organique et détails florissants uniques.',
-    image: '/wedding (2).jpg',
+    image: '/mariage-réalisés (2).JPG',
   },
   {
     id: 3,
     title: 'Éveline & Lucas',
     description: 'Romance pastel douce avec décor à la bougie et élégance florale raffinée.',
-    image: '/wedding (3).jpg',
+    image: '/mariage-réalisés (1).JPG',
   },
   {
     id: 4,
     title: 'Clara & Jacques',
     description: 'Cérémonie côtière avec simplicité moderne et tons dorés inspirés océan.',
-    image: '/wedding (4).jpg',
+    image: '/mariage-réalisés (4).JPG',
   },
 ];
 

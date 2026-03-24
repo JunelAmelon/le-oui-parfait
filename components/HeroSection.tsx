@@ -114,7 +114,7 @@ export function HeroSection() {
             <div className="relative h-full w-full overflow-hidden shadow-lg">
 
               <Image
-                src="/photo-couple.PNG"
+                src="/photo-couple-2.PNG"
                 alt="Couple"
                 fill
                 className="object-cover"
@@ -146,7 +146,7 @@ export function HeroSection() {
             <div className="relative h-full w-full overflow-hidden shadow-lg">
 
               <Image
-                src="/photo-couple-2.PNG"
+                src="/photo-couple.PNG"
                 alt="Mariée"
                 fill
                 className="object-cover"

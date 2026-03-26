@@ -18,27 +18,23 @@ export function AnimationImageCarousel({
   intervalMs = 4200,
   className,
 }: AnimationImageCarouselProps) {
-  const [paused, setPaused] = useState(false);
   const [api, setApi] = useState<any>(null);
 
   useEffect(() => {
     if (!api) return;
-    if (paused) return;
 
     const timer = setInterval(() => {
       api.scrollNext();
     }, intervalMs);
 
     return () => clearInterval(timer);
-  }, [api, paused, intervalMs]);
+  }, [api, intervalMs]);
 
   if (!images?.length) return null;
 
   return (
     <div
       className={`relative ${className || ''}`}
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
     >
       <Carousel opts={{ loop: true, align: 'start' }} setApi={(emblaApi) => setApi(emblaApi)}>
         <CarouselContent>

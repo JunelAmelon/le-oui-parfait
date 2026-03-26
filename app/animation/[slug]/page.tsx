@@ -158,7 +158,7 @@ const animations: AnimationDetail[] = [
     images: [
       { src: '/photoboot-mirror.png', alt: 'Miroir Photobooth — animation' },
       { src: '/photoboot-mirror-rendu (1).jpg', alt: 'Miroir Photobooth — souvenir' },
-      { src: '/photoboot-mirror-rendu (1).jpg', alt: 'Miroir Photobooth — souvenir' },
+      { src: '/photoboot-mirror-rendu (2).jpg', alt: 'Miroir Photobooth — souvenir' },
     ],
   },
   {

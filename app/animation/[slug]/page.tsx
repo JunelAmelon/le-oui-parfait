@@ -187,8 +187,11 @@ const animations: AnimationDetail[] = [
       'Borne compacte et facilement intégrable à différents espaces',
     ],
     images: [
-      { src: '/photobbot-classique (1).jpg', alt: 'Photobooth Classique — animation' },
-      { src: '/photobbot-classique (2).jpg', alt: 'Photobooth Classique — souvenir' },
+      { src: '/photoboot-classique (1).jpg', alt: 'Photobooth Classique — animation' },
+      { src: '/photoboot-classique (2).jpg', alt: 'Photobooth Classique — animation' },
+      { src: '/photoboot-classique (3).jpg', alt: 'Photobooth Classique — animation' },
+      { src: '/photoboot-classique (4).jpg', alt: 'Photobooth Classique — animation' },
+      { src: '/photoboot-classique (5).jpg', alt: 'Photobooth Classique — animation' },
     ],
   },
   {

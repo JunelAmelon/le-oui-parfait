@@ -34,7 +34,7 @@ export default function ShootingTourPage() {
           title="Le Shooting Tour"
           eyebrow="L’EVJF / EVG nouvelle génération à Paris"
           subtitle="Le Shooting Tour by Le Oui Parfait, c’est une journée ou demi-journée sur mesure, pensée pour offrir à la future mariée ou au futur marié une expérience unique à vivre entre proches."
-          image="/evg.jpg"
+          image="/evg.png"
           breadcrumbLabel="Shooting Tour"
         />
 

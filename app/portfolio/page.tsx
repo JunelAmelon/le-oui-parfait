@@ -11,7 +11,7 @@ export default function PortfolioPage() {
         <HeroPage
           title="Portfolio"
           subtitle="Découvrez nos plus belles réalisations et laissez-vous inspirer"
-          backgroundImage="https://www.formation-photographe.net/wp-content/uploads/2020/11/Formation-Photo-Studio-Palle-180562225.jpg"
+          backgroundImage="photographe-mariage-en-action.jpg"
         />
 
         <PortfolioCreatorsShowcase />

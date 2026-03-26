@@ -80,7 +80,7 @@ const samVideos: VideoItem[] = [
     id: 'sam-1',
     title: 'Film — Mariage',
     src: 'https://www.w3schools.com/html/mov_bbb.mp4',
-    poster: '/sam%20realisation/realisation-sam-photo%20(9).jpg',
+    poster: '/sam%20realisation/realisation-sam-photo%20(13).jpg',
   },
   {
     id: 'sam-2',
@@ -92,7 +92,7 @@ const samVideos: VideoItem[] = [
     id: 'sam-3',
     title: 'Teaser — Réception',
     src: 'https://www.w3schools.com/html/mov_bbb.mp4',
-    poster: '/sam%20realisation/realisation-sam-photo%20(2).jpg',
+    poster: '/sam%20realisation/realisation-sam-photo%20(14).jpg',
   },
   {
     id: 'sam-4',
@@ -102,14 +102,58 @@ const samVideos: VideoItem[] = [
   },
 ];
 
-const samPhotos: PhotoItem[] = Array.from({ length: 9 }).map((_, idx) => {
-  const n = idx + 1;
-  return {
-    id: `sam-photo-${n}`,
-    src: `/sam%20realisation/realisation-sam-photo%20(${n}).jpg`,
-    alt: `Sam — Photo ${n}`,
-  };
-});
+const samPhotos: PhotoItem[] = [
+  {
+    id: 'sam-photo-1',
+    src: '/sam%20realisation/realisation-sam-photo%20(12).jpg',
+    alt: 'Sam — Photo 1',
+  },
+  {
+    id: 'sam-photo-2',
+    src: '/sam%20realisation/realisation-sam-photo%20(2).jpg',
+    alt: 'Sam — Photo 2',
+  },
+  {
+    id: 'sam-photo-3',
+    src: '/sam%20realisation/realisation-sam-photo%20(11).jpg',
+    alt: 'Sam — Photo 3',
+  },
+  {
+    id: 'sam-photo-4',
+    src: '/sam%20realisation/realisation-sam-photo%20(4).jpg',
+    alt: 'Sam — Photo 4',
+  },
+  {
+    id: 'sam-photo-5',
+    src: '/sam%20realisation/realisation-sam-photo%20(5).jpg',
+    alt: 'Sam — Photo 5',
+  },
+  {
+    id: 'sam-photo-6',
+    src: '/sam%20realisation/realisation-sam-photo%20(6).jpg',
+    alt: 'Sam — Photo 6',
+  },
+  {
+    id: 'sam-photo-7',
+    src: '/sam%20realisation/realisation-sam-photo%20(7).jpg',
+    alt: 'Sam — Photo 7',
+  },
+  {
+    id: 'sam-photo-8',
+    src: '/sam%20realisation/realisation-sam-photo%20(15).jpg',
+    alt: 'Sam — Photo 8',
+  },
+  {
+    id: 'sam-photo-9',
+    src: '/sam%20realisation/realisation-sam-photo%20(9).jpg',
+    alt: 'Sam — Photo 9',
+  },
+    {
+    id: 'sam-photo-10',
+    src: '/sam%20realisation/realisation-sam-photo%20(16).jpg',
+    alt: 'Sam — Photo 10',
+  },
+];
 
 function CreatorBlock(props: {
   eyebrow: string;
@@ -170,18 +214,30 @@ function CreatorBlock(props: {
         <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
           {photos.map((p, index) => (
             <AnimatedSection key={p.id} direction="up" delay={0.03 * index}>
-              <div className="group">
-                <a href={p.src} target="_blank" rel="noreferrer" className="block overflow-hidden bg-white shadow-[0_12px_30px_rgba(25,20,33,0.08)]">
-                  <div className="relative aspect-[4/5]">
-                    <Image
-                      src={p.src}
-                      alt={p.alt}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                    />
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button type="button" className="group w-full text-left">
+                    <div className="overflow-hidden bg-white shadow-[0_12px_30px_rgba(25,20,33,0.08)]">
+                      <div className="relative aspect-[4/5]">
+                        <Image
+                          src={p.src}
+                          alt={p.alt}
+                          fill
+                          className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                        />
+                      </div>
+                    </div>
+                  </button>
+                </DialogTrigger>
+
+                <DialogContent className="max-w-5xl border-0 bg-black p-0 overflow-hidden">
+                  <div className="relative w-full max-h-[85vh]">
+                    <div className="relative w-full aspect-[4/5] sm:aspect-[16/10]">
+                      <Image src={p.src} alt={p.alt} fill className="object-contain bg-black" />
+                    </div>
                   </div>
-                </a>
-              </div>
+                </DialogContent>
+              </Dialog>
             </AnimatedSection>
           ))}
         </div>
@@ -201,6 +257,8 @@ export function PortfolioCreatorsShowcase() {
               <h2 className="font-baskerville text-3xl lg:text-4xl text-[#4B4456] mb-5">Des Images Qui Racontent Une Histoire</h2>
               <p className="text-[#5A5A5A] leading-relaxed text-[17px] mb-7">
                 Nous capturons l’essentiel : l’émotion, la lumière, les gestes spontanés et les détails qui donnent du relief à votre journée.
+                <br />
+                <br />
                 Découvrez nos réalisations photo & vidéo, pensées avec une esthétique élégante et une narration naturelle.
               </p>
               <Link href="/contact">

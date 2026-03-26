@@ -61,7 +61,7 @@ const animations: AnimationDetail[] = [
     ],
     images: [
       { src: '/COIN CHICHE FORMAT PORTRAIT.png', alt: 'Coin Chicha — mise en scène' },
-      { src: '/COINCHCHA (2).jpg', alt: 'Coin Chicha — ambiance lounge' },
+      { src: '/COIN CHICHE FORMAT PORTRAIT EN INTERIEUR.png', alt: 'Coin Chicha — ambiance lounge' },
       { src: '/COINCHCHA (3).jpg', alt: 'Coin Chicha — détail' },
     ],
   },

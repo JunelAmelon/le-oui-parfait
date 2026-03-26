@@ -93,7 +93,7 @@ const animations: AnimationDetail[] = [
     images: [
       { src: '/STAND EXT  CUP CAKE.png', alt: 'Stand Oui Pancake — présentation' },
       { src: '/BARQUETTE PUNCAKE.png', alt: 'Stand Oui Pancake — service' },
-      { src: '/stand-pancake (3).jpg', alt: 'Stand Oui Pancake — détails' },
+      { src: '/BROCHETTE CAKE.png', alt: 'Stand Oui Pancake — détails' },
       { src: '/stand-pancake (4).jpg', alt: 'Stand Oui Pancake — ambiance' },
     ],
   },

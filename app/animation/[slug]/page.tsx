@@ -60,7 +60,7 @@ const animations: AnimationDetail[] = [
       'En cas d’installation extérieure, une tente ou un parasol peut être envisagé selon les conditions météorologiques.',
     ],
     images: [
-      { src: '/COINCHCHA (1).jpg', alt: 'Coin Chicha — mise en scène' },
+      { src: '/COIN CHICHE FORMAT PORTRAIT.png', alt: 'Coin Chicha — mise en scène' },
       { src: '/COINCHCHA (2).jpg', alt: 'Coin Chicha — ambiance lounge' },
       { src: '/COINCHCHA (3).jpg', alt: 'Coin Chicha — détail' },
     ],

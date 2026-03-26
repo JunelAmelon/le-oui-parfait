@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation';
 import { AnimationImageCarousel } from '@/components/AnimationImageCarousel';
 import { AccordionInclus } from '@/components/AccordionInclus';
 import { Check, Sparkles, Users, Camera, Wine, Heart, Store } from 'lucide-react';
+import { PhotoboothIntroMedia } from '@/components/PhotoboothIntroMedia';
 
 type AnimationDetail = {
   slug: string;
@@ -124,8 +125,8 @@ const animations: AnimationDetail[] = [
       'Personnalisation possible selon l’univers de votre mariage',
     ],
     images: [
+      { src: '/360 COUPLE.png.png', alt: 'Photobooth 360 — souvenir' },
       { src: '/photboot-360 (1).jpg', alt: 'Photobooth 360 — animation' },
-      { src: '/photboot-360 (2).jpg', alt: 'Photobooth 360 — souvenir' },
     ],
   },
   {
@@ -397,7 +398,15 @@ export default async function AnimationDetailPage(props: { params: Promise<{ slu
             <div className="grid grid-cols-1 lg:grid-cols-[2.603fr_2.5fr] gap-12 lg:gap-6 items-stretch">
               <div className="lg:col-span-1 flex flex-col">
                 <div className="relative w-full aspect-[3/4] overflow-hidden mb-4">
-                  <AnimationImageCarousel images={data.images} className="h-full" />
+                  {data.slug === 'photobooth-360' ? (
+                    <PhotoboothIntroMedia
+                      videoSrc="/photoboot-mariage.mp4"
+                      images={data.images}
+                      className="h-full"
+                    />
+                  ) : (
+                    <AnimationImageCarousel images={data.images} className="h-full" />
+                  )}
                 </div>
                 <div className="bg-white p-5">
                   <p className="text-[15px] font-semibold text-[#4B4456] mb-4">Caractéristiques clés :</p>

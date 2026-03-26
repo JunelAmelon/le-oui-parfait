@@ -156,7 +156,7 @@ const animations: AnimationDetail[] = [
     notesTitle: 'À noter',
     notes: ['Modèle susceptible de varier selon disponibilité.'],
     images: [
-      { src: '/photobott-mirror (1).jpg', alt: 'Miroir Photobooth — animation' },
+      { src: '/photoboot-mirror.png', alt: 'Miroir Photobooth — animation' },
       { src: '/photobott-mirror (2).jpg', alt: 'Miroir Photobooth — souvenir' },
     ],
   },

@@ -95,6 +95,7 @@ const animations: AnimationDetail[] = [
       { src: '/BARQUETTE PUNCAKE.png', alt: 'Stand Oui Pancake — service' },
       { src: '/BROCHETTE CAKE.png', alt: 'Stand Oui Pancake — détails' },
       { src: '/Pot rond cake.png', alt: 'Stand Oui Pancake — ambiance' },
+      { src: '/machine piuncake mini.png', alt: 'machine piuncake mini' },
     ],
   },
   {

@@ -33,11 +33,11 @@ const animations: AnimationDetail[] = [
     eyebrow: 'Animations Mariage',
     title: 'Coin Chicha',
     subtitle:
-      'Offrez à vos invités un espace lounge élégant, chaleureux et convivial, pensé comme une véritable parenthèse de détente au cœur de votre réception.',
+      'Offrez à vos invités un espace orientale élégant, chaleureux et convivial, pensé comme une véritable parenthèse de détente au cœur de votre réception.',
     heroImage: '/COINCHCHA (1).jpg',
     price: 'À partir de 649€',
     paymentHint: 'Paiement en 3 ou 4 fois sans frais',
-    highlights: ['Formats : 2h à 4h', 'Intérieur / extérieur', 'Scénographie chic & lounge'],
+    highlights: ['Formats : 2h à 4h', 'Intérieur / extérieur', 'Scénographie chic & orientale'],
     body: [
       'Idéal pour créer une ambiance raffinée et originale, cet espace peut être installé en intérieur comme en extérieur, avec une mise en scène soignée mêlant assises, décoration, service de thé et sélection de saveurs.',
       'Conçu pour favoriser les échanges et prolonger l’expérience de vos convives, le Coin Chicha s’intègre harmonieusement à l’univers de votre mariage grâce à une scénographie chic et accueillante.',
@@ -51,7 +51,7 @@ const animations: AnimationDetail[] = [
       'Service de thé',
       'Accompagnements (petites mignardises)',
       'Choix des saveurs à définir avec les mariés selon le catalogue disponible',
-      'Décoration et ambiance lounge adaptées à votre réception',
+      'Décoration et ambiance orientale adaptées à votre réception',
     ],
     notesTitle: 'Informations importantes',
     notes: [
@@ -60,9 +60,9 @@ const animations: AnimationDetail[] = [
       'En cas d’installation extérieure, une tente ou un parasol peut être envisagé selon les conditions météorologiques.',
     ],
     images: [
-      { src: '/COIN CHICHE FORMAT PORTRAIT EN INTERIEUR.png', alt: 'Coin Chicha — ambiance lounge' },
+      { src: '/COIN CHICHE FORMAT PORTRAIT EN INTERIEUR.png', alt: 'Coin Chicha — ambiance orientale' },
       { src: '/COIN CHICHE FORMAT PORTRAIT.png', alt: 'Coin Chicha — mise en scène' },
-      { src: '/COINCHCHA (3).jpg', alt: 'Coin Chicha — détail' },
+      { src: '/CHICHA.png', alt: 'Coin Chicha — détail' },
     ],
   },
   {
@@ -302,7 +302,7 @@ export default async function AnimationDetailPage(props: { params: Promise<{ slu
     switch (data.slug) {
       case 'coin-chicha':
         return [
-          { icon: Wine, title: 'Ambiance Lounge' },
+          { icon: Wine, title: 'Ambiance orientale' },
           { icon: Users, title: 'Espace Convivial' },
           { icon: Sparkles, title: 'Scénographie Chic' },
           { icon: Heart, title: 'Moment de Détente' },

@@ -105,7 +105,7 @@ const animations: AnimationDetail[] = [
     eyebrow: 'Animations Mariage',
     title: 'Photobooth 360',
     subtitle: 'Une animation immersive, élégante et résolument mémorable.',
-    heroImage: '/photoboot.jpg',
+    heroImage: '/banner-photoboot.jpg',
     price: 'À partir de 549€ HT',
     paymentHint: 'Paiement en 3 ou 4 fois sans frais',
     highlights: ['Captation 360°', 'Effet slow motion', 'Partage rapide (QR, WhatsApp, AirDrop…)'],
@@ -125,7 +125,7 @@ const animations: AnimationDetail[] = [
       'Personnalisation possible selon l’univers de votre mariage',
     ],
     images: [
-      { src: '/360 COUPLE.png.png', alt: 'Photobooth 360 — souvenir' },
+      { src: '/360 COUPLE.png', alt: 'Photobooth 360 — souvenir' },
       { src: '/photboot-360 (1).jpg', alt: 'Photobooth 360 — animation' },
     ],
   },

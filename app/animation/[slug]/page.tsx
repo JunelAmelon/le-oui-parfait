@@ -72,7 +72,7 @@ const animations: AnimationDetail[] = [
     eyebrow: 'Animations Mariage',
     title: 'Stand Oui Pancake',
     subtitle: 'L’animation gourmande qui fait fondre les invités.',
-    heroImage: '/stand-oui-pancake 2.jpg',
+    heroImage: '/baniere site pancake.png',
     price: 'À partir de 399€',
     paymentHint: 'Paiement en 3 ou 4 fois sans frais',
     highlights: ['Durée : 2h', 'Jusqu’à 100 personnes', 'Garnitures & nappages au choix'],

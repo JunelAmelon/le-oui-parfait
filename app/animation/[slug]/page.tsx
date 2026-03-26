@@ -91,7 +91,7 @@ const animations: AnimationDetail[] = [
     notesTitle: 'À noter',
     notes: ['Au-delà de 100 personnes, un ajustement tarifaire sera appliqué selon le nombre de convives.'],
     images: [
-      { src: '/stand-pancake (1).jpg', alt: 'Stand Oui Pancake — présentation' },
+      { src: '/STAND EXT  CUP CAKE.png', alt: 'Stand Oui Pancake — présentation' },
       { src: '/stand-pancake (2).jpg', alt: 'Stand Oui Pancake — service' },
       { src: '/stand-pancake (3).jpg', alt: 'Stand Oui Pancake — détails' },
       { src: '/stand-pancake (4).jpg', alt: 'Stand Oui Pancake — ambiance' },

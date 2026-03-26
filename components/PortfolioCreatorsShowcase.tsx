@@ -79,25 +79,25 @@ const samVideos: VideoItem[] = [
   {
     id: 'sam-1',
     title: 'Film — Mariage',
-    src: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    src: '#',
     poster: '/sam%20realisation/realisation-sam-photo%20(13).jpg',
   },
   {
     id: 'sam-2',
     title: 'Highlights — Émotions',
-    src: 'https://www.w3schools.com/html/movie.mp4',
+    src: '#',
     poster: '/sam%20realisation/realisation-sam-photo%20(8).jpg',
   },
   {
     id: 'sam-3',
     title: 'Teaser — Réception',
-    src: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    src: '#',
     poster: '/sam%20realisation/realisation-sam-photo%20(14).jpg',
   },
   {
     id: 'sam-4',
     title: 'Cérémonie — Moments forts',
-    src: 'https://www.w3schools.com/html/movie.mp4',
+    src: '#',
     poster: '/sam%20realisation/realisation-sam-photo%20(1).jpg',
   },
 ];

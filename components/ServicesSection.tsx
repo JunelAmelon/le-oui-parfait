@@ -4,13 +4,30 @@ import { Button } from '@/components/ui/button';
 import { Check, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { AnimatedSection } from './AnimatedSection';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from '@/components/ui/carousel';
+
+function useInView(options?: IntersectionObserverInit) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      setInView(entry.isIntersecting);
+    }, options);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [options]);
+
+  return { ref, inView };
+}
 
 type ServiceItem = {
   title: string;
@@ -26,6 +43,7 @@ function OffersServicesCarouselDesktop(props: { offers: ServiceItem[] }) {
   const [paused, setPaused] = useState(false);
   const [api, setApi] = useState<any>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { ref, inView } = useInView({ threshold: 0.25 });
 
   useEffect(() => {
     if (!api) return;
@@ -37,14 +55,15 @@ function OffersServicesCarouselDesktop(props: { offers: ServiceItem[] }) {
   useEffect(() => {
     if (!api) return;
     if (paused) return;
+    if (!inView) return;
     const timer = setInterval(() => {
       api.scrollNext();
-    }, 4200);
+    }, 4000);
     return () => clearInterval(timer);
-  }, [api, paused]);
+  }, [api, paused, inView]);
 
   return (
-    <div onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+    <div ref={ref} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
       <Carousel opts={{ loop: true, align: 'start' }} setApi={(emblaApi) => setApi(emblaApi)}>
         <CarouselContent>
           {offers.map((offer, index) => (
@@ -173,6 +192,7 @@ export function ServicesSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [paused, setPaused] = useState(false);
   const [api, setApi] = useState<any>(null);
+  const { ref: mobileCarouselRef, inView: mobileInView } = useInView({ threshold: 0.2 });
 
   useEffect(() => {
     if (!api) return;
@@ -184,18 +204,17 @@ export function ServicesSection() {
   useEffect(() => {
     if (!api) return;
     if (paused) return;
+    if (!mobileInView) return;
     const timer = setInterval(() => {
       api.scrollNext();
-    }, 4500);
+    }, 4000);
     return () => clearInterval(timer);
-  }, [api, paused]);
+  }, [api, paused, mobileInView]);
 
   return (
     <section
       id="services"
       className="py-20 bg-[#f4f1f7]"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
     >
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         <div className="mb-16">
@@ -223,7 +242,12 @@ export function ServicesSection() {
         </div>
 
         {/* Mobile: Auto Carousel */}
-        <div className="md:hidden relative">
+        <div
+          ref={mobileCarouselRef}
+          className="md:hidden relative"
+          onTouchStart={() => setPaused(true)}
+          onTouchEnd={() => setPaused(false)}
+        >
           <Carousel
             opts={{ loop: true, align: 'start' }}
             setApi={(emblaApi) => setApi(emblaApi)}

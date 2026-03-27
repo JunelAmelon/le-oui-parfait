@@ -20,7 +20,7 @@ const portfolioItems = [
     id: 3,
     title: 'Éveline & Lucas',
     description: 'Une parenthèse romantique en pleine nature, entre douceur, élégance et charme automnal.',
-    image: '/mariage-réalisés (1).JPG',
+    image: '/mariage-réalisés (1).PNG',
   },
   {
     id: 4,

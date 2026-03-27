@@ -28,7 +28,7 @@ export default function MentionsLegales() {
                   </p>
                   <p>
                     <strong>Le Oui Parfait</strong><br />
-                    SASU au capital de 100 €<br />
+                    SASU au capital de 1000 €<br />
                     Showroom Clientèle : 19 rue Albert-Remy 91130 Ris-Orangis<br />
                     Siège Social : 25 rue de Ponthieu 75008 Paris<br />
                     RCS Paris : 123 456 789<br />

@@ -7,19 +7,19 @@ const portfolioItems = [
   {
     id: 1,
     title: 'Sophie & Georges',
-    description: 'Célébration de luxe en salle de bal avec éclairage cristal et floraux champagne.',
+    description: 'L’expression d’un raffinement absolu, sublimé par la grâce et l’émotion du moment.',
     image: '/mariage-réalisés (3).JPG',
   },
   {
     id: 2,
     title: 'Olivia & Daniel',
-    description: 'Mariage de jardin serein avec charme organique et détails florissants uniques.',
+    description: 'Un univers d’exception où grâce, intimité et sophistication se rencontrent avec harmonie.',
     image: '/mariage-réalisés (2).JPG',
   },
   {
     id: 3,
     title: 'Éveline & Lucas',
-    description: 'Romance pastel douce avec décor à la bougie et élégance florale raffinée.',
+    description: 'Une parenthèse romantique en pleine nature, entre douceur, élégance et charme automnal.',
     image: '/mariage-réalisés (1).JPG',
   },
   {
@@ -62,7 +62,7 @@ export function PortfolioSection() {
                 </div>
                 <h3 className="font-baskerville text-2xl text-gray-900 mb-2 group-hover:text-[#88b7b5] transition-colors duration-300 text-center md:text-left">{item.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4 text-center md:text-left">{item.description}</p>
-                <Link href="/contact">
+                <Link href="/portfolio">
                   <Button
                     variant="outline"
                     className="w-full uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-6 py-4 font-medium transition-all"

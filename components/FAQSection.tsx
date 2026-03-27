@@ -26,7 +26,7 @@ const faqData: FAQItem[] = [
     answer: 'Nous recommandons de réserver entre 5 mois et 12 mois à l\'avance, selon votre date, vos disponibilités et l\'ampleur de votre projet.',
   },
   {
-    question: 'Offrez-vous des Forfaits de Planification Partielle?',
+    question: 'Offrez-vous des Forfaits de Planification Partielle ?',
     answer: 'Oui, nos forfaits de planification partielle sont parfaits pour les couples qui ont commencé à planifier mais ont besoin de conseils professionnels et de soutien pour des aspects spécifiques de leur mariage.',
   },
   {

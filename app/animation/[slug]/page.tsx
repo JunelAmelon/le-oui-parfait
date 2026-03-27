@@ -234,7 +234,7 @@ const animations: AnimationDetail[] = [
     eyebrow: 'Animations Mariage',
     title: 'La Maison du Ti’Punch',
     subtitle: 'Bar à Rhum by Le Oui Parfait — une animation festive et dépaysante.',
-    heroImage: '/bar-rhum (1).jpg',
+    heroImage: '/bar-rhum (1).png',
     price: 'À partir de 649€ HT',
     paymentHint: 'Paiement en 3 ou 4 fois sans frais',
     highlights: ['Bar à thème', 'Sélection de rhums & créations maison', 'Ambiance exotique'],
@@ -259,7 +259,7 @@ const animations: AnimationDetail[] = [
     images: [
       { src: '/bar-rhum (1).jpg', alt: 'La Maison du Ti’Punch — bar à rhum' },
       { src: '/bar-rhum (2).jpg', alt: 'La Maison du Ti’Punch — dégustation' },
-      { src: '/bar-rhum (3).jpg', alt: 'La Maison du Ti’Punch — ambiance' },
+      { src: '/bar-rhum (1).png', alt: 'La Maison du Ti’Punch — ambiance' },
     ],
   },
 ];

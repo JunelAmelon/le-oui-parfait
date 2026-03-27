@@ -28,7 +28,7 @@ const lieux: Lieu[] = [
       { label: 'Essonne (91)', value: 'Ferme réaménagée' },
     ],
     ctaHref: '/contact',
-    ctaLabel: 'VOIR LE LIEU',
+    ctaLabel: 'RÉSERVER CE LIEU',
     images: [
       { src: '/domaine-olivier/domaine-les-oliviers (1).jpeg', alt: 'Domaine Les Oliviers — extérieur' },
       { src: '/domaine-olivier/domaine-les-oliviers (2).jpeg', alt: 'Domaine Les Oliviers — réception' },
@@ -46,14 +46,14 @@ const lieux: Lieu[] = [
       { label: 'Bord de mer', value: 'Cadre tropical' },
     ],
     ctaHref: '/contact',
-    ctaLabel: 'VOIR LE LIEU',
+    ctaLabel: 'RÉSERVER CE LIEU',
     images: [
       {
-        src: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=80',
+        src: 'https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/elementor/thumbs/IMG-5M4QEF8-rfdcnrqnbp34yyqh34gtg048xom8jc0r77ttse79b4.jpg',
         alt: 'Azure Beach Resort — piscine',
       },
       {
-        src: 'https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1600&q=80',
+        src: 'https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/elementor/thumbs/IMG-NJPCVB7-rfdd36bfby6b8wcx4s6pb467f0osor6dzgqaxnczc0.jpg',
         alt: 'Azure Beach Resort — plage',
       },
       {
@@ -74,7 +74,7 @@ const lieux: Lieu[] = [
       { label: 'Cadre champêtre', value: 'Vallée de l’Ancoeur' },
     ],
     ctaHref: '/contact',
-    ctaLabel: 'VOIR LE LIEU',
+    ctaLabel: 'RÉSERVER CE LIEU',
     images: [
       { src: '/ferme-du-couvent/ferme du couvent (2).jpg', alt: 'La Ferme du Couvent — extérieur' },
       { src: '/ferme-du-couvent/ferme du couvent (3).jpg', alt: 'La Ferme du Couvent — réception' },
@@ -178,9 +178,10 @@ export default function LieuxPage() {
               </div>
               <div className="lg:col-span-6">
                 <p className="text-[#5A5A5A] leading-relaxed text-[16px] max-w-xl lg:ml-auto">
-                  Le Oui Parfait est bien plus qu&apos;une agence d&apos;organisation de mariages : nous sommes des conteurs
-                  d&apos;histoires d&apos;amour et de détails. Nous insufflons émotion, beauté et un équilibre parfait à chaque
-                  célébration que nous concevons.
+                  Nous travaillons main dans la main avec un réseau de plus de 30 partenaires (traiteurs, salles et prestataires)
+                  pour vous proposer une sélection de lieux variés, adaptés à votre style, à votre nombre d&apos;invités et à l&apos;ambiance
+                  que vous imaginez. Découvrez notre large gamme de domaines, hôtels et espaces de réception pour trouver le cadre
+                  parfait.
                 </p>
               </div>
             </div>
@@ -200,25 +201,7 @@ export default function LieuxPage() {
         <section className="py-16 bg-[#f4f1f7] overflow-hidden">
           <div className="container mx-auto px-6 max-w-7xl">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-              <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {[
-                  { n: '17+', title: 'Nombre total de sites', desc: 'Domaines De Jardins' },
-                  { n: '23+', title: 'Nombre total de sites', desc: 'Hôtels De Luxe' },
-                  { n: '21+', title: 'Nombre total de sites', desc: 'Stations Balnéaires' },
-                  { n: '12+', title: 'Nombre total de sites', desc: 'Châteaux Historiques' },
-                ].map((card, i) => (
-                  <div key={i} className="bg-white p-8 border border-[#e8e0dc]">
-                    <p className="text-[#88b7b5] text-4xl font-baskerville mb-2">{card.n}</p>
-                    <p className="text-[11px] uppercase tracking-[0.25em] text-gray-500 mb-4">{card.title}</p>
-                    <p className="font-baskerville text-2xl text-[#4B4456] mb-2">{card.desc}</p>
-                    <p className="text-[#5A5A5A] text-sm leading-relaxed">
-                      Explorez des lieux sélectionnés pour correspondre à chaque ambiance et à chaque vision de réception.
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="lg:col-span-5">
+              <div className="lg:col-span-5 order-1 lg:order-2">
                 <p className="text-[11px] uppercase tracking-[0.25em] text-gray-500 mb-4">PARCOURIR PAR STYLE</p>
                 <h2 className="font-baskerville text-4xl lg:text-5xl text-[#4B4456] leading-tight mb-6">
                   Découvrez Nos
@@ -270,6 +253,24 @@ export default function LieuxPage() {
                     </div>
                   </div>
                 </div>
+              </div>
+
+              <div className="lg:col-span-7 order-2 lg:order-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {[
+                  { n: '17+', title: 'Nombre total de sites', desc: 'Domaines De Jardins' },
+                  { n: '23+', title: 'Nombre total de sites', desc: 'Hôtels De Luxe' },
+                  { n: '21+', title: 'Nombre total de sites', desc: 'Stations Balnéaires' },
+                  { n: '12+', title: 'Nombre total de sites', desc: 'Châteaux Historiques' },
+                ].map((card, i) => (
+                  <div key={i} className="bg-white p-8 border border-[#e8e0dc]">
+                    <p className="text-[#88b7b5] text-4xl font-baskerville mb-2">{card.n}</p>
+                    <p className="text-[11px] uppercase tracking-[0.25em] text-gray-500 mb-4">{card.title}</p>
+                    <p className="font-baskerville text-2xl text-[#4B4456] mb-2">{card.desc}</p>
+                    <p className="text-[#5A5A5A] text-sm leading-relaxed">
+                      Explorez des lieux sélectionnés pour correspondre à chaque ambiance et à chaque vision de réception.
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

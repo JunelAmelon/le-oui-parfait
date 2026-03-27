@@ -132,7 +132,7 @@ export default function MentionsLegales() {
                   </p>
                   <p>
                     Pour exercer ce droit, veuillez nous contacter à l'adresse suivante :<br />
-                    <strong>Email :</strong> dpo@leouiparfait.com<br />
+                    <strong>Email :</strong> contact@leouiparfait.com<br />
                     <strong>Courrier :</strong> Le Oui Parfait - Service DPO, 25 rue de Ponthieu 75008 Paris
                   </p>
                   <p>

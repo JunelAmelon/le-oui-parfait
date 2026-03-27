@@ -79,8 +79,10 @@ export function PricingSection() {
               </ul>
             </div>
 
-            <div className="flex items-start gap-2 mb-8 p-4 bg-white/60 rounded-2xl border border-[#e7e3ea]/60">
-              <p className="text-[12px] text-gray-500 leading-relaxed italic">Résultat : Vous vivez votre mariage pleinement, sans contraintes ni sollicitations.</p>
+
+                        <div className="flex items-start gap-2 mb-8 p-4 bg-[#f0f7f7] rounded-2xl border border-[#88b7b5]/25">
+              <Gift className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
+              <p className="text-[13px] text-[#4B4456] leading-relaxed font-medium">Résultat : Vous vivez votre mariage pleinement, sans contraintes ni sollicitations.</p>
             </div>
 
             <div className="mt-auto flex flex-col gap-3">

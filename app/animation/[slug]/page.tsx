@@ -126,7 +126,6 @@ const animations: AnimationDetail[] = [
     ],
     images: [
       { src: '/360 COUPLE.png', alt: 'Photobooth 360 — souvenir' },
-      { src: '/photboot-360 (1).jpg', alt: 'Photobooth 360 — animation' },
     ],
   },
   {

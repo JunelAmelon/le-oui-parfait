@@ -136,12 +136,12 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/a-propos" className="text-gray-600 hover:text-gray-800 transition text-sm">
+                <Link href="/a-propos#equipe-experts" className="text-gray-600 hover:text-gray-800 transition text-sm">
                   Équipe d'Experts
                 </Link>
               </li>
               <li>
-                <Link href="/a-propos" className="text-gray-600 hover:text-gray-800 transition text-sm">
+                <Link href="/a-propos#avis-clients" className="text-gray-600 hover:text-gray-800 transition text-sm">
                   Avis Clients
                 </Link>
               </li>

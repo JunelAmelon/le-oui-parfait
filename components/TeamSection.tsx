@@ -88,6 +88,7 @@ export function TeamSection() {
 
   return (
     <section
+      id="equipe-experts"
       className="py-20 bg-[#f4f1f7]"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}

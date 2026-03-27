@@ -2,14 +2,31 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { ChevronDown, Menu, X } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobilePrestationOpen, setMobilePrestationOpen] = useState(false);
+  const [desktopPrestationOpen, setDesktopPrestationOpen] = useState(false);
   const pathname = usePathname();
+  const desktopPrestationRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    setDesktopPrestationOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    function handlePointerDown(e: MouseEvent) {
+      if (!desktopPrestationRef.current) return;
+      if (desktopPrestationRef.current.contains(e.target as Node)) return;
+      setDesktopPrestationOpen(false);
+    }
+    window.addEventListener('pointerdown', handlePointerDown);
+    return () => window.removeEventListener('pointerdown', handlePointerDown);
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#f4f1f7]/95 backdrop-blur-sm border-b border-gray-200">
@@ -37,11 +54,46 @@ export function Header() {
             }`}>
               Portfolio
             </Link>
-            <Link href="/services" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
-              pathname === '/services' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
-            }`}>
-              Services
-            </Link>
+            <div className="relative" ref={desktopPrestationRef}>
+              <button
+                type="button"
+                className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
+                  pathname === '/services' || pathname === '/lieux'
+                    ? 'text-[#88b7b5] font-semibold'
+                    : 'text-[#4B4456] hover:text-[#88b7b5]'
+                }`}
+                onClick={() => setDesktopPrestationOpen((v) => !v)}
+                aria-haspopup="menu"
+                aria-expanded={desktopPrestationOpen}
+              >
+                <span className="inline-flex items-center gap-2">
+                  <span>Prestation</span>
+                  <ChevronDown className={`h-4 w-4 transition-transform ${desktopPrestationOpen ? 'rotate-180' : ''}`} />
+                </span>
+              </button>
+              <div
+                className={`absolute left-0 top-full pt-4 transition ${
+                  desktopPrestationOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+                }`}
+              >
+                <div className="min-w-56 bg-white border border-gray-200 shadow-xl">
+                  <Link
+                    href="/services"
+                    className="block px-5 py-3 text-[12px] font-sans uppercase tracking-[0.15em] text-[#4B4456] hover:bg-gray-50 hover:text-[#88b7b5] transition"
+                    onClick={() => setDesktopPrestationOpen(false)}
+                  >
+                    Service
+                  </Link>
+                  <Link
+                    href="/lieux"
+                    className="block px-5 py-3 text-[12px] font-sans uppercase tracking-[0.15em] text-[#4B4456] hover:bg-gray-50 hover:text-[#88b7b5] transition"
+                    onClick={() => setDesktopPrestationOpen(false)}
+                  >
+                    Lieux
+                  </Link>
+                </div>
+              </div>
+            </div>
             <Link href="/tarifs" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
               pathname === '/tarifs' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
             }`}>
@@ -151,14 +203,40 @@ export function Header() {
             <li className={`border-b border-gray-100 transition-all duration-300 ${
               mobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'
             }`} style={{ transitionDelay: mobileMenuOpen ? '300ms' : '0ms' }}>
-              <Link 
-                href="/services" 
-                className="flex justify-between items-center px-6 py-[18px] text-[12px] font-sans font-medium tracking-[1.5px] uppercase text-[#4B4456] hover:bg-gray-50 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
+              <button
+                type="button"
+                className="w-full flex justify-between items-center px-6 py-[18px] text-[12px] font-sans font-medium tracking-[1.5px] uppercase text-[#4B4456] hover:bg-gray-50 transition-colors"
+                onClick={() => setMobilePrestationOpen((v) => !v)}
               >
-                <span>Services</span>
-                <span className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center text-[12px] text-gray-400">›</span>
-              </Link>
+                <span>Prestation</span>
+                <span className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center text-[12px] text-gray-400">
+                  {mobilePrestationOpen ? '−' : '+'}
+                </span>
+              </button>
+              {mobilePrestationOpen ? (
+                <div className="bg-gray-50 border-t border-gray-100">
+                  <Link
+                    href="/services"
+                    className="flex justify-between items-center pl-10 pr-6 py-[16px] text-[12px] font-sans font-medium tracking-[1.5px] uppercase text-[#4B4456] hover:bg-white transition-colors"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setMobilePrestationOpen(false);
+                    }}
+                  >
+                    <span>Service</span>
+                  </Link>
+                  <Link
+                    href="/lieux"
+                    className="flex justify-between items-center pl-10 pr-6 py-[16px] text-[12px] font-sans font-medium tracking-[1.5px] uppercase text-[#4B4456] hover:bg-white transition-colors"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setMobilePrestationOpen(false);
+                    }}
+                  >
+                    <span>Lieux</span>
+                  </Link>
+                </div>
+              ) : null}
             </li>
             <li className={`border-b border-gray-100 transition-all duration-300 ${
               mobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'

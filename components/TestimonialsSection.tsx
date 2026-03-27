@@ -55,7 +55,7 @@ export function TestimonialsSection() {
   };
 
   return (
-    <section className="py-14 bg-[#f4f1f7]">
+    <section id="avis-clients" className="py-14 bg-[#f4f1f7]">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           {/* Left Column - Header (40% width = 2/5) */}

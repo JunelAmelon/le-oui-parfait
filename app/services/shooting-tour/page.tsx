@@ -177,17 +177,17 @@ export default function ShootingTourPage() {
               </div>
               <div className="bg-white">
                 <div className="relative h-[260px] overflow-hidden">
-                  <Image src="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg" alt="Planification mariage" fill className="object-cover" />
+                  <Image src="/offre-signature.png" alt="Offre Signature" fill className="object-cover" />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-baskerville text-2xl text-[#4B4456] mb-2">Planification de Mariage</h3>
-                  <p className="text-sm text-[#5A5A5A] leading-relaxed mb-4">Un service de coordination complet qui garantit que votre journée spéciale se déroule magnifiquement du début à la fin.</p>
+                  <h3 className="font-baskerville text-2xl text-[#4B4456] mb-2">Offre Signature</h3>
+                  <p className="text-sm text-[#5A5A5A] leading-relaxed mb-4">Notre accompagnement haut de gamme : organisation complète, direction artistique et coordination pour un mariage fluide et élégant.</p>
                   <ul className="space-y-1 mb-5">
-                    {['Conception et pilotage global', 'Sélection des prestataires', 'Coordination Jour J'].map((f, j) => (
+                    {['Organisation clé en main', 'Prestataires & planning', 'Coordination Jour J'].map((f, j) => (
                       <li key={j} className="flex items-center gap-2 text-sm text-[#5A5A5A]"><Check className="w-3.5 h-3.5 text-[#88b7b5] flex-shrink-0" />{f}</li>
                     ))}
                   </ul>
-                  <Link href="/services/planification-mariage">
+                  <Link href="/tarifs/offre-signature">
                     <button className="uppercase tracking-[0.15em] text-[11px] border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-6 py-2.5 rounded-full transition-all">Voir le Détail</button>
                   </Link>
                 </div>

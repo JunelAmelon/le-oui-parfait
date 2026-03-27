@@ -153,7 +153,7 @@ export default function DemandeEnMariagePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white">
                 <div className="relative h-[260px] overflow-hidden">
-                  <Image src="/evg.jpg" alt="Shooting Tour" fill className="object-cover" />
+                  <Image src="/evg.png" alt="Shooting Tour" fill className="object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="font-baskerville text-2xl text-[#4B4456] mb-2">Le Shooting Tour</h3>
@@ -170,17 +170,17 @@ export default function DemandeEnMariagePage() {
               </div>
               <div className="bg-white">
                 <div className="relative h-[260px] overflow-hidden">
-                  <Image src="https://images.pexels.com/photos/3171736/pexels-photo-3171736.jpeg" alt="Stylisme fiançailles" fill className="object-cover" />
+                  <Image src="/offre-signature.png" alt="Offre Signature" fill className="object-cover" />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-baskerville text-2xl text-[#4B4456] mb-2">Stylisme de Fiançailles</h3>
-                  <p className="text-sm text-[#5A5A5A] leading-relaxed mb-4">Des moments romantiques remplis d'élégance, de créativité et d'une narration visuelle inoubliable.</p>
+                  <h3 className="font-baskerville text-2xl text-[#4B4456] mb-2">Offre Signature</h3>
+                  <p className="text-sm text-[#5A5A5A] leading-relaxed mb-4">L’accompagnement premium pour un mariage maîtrisé : organisation complète, direction artistique et coordination avec une exigence élevée.</p>
                   <ul className="space-y-1 mb-5">
-                    {['Thème romantique sur mesure', 'Stylisme visuel', 'Coordination complète'].map((f, j) => (
+                    {['Organisation clé en main', 'Prestataires & planning', 'Coordination Jour J'].map((f, j) => (
                       <li key={j} className="flex items-center gap-2 text-sm text-[#5A5A5A]"><Check className="w-3.5 h-3.5 text-[#88b7b5] flex-shrink-0" />{f}</li>
                     ))}
                   </ul>
-                  <Link href="/services/stylisme-fiancailles">
+                  <Link href="/tarifs/offre-signature">
                     <button className="uppercase tracking-[0.15em] text-[11px] border border-[#4B4456] text-[#4B4456] hover:bg-[#4B4456] hover:text-white px-6 py-2.5 rounded-full transition-all">Voir le Détail</button>
                   </Link>
                 </div>

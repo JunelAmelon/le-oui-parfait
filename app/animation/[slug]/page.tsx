@@ -200,7 +200,7 @@ const animations: AnimationDetail[] = [
     eyebrow: 'Animations Mariage',
     title: 'Candy Bar & Cup Cake',
     subtitle: 'Une parenthèse sucrée, généreuse et raffinée.',
-    heroImage: '/candy-bar (1).jpeg',
+    heroImage: '/candy-bar-hero.png',
     price: 'À partir de 690€ HT',
     paymentHint: 'Paiement en 3 ou 4 fois sans frais',
     highlights: ['Durée : 2h30', 'Env. 110 invités', 'Douceurs maison & artisanales'],

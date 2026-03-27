@@ -222,8 +222,10 @@ const animations: AnimationDetail[] = [
     notesTitle: 'Options',
     notes: ['Granités', 'Barbe à papa', 'Bonbon personnalisé au nom des mariés', 'Letter cake aux initiales des mariés'],
     images: [
-      { src: '/candy-bar (1).jpeg', alt: 'Candy Bar & Cup Cake — présentation' },
-      { src: '/candy-bar (2).jpeg', alt: 'Candy Bar & Cup Cake — détails' },
+      { src: '/candy-bar (3).PNG', alt: 'Candy Bar & Cup Cake — présentation' },
+      { src: '/candy-bar (1).JPG', alt: 'Candy Bar & Cup Cake — détails' },
+      { src: '/candy-bar (2).PNG', alt: 'Candy Bar & Cup Cake — détails' },
+      { src: '/candy-bar (1).PNG', alt: 'Candy Bar & Cup Cake — détails' },
     ],
   },
   {

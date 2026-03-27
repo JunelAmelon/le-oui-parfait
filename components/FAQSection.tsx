@@ -10,19 +10,19 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    question: 'Quels Services Offre Le Oui Parfait?',
+    question: 'Quels Services Offre Le Oui Parfait ?',
     answer: 'Le Oui Parfait offre des services complets de planification de mariage incluant la planification complète, la planification partielle, la coordination du jour J, les mariages de destination et la conception d\'événements. Nous adaptons nos services pour répondre à vos besoins spécifiques et à votre vision.',
   },
   {
-    question: 'Gérez-vous la Sélection des Fournisseurs?',
+    question: 'Gérez-vous la Sélection des Fournisseurs ?',
     answer: 'Oui, nous avons un réseau étendu de fournisseurs de confiance et nous vous guiderons à travers le processus de sélection, gérerons les négociations et coordonnerons toutes les communications avec les fournisseurs pour assurer une exécution sans faille de votre événement.',
   },
   {
-    question: 'Pouvez-vous Planifier des Mariages de Destination?',
+    question: 'Pouvez-vous Planifier des Mariages de Destination ?',
     answer: 'Absolument! Nous sommes spécialisés dans les mariages de destination et avons de l\'expérience dans la planification d\'événements dans divers endroits à travers le monde. Nous gérons toute la logistique, la coordination des fournisseurs et la gestion sur place pour créer votre célébration de destination parfaite.',
   },
   {
-    question: 'Combien de Temps à l\'Avance Devrions-nous Réserver?',
+    question: 'Combien de Temps à l\'Avance Devrions-nous Réserver ?',
     answer: 'Nous recommandons de réserver entre 5 mois et 12 mois à l\'avance, selon votre date, vos disponibilités et l\'ampleur de votre projet.',
   },
   {
@@ -30,15 +30,15 @@ const faqData: FAQItem[] = [
     answer: 'Oui, nos forfaits de planification partielle sont parfaits pour les couples qui ont commencé à planifier mais ont besoin de conseils professionnels et de soutien pour des aspects spécifiques de leur mariage.',
   },
   {
-    question: 'Pouvez-vous Gérer les Mariages Multiculturels?',
+    question: 'Pouvez-vous Gérer les Mariages Multiculturels ?',
     answer: 'Nous avons une vaste expérience dans la planification de mariages multiculturels et interconfessionnels. Nous respectons et honorons toutes les traditions et travaillons étroitement avec vous pour intégrer harmonieusement différents éléments culturels dans votre célébration.',
   },
   {
-    question: 'Pouvez-vous Aider avec les Demandes en Mariage?',
+    question: 'Pouvez-vous Aider avec les Demandes en Mariage ?',
     answer: 'Oui! Nous adorons aider à créer des moments de demande magiques. Des cadres intimes aux grands gestes, nous pouvons planifier et exécuter l\'expérience de fiançailles parfaite.',
   },
   {
-    question: 'Comment Pouvons-nous Commencer à Planifier avec Le Oui Parfait?',
+    question: 'Comment Pouvons-nous Commencer à Planifier avec Le Oui Parfait ?',
     answer: 'Contactez-nous simplement via notre formulaire de contact ou planifiez une consultation. Nous discuterons de votre vision, de votre calendrier et de la façon dont nous pouvons donner vie à votre mariage de rêve.',
   },
 ];

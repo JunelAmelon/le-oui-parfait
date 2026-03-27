@@ -175,7 +175,7 @@ export default function MentionsLegales() {
                 </h2>
                 <div className="text-gray-600 leading-relaxed space-y-3">
                   <p>
-                    <strong>Conception et développement :</strong> Deverust Studio<br />
+                    <strong>Conception et développement :</strong> Junel BOKO ASSOGBA<br />
                     <strong>Crédits photographiques :</strong> Pexels, Unsplash (photographes indépendants sous licence libre)<br />
                     <strong>Icônes :</strong> Lucide Icons
                   </p>

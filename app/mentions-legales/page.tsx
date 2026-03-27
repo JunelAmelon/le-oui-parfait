@@ -24,7 +24,7 @@ export default function MentionsLegales() {
                 </h2>
                 <div className="text-gray-600 leading-relaxed space-y-3">
                   <p>
-                    Le site web <strong>leouiparfait.fr</strong> est édité par :
+                    Le site web <strong>leouiparfait.com</strong> est édité par :
                   </p>
                   <p>
                     <strong>Le Oui Parfait</strong><br />
@@ -36,8 +36,8 @@ export default function MentionsLegales() {
                     TVA Intracommunautaire : FR 12 123456789
                   </p>
                   <p>
-                    <strong>Directeur de la publication :</strong> Marie Dubois<br />
-                    <strong>Contact :</strong> contact@leouiparfait.fr<br />
+                    <strong>Directeur de la publication :</strong> Junel BOKO ASSOGBA<br />
+                    <strong>Contact :</strong> contact@leouiparfait.com<br />
                     <strong>Téléphone :</strong> +33 1 23 45 67 89
                   </p>
                 </div>
@@ -53,10 +53,10 @@ export default function MentionsLegales() {
                     Le site est hébergé par :
                   </p>
                   <p>
-                    <strong>Vercel Inc.</strong><br />
-                    340 S Lemon Ave #4133<br />
-                    Walnut, CA 91789, USA<br />
-                    Site web : <a href="https://vercel.com" className="text-[#88b7b5] hover:underline">vercel.com</a>
+                    <strong>Ionos</strong><br />
+                    7 Place de la Gare, #4133<br />
+                    57200 Sarreguemines, France<br />
+                    Site web : <a href="https://www.ionos.fr/" className="text-[#88b7b5] hover:underline">ionos.fr</a>
                   </p>
                 </div>
               </div>
@@ -68,7 +68,7 @@ export default function MentionsLegales() {
                 </h2>
                 <div className="text-gray-600 leading-relaxed space-y-3">
                   <p>
-                    L'ensemble du contenu présent sur le site leouiparfait.fr, incluant, de manière non limitative, les textes, images, graphismes, logo, icônes, sons, logiciels, est la propriété exclusive de Le Oui Parfait ou de ses partenaires, et est protégé par les lois françaises et internationales relatives à la propriété intellectuelle.
+                    L'ensemble du contenu présent sur le site leouiparfait.com, incluant, de manière non limitative, les textes, images, graphismes, logo, icônes, sons, logiciels, est la propriété exclusive de Le Oui Parfait ou de ses partenaires, et est protégé par les lois françaises et internationales relatives à la propriété intellectuelle.
                   </p>
                   <p>
                     Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de Le Oui Parfait.
@@ -89,7 +89,7 @@ export default function MentionsLegales() {
                     Les informations contenues sur ce site sont aussi précises que possible et le site est périodiquement mis à jour, mais peut toutefois contenir des inexactitudes, des omissions ou des lacunes.
                   </p>
                   <p>
-                    Si vous constatez une lacune, erreur ou ce qui paraît être un dysfonctionnement, merci de bien vouloir le signaler par email à contact@leouiparfait.fr en décrivant le problème de la manière la plus précise possible.
+                    Si vous constatez une lacune, erreur ou ce qui paraît être un dysfonctionnement, merci de bien vouloir le signaler par email à contact@leouiparfait.com en décrivant le problème de la manière la plus précise possible.
                   </p>
                   <p>
                     Le Oui Parfait décline toute responsabilité :
@@ -110,7 +110,7 @@ export default function MentionsLegales() {
                 </h2>
                 <div className="text-gray-600 leading-relaxed space-y-3">
                   <p>
-                    Le site leouiparfait.fr peut contenir des liens hypertextes vers d'autres sites présents sur le réseau Internet. Les liens vers ces autres ressources vous font quitter le site leouiparfait.fr.
+                    Le site leouiparfait.com peut contenir des liens hypertextes vers d'autres sites présents sur le réseau Internet. Les liens vers ces autres ressources vous font quitter le site leouiparfait.com.
                   </p>
                   <p>
                     Il est possible de créer un lien vers la page de présentation de ce site sans autorisation expresse de Le Oui Parfait. Aucune autorisation ni demande d'information préalable ne peut être exigée par l'éditeur à l'égard d'un site qui souhaite établir un lien vers le site de l'éditeur.
@@ -132,7 +132,7 @@ export default function MentionsLegales() {
                   </p>
                   <p>
                     Pour exercer ce droit, veuillez nous contacter à l'adresse suivante :<br />
-                    <strong>Email :</strong> dpo@leouiparfait.fr<br />
+                    <strong>Email :</strong> dpo@leouiparfait.com<br />
                     <strong>Courrier :</strong> Le Oui Parfait - Service DPO, 25 rue de Ponthieu 75008 Paris
                   </p>
                   <p>
@@ -148,7 +148,7 @@ export default function MentionsLegales() {
                 </h2>
                 <div className="text-gray-600 leading-relaxed space-y-3">
                   <p>
-                    Le site leouiparfait.fr peut être amené à vous demander l'acceptation des cookies pour des besoins de statistiques et d'affichage. Un cookie est une information déposée sur votre disque dur par le serveur du site que vous visitez.
+                    Le site leouiparfait.com peut être amené à vous demander l'acceptation des cookies pour des besoins de statistiques et d'affichage. Un cookie est une information déposée sur votre disque dur par le serveur du site que vous visitez.
                   </p>
                   <p>
                     Il contient plusieurs données qui sont stockées sur votre ordinateur dans un simple fichier texte auquel un serveur accède pour lire et enregistrer des informations. Certaines parties de ce site ne peuvent être fonctionnelles sans l'acceptation de cookies.

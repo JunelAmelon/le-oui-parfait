@@ -58,7 +58,19 @@ const lieux: Lieu[] = [
         alt: 'Azure Beach Resort — plage',
       },
       {
-        src: 'azur/azur (2).png',
+        src: 'azur/azur (3).png',
+        alt: 'Azure Beach Resort — cérémonie',
+      },
+            {
+        src: 'azur/azur (1).jpg',
+        alt: 'Azure Beach Resort — cérémonie',
+      },
+            {
+        src: 'azur/azur (2).jpg',
+        alt: 'Azure Beach Resort — cérémonie',
+      },
+            {
+        src: 'azur/azur (3).jpg',
         alt: 'Azure Beach Resort — cérémonie',
       },
     ],

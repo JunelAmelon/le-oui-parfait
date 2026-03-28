@@ -127,6 +127,10 @@ export default function EspaceClientPage() {
               <div className="lg:col-span-7">
                 <div className="relative w-full aspect-[16/9] overflow-hidden">
                   <Image src="/mockup.png" alt="Mockup de la web app Le Oui Parfait" fill className="object-contain" priority />
+
+                  <div className="absolute -top-8 -right-6 w-28 h-40 sm:w-32 sm:h-48 opacity-90 pointer-events-none">
+                    <Image src="/decoration-eucalyptus.PNG" alt="Décoration eucalyptus" fill className="object-contain" />
+                  </div>
                 </div>
               </div>
             </div>

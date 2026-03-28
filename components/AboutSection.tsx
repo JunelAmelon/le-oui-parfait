@@ -22,15 +22,6 @@ export function AboutSection() {
               className="object-cover"
               priority
             />
-
-            <div className="absolute bottom-3 left-3 w-20 h-20 sm:bottom-4 sm:left-4 sm:w-28 sm:h-28 z-10">
-              <Image
-                src="/rose-verte.PNG"
-                alt="Décoration florale"
-                fill
-                className="object-contain opacity-90"
-              />
-            </div>
           </div>
 
           {/* texte */}

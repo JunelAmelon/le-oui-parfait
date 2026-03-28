@@ -65,8 +65,9 @@ export function HeroSection() {
 
               <AnimatedSection delay={0.4} direction="up">
               <h1 className="heading-main text-[26px] sm:text-[42px] mb-3 sm:mb-6 leading-tight">
-                Organisateur de Mariage &<br />
-                Fiançailles Élégant
+                Organisatrice de mariage &
+                <br />
+                coordination du jour J
               </h1>
               </AnimatedSection>
 

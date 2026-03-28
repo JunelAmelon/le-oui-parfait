@@ -49,10 +49,7 @@ const lieux: Lieu[] = [
     ctaHref: '/contact',
     ctaLabel: 'RÉSERVER CE LIEU',
     images: [
-      {
-        src: 'https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/elementor/thumbs/IMG-5M4QEF8-rfdcnrqnbp34yyqh34gtg048xom8jc0r77ttse79b4.jpg',
-        alt: 'Azure Beach Resort — piscine',
-      },
+
       {
         src: 'azur/azur (1).png',
         alt: 'Azure Beach Resort — plage',

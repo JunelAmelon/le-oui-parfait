@@ -50,7 +50,12 @@ export function PortfolioSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {portfolioItems.map((item, index) => (
-            <AnimatedSection key={item.id} delay={0.1 * index} direction="up">
+            <AnimatedSection
+              key={item.id}
+              delay={0.1 * index}
+              direction="up"
+              className={item.id === 2 || item.id === 4 ? 'hidden md:block' : ''}
+            >
               <div className="group">
                 <div className="relative h-[400px] rounded-lg overflow-hidden mb-4 shadow-lg">
                   <Image

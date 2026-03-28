@@ -76,11 +76,13 @@ export default function StylismeFiancaillesPage() {
                   </button>
                 </Link>
                 <p className="text-[15px] font-semibold text-[#4B4456] mb-4">Spécifications du Service</p>
-                <div className="grid grid-cols-2 gap-3 mb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                   {specs.map((s, i) => (
-                    <div key={i} className="bg-white border border-[#e8e0dc] p-5 flex flex-col items-start gap-3">
-                      <s.icon className="w-8 h-8 text-[#88b7b5]" />
-                      <span className="font-baskerville text-[20px] text-[#4B4456] leading-snug">{s.title}</span>
+                    <div key={i} className="bg-white border border-[#e8e0dc] p-5 flex flex-col items-start gap-3 min-w-0">
+                      <s.icon className="w-8 h-8 text-[#88b7b5] flex-shrink-0" />
+                      <span className="font-baskerville text-[20px] text-[#4B4456] leading-snug min-w-0 break-words whitespace-normal [hyphens:auto]">
+                        {s.title}
+                      </span>
                     </div>
                   ))}
                 </div>

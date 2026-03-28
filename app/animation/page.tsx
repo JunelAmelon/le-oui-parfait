@@ -188,11 +188,11 @@ export default function AnimationPage() {
                       </p>
                     </div>
 
-                    <div className="mt-8 flex items-center justify-between gap-6">
-                      <div className="text-white/70 text-[11px] uppercase tracking-[0.22em]">
+                    <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6 min-w-0">
+                      <div className="text-white/70 text-[11px] uppercase tracking-[0.22em] break-words whitespace-normal [hyphens:auto]">
                         Réponse rapide — devis personnalisé
                       </div>
-                      <Button className="uppercase tracking-[0.15em] text-[11px] bg-[#88b7b5] text-white hover:bg-[#6a9a98] rounded-full px-10 py-7 font-medium transition-all shadow-lg hover:shadow-xl">
+                      <Button className="w-full sm:w-auto uppercase tracking-[0.15em] text-[11px] bg-[#88b7b5] text-white hover:bg-[#6a9a98] rounded-full px-10 py-7 font-medium transition-all shadow-lg hover:shadow-xl whitespace-nowrap">
                         Nous contacter
                       </Button>
                     </div>

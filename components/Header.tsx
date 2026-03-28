@@ -104,6 +104,11 @@ export function Header() {
             }`}>
               Animation
             </Link>
+            <Link href="/espace-client" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
+              pathname === '/espace-client' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
+            }`}>
+              Logiciel
+            </Link>
             <Link href="/blog" className={`text-[12px] font-sans uppercase tracking-[0.15em] transition ${
               pathname === '/blog' ? 'text-[#88b7b5] font-semibold' : 'text-[#4B4456] hover:text-[#88b7b5]'
             }`}>
@@ -258,6 +263,17 @@ export function Header() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span>Animation</span>
+              </Link>
+            </li>
+            <li className={`border-b border-gray-100 transition-all duration-300 ${
+              mobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'
+            }`} style={{ transitionDelay: mobileMenuOpen ? '350ms' : '0ms' }}>
+              <Link 
+                href="/espace-client" 
+                className="flex justify-between items-center px-6 py-[18px] text-[12px] font-sans font-medium tracking-[1.5px] uppercase text-[#4B4456] hover:bg-gray-50 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span>Logiciel</span>
               </Link>
             </li>
             <li className={`border-b border-gray-100 transition-all duration-300 ${

@@ -32,6 +32,7 @@ const lieux: Lieu[] = [
     images: [
       { src: '/domaine-olivier/domaine-les-oliviers (1).jpeg', alt: 'Domaine Les Oliviers — extérieur' },
       { src: '/domaine-olivier/domaine-les-oliviers (2).jpeg', alt: 'Domaine Les Oliviers — réception' },
+      { src: '/domaine-olivier/domaine-les-oliviers (3).png', alt: 'Domaine Les Oliviers — réception' },
     ],
     layout: 'image-left',
   },
@@ -53,11 +54,11 @@ const lieux: Lieu[] = [
         alt: 'Azure Beach Resort — piscine',
       },
       {
-        src: 'https://demo.deverust.com/bellavue/wp-content/uploads/sites/75/elementor/thumbs/IMG-NJPCVB7-rfdd36bfby6b8wcx4s6pb467f0osor6dzgqaxnczc0.jpg',
+        src: 'azur/azur (1).png',
         alt: 'Azure Beach Resort — plage',
       },
       {
-        src: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1600&q=80',
+        src: 'azur/azur (2).png',
         alt: 'Azure Beach Resort — cérémonie',
       },
     ],
@@ -76,16 +77,16 @@ const lieux: Lieu[] = [
     ctaHref: '/contact',
     ctaLabel: 'RÉSERVER CE LIEU',
     images: [
-      { src: '/ferme-du-couvent/ferme du couvent (2).jpg', alt: 'La Ferme du Couvent — extérieur' },
-      { src: '/ferme-du-couvent/ferme du couvent (3).jpg', alt: 'La Ferme du Couvent — réception' },
-      { src: '/ferme-du-couvent/ferme du couvent (4).jpg', alt: 'La Ferme du Couvent — détail' },
-      { src: '/ferme-du-couvent/ferme du couvent (1).png', alt: 'La Ferme du Couvent — panorama' },
-      { src: '/ferme-du-couvent/ferme du couvent (1).jpg', alt: 'La Ferme du Couvent — panorama' },
+      { src: '/ferme-du-couvent/ferme du couvent (1).png', alt: 'La Ferme du Couvent — extérieur' },
+      { src: '/ferme-du-couvent/ferme du couvent (2).png', alt: 'La Ferme du Couvent — réception' },
+      { src: '/ferme-du-couvent/ferme du couvent (3).png', alt: 'La Ferme du Couvent — détail' },
+      { src: '/ferme-du-couvent/ferme du couvent (4).png', alt: 'La Ferme du Couvent — panorama' },
+      { src: '/ferme-du-couvent/ferme du couvent (5).png', alt: 'La Ferme du Couvent — panorama' },
+      { src: '/ferme-du-couvent/ferme du couvent (6).png', alt: 'La Ferme du Couvent — panorama' },
+      { src: '/ferme-du-couvent/ferme du couvent (7).png', alt: 'La Ferme du Couvent — panorama' },
+      { src: '/ferme-du-couvent/ferme du couvent (8).png', alt: 'La Ferme du Couvent — panorama' },
       { src: '/ferme-du-couvent/ferme du couvent (1).jpeg', alt: 'La Ferme du Couvent — panorama' },
-      { src: '/ferme-du-couvent/ferme du couvent (1).webp', alt: 'La Ferme du Couvent — panorama' },
-      { src: '/ferme-du-couvent/ferme du couvent (2).webp', alt: 'La Ferme du Couvent — panorama' },
       { src: '/ferme-du-couvent/ferme du couvent (3).jpg', alt: 'La Ferme du Couvent — panorama' },
-      { src: '/ferme-du-couvent/ferme du couvent (2).png', alt: 'La Ferme du Couvent — panorama' },
 
 
     ],
@@ -259,7 +260,7 @@ export default function LieuxPage() {
                 {[
                   { n: '17+', title: 'Nombre total de sites', desc: 'Domaines De Jardins' },
                   { n: '23+', title: 'Nombre total de sites', desc: 'Hôtels De Luxe' },
-                  { n: '21+', title: 'Nombre total de sites', desc: 'Stations Balnéaires' },
+                  { n: '21+', title: 'Nombre total de sites', desc: 'Salles de mariages' },
                   { n: '12+', title: 'Nombre total de sites', desc: 'Châteaux Historiques' },
                 ].map((card, i) => (
                   <div key={i} className="bg-white p-8 border border-[#e8e0dc]">

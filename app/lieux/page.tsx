@@ -223,7 +223,7 @@ export default function LieuxPage() {
                     <div className="flex gap-3 flex-shrink-0">
                       {[
                         '/domaine-olivier/domaine-les-oliviers (1).jpeg',
-                        '/ferme-du-couvent/ferme du couvent (2).jpg',
+                        '/ferme-du-couvent/ferme du couvent (2).png',
                         '/mariage-réalisés (2).jpg',
                       ].map((src, idx) => (
                         <div key={idx} className="w-56 h-40 overflow-hidden bg-white">
@@ -239,7 +239,7 @@ export default function LieuxPage() {
                     <div className="flex gap-3 flex-shrink-0" aria-hidden="true">
                       {[
                         '/domaine-olivier/domaine-les-oliviers (1).jpeg',
-                        '/ferme-du-couvent/ferme du couvent (2).jpg',
+                        '/ferme-du-couvent/ferme du couvent (2).png',
                         '/mariage-réalisés (2).jpg',
                       ].map((src, idx) => (
                         <div key={`dup-${idx}`} className="w-56 h-40 overflow-hidden bg-white">

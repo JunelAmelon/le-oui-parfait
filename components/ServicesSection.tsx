@@ -187,7 +187,8 @@ export function ServicesSection() {
     },
   ];
 
-  const servicesMobile: ServiceItem[] = [...offers, ...otherServices];
+  const servicesMobileCarousel: ServiceItem[] = offers;
+  const servicesMobileGrid: ServiceItem[] = otherServices;
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -253,7 +254,7 @@ export function ServicesSection() {
             setApi={(emblaApi) => setApi(emblaApi)}
           >
             <CarouselContent>
-              {servicesMobile.map((service, index) => (
+              {servicesMobileCarousel.map((service, index) => (
                 <CarouselItem key={index} className="basis-full">
                   <div className="px-2">
                     <div className="bg-white rounded-lg overflow-hidden shadow-lg">
@@ -297,7 +298,7 @@ export function ServicesSection() {
           </Carousel>
 
           <div className="flex justify-center gap-2 mt-6">
-            {servicesMobile.map((_, index) => (
+            {servicesMobileCarousel.map((_, index) => (
               <button
                 key={index}
                 onClick={() => api?.scrollTo(index)}
@@ -308,6 +309,32 @@ export function ServicesSection() {
                 }`}
                 aria-label={`Aller au service ${index + 1}`}
               />
+            ))}
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 px-2">
+            {servicesMobileGrid.map((service, index) => (
+              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg">
+                <div className="relative h-[200px] w-full">
+                  <Image src={service.image} alt={service.alt} fill className="object-cover" />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-baskerville text-[20px] text-[#5A5A5A] mb-2 leading-tight font-normal">
+                    {service.title}
+                  </h3>
+                  <p className="text-[#5A5A5A] leading-relaxed mb-4 text-[15px]">
+                    {service.description}
+                  </p>
+                  <Link href={service.link}>
+                    <Button
+                      variant="outline"
+                      className="w-full uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-6 py-5 font-medium transition-all"
+                    >
+                      Voir les Détails
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             ))}
           </div>
         </div>

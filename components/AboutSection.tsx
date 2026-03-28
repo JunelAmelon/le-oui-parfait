@@ -23,7 +23,7 @@ export function AboutSection() {
               priority
             />
 
-            <div className="absolute bottom-4 left-4 w-32 h-32 z-10">
+            <div className="absolute bottom-3 left-3 w-20 h-20 sm:bottom-4 sm:left-4 sm:w-28 sm:h-28 z-10">
               <Image
                 src="/rose-verte.PNG"
                 alt="Décoration florale"

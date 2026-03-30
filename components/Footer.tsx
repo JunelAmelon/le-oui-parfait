@@ -7,12 +7,38 @@ import { Facebook, Instagram, Linkedin, Youtube, ArrowUp } from 'lucide-react';
 
 export function Footer() {
   const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [statusMessage, setStatusMessage] = useState('');
   const currentYear = new Date().getFullYear();
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Subscribe email:', email);
-    setEmail('');
+
+    setStatus('loading');
+    setStatusMessage('');
+
+    try {
+      const res = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await res.json().catch(() => null);
+
+      if (!res.ok || !data?.ok) {
+        setStatus('error');
+        setStatusMessage(data?.error || 'Une erreur est survenue.');
+        return;
+      }
+
+      setStatus('success');
+      setStatusMessage("Merci ! Vous êtes bien inscrit(e).");
+      setEmail('');
+    } catch {
+      setStatus('error');
+      setStatusMessage('Une erreur est survenue.');
+    }
   };
 
   const scrollToTop = () => {
@@ -49,11 +75,18 @@ export function Footer() {
             />
             <button
               type="submit"
-              className="px-8 py-3 border border-[#88b7b5] rounded-full text-sm uppercase tracking-wider text-[#88b7b5] hover:bg-[#88b7b5] hover:text-white transition-all duration-300"
+              className="px-8 py-3 border border-[#88b7b5] rounded-full text-sm uppercase tracking-wider text-[#88b7b5] hover:bg-[#88b7b5] hover:text-white transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+              disabled={status === 'loading'}
             >
-              S'abonner
+              {status === 'loading' ? 'Envoi…' : "S'abonner"}
             </button>
           </form>
+
+          {status !== 'idle' && (
+            <p className={`text-sm ${status === 'success' ? 'text-[#88b7b5]' : status === 'error' ? 'text-red-600' : 'text-gray-500'}`}>
+              {status === 'loading' ? 'Inscription en cours…' : statusMessage}
+            </p>
+          )}
           <p className="text-sm text-gray-500">
             Recevez des conseils de planification et des offres exclusives.
           </p>

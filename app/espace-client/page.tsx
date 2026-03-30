@@ -72,7 +72,31 @@ export default function EspaceClientPage() {
           title="Outil d’organisation"
           subtitle="L’outil que nous mettons à votre disposition pour organiser votre mariage avec clarté, méthode et sérénité."
           backgroundImage="/wedding (5).jpg"
-        />
+        >
+          <div className="flex flex-wrap items-center gap-3">
+            <a href="#" aria-label="Télécharger sur l’App Store" className="inline-flex">
+              <Image
+                src="/appstore.png"
+                alt="Télécharger sur l’App Store"
+                width={170}
+                height={56}
+                className="h-12 w-auto"
+                priority
+              />
+            </a>
+
+            <a href="#" aria-label="Télécharger sur Google Play" className="inline-flex">
+              <Image
+                src="/googleplay.png"
+                alt="Disponible sur Google Play"
+                width={170}
+                height={56}
+                className="h-12 w-auto"
+                priority
+              />
+            </a>
+          </div>
+        </HeroPage>
 
         <section className="py-12 bg-[#f4f1f7]">
           <div className="container mx-auto px-6 max-w-7xl">

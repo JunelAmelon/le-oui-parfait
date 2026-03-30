@@ -21,9 +21,52 @@ export function PlanningSection() {
     consent: false
   });
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [statusMessage, setStatusMessage] = useState<string>('');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+
+    if (!formData.consent) {
+      setStatus('error');
+      setStatusMessage("Veuillez accepter les conditions générales.");
+      return;
+    }
+
+    setStatus('loading');
+    setStatusMessage('');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json().catch(() => null);
+
+      if (!res.ok || !data?.ok) {
+        setStatus('error');
+        setStatusMessage(data?.error || "Une erreur est survenue. Veuillez réessayer.");
+        return;
+      }
+
+      setStatus('success');
+      setStatusMessage('Message envoyé. Nous revenons vers vous rapidement.');
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        subject: '',
+        date: '',
+        eventType: '',
+        message: '',
+        consent: false,
+      });
+    } catch {
+      setStatus('error');
+      setStatusMessage("Une erreur est survenue. Veuillez réessayer.");
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -101,11 +144,18 @@ export function PlanningSection() {
             </label>
           </div>
 
+          {status !== 'idle' && (
+            <div className={`text-[13px] ${status === 'success' ? 'text-[#88b7b5]' : status === 'error' ? 'text-red-600' : 'text-gray-500'}`}>
+              {status === 'loading' ? 'Envoi en cours…' : statusMessage}
+            </div>
+          )}
+
           <button
             type="submit"
-            className="uppercase tracking-[0.25em] text-[10px] border border-gray-400 px-8 py-3 rounded-full mt-6 hover:bg-gray-100 transition"
+            className="uppercase tracking-[0.25em] text-[10px] border border-gray-400 px-8 py-3 rounded-full mt-6 hover:bg-gray-100 transition disabled:opacity-60 disabled:cursor-not-allowed"
+            disabled={status === 'loading'}
           >
-            ENVOYER
+            {status === 'loading' ? 'ENVOI…' : 'ENVOYER'}
           </button>
         </form>
       </div>

@@ -20,7 +20,7 @@ export function VideoPresentationSection() {
   };
 
   return (
-    <section className="relative py-20 bg-[#f4f1f7] w-full py-20 bg-white overflow-hidden">
+    <section className="relative py-10 sm:py-16 lg:py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="relative w-full aspect-video lg:aspect-[2/1] overflow-hidden">
           <div className="absolute inset-0">

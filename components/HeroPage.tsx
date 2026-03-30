@@ -6,9 +6,10 @@ interface HeroPageProps {
   title: string;
   subtitle?: string;
   backgroundImage?: string;
+  children?: React.ReactNode;
 }
 
-export function HeroPage({ title, subtitle, backgroundImage }: HeroPageProps) {
+export function HeroPage({ title, subtitle, backgroundImage, children }: HeroPageProps) {
   return (
     <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 bg-[#f4f1f7] overflow-hidden">
       {backgroundImage && (
@@ -45,6 +46,8 @@ export function HeroPage({ title, subtitle, backgroundImage }: HeroPageProps) {
               {subtitle}
             </p>
           )}
+
+          {children && <div className="mt-5">{children}</div>}
 
           <div className={`mt-8 w-20 h-[3px] ${backgroundImage ? 'bg-[#88b7b5]' : 'bg-[#88b7b5]'}`} />
         </div>

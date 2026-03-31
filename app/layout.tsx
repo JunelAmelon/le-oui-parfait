@@ -17,17 +17,17 @@ const baskerville = Libre_Baskerville({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Le Oui Parfait - Organisation de Mariages Élégants & Fiançailles',
+    default: 'Le Oui Parfait - Organisatrice de Mariage à Paris & Île-de-France',
     template: '%s | Le Oui Parfait'
   },
-  description: 'Organisateur de mariage professionnel créant des célébrations inoubliables. Planification complète, stylisme de fiançailles et gestion d\'événements sur mesure. Transformez vos moments en souvenirs impérissables.',
-  keywords: ['organisateur mariage', 'wedding planner', 'planification mariage', 'stylisme fiançailles', 'organisation événement', 'mariage élégant', 'coordinateur mariage', 'décoration mariage', 'mariage sur mesure', 'Le Oui Parfait'],
+  description: 'Organisatrice de mariage à Paris & en Île-de-France. Organisation clé en main, organisation partielle, coordination du jour J, demande en mariage et expériences EVJF/EVG. Transformez vos moments en souvenirs impérissables.',
+  keywords: ['organisatrice mariage', 'wedding planner', 'wedding planner paris', 'organisation mariage', 'coordination jour j', 'planification mariage', 'organisation partielle', 'mariage sur mesure', 'décoration mariage', 'Le Oui Parfait'],
   authors: [{ name: 'Le Oui Parfait' }],
   creator: 'Le Oui Parfait',
   publisher: 'Le Oui Parfait',
-  metadataBase: new URL('https://leouiparfait.fr'),
+  metadataBase: new URL('https://leouiparfait.com'),
   alternates: {
-    canonical: 'https://leouiparfait.fr',
+    canonical: 'https://leouiparfait.com',
   },
   robots: {
     index: true,
@@ -41,11 +41,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Le Oui Parfait - Organisation de Mariages Élégants & Fiançailles',
-    description: 'Créez votre mariage de rêve avec notre équipe d\'experts. Planification, stylisme et coordination pour une journée parfaite. Transformez vos moments en souvenirs impérissables.',
+    title: 'Le Oui Parfait - Organisatrice de Mariage à Paris & Île-de-France',
+    description: 'Organisation de mariage sur mesure : clé en main, organisation partielle, coordination du jour J, demande en mariage et EVJF/EVG à Paris & en Île-de-France.',
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://leouiparfait.fr',
+    url: 'https://leouiparfait.com',
     siteName: 'Le Oui Parfait',
     images: [
       {
@@ -58,8 +58,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Le Oui Parfait - Organisation de Mariages Élégants',
-    description: 'Créez votre mariage de rêve avec notre équipe d\'experts. Planification, stylisme et coordination pour une journée parfaite.',
+    title: 'Le Oui Parfait - Organisatrice de Mariage (Paris & Île-de-France)',
+    description: 'Organisation de mariage sur mesure : clé en main, organisation partielle, coordination du jour J, demande en mariage et EVJF/EVG.',
     creator: '@leouiparfait',
     images: [
       {
@@ -73,15 +73,43 @@ export const metadata: Metadata = {
   },
   category: 'Wedding Planning',
   icons: {
-    icon: [
-      { url: '/favicon.ico' },
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-    ],
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
+    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
   },
+};
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://leouiparfait.com/#organization',
+      name: 'Le Oui Parfait',
+      url: 'https://leouiparfait.com',
+      logo: 'https://leouiparfait.com/logo-horizontal.png',
+      sameAs: [],
+    },
+    {
+      '@type': 'LocalBusiness',
+      '@id': 'https://leouiparfait.com/#localbusiness',
+      name: 'Le Oui Parfait',
+      url: 'https://leouiparfait.com',
+      image: ['https://leouiparfait.com/logo-horizontal.png'],
+      priceRange: '€€€',
+      areaServed: [
+        { '@type': 'AdministrativeArea', name: 'Île-de-France' },
+        { '@type': 'City', name: 'Paris' },
+      ],
+      knowsAbout: [
+        'Organisation de mariage',
+        'Organisatrice de mariage',
+        'Wedding planner Paris',
+        'Coordination du jour J',
+        'Demande en mariage',
+        'EVJF / EVG',
+      ],
+      parentOrganization: { '@id': 'https://leouiparfait.com/#organization' },
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -92,10 +120,13 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#88b7b5" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </head>
       <body className={`${inter.variable} ${baskerville.variable} font-sans`}>{children}</body>
     </html>

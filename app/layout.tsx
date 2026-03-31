@@ -52,7 +52,7 @@ export const metadata: Metadata = {
         url: 'https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&w=1200',
         width: 1200,
         height: 630,
-        alt: 'Le Oui Parfait - Organisation de Mariages Élégants',
+        alt: 'Le Oui Parfait - Organisatrice de Mariage (Paris & Île-de-France)',
       },
     ],
   },
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&cs=tinysrgb&w=1200',
-        alt: 'Le Oui Parfait - Organisation de Mariages',
+        alt: 'Le Oui Parfait - Organisatrice de Mariage',
       },
     ],
   },

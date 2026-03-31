@@ -73,7 +73,11 @@ export const metadata: Metadata = {
   },
   category: 'Wedding Planning',
   icons: {
-    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+    icon: [
+      { url: '/logo-horizontal.png', type: 'image/png' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [{ url: '/logo-horizontal.png', type: 'image/png' }],
   },
 };
 
@@ -120,6 +124,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
+        <link rel="icon" href="/logo-horizontal.png" type="image/png" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#88b7b5" />

@@ -5,6 +5,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { HeroPage } from '@/components/HeroPage';
 import { PlanningSection } from '@/components/PlanningSection';
+import { ServicesSection } from '@/components/ServicesSection';
 import { getDepartmentBySlug, IDF_DEPARTMENTS } from '../_idfData';
 
 type PageProps = {
@@ -88,10 +89,10 @@ export default async function IleDeFranceDepartmentPage({ params }: PageProps) {
               Demander un devis
             </Link>
             <Link
-              href="/services"
+              href="/tarifs"
               className="inline-flex items-center justify-center px-7 py-3 rounded-full bg-white/90 text-[#4B4456] font-medium hover:bg-white transition"
             >
-              Voir les services
+              Voir les tarifs
             </Link>
           </div>
 
@@ -116,9 +117,9 @@ export default async function IleDeFranceDepartmentPage({ params }: PageProps) {
                   Une organisatrice de mariage en {d.name}
                 </h2>
                 <p className="text-[#4B4456]/80 leading-relaxed">
-                  Vous cherchez une wedding planner en {d.name} ? Le Oui Parfait vous accompagne avec une méthode claire,
-                  des prestataires sélectionnés et une coordination irréprochable. Notre approche : élégante, efficace et 100%
-                  sur-mesure.
+                  Le Oui Parfait accompagne les couples en {d.name} ({d.code}) avec une organisation sur mesure : clé en main,
+                  organisation partielle, coordination du jour J et prestations complémentaires. Objectif : un mariage fluide,
+                  élégant et parfaitement orchestré.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Link
@@ -136,41 +137,6 @@ export default async function IleDeFranceDepartmentPage({ params }: PageProps) {
                 </div>
               </div>
 
-              <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div className="rounded-3xl bg-white border border-[#88b7b5]/30 p-6">
-                  <h2 className="text-xl font-baskerville text-[#4B4456] mb-2">Prestations</h2>
-                  <ul className="space-y-2 text-[#4B4456]/80">
-                    <li>Organisation clé en main</li>
-                    <li>Organisation partielle</li>
-                    <li>Coordination du jour J</li>
-                    <li>Demande en mariage</li>
-                  </ul>
-                  <div className="mt-5">
-                    <Link
-                      href="/services"
-                      className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-[#4B4456] text-white font-medium hover:bg-[#3a3540] transition"
-                    >
-                      Voir les services
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="rounded-3xl bg-white border border-[#88b7b5]/30 p-6">
-                  <h2 className="text-xl font-baskerville text-[#4B4456] mb-2">Villes fréquentes</h2>
-                  <p className="text-[#4B4456]/80">
-                    {d.cities.join(' · ')}
-                  </p>
-                  <div className="mt-5">
-                    <Link
-                      href="/contact"
-                      className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-[#88b7b5] text-white font-medium hover:bg-[#6fa3a1] transition"
-                    >
-                      Demander un devis
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
               <div className="mt-10 rounded-3xl bg-white border border-[#88b7b5]/30 p-6 md:p-8">
                 <h2 className="text-xl font-baskerville text-[#4B4456] mb-3">Pourquoi choisir Le Oui Parfait ?</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-[#4B4456]/80">
@@ -179,20 +145,38 @@ export default async function IleDeFranceDepartmentPage({ params }: PageProps) {
                   <div className="rounded-2xl bg-[#f4f1f7] p-4">Une coordination précise le jour J</div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
 
-              <div className="mt-12">
-                <h2 className="text-xl font-baskerville text-[#4B4456] mb-4">FAQ</h2>
-                <div className="space-y-4">
-                  {faq.map((item) => (
-                    <div key={item.q} className="rounded-2xl bg-white border border-[#88b7b5]/30 p-5">
-                      <p className="font-semibold text-[#4B4456]">{item.q}</p>
-                      <p className="mt-2 text-[#4B4456]/80">{item.a}</p>
-                    </div>
-                  ))}
-                </div>
+        <ServicesSection />
+
+        <section className="py-10 bg-[#f4f1f7]">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="max-w-4xl mx-auto rounded-3xl bg-white border border-[#88b7b5]/30 p-6 md:p-8">
+              <p className="text-[10px] tracking-[0.3em] text-[#4B4456]/70 uppercase mb-3">ZONES DESSERVIES</p>
+              <h2 className="text-xl font-baskerville text-[#4B4456] mb-2">Villes en {d.name}</h2>
+              <p className="text-[#4B4456]/80">
+                {d.cities.join(' · ')}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-10 bg-[#f4f1f7]">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-xl font-baskerville text-[#4B4456] mb-4">FAQ</h2>
+              <div className="space-y-4">
+                {faq.map((item) => (
+                  <div key={item.q} className="rounded-2xl bg-white border border-[#88b7b5]/30 p-5">
+                    <p className="font-semibold text-[#4B4456]">{item.q}</p>
+                    <p className="mt-2 text-[#4B4456]/80">{item.a}</p>
+                  </div>
+                ))}
               </div>
 
-              <div className="mt-12">
+              <div className="mt-10">
                 <Link href="/ile-de-france" className="text-[#4B4456] underline">
                   Retour à Île-de-France
                 </Link>

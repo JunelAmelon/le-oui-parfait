@@ -4,6 +4,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { HeroPage } from '@/components/HeroPage';
 import { PlanningSection } from '@/components/PlanningSection';
+import { ServicesSection } from '@/components/ServicesSection';
 import { IDF_DEPARTMENTS } from './_idfData';
 
 export const metadata: Metadata = {
@@ -66,10 +67,10 @@ export default function IleDeFrancePage() {
               Demander un devis
             </Link>
             <Link
-              href="/services"
+              href="/tarifs"
               className="inline-flex items-center justify-center px-7 py-3 rounded-full bg-white/90 text-[#4B4456] font-medium hover:bg-white transition"
             >
-              Voir les services
+              Voir les tarifs
             </Link>
           </div>
 
@@ -90,36 +91,22 @@ export default function IleDeFrancePage() {
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-baskerville text-[#4B4456] mb-4">
-                Une organisatrice de mariage pour toute l’Île-de-France
+                Organisatrice de mariage en Île-de-France
               </h2>
-              <p className="text-[#4B4456]/80 leading-relaxed mb-10">
-                Le Oui Parfait accompagne les couples partout en Île-de-France : repérage de lieux, sélection de prestataires,
-                scénographie et coordination. Notre objectif : une organisation fluide, élégante, et une journée parfaitement
-                orchestrée.
+              <p className="text-[#4B4456]/80 leading-relaxed">
+                Le Oui Parfait accompagne les couples à Paris et dans toute l’Île-de-France : organisation clé en main,
+                organisation partielle, coordination du jour J et expériences sur mesure.
               </p>
+            </div>
+          </div>
+        </section>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                <div className="rounded-3xl bg-white border border-[#88b7b5]/30 p-6">
-                  <p className="text-[10px] tracking-[0.3em] text-[#4B4456]/70 uppercase mb-3">ACCOMPAGNEMENT</p>
-                  <p className="text-xl font-baskerville text-[#4B4456]">Une méthode claire</p>
-                  <p className="mt-2 text-[#4B4456]/80">Planning, budget, prestataires, scénographie : tout est cadré et suivi.</p>
-                </div>
-                <div className="rounded-3xl bg-white border border-[#88b7b5]/30 p-6">
-                  <p className="text-[10px] tracking-[0.3em] text-[#4B4456]/70 uppercase mb-3">JOUR J</p>
-                  <p className="text-xl font-baskerville text-[#4B4456]">Coordination premium</p>
-                  <p className="mt-2 text-[#4B4456]/80">Une journée fluide, des prestataires briefés, une timeline maîtrisée.</p>
-                </div>
-                <div className="rounded-3xl bg-white border border-[#88b7b5]/30 p-6">
-                  <p className="text-[10px] tracking-[0.3em] text-[#4B4456]/70 uppercase mb-3">SUR-MESURE</p>
-                  <p className="text-xl font-baskerville text-[#4B4456]">Un style qui vous ressemble</p>
-                  <p className="mt-2 text-[#4B4456]/80">Élégant, moderne, cohérent : du moodboard à la mise en place.</p>
-                </div>
-              </div>
+        <ServicesSection />
 
-              <div className="mt-10">
-                <p className="text-[10px] tracking-[0.3em] text-[#4B4456]/70 uppercase mb-4">DÉPARTEMENTS</p>
-              </div>
-
+        <section className="py-10 bg-[#f4f1f7]">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="max-w-4xl mx-auto">
+              <p className="text-[10px] tracking-[0.3em] text-[#4B4456]/70 uppercase mb-4">DÉPARTEMENTS COUVERTS</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {IDF_DEPARTMENTS.map((d) => (
                   <Link
@@ -129,22 +116,9 @@ export default function IleDeFrancePage() {
                   >
                     <p className="text-sm tracking-wide text-[#4B4456]/70">{d.code}</p>
                     <p className="text-lg font-semibold text-[#4B4456]">{d.name}</p>
-                    <p className="text-sm text-[#4B4456]/70 mt-2">Voir les détails</p>
+                    <p className="text-sm text-[#4B4456]/70 mt-2">Découvrir</p>
                   </Link>
                 ))}
-              </div>
-
-              <div className="mt-12 rounded-3xl bg-white border border-[#88b7b5]/30 p-6 md:p-8">
-                <h3 className="text-xl font-baskerville text-[#4B4456] mb-3">Besoin d’un devis ?</h3>
-                <p className="text-[#4B4456]/80 mb-6">
-                  Dites-nous la date, le lieu envisagé et le niveau d’accompagnement souhaité. Nous vous répondons rapidement.
-                </p>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#88b7b5] text-white font-medium hover:bg-[#6fa3a1] transition"
-                >
-                  Demander un devis
-                </Link>
               </div>
 
               <div className="mt-12">

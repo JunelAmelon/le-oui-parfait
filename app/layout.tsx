@@ -74,6 +74,7 @@ export const metadata: Metadata = {
   category: 'Wedding Planning',
   icons: {
     icon: [
+      { url: '/logo-horizontal.ico', type: 'image/x-icon' },
       { url: '/logo-horizontal.png', type: 'image/png' },
       { url: '/favicon.svg', type: 'image/svg+xml' },
     ],
@@ -90,6 +91,15 @@ const structuredData = {
       name: 'Le Oui Parfait',
       url: 'https://leouiparfait.com',
       logo: 'https://leouiparfait.com/logo-horizontal.png',
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          telephone: '+33 6 13 63 44 56',
+          contactType: 'customer service',
+          areaServed: 'FR',
+          availableLanguage: ['fr'],
+        },
+      ],
       sameAs: [],
     },
     {
@@ -98,6 +108,14 @@ const structuredData = {
       name: 'Le Oui Parfait',
       url: 'https://leouiparfait.com',
       image: ['https://leouiparfait.com/logo-horizontal.png'],
+      telephone: '+33 6 13 63 44 56',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '19 rue Albert-Remy',
+        addressLocality: 'Ris-Orangis',
+        postalCode: '91130',
+        addressCountry: 'FR',
+      },
       priceRange: '€€€',
       areaServed: [
         { '@type': 'AdministrativeArea', name: 'Île-de-France' },
@@ -124,6 +142,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
+        <link rel="icon" href="/logo-horizontal.ico" sizes="any" />
         <link rel="icon" href="/logo-horizontal.png" type="image/png" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="manifest" href="/site.webmanifest" />

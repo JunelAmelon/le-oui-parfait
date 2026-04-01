@@ -74,7 +74,7 @@ export const metadata: Metadata = {
   category: 'Wedding Planning',
   icons: {
     icon: [
-      { url: '/favicon.ico', type: 'image/x-icon' },
+      { url: '/logo-horizontal.ico', type: 'image/x-icon' },
       { url: '/logo-horizontal.png', type: 'image/png' },
       { url: '/favicon.svg', type: 'image/svg+xml' },
     ],
@@ -142,8 +142,8 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
-        <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
-        <link rel="shortcut icon" href="/favicon.ico?v=2" />
+        <link rel="icon" href="/logo-horizontal.ico?v=2" sizes="any" />
+        <link rel="shortcut icon" href="/logo-horizontal.ico?v=2" />
         <link rel="icon" href="/logo-horizontal.png?v=2" type="image/png" />
         <link rel="apple-touch-icon" href="/logo-horizontal.png?v=2" />
         <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" />

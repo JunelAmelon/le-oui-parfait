@@ -4,3 +4,21 @@ publish = ".next"
 
 [[plugins]]
 package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+from = "https://www.leouiparfait.com/*"
+to = "https://leouiparfait.com/:splat"
+status = 308
+force = true
+
+[[redirects]]
+from = "http://www.leouiparfait.com/*"
+to = "https://leouiparfait.com/:splat"
+status = 308
+force = true
+
+[[redirects]]
+from = "http://leouiparfait.com/*"
+to = "https://leouiparfait.com/:splat"
+status = 308
+force = true

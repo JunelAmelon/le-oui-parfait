@@ -163,7 +163,7 @@ export default function StylismeFiancaillesPage() {
                     Réserver Ma Consultation
                   </Button>
                 </Link>
-                <Link href="tel:+33123456789" className="w-full sm:w-auto">
+                <Link href="tel:+33687217118" className="w-full sm:w-auto">
                   <Button className="w-full sm:w-auto uppercase tracking-[0.1em] text-xs sm:text-sm bg-white text-[#4B4456] hover:bg-gray-100 rounded-full px-6 sm:px-8 py-4 sm:py-6 font-medium transition-all shadow-lg">
                     Appeler Maintenant
                   </Button>

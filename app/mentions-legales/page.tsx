@@ -38,7 +38,7 @@ export default function MentionsLegales() {
                   <p>
                     <strong>Directeur de la publication :</strong> Junel BOKO ASSOGBA<br />
                     <strong>Contact :</strong> contact@leouiparfait.com<br />
-                    <strong>Téléphone :</strong> +33 1 23 45 67 89
+                    <strong>Téléphone :</strong> +33 6 87 21 71 18
                   </p>
                 </div>
               </div>

@@ -86,7 +86,7 @@ export function ContactSection() {
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900 mb-1">Téléphone</h4>
-                <p className="text-gray-600">+33 1 23 45 67 89</p>
+                <p className="text-gray-600">+33 6 87 21 71 18</p>
               </div>
             </div>
 

@@ -94,13 +94,16 @@ const structuredData = {
       contactPoint: [
         {
           '@type': 'ContactPoint',
-          telephone: '+33 6 13 63 44 56',
+          telephone: '+33 6 87 21 71 18',
           contactType: 'customer service',
           areaServed: 'FR',
           availableLanguage: ['fr'],
         },
       ],
-      sameAs: [],
+      sameAs: [
+        'https://www.facebook.com/share/1NRMWajbmP/?mibextid=wwXIfr',
+        'https://www.instagram.com/leouiparfait_officiel?igsh=Z2dsZHF2cDJmZmIz',
+      ],
     },
     {
       '@type': 'LocalBusiness',
@@ -108,7 +111,7 @@ const structuredData = {
       name: 'Le Oui Parfait',
       url: 'https://leouiparfait.com',
       image: ['https://leouiparfait.com/logo-horizontal.png'],
-      telephone: '+33 6 13 63 44 56',
+      telephone: '+33 6 87 21 71 18',
       address: {
         '@type': 'PostalAddress',
         streetAddress: '19 rue Albert-Remy',

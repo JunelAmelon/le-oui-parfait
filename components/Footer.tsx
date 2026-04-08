@@ -112,14 +112,18 @@ export function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://www.facebook.com/share/1NRMWajbmP/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noreferrer"
                 className="w-10 h-10 rounded-full border border-[#88b7b5] flex items-center justify-center text-[#88b7b5] hover:bg-[#88b7b5] hover:text-white transition-all duration-300"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/leouiparfait_officiel?igsh=Z2dsZHF2cDJmZmIz"
+                target="_blank"
+                rel="noreferrer"
                 className="w-10 h-10 rounded-full border border-[#88b7b5] flex items-center justify-center text-[#88b7b5] hover:bg-[#88b7b5] hover:text-white transition-all duration-300"
                 aria-label="Instagram"
               >

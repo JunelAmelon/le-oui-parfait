@@ -25,6 +25,11 @@ const teamMembers = [
     title: 'Spécialiste Logistique & Commercial',
     image: '/equipe/yan.jpeg',
   },
+    {
+    name: 'Noella',
+    title: 'Wedding planner & Animatrice',
+    image: '/equipe/Noella.jpg',
+  },
   {
     name: 'Miriam',
     title: 'Chargée Communication',

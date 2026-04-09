@@ -32,7 +32,7 @@ export default function MentionsLegales() {
                     Showroom Clientèle : 19 rue Albert-Remy 91130 Ris-Orangis<br />
                     Siège Social : 25 rue de Ponthieu 75008 Paris<br />
                     102 662 236 R.C.S. Paris<br />
-                    SIRET : 123 456 789 00012<br />
+                    {/* SIRET : 123 456 789 00012<br /> */}
                     TVA Intracommunautaire : FR7501.102662236
                   </p>
                   <p>

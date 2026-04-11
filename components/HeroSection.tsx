@@ -24,6 +24,7 @@ export function HeroSection() {
               loop
               muted
               playsInline
+              preload="none"
               className="w-full h-full object-cover"
             />
           </div>
@@ -38,15 +39,15 @@ export function HeroSection() {
 
                 <div className="flex -space-x-2">
                   <Avatar className="border-2 border-white w-7 h-7">
-                    <AvatarImage src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg" />
+                    <AvatarImage src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=84&h=84&fit=crop" />
                   </Avatar>
 
                   <Avatar className="border-2 border-white w-7 h-7">
-                    <AvatarImage src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" />
+                    <AvatarImage src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=84&h=84&fit=crop" />
                   </Avatar>
 
                   <Avatar className="border-2 border-white w-7 h-7">
-                    <AvatarImage src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" />
+                    <AvatarImage src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=84&h=84&fit=crop" />
                   </Avatar>
                 </div>
 
@@ -135,6 +136,7 @@ export function HeroSection() {
                 loop
                 muted
                 playsInline
+                preload="none"
                 className="w-full h-full object-cover"
               />
 
@@ -172,15 +174,15 @@ export function HeroSection() {
                 <div className="flex -space-x-2">
 
                   <Avatar className="border-2 border-white w-9 h-9">
-                    <AvatarImage src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg" />
+                    <AvatarImage src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=96&h=96&fit=crop" />
                   </Avatar>
 
                   <Avatar className="border-2 border-white w-9 h-9">
-                    <AvatarImage src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" />
+                    <AvatarImage src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=96&h=96&fit=crop" />
                   </Avatar>
 
                   <Avatar className="border-2 border-white w-9 h-9">
-                    <AvatarImage src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" />
+                    <AvatarImage src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=96&h=96&fit=crop" />
                   </Avatar>
 
                 </div>

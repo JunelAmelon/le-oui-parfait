@@ -239,6 +239,9 @@ export function Footer() {
                 src="/moment-mariage (1).jpg"
                 alt="Moment mariage 1"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
@@ -246,6 +249,9 @@ export function Footer() {
                 src="/moment-mariage (2).jpg"
                 alt="Moment mariage 2"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
               />
             </div>
 
@@ -254,6 +260,9 @@ export function Footer() {
                 src="/moment-mariage (4).jpg"
                 alt="Moment mariage 4"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
@@ -261,6 +270,9 @@ export function Footer() {
                 src="/moment-mariage (5).jpg"
                 alt="Moment mariage 5"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
@@ -268,6 +280,9 @@ export function Footer() {
                 src="/moment-mariage (6).jpg"
                 alt="Moment mariage 6"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
               />
             </div>
           </div>
@@ -277,6 +292,9 @@ export function Footer() {
                 src="/moment-mariage (7).jpg"
                 alt="Moment mariage 2"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
               />
             </div>
                         <div className="w-64 h-64 overflow-hidden">
@@ -284,6 +302,9 @@ export function Footer() {
                 src="/moment-mariage (1).jpg"
                 alt="Moment mariage 1"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
@@ -291,6 +312,9 @@ export function Footer() {
                 src="/moment-mariage (2).jpg"
                 alt="Moment mariage 2"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
               />
             </div>
 
@@ -299,6 +323,9 @@ export function Footer() {
                 src="/moment-mariage (4).jpg"
                 alt="Moment mariage 4"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
               />
             </div>
             <div className="w-64 h-64 overflow-hidden">
@@ -306,6 +333,9 @@ export function Footer() {
                 src="/moment-mariage (5).jpg"
                 alt="Moment mariage 5"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
               />
             </div>
 

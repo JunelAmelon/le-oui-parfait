@@ -4,7 +4,6 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    unoptimized: true,
     remotePatterns: [
       { protocol: 'https', hostname: '21gproduction.com' },
       { protocol: 'https', hostname: 'res.cloudinary.com' },

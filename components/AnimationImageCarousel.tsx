@@ -41,7 +41,14 @@ export function AnimationImageCarousel({
           {images.map((img, idx) => (
             <CarouselItem key={`${img.src}-${idx}`} className="basis-full">
               <div className="relative h-full w-full overflow-hidden">
-                <img src={img.src} alt={img.alt} className="h-full w-full object-cover" />
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="h-full w-full object-cover"
+                  loading={idx === 0 ? 'eager' : 'lazy'}
+                  decoding="async"
+                  fetchPriority={idx === 0 ? 'high' : 'auto'}
+                />
                 <div className="absolute inset-0 bg-black/35" />
               </div>
             </CarouselItem>

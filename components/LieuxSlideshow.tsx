@@ -47,6 +47,8 @@ return (
             alt={img.alt}
             className="w-full h-full object-cover"
             loading={i === 0 ? 'eager' : 'lazy'}
+            decoding="async"
+            fetchPriority={i === 0 ? 'high' : 'auto'}
           />
 
           <div className="absolute inset-0 bg-black/10" />

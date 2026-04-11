@@ -203,7 +203,15 @@ function CreatorBlock(props: {
 
                 <DialogContent className="max-w-5xl border-0 bg-black p-0 overflow-hidden">
                   <div className="relative aspect-video w-full">
-                    <video src={v.src} poster={v.poster} controls autoPlay playsInline className="h-full w-full object-cover" />
+                    <video
+                      src={v.src}
+                      poster={v.poster}
+                      controls
+                      autoPlay
+                      playsInline
+                      preload="metadata"
+                      className="h-full w-full object-cover"
+                    />
                   </div>
                 </DialogContent>
               </Dialog>
@@ -304,7 +312,7 @@ export function PortfolioCreatorsShowcase() {
 
       <section className="relative py-20 lg:py-28 overflow-hidden">
         <div className="absolute inset-0">
-          <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+          <video autoPlay muted loop playsInline preload="none" className="w-full h-full object-cover">
             <source src="/presentation.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-black/60" />

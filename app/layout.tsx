@@ -26,9 +26,6 @@ export const metadata: Metadata = {
   creator: 'Le Oui Parfait',
   publisher: 'Le Oui Parfait',
   metadataBase: new URL('https://leouiparfait.com'),
-  alternates: {
-    canonical: 'https://leouiparfait.com',
-  },
   robots: {
     index: true,
     follow: true,

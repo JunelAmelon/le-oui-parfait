@@ -121,6 +121,13 @@ export default async function IleDeFranceDepartmentPage({ params }: PageProps) {
                   organisation partielle, coordination du jour J et prestations complémentaires. Objectif : un mariage fluide,
                   élégant et parfaitement orchestré.
                 </p>
+                {d.slug === '91-essonne' && (
+                  <div className="mt-5">
+                    <Link href="/wedding-planner-ris-orangis" className="text-[#4B4456] underline">
+                      Wedding planner à Ris-Orangis (Essonne)
+                    </Link>
+                  </div>
+                )}
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Link
                     href="/tarifs"

@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/a-propos`, priority: 0.7, changeFrequency: 'monthly' },
     { url: `${baseUrl}/espace-client`, priority: 0.6, changeFrequency: 'monthly' },
     { url: `${baseUrl}/ile-de-france`, priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${baseUrl}/wedding-planner-ris-orangis`, priority: 0.8, changeFrequency: 'monthly' },
     { url: `${baseUrl}/ile-de-france/75-paris`, priority: 0.8, changeFrequency: 'monthly' },
     { url: `${baseUrl}/ile-de-france/77-seine-et-marne`, priority: 0.7, changeFrequency: 'monthly' },
     { url: `${baseUrl}/ile-de-france/78-yvelines`, priority: 0.7, changeFrequency: 'monthly' },

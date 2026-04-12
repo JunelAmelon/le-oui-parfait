@@ -8,6 +8,7 @@ import { AnimationImageCarousel } from '@/components/AnimationImageCarousel';
 import { AccordionInclus } from '@/components/AccordionInclus';
 import { Check, Sparkles, Users, Camera, Wine, Heart, Store } from 'lucide-react';
 import { PhotoboothIntroMedia } from '@/components/PhotoboothIntroMedia';
+import type { Metadata } from 'next';
 
 type AnimationDetail = {
   slug: string;
@@ -263,6 +264,26 @@ const animations: AnimationDetail[] = [
     ],
   },
 ];
+
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await props.params;
+  const data = animations.find((a) => a.slug === slug);
+  if (!data) return {};
+
+  const url = `https://leouiparfait.com/animation/${data.slug}`;
+
+  return {
+    title: `${data.menuTitle} | Animation mariage`,
+    description: `${data.menuTitle} : ${data.subtitle}`,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${data.menuTitle} | Le Oui Parfait`,
+      description: data.subtitle,
+      url,
+      type: 'website',
+    },
+  };
+}
 
 export default async function AnimationDetailPage(props: { params: Promise<{ slug: string }> }) {
   const { slug } = await props.params;

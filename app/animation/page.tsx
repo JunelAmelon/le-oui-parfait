@@ -4,6 +4,23 @@ import { HeroPage } from '@/components/HeroPage';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import type { Metadata } from 'next';
+
+const url = 'https://leouiparfait.com/animation';
+
+export const metadata: Metadata = {
+  title: 'Animations | Le Oui Parfait',
+  description:
+    'Animations pour mariage : photobooth, bar à thème, stands gourmands et expériences sur mesure en Île-de-France.',
+  alternates: { canonical: url },
+  openGraph: {
+    title: 'Animations | Le Oui Parfait',
+    description:
+      'Animations pour mariage : photobooth, bar à thème, stands gourmands et expériences sur mesure en Île-de-France.',
+    url,
+    type: 'website',
+  },
+};
 
 const animations = [
   {

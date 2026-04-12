@@ -1,9 +1,26 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LieuxSlideshow } from '@/components/LieuxSlideshow';
 import { HeroPage } from '@/components/HeroPage';
 import { MapPin, Ruler, Sparkles } from 'lucide-react';
+
+const url = 'https://leouiparfait.com/lieux';
+
+export const metadata: Metadata = {
+  title: 'Lieux de réception | Île-de-France',
+  description:
+    'Découvrez une sélection de lieux de réception pour mariages : domaines, hôtels, salles et espaces, en Essonne (91) et en Île-de-France.',
+  alternates: { canonical: url },
+  openGraph: {
+    title: 'Lieux de réception | Le Oui Parfait',
+    description:
+      'Une sélection de lieux de réception pour mariages : domaines, hôtels, salles et espaces, en Île-de-France.',
+    url,
+    type: 'website',
+  },
+};
 
 type Lieu = {
   id: string;

@@ -1,11 +1,29 @@
+import Link from 'next/link';
+import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { Button } from '@/components/ui/button';
+import { HeroPage } from '@/components/HeroPage';
 import { Check, ClipboardList, Clock, Shield, Zap } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { ServiceHero } from '@/components/ServiceHero';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
+import { Button } from '@/components/ui/button';
+
+const url = 'https://leouiparfait.com/services/gestion-evenements';
+
+export const metadata: Metadata = {
+  title: 'Coordination & gestion des événements | Jour J',
+  description:
+    'Coordination du jour J et gestion des événements : planning, prestataires, timing et imprévus. Un accompagnement serein en Île-de-France avec Le Oui Parfait.',
+  alternates: { canonical: url },
+  openGraph: {
+    title: 'Coordination & gestion des événements | Le Oui Parfait',
+    description:
+      'Coordination du jour J : planning, prestataires, timing et imprévus en Île-de-France.',
+    url,
+    type: 'website',
+  },
+};
 
 export default function GestionEvenementsPage() {
   const specs = [

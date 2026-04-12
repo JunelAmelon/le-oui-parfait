@@ -2,6 +2,23 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { HeroPage } from '@/components/HeroPage';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+const url = 'https://leouiparfait.com/portfolio/galerie';
+
+export const metadata: Metadata = {
+  title: 'Galerie | Portfolio',
+  description:
+    'Galerie photo : inspirations et réalisations pour un mariage élégant en Île-de-France.',
+  alternates: { canonical: url },
+  openGraph: {
+    title: 'Galerie | Le Oui Parfait',
+    description:
+      'Galerie photo : inspirations et réalisations pour un mariage élégant en Île-de-France.',
+    url,
+    type: 'website',
+  },
+};
 
 const galleryItems = [
   {

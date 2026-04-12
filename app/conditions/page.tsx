@@ -2,6 +2,23 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { HeroPage } from '@/components/HeroPage';
 import { FileText, AlertCircle, CheckCircle } from 'lucide-react';
+import type { Metadata } from 'next';
+
+const url = 'https://leouiparfait.com/conditions';
+
+export const metadata: Metadata = {
+  title: 'Conditions générales | Le Oui Parfait',
+  description:
+    'Conditions générales de vente et informations contractuelles applicables aux prestations Le Oui Parfait.',
+  alternates: { canonical: url },
+  openGraph: {
+    title: 'Conditions générales | Le Oui Parfait',
+    description:
+      'Conditions générales de vente et informations contractuelles applicables aux prestations Le Oui Parfait.',
+    url,
+    type: 'website',
+  },
+};
 
 export default function Conditions() {
   return (

@@ -6,6 +6,23 @@ import { Check, Gift, Smartphone, Star, Calendar, Users, Heart, Sparkles } from 
 import { AccordionInclus } from '@/components/AccordionInclus';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { Button } from '@/components/ui/button';
+import type { Metadata } from 'next';
+
+const url = 'https://leouiparfait.com/tarifs/offre-signature';
+
+export const metadata: Metadata = {
+  title: 'Offre Signature | Tarifs wedding planner',
+  description:
+    'Offre Signature : accompagnement premium pour une organisation de mariage clé en main en Île-de-France. Découvrez le contenu de l’offre et demandez un devis.',
+  alternates: { canonical: url },
+  openGraph: {
+    title: 'Offre Signature | Le Oui Parfait',
+    description:
+      'Accompagnement premium : organisation de mariage clé en main en Île-de-France. Offre Signature.',
+    url,
+    type: 'website',
+  },
+};
 
 const sections = [
   {

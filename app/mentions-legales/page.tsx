@@ -1,6 +1,23 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { HeroPage } from '@/components/HeroPage';
+import type { Metadata } from 'next';
+
+const url = 'https://leouiparfait.com/mentions-legales';
+
+export const metadata: Metadata = {
+  title: 'Mentions légales | Le Oui Parfait',
+  description:
+    'Mentions légales du site Le Oui Parfait : informations sur l’éditeur, l’hébergement et les conditions d’utilisation.',
+  alternates: { canonical: url },
+  openGraph: {
+    title: 'Mentions légales | Le Oui Parfait',
+    description:
+      'Informations sur l’éditeur, l’hébergement et les conditions d’utilisation du site Le Oui Parfait.',
+    url,
+    type: 'website',
+  },
+};
 
 export default function MentionsLegales() {
   return (

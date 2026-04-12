@@ -6,6 +6,23 @@ import { Check, Smartphone, Calendar, Users, Heart } from 'lucide-react';
 import { AccordionInclus } from '@/components/AccordionInclus';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { Button } from '@/components/ui/button';
+import type { Metadata } from 'next';
+
+const url = 'https://leouiparfait.com/tarifs/offre-harmonie';
+
+export const metadata: Metadata = {
+  title: 'Offre Harmonie | Coordination du jour J',
+  description:
+    'Offre Harmonie : coordination du jour J et gestion complète de votre journée de mariage en Île-de-France. Découvrez le contenu de l’offre et demandez un devis.',
+  alternates: { canonical: url },
+  openGraph: {
+    title: 'Offre Harmonie | Le Oui Parfait',
+    description:
+      'Coordination du jour J : gestion du planning, des prestataires et des imprévus en Île-de-France. Offre Harmonie.',
+    url,
+    type: 'website',
+  },
+};
 
 const sections = [
   {

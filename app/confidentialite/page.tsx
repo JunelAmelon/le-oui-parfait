@@ -2,6 +2,23 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { HeroPage } from '@/components/HeroPage';
 import { Shield, Lock, Eye, UserCheck, Database, FileText } from 'lucide-react';
+import type { Metadata } from 'next';
+
+const url = 'https://leouiparfait.com/confidentialite';
+
+export const metadata: Metadata = {
+  title: 'Politique de confidentialité | Le Oui Parfait',
+  description:
+    'Politique de confidentialité : collecte, utilisation et protection des données personnelles sur le site Le Oui Parfait.',
+  alternates: { canonical: url },
+  openGraph: {
+    title: 'Politique de confidentialité | Le Oui Parfait',
+    description:
+      'Collecte, utilisation et protection des données personnelles sur le site Le Oui Parfait.',
+    url,
+    type: 'website',
+  },
+};
 
 export default function Confidentialite() {
   return (

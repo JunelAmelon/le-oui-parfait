@@ -3,6 +3,7 @@ import { Footer } from '@/components/Footer';
 import { ServiceHero } from '@/components/ServiceHero';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { Button } from '@/components/ui/button';
+import type { Metadata } from 'next';
 import { Check, Sparkles, Heart, Camera, MapPin, Video } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -18,6 +19,22 @@ const inclus = [
   'vidéo souvenir et galerie photo',
   'possibilité d’ajouter un bouquet, une mise en beauté, un dîner privé avec chef cuisinier, un transport avec chauffeur, ainsi que des prestations exclusives telles qu’un violoniste, une chanteuse, un pianiste, une masseuse ou tout autre artiste selon l’univers souhaité',
 ];
+
+const url = 'https://leouiparfait.com/services/demande-en-mariage';
+
+export const metadata: Metadata = {
+  title: 'Demande en mariage | Organisation & mise en scène',
+  description:
+    'Organisation de demande en mariage : conception, mise en scène, coordination et moments inoubliables en Île-de-France. Contactez Le Oui Parfait pour un accompagnement sur mesure.',
+  alternates: { canonical: url },
+  openGraph: {
+    title: 'Demande en mariage | Le Oui Parfait',
+    description:
+      'Organisation de demande en mariage : conception, mise en scène et coordination en Île-de-France.',
+    url,
+    type: 'website',
+  },
+};
 
 export default function DemandeEnMariagePage() {
   return (

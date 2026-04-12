@@ -6,6 +6,23 @@ import { Check, Gift, Smartphone, Star, Calendar, Users, Heart, Sparkles } from 
 import { AccordionInclus } from '@/components/AccordionInclus';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { Button } from '@/components/ui/button';
+import type { Metadata } from 'next';
+
+const url = 'https://leouiparfait.com/tarifs/offre-elegance';
+
+export const metadata: Metadata = {
+  title: 'Offre Élégance | Tarifs wedding planner',
+  description:
+    'Offre Élégance : accompagnement ciblé pour structurer votre organisation de mariage en Île-de-France. Découvrez le contenu de l’offre et demandez un devis.',
+  alternates: { canonical: url },
+  openGraph: {
+    title: 'Offre Élégance | Le Oui Parfait',
+    description:
+      'Accompagnement ciblé pour structurer votre organisation de mariage en Île-de-France. Offre Élégance.',
+    url,
+    type: 'website',
+  },
+};
 
 const sections = [
   {

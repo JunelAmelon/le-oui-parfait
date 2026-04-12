@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { HeroPage } from '@/components/HeroPage';
+import type { Metadata } from 'next';
 import {
   CalendarDays,
   CreditCard,
@@ -14,6 +15,22 @@ import {
   PiggyBank,
   Users,
 } from 'lucide-react';
+
+const url = 'https://leouiparfait.com/espace-client';
+
+export const metadata: Metadata = {
+  title: 'Espace client | Le Oui Parfait',
+  description:
+    'Espace client : l’outil mis à disposition pour organiser votre mariage avec clarté, méthode et sérénité.',
+  alternates: { canonical: url },
+  openGraph: {
+    title: 'Espace client | Le Oui Parfait',
+    description:
+      'Outil d’organisation : planning, budget, prestataires, inspirations et documents pour votre mariage.',
+    url,
+    type: 'website',
+  },
+};
 
 const features = [
   {

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { ServiceHero } from '@/components/ServiceHero';
@@ -5,7 +7,6 @@ import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { Button } from '@/components/ui/button';
 import { Check, Users, Car, Camera, Video, Sparkles } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const inclus = [
   'navette avec chauffeur jusqu’à 8 places ou berline de luxe 4 places',
@@ -24,6 +25,22 @@ const options = [
   'restaurant, villas, lofts, appartements ou boat sur devis',
   'recommandations et organisation de A à Z de la suite du programme',
 ];
+
+const url = 'https://leouiparfait.com/services/shooting-tour';
+
+export const metadata: Metadata = {
+  title: 'Shooting tour EVJF/EVG | Expérience sur mesure',
+  description:
+    'Shooting tour EVJF/EVG : un parcours photo/vidéo stylé et une expérience sur mesure en Île-de-France. Le Oui Parfait organise des moments mémorables.',
+  alternates: { canonical: url },
+  openGraph: {
+    title: 'Shooting tour EVJF/EVG | Le Oui Parfait',
+    description:
+      'Shooting tour EVJF/EVG : expérience sur mesure en Île-de-France.',
+    url,
+    type: 'website',
+  },
+};
 
 export default function ShootingTourPage() {
   return (

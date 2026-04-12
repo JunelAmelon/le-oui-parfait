@@ -1,11 +1,28 @@
+import Link from 'next/link';
+import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Check, Calendar, Users, Heart, Sparkles } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { ServiceHero } from '@/components/ServiceHero';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
+
+const url = 'https://leouiparfait.com/services/planification-mariage';
+
+export const metadata: Metadata = {
+  title: 'Planification de mariage | Wedding planner Île-de-France',
+  description:
+    'Planification de mariage : organisation clé en main, organisation partielle et accompagnement sur mesure en Île-de-France. Le Oui Parfait, wedding planner.',
+  alternates: { canonical: url },
+  openGraph: {
+    title: 'Planification de mariage | Le Oui Parfait',
+    description:
+      'Planification de mariage : organisation et accompagnement sur mesure en Île-de-France.',
+    url,
+    type: 'website',
+  },
+};
 
 export default function PlanificationMariagePage() {
   const specs = [

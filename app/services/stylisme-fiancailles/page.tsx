@@ -1,11 +1,29 @@
+import Link from 'next/link';
+import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { Button } from '@/components/ui/button';
+import { HeroPage } from '@/components/HeroPage';
 import { Check, Palette, Camera, Lightbulb, Star } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { ServiceHero } from '@/components/ServiceHero';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
+import { Button } from '@/components/ui/button';
+
+const url = 'https://leouiparfait.com/services/stylisme-fiancailles';
+
+export const metadata: Metadata = {
+  title: 'Stylisme fiançailles | Consultation & mise en beauté',
+  description:
+    'Stylisme fiançailles : consultation, direction artistique et accompagnement pour une célébration élégante en Île-de-France. Le Oui Parfait.',
+  alternates: { canonical: url },
+  openGraph: {
+    title: 'Stylisme fiançailles | Le Oui Parfait',
+    description:
+      'Stylisme fiançailles : consultation et accompagnement en Île-de-France.',
+    url,
+    type: 'website',
+  },
+};
 
 export default function StylismeFiancaillesPage() {
   const specs = [

@@ -279,10 +279,10 @@ export function PortfolioCreatorsShowcase() {
             <div className="lg:col-span-6">
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { src: 'https://www.atelierlilac.com/cdn/shop/files/KELLYDUJARDIN-FONTARECHES-251.jpg?v=1740324575&width=1024', alt: 'Portfolio — image 1' },
-                  { src: 'https://provence-emoi.com/wp-content/uploads/2020/02/Mariage-moderne-Provence-7-2-1170x536.jpg', alt: 'Portfolio — image 2' },
-                  { src: 'https://pokaa.fr/wp-content/uploads/2026/01/13/c1.jpg', alt: 'Portfolio — image 3' },
-                  { src: 'https://www.soireeblanche.fr/wp-content/uploads/2022/04/Robe-De-Mariage-Moderne-zoom-dos-510x764.jpg', alt: 'Portfolio — image 4' },
+                  { src: 'photoboot-mirror-rendu (1).JPG', alt: 'Portfolio — image 1' },
+                  { src: 'mariage-réalisés (3).jpg', alt: 'Portfolio — image 2' },
+                  { src: 'moment-mariage (7).jpg', alt: 'Portfolio — image 3' },
+                  { src: 'moment-mariage (5).jpg', alt: 'Portfolio — image 4' },
                 ].map((img, i) => (
                   <div key={i} className="relative aspect-[4/5] overflow-hidden bg-white shadow-[0_18px_45px_rgba(25,20,33,0.10)]">
                     <Image src={img.src} alt={img.alt} fill className="object-cover" />

@@ -279,7 +279,7 @@ export function PortfolioCreatorsShowcase() {
             <div className="lg:col-span-6">
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { src: 'moment-mariage (5).jpg', alt: 'Portfolio — image 4' },
+                  { src: 'mariage-moment.jpg', alt: 'Portfolio — image 4' },
                   { src: 'mariage-réalisés (3).jpg', alt: 'Portfolio — image 2' },
                   { src: 'moment-mariage (7).jpg', alt: 'Portfolio — image 3' },
                   { src: 'photoboot-mirror-rendu (1).JPG', alt: 'Portfolio — image 1' },

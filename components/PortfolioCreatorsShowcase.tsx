@@ -279,10 +279,11 @@ export function PortfolioCreatorsShowcase() {
             <div className="lg:col-span-6">
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { src: 'photoboot-mirror-rendu (1).JPG', alt: 'Portfolio — image 1' },
+                  { src: 'moment-mariage (5).jpg', alt: 'Portfolio — image 4' },
                   { src: 'mariage-réalisés (3).jpg', alt: 'Portfolio — image 2' },
                   { src: 'moment-mariage (7).jpg', alt: 'Portfolio — image 3' },
-                  { src: 'moment-mariage (5).jpg', alt: 'Portfolio — image 4' },
+                  { src: 'photoboot-mirror-rendu (1).JPG', alt: 'Portfolio — image 1' },
+                 
                 ].map((img, i) => (
                   <div key={i} className="relative aspect-[4/5] overflow-hidden bg-white shadow-[0_18px_45px_rgba(25,20,33,0.10)]">
                     <Image src={img.src} alt={img.alt} fill className="object-cover" />

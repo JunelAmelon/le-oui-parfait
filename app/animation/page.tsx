@@ -96,7 +96,7 @@ export default function AnimationPage() {
         <HeroPage
           title="Animations"
           subtitle="Des expériences pensées pour enrichir l’expérience de vos invités et créer des souvenirs mémorables"
-          backgroundImage="https://www.weddinggame.fr/top-8-animation-mariage-2025/feu-artifice-lanternes-mariage.jpg"
+          backgroundImage="feu-artifice-lanternes-mariage.jpg"
         />
 
         <section className="py-16 bg-[#f4f1f7]">
@@ -183,7 +183,7 @@ export default function AnimationPage() {
                 <div className="relative h-full">
                   <div className="absolute inset-0">
                     <Image
-                      src="https://www.utopix.com/fr/blog/wp-content/uploads/2024/04/ZDQyZjAwZWQtZjNhNC00ZWU1LWI2M2UtZjE5MzIwZmJiYTQ3_23f2f3bf-f81c-44f0-8c26-dd394fbc6c60_mariage282229-scaled.jpg"
+                      src="animation-background.jpg"
                       alt="Réserver une animation"
                       fill
                       className="object-cover opacity-40 transition-transform duration-1000 group-hover:scale-[1.03]"

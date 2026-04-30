@@ -40,11 +40,11 @@ const teamMembers = [
     title: 'Développement Web, Marketing & Vidéaste',
     image: '/equipe/junel.png',
   },
-  {
-    name: 'Sam',
-    title: 'Responsable des Opérations',
-    image: '/equipe/Sam.jpg',
-  },
+  // {
+  //   name: 'Sam',
+  //   title: 'Responsable des Opérations',
+  //   image: '/equipe/Sam.jpg',
+  // },
 ];
 
 export function TeamSection() {

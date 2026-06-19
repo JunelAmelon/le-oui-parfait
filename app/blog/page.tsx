@@ -149,12 +149,6 @@ export default function BlogPage() {
                   à couper le souffle et des guides essentiels pour rendre chaque 
                   moment magique.
                 </p>
-                <Link 
-                  href="#tous-nos-articles" 
-                  className="inline-flex items-center text-sm uppercase tracking-[0.15em] text-[#4B4456] font-medium hover:text-[#88b7b5] transition-colors"
-                >
-                  Lire le Blog <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
               </div>
             </div>
 

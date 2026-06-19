@@ -53,27 +53,27 @@ const romainPhotos: PhotoItem[] = [
   {
     id: 'romain-photo-1',
     src: 'https://21gproduction.com/images/Weddings/Photos/MariageM%26J-121_resultat.webp',
-    alt: 'Romain — Photo 1',
+    alt: 'Reportage photo de mariage — Romain — Le Oui Parfait — Photo 1',
   },
   {
     id: 'romain-photo-2',
     src: 'https://21gproduction.com/images/Weddings/Photos/53138182747_1c5d118fbd_o_resultat.webp',
-    alt: 'Romain — Photo 2',
+    alt: 'Reportage photo de mariage — Romain — Le Oui Parfait — Photo 2',
   },
   {
     id: 'romain-photo-3',
     src: 'https://21gproduction.com/images/Weddings/Photos/G%26J-276_resultat.webp',
-    alt: 'Romain — Photo 3',
+    alt: 'Reportage photo de mariage — Romain — Le Oui Parfait — Photo 3',
   },
   {
     id: 'romain-photo-4',
     src: 'https://21gproduction.com/images/Weddings/Photos/52162314996_820e7640e7_o_resultat.webp',
-    alt: 'Romain — Photo 4',
+    alt: 'Reportage photo de mariage — Romain — Le Oui Parfait — Photo 4',
   },
   {
     id: 'romain-photo-5',
     src: 'https://21gproduction.com/images/Weddings/Photos/MariageM%26A-441_resultat.webp',
-    alt: 'Romain — Photo 5',
+    alt: 'Reportage photo de mariage — Romain — Le Oui Parfait — Photo 5',
   },
 ];
 
@@ -81,52 +81,52 @@ const samPhotos: PhotoItem[] = [
   {
     id: 'sam-photo-1',
     src: '/sam%20realisation/realisation-sam-photo%20(12).jpg',
-    alt: 'Sam — Photo 1',
+    alt: 'Reportage photo de mariage — Sam — Le Oui Parfait — Photo 1',
   },
   {
     id: 'sam-photo-2',
     src: '/sam%20realisation/realisation-sam-photo%20(2).jpg',
-    alt: 'Sam — Photo 2',
+    alt: 'Reportage photo de mariage — Sam — Le Oui Parfait — Photo 2',
   },
   {
     id: 'sam-photo-3',
     src: '/sam%20realisation/realisation-sam-photo%20(11).jpg',
-    alt: 'Sam — Photo 3',
+    alt: 'Reportage photo de mariage — Sam — Le Oui Parfait — Photo 3',
   },
   {
     id: 'sam-photo-4',
     src: '/sam%20realisation/realisation-sam-photo%20(4).jpg',
-    alt: 'Sam — Photo 4',
+    alt: 'Reportage photo de mariage — Sam — Le Oui Parfait — Photo 4',
   },
   {
     id: 'sam-photo-5',
     src: '/sam%20realisation/realisation-sam-photo%20(5).jpg',
-    alt: 'Sam — Photo 5',
+    alt: 'Reportage photo de mariage — Sam — Le Oui Parfait — Photo 5',
   },
   {
     id: 'sam-photo-6',
     src: '/sam%20realisation/realisation-sam-photo%20(6).jpg',
-    alt: 'Sam — Photo 6',
+    alt: 'Reportage photo de mariage — Sam — Le Oui Parfait — Photo 6',
   },
   {
     id: 'sam-photo-7',
     src: '/sam%20realisation/realisation-sam-photo%20(7).jpg',
-    alt: 'Sam — Photo 7',
+    alt: 'Reportage photo de mariage — Sam — Le Oui Parfait — Photo 7',
   },
   {
     id: 'sam-photo-8',
     src: '/sam%20realisation/realisation-sam-photo%20(15).jpg',
-    alt: 'Sam — Photo 8',
+    alt: 'Reportage photo de mariage — Sam — Le Oui Parfait — Photo 8',
   },
   {
     id: 'sam-photo-9',
     src: '/sam%20realisation/realisation-sam-photo%20(9).jpg',
-    alt: 'Sam — Photo 9',
+    alt: 'Reportage photo de mariage — Sam — Le Oui Parfait — Photo 9',
   },
     {
     id: 'sam-photo-10',
     src: '/sam%20realisation/realisation-sam-photo%20(16).jpg',
-    alt: 'Sam — Photo 10',
+    alt: 'Reportage photo de mariage — Sam — Le Oui Parfait — Photo 10',
   },
 ];
 
@@ -161,7 +161,7 @@ function CreatorBlock(props: {
                         <div className="relative aspect-video">
                           <Image
                             src={v.poster}
-                            alt={v.title}
+                            alt={`Film de mariage — ${v.title} — vidéaste Romain — Le Oui Parfait — Vidéo ${index + 1}`}
                             fill
                             className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                           />

@@ -5,6 +5,7 @@ import { Footer } from '@/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { notFound } from 'next/navigation';
 
 const articlesData: Record<string, {
   title: string;
@@ -17,6 +18,156 @@ const articlesData: Record<string, {
     sections: { title: string; text: string }[];
   };
 }> = {
+  'creer-liste-invites-sans-stress': {
+    title: 'Comment Créer Une Liste d\'Invités Sans Stress',
+    date: '28 Décembre 2025',
+    author: 'Le Oui Parfait',
+    image: 'https://images.pexels.com/photos/1043902/pexels-photo-1043902.jpeg',
+    category: 'CONSEILS',
+    content: {
+      intro:
+        'Construire une liste d’invités peut vite devenir un sujet sensible. Avec une méthode simple et quelques règles claires, vous pouvez avancer sereinement et éviter les tensions.',
+      sections: [
+        {
+          title: 'Commencer par une vision globale',
+          text: 'Définissez votre capacité (lieu + budget) puis listez “sans filtre” toutes les personnes importantes. Ensuite seulement, vous affinerez.',
+        },
+        {
+          title: 'Prioriser par cercles',
+          text: 'Créez 3 cercles (incontournables, proches, optionnels). Cela vous aide à trancher si vous devez réduire le nombre final.',
+        },
+        {
+          title: 'Anticiper les équilibres familiaux',
+          text: 'Fixez des règles justes (par exemple : mêmes “droits” des deux côtés). Validez ces règles avant d’envoyer les save-the-date.',
+        },
+      ],
+    },
+  },
+  'fleurs-saison-guide-mariage': {
+    title: 'Fleurs de Saison : Le Guide Complet Pour Votre Mariage',
+    date: '25 Décembre 2025',
+    author: 'Le Oui Parfait',
+    image: 'https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg',
+    category: 'DÉCORATION',
+    content: {
+      intro:
+        'Choisir des fleurs de saison permet d’obtenir des compositions plus fraîches, plus cohérentes et souvent plus avantageuses. Voici un guide simple pour faire les bons choix.',
+      sections: [
+        {
+          title: 'Pourquoi la saison compte',
+          text: 'Disponibilité, tenue, budget : la saison influence la qualité et le prix. Votre fleuriste pourra aussi proposer des alternatives très proches si une variété est rare.',
+        },
+        {
+          title: 'Créer une palette cohérente',
+          text: 'Définissez 2 à 4 couleurs maximum et déclinez-les (bouquet, centres de table, boutonnières). Une palette claire rend l’ensemble plus élégant.',
+        },
+        {
+          title: 'Optimiser le budget',
+          text: 'Investissez sur 1 à 2 points forts (arche, allée, table d’honneur) et allégez sur les autres éléments. Effet “waouh” garanti sans exploser les coûts.',
+        },
+      ],
+    },
+  },
+  'planning-mariage-12-mois': {
+    title: 'Planning Mariage : Les 12 Mois Avant le Jour J',
+    date: '22 Décembre 2025',
+    author: 'Le Oui Parfait',
+    image: 'https://images.pexels.com/photos/1024960/pexels-photo-1024960.jpeg',
+    category: 'ORGANISATION',
+    content: {
+      intro:
+        'Un rétroplanning clair est l’un des meilleurs moyens de réduire le stress et d’éviter les oublis. Voici une trame des étapes clés à 12 mois du mariage.',
+      sections: [
+        {
+          title: 'M-12 à M-9 : cadrer le projet',
+          text: 'Budget, style, liste d’invités approximative et choix du lieu : ces décisions structurent tout le reste.',
+        },
+        {
+          title: 'M-9 à M-6 : sécuriser les prestataires',
+          text: 'Traiteur, photo/vidéo, musique, officiant : les bons prestataires partent vite. Réservez tôt pour avoir le choix.',
+        },
+        {
+          title: 'M-6 à J-0 : finaliser et coordonner',
+          text: 'Déroulé de la journée, plan de table, détails déco, timing : c’est la phase où une coordination du jour J devient très utile.',
+        },
+      ],
+    },
+  },
+  'mariage-champetre-idees-inspirations': {
+    title: 'Mariage Champêtre : Idées et Inspirations',
+    date: '20 Décembre 2025',
+    author: 'Le Oui Parfait',
+    image: 'https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg',
+    category: 'INSPIRATION',
+    content: {
+      intro:
+        'Le style champêtre est intemporel : naturel, chaleureux et élégant. L’idée : une ambiance authentique, des matières brutes et une scénographie maîtrisée.',
+      sections: [
+        {
+          title: 'Les matières',
+          text: 'Bois, lin, céramique, fleurs de saison : privilégiez des textures naturelles et un rendu “simple mais chic”.',
+        },
+        {
+          title: 'La déco',
+          text: 'Pensez à une signalétique douce, des bougies, des compositions aériennes et des éléments personnalisés pour raconter votre histoire.',
+        },
+        {
+          title: 'L’expérience invités',
+          text: 'Coin photo, bar à thème, animation légère : le champêtre marche très bien avec des expériences conviviales.',
+        },
+      ],
+    },
+  },
+  'couleurs-tendance-mariage-moderne': {
+    title: 'Les Couleurs Tendance Pour Un Mariage Moderne',
+    date: '18 Décembre 2025',
+    author: 'Le Oui Parfait',
+    image: 'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg',
+    category: 'TENDANCES',
+    content: {
+      intro:
+        'Les couleurs donnent immédiatement le ton. Pour un mariage moderne et élégant, l’objectif est de créer une palette harmonieuse et facile à décliner.',
+      sections: [
+        {
+          title: 'Ne pas multiplier',
+          text: '2 à 4 couleurs maximum : une couleur principale, une secondaire et 1 à 2 accents. Cela rend le rendu plus haut de gamme.',
+        },
+        {
+          title: 'Adapter à la saison et au lieu',
+          text: 'Un lieu très marqué (domaine, château, salle moderne) influence la palette. On ajuste pour garder une cohérence globale.',
+        },
+        {
+          title: 'Décliner sans surcharger',
+          text: 'Papeterie, fleurs, rubans, art de la table : on répète la palette par petites touches plutôt que de “tout colorer”.',
+        },
+      ],
+    },
+  },
+  'discours-mariage-emouvoir-invites': {
+    title: 'Discours de Mariage : Comment Émouvoir Vos Invités',
+    date: '15 Décembre 2025',
+    author: 'Le Oui Parfait',
+    image: 'https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg',
+    category: 'CONSEILS',
+    content: {
+      intro:
+        'Un bon discours est simple, sincère et structuré. Voici une méthode pour toucher vos invités sans stress.',
+      sections: [
+        {
+          title: 'Structure en 3 temps',
+          text: '1) Remerciements, 2) Anecdote(s) courte(s), 3) Message final. Gardez un fil conducteur et évitez de trop vous disperser.',
+        },
+        {
+          title: 'Durée idéale',
+          text: '3 à 6 minutes : suffisamment long pour émouvoir, assez court pour garder l’attention. Répétez une fois à voix haute.',
+        },
+        {
+          title: 'Sincérité + humour léger',
+          text: 'Une touche d’humour fonctionne si elle reste bienveillante. Évitez les blagues gênantes ou trop “privées”.',
+        },
+      ],
+    },
+  },
   'choisir-lieu-parfait-mariage': {
     title: 'Comment Choisir le Lieu Parfait Pour Votre Mariage',
     date: '15 Janvier 2026',
@@ -212,22 +363,8 @@ const relatedPosts = [
 ];
 
 export default function BlogArticlePage({ params }: { params: { slug: string } }) {
-  const article = articlesData[params.slug] || {
-    title: 'Comment Choisir le Lieu Parfait Pour Votre Mariage',
-    date: '15 Janvier 2026',
-    author: 'Le Oui Parfait',
-    image: 'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg',
-    category: 'CONSEILS MARIAGE',
-    content: {
-      intro: 'Le choix du lieu de réception est l\'une des décisions les plus importantes dans l\'organisation de votre mariage.',
-      sections: [
-        {
-          title: 'Définir Votre Vision',
-          text: 'Avant de commencer vos recherches, prenez le temps de discuter avec votre partenaire de ce que vous imaginez pour votre grand jour.'
-        }
-      ]
-    }
-  };
+  const article = articlesData[params.slug];
+  if (!article) return notFound();
 
   return (
     <div className="min-h-screen">

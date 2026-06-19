@@ -47,6 +47,8 @@ const romainVideos: VideoItem[] = [
   },
 ];
 
+const samPhotoOnlyVideos: VideoItem[] = [];
+
 const romainPhotos: PhotoItem[] = [
   {
     id: 'romain-photo-1',
@@ -72,33 +74,6 @@ const romainPhotos: PhotoItem[] = [
     id: 'romain-photo-5',
     src: 'https://21gproduction.com/images/Weddings/Photos/MariageM%26A-441_resultat.webp',
     alt: 'Romain — Photo 5',
-  },
-];
-
-const samVideos: VideoItem[] = [
-  {
-    id: 'sam-1',
-    title: 'Film — Mariage',
-    src: '#',
-    poster: '/sam%20realisation/realisation-sam-photo%20(13).jpg',
-  },
-  {
-    id: 'sam-2',
-    title: 'Highlights — Émotions',
-    src: '#',
-    poster: '/sam%20realisation/realisation-sam-photo%20(8).jpg',
-  },
-  {
-    id: 'sam-3',
-    title: 'Teaser — Réception',
-    src: '#',
-    poster: '/sam%20realisation/realisation-sam-photo%20(14).jpg',
-  },
-  {
-    id: 'sam-4',
-    title: 'Cérémonie — Moments forts',
-    src: '#',
-    poster: '/sam%20realisation/realisation-sam-photo%20(1).jpg',
   },
 ];
 
@@ -175,51 +150,53 @@ function CreatorBlock(props: {
           </div>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {videos.map((v, index) => (
-            <AnimatedSection key={v.id} direction="up" delay={0.06 * index}>
-              <Dialog>
-                <DialogTrigger asChild>
-                  <button type="button" className="group w-full text-left">
-                    <div className="relative overflow-hidden bg-black shadow-[0_18px_45px_rgba(25,20,33,0.12)]">
-                      <div className="relative aspect-video">
-                        <Image
-                          src={v.poster}
-                          alt={v.title}
-                          fill
-                          className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                        />
-                        <div className="absolute inset-0 bg-black/50" />
-                        <div className="absolute inset-0 flex flex-col items-center justify-center">
-                          <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/20 backdrop-blur-sm transition-all duration-300 group-hover:bg-white/15">
-                            <Play className="h-5 w-5 text-white" fill="currentColor" />
-                          </span>
-                          <p className="mt-4 text-white text-[11px] uppercase tracking-[0.25em]">{v.title}</p>
+        {videos.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {videos.map((v, index) => (
+              <AnimatedSection key={v.id} direction="up" delay={0.06 * index}>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button type="button" className="group w-full text-left">
+                      <div className="relative overflow-hidden bg-black shadow-[0_18px_45px_rgba(25,20,33,0.12)]">
+                        <div className="relative aspect-video">
+                          <Image
+                            src={v.poster}
+                            alt={v.title}
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                          />
+                          <div className="absolute inset-0 bg-black/50" />
+                          <div className="absolute inset-0 flex flex-col items-center justify-center">
+                            <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/20 backdrop-blur-sm transition-all duration-300 group-hover:bg-white/15">
+                              <Play className="h-5 w-5 text-white" fill="currentColor" />
+                            </span>
+                            <p className="mt-4 text-white text-[11px] uppercase tracking-[0.25em]">{v.title}</p>
+                          </div>
                         </div>
                       </div>
+                    </button>
+                  </DialogTrigger>
+
+                  <DialogContent className="max-w-5xl border-0 bg-black p-0 overflow-hidden">
+                    <div className="relative aspect-video w-full">
+                      <video
+                        src={v.src}
+                        poster={v.poster}
+                        controls
+                        autoPlay
+                        playsInline
+                        preload="metadata"
+                        className="h-full w-full object-cover"
+                      />
                     </div>
-                  </button>
-                </DialogTrigger>
+                  </DialogContent>
+                </Dialog>
+              </AnimatedSection>
+            ))}
+          </div>
+        ) : null}
 
-                <DialogContent className="max-w-5xl border-0 bg-black p-0 overflow-hidden">
-                  <div className="relative aspect-video w-full">
-                    <video
-                      src={v.src}
-                      poster={v.poster}
-                      controls
-                      autoPlay
-                      playsInline
-                      preload="metadata"
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                </DialogContent>
-              </Dialog>
-            </AnimatedSection>
-          ))}
-        </div>
-
-        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className={videos.length > 0 ? 'mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4' : 'mt-0 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4'}>
           {photos.map((p, index) => (
             <AnimatedSection key={p.id} direction="up" delay={0.03 * index}>
               <Dialog>
@@ -305,9 +282,9 @@ export function PortfolioCreatorsShowcase() {
 
       <CreatorBlock
         eyebrow="Réalisations"
-        title="Sam — Vidéaste & Photographe"
-        subtitle="Reportage photo & vidéo axé sur l’authenticité : prises de vue sur le vif, portraits, détails, et couverture complète de la journée pour raconter votre événement avec simplicité et sincérité."
-        videos={samVideos}
+        title="Sam — Reportage photo"
+        subtitle="Reportage photo axé sur l’authenticité : prises de vue sur le vif, portraits, détails, et couverture complète de la journée pour raconter votre événement avec simplicité et sincérité."
+        videos={samPhotoOnlyVideos}
         photos={samPhotos}
       />
 

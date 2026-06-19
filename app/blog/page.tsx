@@ -150,7 +150,7 @@ export default function BlogPage() {
                   moment magique.
                 </p>
                 <Link 
-                  href="/blog" 
+                  href="#tous-nos-articles" 
                   className="inline-flex items-center text-sm uppercase tracking-[0.15em] text-[#4B4456] font-medium hover:text-[#88b7b5] transition-colors"
                 >
                   Lire le Blog <ArrowRight className="ml-2 h-4 w-4" />
@@ -164,44 +164,49 @@ export default function BlogPage() {
               {/* Featured Article Slider - Left Side */}
               <div className="lg:col-span-2">
                 <div className="relative">
-                  {/* Main Featured Image */}
-                  <div className="relative h-[400px] lg:h-[500px] overflow-hidden">
-                    <Image
-                      src={featuredArticles[currentSlide].image}
-                      alt={featuredArticles[currentSlide].title}
-                      fill
-                      className="object-cover"
-                    />
-                    {/* Decorative leaf overlay */}
-                    <div className="absolute top-0 left-0 w-32 h-32 opacity-30">
+                  <Link href={`/blog/${featuredArticles[currentSlide].slug}`} className="group block">
+                    {/* Main Featured Image */}
+                    <div className="relative h-[400px] lg:h-[500px] overflow-hidden">
                       <Image
-                        src="/decoration-eucalyptus.PNG"
-                        alt="Décoration"
+                        src={featuredArticles[currentSlide].image}
+                        alt={featuredArticles[currentSlide].title}
                         fill
-                        className="object-contain"
+                        className="object-cover group-hover:scale-[1.02] transition-transform duration-700"
                       />
+                      {/* Decorative leaf overlay */}
+                      <div className="absolute top-0 left-0 w-32 h-32 opacity-30">
+                        <Image
+                          src="/decoration-eucalyptus.PNG"
+                          alt="Décoration"
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  
-                  {/* Article Info */}
-                  <div className="mt-6">
-                    <p className="text-xs uppercase tracking-[0.2em] text-[#88b7b5] mb-2 font-medium">
-                      {featuredArticles[currentSlide].category}
-                    </p>
-                    <h3 className="font-baskerville text-2xl lg:text-3xl text-[#4A4A4A] mb-3">
-                      {featuredArticles[currentSlide].title}
-                    </h3>
-                    <p className="text-sm text-[#5A5A5A] uppercase tracking-wider">
-                      {featuredArticles[currentSlide].date}
-                    </p>
-                  </div>
+                    
+                    {/* Article Info */}
+                    <div className="mt-6">
+                      <p className="text-xs uppercase tracking-[0.2em] text-[#88b7b5] mb-2 font-medium">
+                        {featuredArticles[currentSlide].category}
+                      </p>
+                      <h3 className="font-baskerville text-2xl lg:text-3xl text-[#4A4A4A] mb-3 group-hover:text-[#88b7b5] transition-colors">
+                        {featuredArticles[currentSlide].title}
+                      </h3>
+                      <p className="text-sm text-[#5A5A5A] uppercase tracking-wider">
+                        {featuredArticles[currentSlide].date}
+                      </p>
+                    </div>
+                  </Link>
 
                   {/* Slider Dots */}
                   <div className="flex gap-2 mt-6">
                     {featuredArticles.map((_, index) => (
                       <button
                         key={index}
+                        type="button"
                         onClick={() => setCurrentSlide(index)}
+                        aria-label={`Voir l’article : ${featuredArticles[index].title}`}
+                        title={featuredArticles[index].title}
                         className={`w-3 h-3 rounded-full transition-all ${
                           currentSlide === index 
                             ? 'bg-[#88b7b5]' 
@@ -268,7 +273,7 @@ export default function BlogPage() {
         </section>
 
         {/* All Articles Grid */}
-        <section className="py-20 bg-white">
+        <section id="tous-nos-articles" className="py-20 bg-white">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="text-center mb-12">
               <p className="text-xs uppercase tracking-[0.2em] text-[#88b7b5] mb-3 font-medium">

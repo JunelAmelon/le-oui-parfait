@@ -23,13 +23,27 @@ export function WhatsAppFloatingButton() {
     }
   }, []);
 
+  const hideBubble = () => {
+    setIsBubbleHidden(true);
+    try {
+      localStorage.setItem('lop_whatsapp_bubble_hidden', '1');
+    } catch {}
+  };
+
+  const showBubble = () => {
+    setIsBubbleHidden(false);
+    try {
+      localStorage.removeItem('lop_whatsapp_bubble_hidden');
+    } catch {}
+  };
+
   return (
     <div className="fixed bottom-4 right-4 z-50">
       <div className="group relative flex items-end justify-end rounded-2xl">
         <span className="sr-only">Vérifier ma date de mariage — Réponse en moins de 30 min</span>
 
         {!isBubbleHidden ? (
-          <div className="absolute bottom-[72px] right-0 hidden w-[320px] sm:block">
+          <div className="absolute bottom-[72px] right-0 w-[290px] sm:w-[320px]">
             <div className="rounded-2xl bg-white p-5 shadow-xl ring-1 ring-black/10">
               <button
                 type="button"
@@ -38,10 +52,7 @@ export function WhatsAppFloatingButton() {
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
-                  setIsBubbleHidden(true);
-                  try {
-                    localStorage.setItem('lop_whatsapp_bubble_hidden', '1');
-                  } catch {}
+                  hideBubble();
                 }}
               >
                 <X className="h-4 w-4" />
@@ -49,7 +60,13 @@ export function WhatsAppFloatingButton() {
 
               <div className="flex items-start gap-3">
                 <div className="relative h-10 w-10 overflow-hidden rounded-full ring-2 ring-white">
-                  <Image src="/equipe/kathy.png" alt="Kathy" fill className="object-cover" />
+                  <Image
+                    src="/equipe/kathy.png"
+                    alt="Kathy"
+                    fill
+                    className="object-cover"
+                    style={{ objectPosition: '50% 20%' }}
+                  />
                 </div>
                 <div className="flex-1 pr-8">
                   <p className="text-sm font-semibold text-[#111827]">Planifier mon mariage avec Kathy</p>
@@ -59,6 +76,22 @@ export function WhatsAppFloatingButton() {
               </div>
             </div>
           </div>
+        ) : null}
+
+        {isBubbleHidden ? (
+          <button
+            type="button"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              showBubble();
+            }}
+            aria-label="Afficher l'infobulle"
+            className="mr-2 hidden h-10 w-10 items-center justify-center rounded-2xl bg-white shadow-lg shadow-black/10 ring-1 ring-black/10 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/40 sm:inline-flex"
+            title="Afficher l'infobulle"
+          >
+            <span className="text-sm font-semibold text-[#111827]">i</span>
+          </button>
         ) : null}
 
         <Link

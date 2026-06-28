@@ -1,5 +1,4 @@
-'use client';
-
+import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import Image from 'next/image';
@@ -97,7 +96,7 @@ const articlesData: Record<string, {
     title: 'Wedding planner Essonne (91) : tarifs + comment choisir la bonne',
     date: '28 Juin 2026',
     author: 'Le Oui Parfait',
-    image: '/equipe/kathy.png',
+    image: '/couple.jpg',
     category: 'LOCAL',
     content: {
       intro:
@@ -122,7 +121,7 @@ const articlesData: Record<string, {
     title: 'Wedding planner Ris-Orangis : tarifs et disponibilité',
     date: '28 Juin 2026',
     author: 'Le Oui Parfait',
-    image: '/equipe/kathy.png',
+    image: '/feu-artifice-lanternes-mariage.jpg',
     category: 'LOCAL',
     content: {
       intro:
@@ -297,7 +296,7 @@ const articlesData: Record<string, {
     title: 'Devis wedding planner : que doit contenir une offre sérieuse ?',
     date: '28 Juin 2026',
     author: 'Le Oui Parfait',
-    image: '/equipe/kathy.png',
+    image: '/alliance.jpg',
     category: 'TARIFS',
     content: {
       intro:
@@ -372,7 +371,7 @@ const articlesData: Record<string, {
     title: 'Wedding planner vs organisation seule : comparaison honnête (coût, stress, erreurs)',
     date: '28 Juin 2026',
     author: 'Le Oui Parfait',
-    image: '/equipe/kathy.png',
+    image: '/photographe-mariage-en-action.jpg',
     category: 'CONSEILS',
     content: {
       intro:
@@ -736,6 +735,38 @@ const relatedPosts = [
     slug: 'tendances-decoration-mariage'
   }
 ];
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const article = articlesData[params.slug];
+  if (!article) {
+    return {
+      title: 'Blog | Le Oui Parfait',
+      description:
+        'Conseils, inspirations et tendances pour organiser votre mariage en Île-de-France : lieux, décoration, planning et prestataires.',
+    };
+  }
+
+  const canonical = `https://leouiparfait.com/blog/${params.slug}`;
+  const title = `${article.title.trim()} | Le Oui Parfait`;
+  const description = article.content.intro.replace(/\s+/g, ' ').trim().slice(0, 160);
+
+  return {
+    title,
+    description,
+    alternates: { canonical },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      type: 'article',
+      images: article.image ? [{ url: article.image }] : undefined,
+    },
+  };
+}
 
 export default function BlogArticlePage({ params }: { params: { slug: string } }) {
   const article = articlesData[params.slug];

@@ -1,10 +1,171 @@
 import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { notFound } from 'next/navigation';
+
+function renderRichText(text: string, variant: 'intro' | 'section' = 'section'): ReactNode {
+  const trimmed = (text ?? '').trim();
+  if (!trimmed) return null;
+
+  const baseTextClass = variant === 'intro' ? 'text-base lg:text-lg' : 'text-base';
+
+  const renderInline = (value: string): ReactNode => {
+    const parts = value.split(/(\/[a-z0-9-]+(?:\/[a-z0-9-]+)*)/gi);
+    return (
+      <>
+        {parts
+          .filter((p) => p.length > 0)
+          .map((part, idx) => {
+            const isInternalPath = /^\/[a-z0-9-]+(?:\/[a-z0-9-]+)*$/i.test(part);
+            if (isInternalPath) {
+              return (
+                <Link
+                  key={idx}
+                  href={part}
+                  className="text-[#88b7b5] underline underline-offset-4 hover:opacity-80"
+                >
+                  {part}
+                </Link>
+              );
+            }
+            return <span key={idx}>{part}</span>;
+          })}
+      </>
+    );
+  };
+
+  const renderBlock = (block: string, key: number): ReactNode => {
+    const lines = block
+      .split('\n')
+      .map((l) => l.replace(/\s+$/g, ''))
+      .filter((l) => l.trim().length > 0);
+
+    const isTable = lines.length >= 2 && lines.every((l) => l.includes('\t'));
+    if (isTable) {
+      const rows = lines.map((l) => l.split('\t').map((c) => c.trim()));
+      return <div key={key}>{renderTable(rows) as ReactNode}</div>;
+    }
+
+    const isUnordered = lines.length >= 2 && lines.every((l) => /^-\s+/.test(l.trim()));
+    if (isUnordered) {
+      return <div key={key}>{renderList(lines, false) as ReactNode}</div>;
+    }
+
+    const isOrdered = lines.length >= 2 && lines.every((l) => /^\d+\.\s+/.test(l.trim()));
+    if (isOrdered) {
+      return <div key={key}>{renderList(lines, true) as ReactNode}</div>;
+    }
+
+    const isSubheading =
+      lines.length === 1 && (lines[0].trim().endsWith('?') || lines[0].trim().endsWith(':'));
+    if (isSubheading) {
+      return (
+        <h4 key={key} className="text-[#4A4A4A] font-semibold tracking-tight text-base lg:text-lg">
+          {lines[0].trim()}
+        </h4>
+      );
+    }
+
+    return (
+      <p key={key} className={`text-[#5A5A5A] leading-relaxed ${baseTextClass}`}>
+        {renderInline(block.trim())}
+      </p>
+    );
+  };
+
+  const blocks = trimmed.split(/\n\s*\n/);
+
+  const renderList = (lines: string[], ordered: boolean) => {
+    const items = lines
+      .map((l) => l.trim())
+      .filter(Boolean)
+      .map((l) => {
+        if (ordered) return l.replace(/^\d+\.\s+/, '');
+        return l.replace(/^-\s+/, '');
+      });
+
+    const ListTag = ordered ? 'ol' : 'ul';
+
+    return (
+      <ListTag
+        className={
+          ordered
+            ? `list-decimal pl-6 space-y-2 text-[#5A5A5A] leading-relaxed ${baseTextClass}`
+            : `list-disc pl-6 space-y-2 text-[#5A5A5A] leading-relaxed ${baseTextClass}`
+        }
+      >
+        {items.map((item, idx) => (
+          <li key={idx}>{renderInline(item)}</li>
+        ))}
+      </ListTag>
+    );
+  };
+
+  const renderTable = (rows: string[][]) => {
+    if (rows.length < 2) return null;
+    const [headerRow, ...bodyRows] = rows;
+
+    return (
+      <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
+        <table className="min-w-full border-collapse">
+          <thead>
+            <tr className="bg-gray-50">
+              {headerRow.map((cell, idx) => (
+                <th
+                  key={idx}
+                  className="px-4 py-3 text-left text-sm font-semibold text-[#4A4A4A]"
+                >
+                  {cell}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {bodyRows.map((row, rIdx) => (
+              <tr key={rIdx} className="border-t border-gray-200">
+                {row.map((cell, cIdx) => (
+                  <td key={cIdx} className="px-4 py-3 text-sm text-[#5A5A5A]">
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  };
+
+  return (
+    <div className="space-y-4">
+      {blocks.map((block, blockIdx) => {
+        const rawBlock = block.trim();
+
+        const isCallout =
+          /\bPlanifier mon mariage avec Kathy\b/i.test(rawBlock) ||
+          /\bR[ée]ponse en moins de\b/i.test(rawBlock) ||
+          /\bVous ne savez pas\b/i.test(rawBlock);
+
+        if (isCallout) {
+          return (
+            <div
+              key={blockIdx}
+              className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
+            >
+              <div className="space-y-3">{renderBlock(rawBlock, blockIdx) as ReactNode}</div>
+            </div>
+          );
+        }
+
+        return renderBlock(block, blockIdx);
+      })}
+    </div>
+  );
+}
 
 const articlesData: Record<string, {
   title: string;
@@ -18,26 +179,349 @@ const articlesData: Record<string, {
   };
 }> = {
   'prix-wedding-planner-ile-de-france': {
-    title: 'Prix wedding planner Île-de-France : combien ça coûte vraiment ? ',
+    title: 'Prix d’une Wedding Planner en Île-de-France (2026) : tarifs, formules et budget réel',
     date: '28 Juin 2026',
     author: 'Le Oui Parfait',
     image: '/alliance.jpg',
     category: 'TARIFS',
     content: {
       intro:
-        'En Île-de-France, le prix d’une wedding planner dépend surtout de la formule choisie. L’objectif n’est pas seulement “d’organiser”, mais de sécuriser le budget, le planning et la sérénité jusqu’au jour J.',
+        `Le prix d’une wedding planner en Île-de-France varie généralement entre 800 € et plus de 6 000 €, selon le niveau d’accompagnement, la taille du mariage et les prestations incluses.
+
+Certaines formules couvrent uniquement la coordination du jour J, tandis que d’autres incluent l’organisation complète du mariage de A à Z.
+
+Dans ce guide, vous allez comprendre :
+
+combien coûte réellement une wedding planner,
+pourquoi les prix varient autant,
+quelle formule est adaptée à votre situation,
+et comment éviter de payer trop cher ou de mal choisir.`,
       sections: [
         {
-          title: 'Réponse directe (simple)',
-          text: 'Les formules les plus courantes sont : coordination du jour J (pour vivre la journée sans gérer), organisation partielle (si tu as commencé mais tu veux reprendre le contrôle), et organisation clé en main (pilotage complet). Le “bon” prix dépend du niveau de complexité et de délégation.',
+          title: 'Combien coûte une wedding planner en Île-de-France ?',
+          text: `Voici les fourchettes moyennes constatées :
+
+Prestation\tPrix moyen
+Coordination du jour J\t800 € – 2 000 €
+Organisation partielle\t1 500 € – 3 500 €
+Organisation complète\t3 000 € – 6 500 €+
+
+Ces prix varient selon :
+
+- le nombre d’invités
+- la complexité du mariage
+- le nombre de prestataires à gérer
+- la localisation
+- le niveau d’accompagnement souhaité`,
+        },
+        {
+          title: 'Pourquoi les prix d’une wedding planner varient autant ?',
+          text: `Deux mariages ne demandent jamais la même charge de travail.
+
+Les principaux facteurs sont :
+
+1. Le niveau de délégation
+
+Plus vous déléguez, plus le prix augmente.
+
+2. Le nombre de prestataires
+
+DJ, traiteur, lieu, décoration, photo, coordination…
+
+3. La durée d’accompagnement
+
+Certaines wedding planners travaillent 2 semaines, d’autres 12 mois.
+
+4. Le niveau de personnalisation
+
+Un mariage sur mesure demande plus de travail qu’une organisation standardisée.
+
+5. Le jour J
+
+Présence sur place, gestion des imprévus, coordination des équipes.`,
         },
         {
           title: 'Ce que beaucoup de couples sous-estiment',
-          text: 'Charge mentale, erreurs de timing, budget qui “fuit” par petites dépenses, tensions et imprévus : c’est rarement l’organisation “en soi” qui est difficile, mais l’enchaînement des détails et la logistique finale.',
+          text: `Le vrai coût d’un mariage n’est pas seulement financier.
+
+C’est surtout :
+
+- la charge mentale
+- le stress d’organisation
+- les erreurs de timing
+- les oublis logistiques
+- les imprévus du jour J
+
+Beaucoup de couples pensent économiser en organisant seuls, mais finissent par payer en stress, en erreurs ou en surcoûts de dernière minute.`,
         },
         {
-          title: 'La solution la plus rentable (selon ton cas)',
-          text: 'Si tu veux être sereine le jour J : coordination. Si tu es bloquée : organisation partielle. Si tu veux gagner du temps et éviter les erreurs : clé en main. L’idée : choisir la formule qui réduit ton stress et sécurise ton planning.',
+          title: 'Coordination du jour J : pour qui ?',
+          text: `Cette formule est idéale si :
+
+
+- vous avez déjà organisé votre mariage
+- vous voulez profiter du jour J sans stress
+- vous voulez quelqu’un pour gérer les prestataires
+
+La wedding planner intervient uniquement sur la coordination finale.
+
+C’est souvent la formule la plus rentable pour les couples organisés mais stressés.`,
+        },
+        {
+          title: 'Organisation partielle : le bon équilibre',
+          text: `Cette formule est adaptée si :
+
+
+- vous avez commencé les préparatifs
+- vous êtes bloqués ou dépassés
+- vous voulez reprendre le contrôle sans repartir de zéro
+
+La wedding planner reprend une partie de l’organisation et sécurise les étapes restantes.`,
+        },
+        {
+          title: 'Organisation complète : zéro charge mentale',
+          text: `Cette option inclut :
+
+
+- recherche des prestataires
+- planning complet
+- gestion du budget
+- coordination jusqu’au jour J
+
+Elle est idéale si vous manquez de temps ou souhaitez éviter toute complexité.`,
+        },
+        {
+          title: 'Wedding planner : dépense ou investissement ?',
+          text: `Beaucoup de couples hésitent à cause du prix.
+
+Mais la vraie question est la suivante :
+
+Préférez-vous gérer le stress, les erreurs et le temps perdu… ou sécuriser votre mariage dès le départ ?
+
+Une wedding planner permet souvent :
+
+
+- d’éviter des erreurs coûteuses
+- de mieux gérer le budget global
+- de réduire fortement le stress
+- d’optimiser le planning et les prestataires`,
+        },
+        {
+          title: 'Comment choisir la bonne wedding planner ?',
+          text: `Voici les critères essentiels :
+
+
+- Expérience réelle sur des mariages complets
+- Avis clients vérifiés
+- Transparence sur les prix
+- Qualité du contact humain
+- Capacité à gérer les imprévus
+
+Les erreurs les plus fréquentes :
+
+- choisir uniquement sur le prix
+- sous-estimer la charge mentale
+- attendre trop longtemps pour réserver
+- ne pas vérifier la disponibilité réelle
+- mal définir ses besoins`,
+        },
+        {
+          title: 'Budget mariage global : à quoi s’attendre ?',
+          text: `En Île-de-France, un mariage coûte généralement :
+
+Petit mariage : 8 000 € – 15 000 €
+Mariage moyen : 15 000 € – 30 000 €
+Mariage premium : 30 000 €+
+
+La wedding planner représente souvent 5 à 15 % du budget total, mais sécurise 100 % de l’événement.`,
+        },
+        {
+          title: 'FAQ',
+          text: `Quel est le prix moyen d’une wedding planner ?
+
+Entre 800 € et 6 500 € selon les prestations.
+
+Est-ce rentable d’avoir une wedding planner ?
+
+Oui, surtout pour éviter les erreurs et le stress.
+
+Quand faut-il réserver ?
+
+Idéalement 6 à 12 mois avant le mariage.
+
+Peut-on avoir une wedding planner pour un petit budget ?
+
+Oui, notamment via la coordination du jour J.`,
+        },
+        {
+          title: 'Pourquoi Le Oui Parfait ?',
+          text: `Le Oui Parfait accompagne les couples en Île-de-France dans l’organisation et la coordination de leur mariage avec une approche centrée sur la sérénité, la clarté et la gestion des imprévus.
+
+Notre objectif : que vous viviez votre mariage sans stress, sans surcharge mentale et sans mauvaise surprise.`,
+        },
+        {
+          title: 'Vérifier la disponibilité de votre date',
+          text: `Chaque mariage est unique.
+
+En quelques minutes, nous pouvons :
+
+
+- vérifier votre date
+- comprendre votre besoin
+- vous orienter vers la formule la plus adaptée
+
+Planifier mon mariage avec Kathy
+
+Réponse en moins de 30 minutes`,
+        },
+      ],
+    },
+  },
+  'formules-wedding-planner-jour-j-partiel-complet': {
+    title: 'Quelles sont les formules d’une wedding planner ? (Jour J, partielle, complète)',
+    date: '28 Juin 2026',
+    author: 'Le Oui Parfait',
+    image: '/couple.jpg',
+    category: 'ORGANISATION',
+    content: {
+      intro:
+        `Une wedding planner propose généralement plusieurs niveaux d’accompagnement pour s’adapter aux besoins, au budget et au degré d’implication des couples.
+
+Certaines personnes souhaitent uniquement être accompagnées le jour du mariage pour éviter le stress logistique. D’autres préfèrent déléguer une partie de l’organisation, ou confier l’intégralité du projet pour éviter toute charge mentale.
+
+Dans la majorité des cas, le choix de la formule dépend de trois facteurs :
+
+- le temps disponible
+- le budget global du mariage
+- le niveau de stress que le couple souhaite éviter
+
+Dans ce guide, vous allez comprendre clairement les différences entre les formules et savoir laquelle est réellement adaptée à votre situation.
+
+Pour comprendre les tarifs détaillés en Île-de-France, consultez le guide complet : /blog/prix-wedding-planner-ile-de-france`,
+      sections: [
+        {
+          title: '1. La coordination du jour J',
+          text: `Qu’est-ce que c’est ?
+
+La coordination du jour J est une formule où la wedding planner intervient uniquement le jour du mariage (et quelques jours avant pour la préparation finale).
+
+Elle ne participe pas à toute l’organisation, mais elle s’assure que tout se déroule parfaitement le jour de l’événement.
+
+Ce que cela inclut :
+
+- prise de contact avec les prestataires
+- création du planning du jour J
+- gestion des imprévus
+- coordination des équipes
+- supervision du déroulement
+
+Pour qui ?
+
+Cette formule est idéale si :
+
+- vous avez déjà tout organisé
+- vous voulez profiter du mariage sans stress
+- vous avez peur des imprévus le jour J
+
+Lien stratégique :
+
+Si vous voulez comprendre en détail combien coûte cette formule : /blog/coordination-jour-j-wedding-planner`,
+        },
+        {
+          title: '2. L’organisation partielle',
+          text: `Qu’est-ce que c’est ?
+
+L’organisation partielle intervient lorsque les couples ont déjà commencé les préparatifs mais ont besoin d’aide pour structurer, corriger ou finaliser certains aspects.
+
+Ce que cela inclut :
+
+- reprise de l’organisation en cours
+- aide au choix des prestataires
+- optimisation du budget
+- correction du planning
+- accompagnement ciblé
+
+Pour qui ?
+
+Cette formule est idéale si :
+
+- vous avez commencé seul mais êtes dépassé
+- vous manquez de temps pour finaliser
+- vous voulez éviter les erreurs coûteuses
+
+Voir aussi : /blog/prix-wedding-planner-ile-de-france`,
+        },
+        {
+          title: '3. L’organisation complète',
+          text: `Qu’est-ce que c’est ?
+
+L’organisation complète consiste à déléguer entièrement la préparation du mariage à une wedding planner, de la planification initiale jusqu’au jour J.
+
+Ce que cela inclut :
+
+- recherche de tous les prestataires
+- gestion du budget global
+- création du planning complet
+- coordination générale du projet
+- présence le jour J
+
+Pour qui ?
+
+Cette formule est idéale si :
+
+- vous manquez de temps
+- vous voulez zéro stress
+- vous souhaitez un accompagnement global
+
+Pour comprendre les budgets associés : /blog/prix-wedding-planner-ile-de-france`,
+        },
+        {
+          title: 'Comment choisir la bonne formule ?',
+          text: `Le choix dépend principalement de 3 critères :
+
+1. Votre temps disponible
+
+Plus vous avez de temps, moins vous avez besoin de déléguer.
+
+2. Votre budget
+
+Chaque formule implique un niveau d’investissement différent.
+
+3. Votre niveau de stress
+
+Plus vous souhaitez être serein, plus la délégation est importante.`,
+        },
+        {
+          title: 'Quelle formule est la plus choisie ?',
+          text: `Dans la majorité des cas :
+
+- coordination du jour J : très fréquent
+- organisation complète : couples très occupés
+- organisation partielle : cas intermédiaires`,
+        },
+        {
+          title: 'Erreurs fréquentes à éviter',
+          text: `- choisir uniquement en fonction du prix
+- sous-estimer la charge mentale
+- penser pouvoir tout gérer seul sans expérience
+- réserver trop tard
+- mal définir ses besoins dès le départ`,
+        },
+        {
+          title: 'Conclusion',
+          text: `Chaque formule répond à une situation différente.
+
+Il n’y a pas de “meilleure formule”, seulement une formule adaptée à votre niveau d’implication, votre budget et votre besoin de sérénité.`,
+        },
+        {
+          title: 'CTA',
+          text: `Vous ne savez pas quelle formule est la plus adaptée à votre mariage ?
+
+Nous pouvons vous orienter en fonction de votre situation et vérifier la disponibilité de votre date.
+
+Planifier mon mariage avec Kathy
+
+Réponse en moins de 30 minutes`,
         },
       ],
     },
@@ -820,9 +1304,7 @@ export default function BlogArticlePage({ params }: { params: { slug: string } }
                   <h2 className="font-baskerville text-2xl lg:text-3xl text-[#4A4A4A] mb-6">
                     Introduction
                   </h2>
-                  <p className="text-[#5A5A5A] leading-relaxed text-base lg:text-lg">
-                    {article.content.intro}
-                  </p>
+                  {renderRichText(article.content.intro, 'intro')}
                 </div>
 
                 {/* Content Sections */}
@@ -831,9 +1313,7 @@ export default function BlogArticlePage({ params }: { params: { slug: string } }
                     <h3 className="font-baskerville text-xl lg:text-2xl text-[#4A4A4A] mb-4">
                       {section.title}
                     </h3>
-                    <p className="text-[#5A5A5A] leading-relaxed">
-                      {section.text}
-                    </p>
+                    {renderRichText(section.text, 'section')}
                   </div>
                 ))}
               </div>

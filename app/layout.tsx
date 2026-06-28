@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter, Libre_Baskerville } from 'next/font/google';
+import { WhatsAppFloatingButton } from '@/components/WhatsAppFloatingButton';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -154,7 +155,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className={`${inter.variable} ${baskerville.variable} font-sans`}>{children}</body>
+      <body className={`${inter.variable} ${baskerville.variable} font-sans`}>
+        {children}
+        <WhatsAppFloatingButton />
+      </body>
     </html>
   );
 }

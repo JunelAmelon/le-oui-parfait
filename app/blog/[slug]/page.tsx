@@ -18,6 +18,381 @@ const articlesData: Record<string, {
     sections: { title: string; text: string }[];
   };
 }> = {
+  'prix-wedding-planner-ile-de-france': {
+    title: 'Prix wedding planner Île-de-France : combien ça coûte vraiment ? ',
+    date: '28 Juin 2026',
+    author: 'Le Oui Parfait',
+    image: '/alliance.jpg',
+    category: 'TARIFS',
+    content: {
+      intro:
+        'En Île-de-France, le prix d’une wedding planner dépend surtout de la formule choisie. L’objectif n’est pas seulement “d’organiser”, mais de sécuriser le budget, le planning et la sérénité jusqu’au jour J.',
+      sections: [
+        {
+          title: 'Réponse directe (simple)',
+          text: 'Les formules les plus courantes sont : coordination du jour J (pour vivre la journée sans gérer), organisation partielle (si tu as commencé mais tu veux reprendre le contrôle), et organisation clé en main (pilotage complet). Le “bon” prix dépend du niveau de complexité et de délégation.',
+        },
+        {
+          title: 'Ce que beaucoup de couples sous-estiment',
+          text: 'Charge mentale, erreurs de timing, budget qui “fuit” par petites dépenses, tensions et imprévus : c’est rarement l’organisation “en soi” qui est difficile, mais l’enchaînement des détails et la logistique finale.',
+        },
+        {
+          title: 'La solution la plus rentable (selon ton cas)',
+          text: 'Si tu veux être sereine le jour J : coordination. Si tu es bloquée : organisation partielle. Si tu veux gagner du temps et éviter les erreurs : clé en main. L’idée : choisir la formule qui réduit ton stress et sécurise ton planning.',
+        },
+      ],
+    },
+  },
+  'coordination-jour-j-mariage-prix': {
+    title: 'Coordination jour J : prix + ce qui est inclus (et ce que tu risques sans)',
+    date: '28 Juin 2026',
+    author: 'Le Oui Parfait',
+    image: '/mairie.jpg',
+    category: 'JOUR J',
+    content: {
+      intro:
+        'La coordination du jour J est la solution idéale si tu as déjà réservé tes prestataires mais que tu veux une journée fluide, sans retards, sans stress et sans sollicitations permanentes.',
+      sections: [
+        {
+          title: 'Ce qui est inclus (dans une coordination sérieuse)',
+          text: 'Reprise du déroulé, échanges et brief prestataires, point logistique, plan B, et présence le jour J pour piloter le timing et gérer les imprévus.',
+        },
+        {
+          title: 'Ce que tu risques sans',
+          text: 'Retards en chaîne, prestataires qui te sollicitent, imprévus sans plan B, et proches qui “travaillent” au lieu de profiter. Résultat : une journée moins vécue, plus gérée.',
+        },
+        {
+          title: 'Pourquoi c’est rentable',
+          text: 'Parce que ça protège ton énergie et ton expérience. Le jour J, ton rôle est de vivre, pas de résoudre des problèmes.',
+        },
+      ],
+    },
+  },
+  'organisation-mariage-cle-en-main-prix': {
+    title: 'Organisation de mariage clé en main : prix, étapes, et pour qui c’est fait',
+    date: '28 Juin 2026',
+    author: 'Le Oui Parfait',
+    image: '/mariage-moment.jpg',
+    category: 'ORGANISATION',
+    content: {
+      intro:
+        'La clé en main est faite pour les couples qui veulent un mariage élégant sans charge mentale : une méthode, des décisions plus rapides, et une exécution sécurisée.',
+      sections: [
+        {
+          title: 'Réponse directe',
+          text: 'Le prix dépend du niveau de complexité (budget, invités, lieu, scénographie), du temps restant et du niveau de délégation. En échange : tu gagnes du temps et tu réduis les erreurs.',
+        },
+        {
+          title: 'Les problèmes cachés quand on fait seul',
+          text: 'Prestataires réservés trop tard, budget non piloté, déroulé incohérent, logistique sous-estimée et décisions prises dans l’urgence.',
+        },
+        {
+          title: 'Ce que la clé en main sécurise',
+          text: 'Budget, rétroplanning, sélection prestataires, scénographie, coordination et plan B. Tu gardes la vision, on gère l’exécution.',
+        },
+      ],
+    },
+  },
+  'wedding-planner-essonne-91-tarifs': {
+    title: 'Wedding planner Essonne (91) : tarifs + comment choisir la bonne',
+    date: '28 Juin 2026',
+    author: 'Le Oui Parfait',
+    image: '/equipe/kathy.png',
+    category: 'LOCAL',
+    content: {
+      intro:
+        'En Essonne, les tarifs varient selon la formule (jour J, partielle, clé en main). Le plus important est de choisir une méthode claire et un accompagnement qui te rassure.',
+      sections: [
+        {
+          title: 'Réponse directe',
+          text: 'Coordination jour J = le plus accessible. Organisation partielle = structure et reprise. Clé en main = pilotage complet. Le bon choix dépend de ton avancement et de ton besoin de délégation.',
+        },
+        {
+          title: 'Comment choisir sans se tromper',
+          text: 'Demande une méthode (rétroplanning, points de contrôle), vérifie ce qui est inclus (présence, limites, plan B), et choisis quelqu’un avec qui tu te sens en confiance.',
+        },
+        {
+          title: 'La vraie différence',
+          text: 'Une organisation plus fluide et moins d’erreurs. Et surtout : une journée vécue pleinement.',
+        },
+      ],
+    },
+  },
+  'wedding-planner-ris-orangis-tarifs-disponibilite': {
+    title: 'Wedding planner Ris-Orangis : tarifs et disponibilité',
+    date: '28 Juin 2026',
+    author: 'Le Oui Parfait',
+    image: '/equipe/kathy.png',
+    category: 'LOCAL',
+    content: {
+      intro:
+        'La question la plus fréquente : “êtes-vous disponible pour ma date ?”. Ensuite : quelle formule me correspond (jour J, partielle, clé en main) ? Voici une réponse claire.',
+      sections: [
+        {
+          title: 'Réponse directe',
+          text: 'Les tarifs varient selon la formule et le niveau d’accompagnement. Le bon choix est celui qui te retire de la charge mentale et sécurise ton déroulé.',
+        },
+        {
+          title: 'Pourquoi c’est rentable',
+          text: 'Tu évites les erreurs de timing, tu gagnes du temps sur les relances/décisions, et tu avances avec une méthode et un plan B.',
+        },
+        {
+          title: 'Vérifier la disponibilité',
+          text: 'Le plus simple : nous écrire avec ta date + ton lieu + ton budget approximatif, et on te répond rapidement.',
+        },
+      ],
+    },
+  },
+  'budget-mariage-80-invites-ile-de-france': {
+    title: 'Quel budget prévoir pour un mariage 80 personnes en Île-de-France ?',
+    date: '28 Juin 2026',
+    author: 'Le Oui Parfait',
+    image: '/table mariage.webp',
+    category: 'BUDGET',
+    content: {
+      intro:
+        'À 80 invités, le budget dépend surtout du lieu, du traiteur et du niveau de prestation. Le plus important : piloter par priorités et éviter les options ajoutées “au fil de l’eau”.',
+      sections: [
+        {
+          title: 'Les postes qui pèsent le plus',
+          text: 'Lieu + traiteur (souvent les plus gros postes), puis photo/vidéo, musique/animation, décoration et logistique (transports, installations).',
+        },
+        {
+          title: 'Les pièges qui font exploser le budget',
+          text: 'Options traiteur, déco par petits achats, logistique sous-estimée, réservation tardive et contrats flous.',
+        },
+        {
+          title: 'Solution pro',
+          text: 'Une méthode de pilotage : enveloppes par catégorie, marges imprévus, arbitrages et cohérence globale.',
+        },
+      ],
+    },
+  },
+  'erreurs-budget-mariage': {
+    title: 'Les 7 erreurs qui font exploser le budget mariage (et comment les éviter)',
+    date: '28 Juin 2026',
+    author: 'Le Oui Parfait',
+    image: '/location-de-salle-de-mariage.jpg.jpeg',
+    category: 'BUDGET',
+    content: {
+      intro:
+        'Les budgets explosent rarement “d’un coup”. Ils explosent par accumulation. Voici les erreurs les plus fréquentes et comment les éviter.',
+      sections: [
+        {
+          title: 'Les 7 erreurs fréquentes',
+          text: 'Pas de priorités, options traiteur en cascade, logistique oubliée, réservations tardives, déco accumulée, contrats flous, pas de marge imprévus.',
+        },
+        {
+          title: 'Comment les éviter',
+          text: 'Piloter par priorités, valider les devis “tout compris”, cadrer les heures et les livrables, et garder une marge dédiée aux imprévus.',
+        },
+        {
+          title: 'Pourquoi une méthode change tout',
+          text: 'Quand tout est structuré, tu fais moins d’achats “réflexe” et tu prends des décisions sereines.',
+        },
+      ],
+    },
+  },
+  'checklist-mariage-12-mois': {
+    title: 'Checklist mariage 12 mois : planning simple + éviter la surcharge mentale',
+    date: '28 Juin 2026',
+    author: 'Le Oui Parfait',
+    image: '/faire-part.png',
+    category: 'ORGANISATION',
+    content: {
+      intro:
+        'Le secret d’une organisation sereine : faire dans le bon ordre. Voici une checklist simple sur 12 mois pour éviter la surcharge mentale.',
+      sections: [
+        {
+          title: 'M-12 à M-9 : cadrer le projet',
+          text: 'Budget, style, invités approximatifs et lieu. Ces choix structurent le reste.',
+        },
+        {
+          title: 'M-9 à M-6 : sécuriser les prestataires majeurs',
+          text: 'Traiteur, photo/vidéo, musique, cérémonie : réservez tôt pour avoir le choix.',
+        },
+        {
+          title: 'M-6 à J : détails + coordination',
+          text: 'Déroulé, logistique, brief prestataires, plan B. C’est là que la coordination jour J devient clé.',
+        },
+      ],
+    },
+  },
+  'choisir-lieu-mariage-ile-de-france': {
+    title: 'Comment choisir un lieu de mariage en Île-de-France (sans se tromper)',
+    date: '28 Juin 2026',
+    author: 'Le Oui Parfait',
+    image: '/location-de-salle-de-mariage.jpg.jpeg',
+    category: 'LIEUX',
+    content: {
+      intro:
+        'Le lieu décide du budget, du style et de la logistique. Voici une méthode simple et les pièges à éviter pour choisir sereinement en Île-de-France.',
+      sections: [
+        {
+          title: 'Les critères essentiels',
+          text: 'Invités + budget d’abord, puis accessibilité, plan B pluie, contraintes horaires, traiteur imposé, logistique et hébergements.',
+        },
+        {
+          title: 'Les pièges cachés',
+          text: 'Heures de fin, restrictions musique, coûts additionnels, plan B inexistant, parking insuffisant et trajets compliqués.',
+        },
+        {
+          title: 'Solution pro',
+          text: 'Une wedding planner sait quoi vérifier et comment sécuriser les détails qui coûtent cher si tu les découvres trop tard.',
+        },
+      ],
+    },
+  },
+  'organiser-mariage-civil-et-ceremonie': {
+    title: 'Mariage civil + cérémonie : comment organiser sans stress ? ',
+    date: '28 Juin 2026',
+    author: 'Le Oui Parfait',
+    image: '/mairie.jpg',
+    category: 'ORGANISATION',
+    content: {
+      intro:
+        'Mairie + cérémonie + réception = plus de timing, plus de trajets, plus de risques de retards. La clé : un déroulé solide et un pilotage clair.',
+      sections: [
+        {
+          title: 'La méthode simple',
+          text: 'Fixer les horaires non négociables, calculer trajets + marges, construire un déroulé minute par minute, et confier le pilotage le jour J.',
+        },
+        {
+          title: 'Les problèmes cachés',
+          text: 'Trajets sous-estimés, invités perdus, retards de préparation, photos écourtées, pas de plan B météo.',
+        },
+        {
+          title: 'Solution pro',
+          text: 'Une coordination sécurise le timing, brief les prestataires et gère les imprévus : tu vis, on pilote.',
+        },
+      ],
+    },
+  },
+  'temps-necessaire-organiser-mariage': {
+    title: 'Combien de temps faut-il pour organiser un mariage ? (réponse réaliste)',
+    date: '28 Juin 2026',
+    author: 'Le Oui Parfait',
+    image: '/save-the-date.png',
+    category: 'ORGANISATION',
+    content: {
+      intro:
+        'La réponse dépend de ta date, ton budget et ton niveau de délégation. Le temps “réel” vient surtout des décisions régulières et de la coordination.',
+      sections: [
+        {
+          title: 'Ce qui prend du temps',
+          text: 'Choix du lieu, traiteur, photo/vidéo, scénographie, logistique, rétroplanning et coordination prestataires.',
+        },
+        {
+          title: 'Pourquoi on se retrouve en retard',
+          text: 'Décisions repoussées, réservations tardives, et manque de méthode. En Île-de-France, les bons prestataires partent vite.',
+        },
+        {
+          title: 'Solution pro',
+          text: 'Une wedding planner accélère : priorités, décisions, méthode, points de contrôle, et sécurisation des étapes.',
+        },
+      ],
+    },
+  },
+  'devis-wedding-planner-contenu': {
+    title: 'Devis wedding planner : que doit contenir une offre sérieuse ?',
+    date: '28 Juin 2026',
+    author: 'Le Oui Parfait',
+    image: '/equipe/kathy.png',
+    category: 'TARIFS',
+    content: {
+      intro:
+        'Un devis clair évite 90% des mauvaises surprises. Voici les éléments indispensables à vérifier avant de signer.',
+      sections: [
+        {
+          title: 'Ce qui doit être écrit noir sur blanc',
+          text: 'Périmètre exact, rendez-vous, rétroplanning, échanges prestataires, présence le jour J, horaires, limites de prestation, options et hors prestation.',
+        },
+        {
+          title: 'Les offres floues : les risques',
+          text: 'Coordination sans reprise de planning, présence limitée non dite, pas de plan B, pas de brief prestataires : tu te retrouves à gérer quand même.',
+        },
+        {
+          title: 'Solution',
+          text: 'Choisir une offre qui détaille la méthode et l’exécution, pas uniquement une promesse.',
+        },
+      ],
+    },
+  },
+  'coordination-jour-j-qui-fait-quoi': {
+    title: 'Coordination jour J : qui gère quoi (mariés, témoins, wedding planner)',
+    date: '28 Juin 2026',
+    author: 'Le Oui Parfait',
+    image: '/photographe-mariage-en-action.jpg',
+    category: 'JOUR J',
+    content: {
+      intro:
+        'Le stress du jour J vient souvent d’une seule chose : personne ne sait qui gère quoi. Voici une répartition simple et efficace.',
+      sections: [
+        {
+          title: 'Le rôle des mariés',
+          text: 'Vivre la journée, pas la gérer. Se concentrer sur les moments, pas sur la logistique.',
+        },
+        {
+          title: 'Le rôle des témoins',
+          text: 'Soutenir, accompagner, rassurer. Pas piloter les prestataires et le timing.',
+        },
+        {
+          title: 'Le rôle de la wedding planner',
+          text: 'Piloter le timing, briefer les prestataires, gérer les imprévus et protéger l’expérience des mariés et des invités.',
+        },
+      ],
+    },
+  },
+  'mariage-petit-comite-ile-de-france': {
+    title: 'Mariage en petit comité en Île-de-France : organisation + budget',
+    date: '28 Juin 2026',
+    author: 'Le Oui Parfait',
+    image: '/mariage moment.jpg',
+    category: 'INSPIRATION',
+    content: {
+      intro:
+        'Moins d’invités ne veut pas dire moins de travail : il faut structurer l’expérience. En petit comité, on investit surtout sur la qualité et les détails.',
+      sections: [
+        {
+          title: 'Organisation : les clés',
+          text: 'Choisir un lieu adapté (pas trop grand), construire un déroulé vivant, et créer des moments forts (accueil, repas, animations légères).',
+        },
+        {
+          title: 'Budget : les pièges',
+          text: 'On “upgrade” tout et le budget dérive. Il faut piloter par priorités pour rester cohérent.',
+        },
+        {
+          title: 'Solution pro',
+          text: 'Une wedding planner aide à créer une expérience cohérente : lieu, scénographie, prestataires et coordination.',
+        },
+      ],
+    },
+  },
+  'wedding-planner-vs-organiser-seul': {
+    title: 'Wedding planner vs organisation seule : comparaison honnête (coût, stress, erreurs)',
+    date: '28 Juin 2026',
+    author: 'Le Oui Parfait',
+    image: '/equipe/kathy.png',
+    category: 'CONSEILS',
+    content: {
+      intro:
+        'La comparaison utile n’est pas seulement “avec / sans”, mais coût réel + charge mentale + risques. Voici une comparaison honnête pour décider sans regret.',
+      sections: [
+        {
+          title: 'Organiser seul : quand ça marche',
+          text: 'Si tu as du temps, une méthode, et que tu aimes gérer la logistique. Sinon, tu risques de porter toute la charge mentale.',
+        },
+        {
+          title: 'Avec wedding planner : ce que tu achètes',
+          text: 'Une méthode, des décisions plus rapides, moins d’erreurs, un budget plus cadré, et une journée vécue pleinement.',
+        },
+        {
+          title: 'Décider sereinement',
+          text: 'La wedding planner devient évidente quand tu veux sécuriser budget + planning + expérience, sans t’épuiser.',
+        },
+      ],
+    },
+  },
   'creer-liste-invites-sans-stress': {
     title: 'Comment Créer Une Liste d\'Invités Sans Stress',
     date: '28 Décembre 2025',

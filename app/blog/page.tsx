@@ -114,10 +114,152 @@ const allArticles = [
     image: 'https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg',
     slug: 'discours-mariage-emouvoir-invites',
   },
+  {
+    id: 7,
+    category: 'TARIFS',
+    title: 'Prix wedding planner Île-de-France : combien ça coûte vraiment ? ',
+    excerpt: 'Coordination jour J, organisation partielle ou clé en main : comprendre le prix et choisir la formule la plus rentable.',
+    date: '28 Juin 2026',
+    image: '/alliance.jpg',
+    slug: 'prix-wedding-planner-ile-de-france',
+  },
+  {
+    id: 8,
+    category: 'JOUR J',
+    title: 'Coordination jour J : prix + ce qui est inclus (et ce que tu risques sans)',
+    excerpt: 'Ce qui est inclus dans une coordination sérieuse, et pourquoi tu évites stress, retards et imprévus le jour du mariage.',
+    date: '28 Juin 2026',
+    image: '/mairie.jpg',
+    slug: 'coordination-jour-j-mariage-prix',
+  },
+  {
+    id: 9,
+    category: 'ORGANISATION',
+    title: 'Organisation de mariage clé en main : prix, étapes, et pour qui c’est fait',
+    excerpt: 'La formule la plus simple pour déléguer sans perdre le contrôle : étapes, bénéfices et erreurs évitées.',
+    date: '28 Juin 2026',
+    image: '/mariage-moment.jpg',
+    slug: 'organisation-mariage-cle-en-main-prix',
+  },
+  {
+    id: 10,
+    category: 'LOCAL',
+    title: 'Wedding planner Essonne (91) : tarifs + comment choisir la bonne',
+    excerpt: 'Tarifs, formules, et critères concrets pour choisir une wedding planner qui te sécurise et te rassure.',
+    date: '28 Juin 2026',
+    image: '/couple.jpg',
+    slug: 'wedding-planner-essonne-91-tarifs',
+  },
+  {
+    id: 11,
+    category: 'LOCAL',
+    title: 'Wedding planner Ris-Orangis : tarifs et disponibilité',
+    excerpt: 'La réponse claire sur les formules, et la meilleure façon de vérifier rapidement la disponibilité de ta date.',
+    date: '28 Juin 2026',
+    image: '/feu-artifice-lanternes-mariage.jpg',
+    slug: 'wedding-planner-ris-orangis-tarifs-disponibilite',
+  },
+  {
+    id: 12,
+    category: 'BUDGET',
+    title: 'Quel budget prévoir pour un mariage 80 personnes en Île-de-France ?',
+    excerpt: 'Postes clés, pièges et méthode simple pour garder un budget maîtrisé sans perdre l’élégance.',
+    date: '28 Juin 2026',
+    image: '/table mariage.webp',
+    slug: 'budget-mariage-80-invites-ile-de-france',
+  },
+  {
+    id: 13,
+    category: 'BUDGET',
+    title: 'Les 7 erreurs qui font exploser le budget mariage (et comment les éviter)',
+    excerpt: 'Les 7 pièges les plus fréquents (options, logistique, timing) et comment les éviter avec une méthode claire.',
+    date: '28 Juin 2026',
+    image: '/location-de-salle-de-mariage.jpg.jpeg',
+    slug: 'erreurs-budget-mariage',
+  },
+  {
+    id: 14,
+    category: 'ORGANISATION',
+    title: 'Checklist mariage 12 mois : planning simple + éviter la surcharge mentale',
+    excerpt: 'Le bon ordre des étapes sur 12 mois : une checklist simple pour avancer sans stress ni oublis.',
+    date: '28 Juin 2026',
+    image: '/faire-part.png',
+    slug: 'checklist-mariage-12-mois',
+  },
+  {
+    id: 15,
+    category: 'LIEUX',
+    title: 'Comment choisir un lieu de mariage en Île-de-France (sans se tromper)',
+    excerpt: 'Critères essentiels, questions à poser et pièges cachés (plan B pluie, contraintes, logistique).',
+    date: '28 Juin 2026',
+    image: '/location-de-salle-de-mariage.jpg.jpeg',
+    slug: 'choisir-lieu-mariage-ile-de-france',
+  },
+  {
+    id: 16,
+    category: 'ORGANISATION',
+    title: 'Mariage civil + cérémonie : comment organiser sans stress ? ',
+    excerpt: 'Timing, trajets, marges et déroulé : une méthode simple pour une journée fluide et sans retards.',
+    date: '28 Juin 2026',
+    image: '/mairie.jpg',
+    slug: 'organiser-mariage-civil-et-ceremonie',
+  },
+  {
+    id: 17,
+    category: 'ORGANISATION',
+    title: 'Combien de temps faut-il pour organiser un mariage ? (réponse réaliste)',
+    excerpt: 'Ce qui prend réellement du temps, pourquoi on se retrouve en retard et comment sécuriser les étapes.',
+    date: '28 Juin 2026',
+    image: '/save-the-date.png',
+    slug: 'temps-necessaire-organiser-mariage',
+  },
+  {
+    id: 18,
+    category: 'TARIFS',
+    title: 'Devis wedding planner : que doit contenir une offre sérieuse ?',
+    excerpt: 'Les points indispensables à vérifier pour éviter les offres floues et les mauvaises surprises.',
+    date: '28 Juin 2026',
+    image: '/alliance.jpg',
+    slug: 'devis-wedding-planner-contenu',
+  },
+  {
+    id: 19,
+    category: 'JOUR J',
+    title: 'Coordination jour J : qui gère quoi (mariés, témoins, wedding planner)',
+    excerpt: 'Répartition claire des rôles pour éviter stress et retards : qui gère quoi, et pourquoi ça change tout.',
+    date: '28 Juin 2026',
+    image: '/photographe-mariage-en-action.jpg',
+    slug: 'coordination-jour-j-qui-fait-quoi',
+  },
+  {
+    id: 20,
+    category: 'INSPIRATION',
+    title: 'Mariage en petit comité en Île-de-France : organisation + budget',
+    excerpt: 'Moins d’invités, plus de détails : comment structurer l’expérience et garder une cohérence élégante.',
+    date: '28 Juin 2026',
+    image: '/mariage moment.jpg',
+    slug: 'mariage-petit-comite-ile-de-france',
+  },
+  {
+    id: 21,
+    category: 'CONSEILS',
+    title: 'Wedding planner vs organisation seule : comparaison honnête (coût, stress, erreurs)',
+    excerpt: 'Comparaison honnête : coût réel, charge mentale, risques et comment décider sereinement.',
+    date: '28 Juin 2026',
+    image: '/photographe-mariage-en-action.jpg',
+    slug: 'wedding-planner-vs-organiser-seul',
+  },
 ];
 
 export default function BlogPage() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 9;
+
+  const totalPages = Math.max(1, Math.ceil(allArticles.length / itemsPerPage));
+  const safePage = Math.min(Math.max(1, currentPage), totalPages);
+  const startIndex = (safePage - 1) * itemsPerPage;
+  const paginatedArticles = allArticles.slice(startIndex, startIndex + itemsPerPage);
 
   return (
     <div className="min-h-screen">
@@ -279,7 +421,7 @@ export default function BlogPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {allArticles.map((article) => (
+              {paginatedArticles.map((article) => (
                 <Link 
                   key={article.id} 
                   href={`/blog/${article.slug}`}
@@ -307,6 +449,50 @@ export default function BlogPage() {
                   </p>
                 </Link>
               ))}
+            </div>
+
+            {/* Pagination */}
+            <div className="mt-12 flex flex-col items-center gap-4">
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                  disabled={safePage <= 1}
+                  className="rounded-full border border-gray-300 px-4 py-2 text-sm text-[#4A4A4A] disabled:opacity-40 disabled:cursor-not-allowed hover:border-[#88b7b5] hover:text-[#88b7b5] transition-colors"
+                >
+                  Précédent
+                </button>
+
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                    <button
+                      key={page}
+                      type="button"
+                      onClick={() => setCurrentPage(page)}
+                      className={`h-9 w-9 rounded-full border text-sm transition-colors ${
+                        page === safePage
+                          ? 'border-[#88b7b5] bg-[#88b7b5] text-white'
+                          : 'border-gray-300 text-[#4A4A4A] hover:border-[#88b7b5] hover:text-[#88b7b5]'
+                      }`}
+                      aria-label={`Page ${page}`}
+                    >
+                      {page}
+                    </button>
+                  ))}
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                  disabled={safePage >= totalPages}
+                  className="rounded-full border border-gray-300 px-4 py-2 text-sm text-[#4A4A4A] disabled:opacity-40 disabled:cursor-not-allowed hover:border-[#88b7b5] hover:text-[#88b7b5] transition-colors"
+                >
+                  Suivant
+                </button>
+              </div>
+              <p className="text-xs text-[#5A5A5A] uppercase tracking-wider">
+                Page {safePage} / {totalPages}
+              </p>
             </div>
           </div>
         </section>

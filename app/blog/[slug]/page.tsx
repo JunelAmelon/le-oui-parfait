@@ -7,6 +7,56 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { notFound } from 'next/navigation';
 
+function BlogCtaCard(): ReactNode {
+  const phoneNumber = '33687217118';
+  const message =
+    'Bonjour Kathy, je souhaite être conseillé(e) sur la formule la plus adaptée (jour J / partielle / complète). Pouvez-vous vérifier la disponibilité de ma date ?';
+  const waHref = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  return (
+    <div className="relative overflow-hidden rounded-2xl border border-gray-200">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/animation-background.jpg')" }}
+      />
+      <div className="absolute inset-0 bg-[#4B4456]/70" />
+
+      <div className="relative p-7 sm:p-8">
+        <div className="max-w-2xl space-y-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/80">
+            Disponibilité et conseil
+          </p>
+          <h4 className="font-baskerville text-2xl sm:text-3xl text-white">
+            Vous ne savez pas quelle formule est la plus adaptée à votre mariage ?
+          </h4>
+          <p className="text-white leading-relaxed">
+            Nous pouvons vous orienter en fonction de votre situation et vérifier la disponibilité de votre date.
+          </p>
+
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Link
+              href={waHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-xl bg-[#25D366] px-5 py-3 text-sm font-semibold text-white shadow-sm hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/50"
+            >
+              Contacter sur WhatsApp
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-xl bg-white/10 px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/25 backdrop-blur-sm hover:bg-white/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
+            >
+              Demander un devis
+            </Link>
+          </div>
+
+          <p className="text-xs text-white/70">Réponse en moins de 30 minutes</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function renderRichText(text: string, variant: 'intro' | 'section' = 'section'): ReactNode {
   const trimmed = (text ?? '').trim();
   if (!trimmed) return null;
@@ -140,31 +190,7 @@ function renderRichText(text: string, variant: 'intro' | 'section' = 'section'):
     );
   };
 
-  return (
-    <div className="space-y-4">
-      {blocks.map((block, blockIdx) => {
-        const rawBlock = block.trim();
-
-        const isCallout =
-          /\bPlanifier mon mariage avec Kathy\b/i.test(rawBlock) ||
-          /\bR[ée]ponse en moins de\b/i.test(rawBlock) ||
-          /\bVous ne savez pas\b/i.test(rawBlock);
-
-        if (isCallout) {
-          return (
-            <div
-              key={blockIdx}
-              className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
-            >
-              <div className="space-y-3">{renderBlock(rawBlock, blockIdx) as ReactNode}</div>
-            </div>
-          );
-        }
-
-        return renderBlock(block, blockIdx);
-      })}
-    </div>
-  );
+  return <div className="space-y-4">{blocks.map((block, idx) => renderBlock(block, idx))}</div>;
 }
 
 const articlesData: Record<string, {
@@ -527,26 +553,263 @@ Réponse en moins de 30 minutes`,
     },
   },
   'coordination-jour-j-mariage-prix': {
-    title: 'Coordination jour J : prix + ce qui est inclus (et ce que tu risques sans)',
+    title: 'Coordination du Jour J : rôle, prix et pourquoi c’est indispensable',
     date: '28 Juin 2026',
     author: 'Le Oui Parfait',
     image: '/mairie.jpg',
     category: 'JOUR J',
     content: {
       intro:
-        'La coordination du jour J est la solution idéale si tu as déjà réservé tes prestataires mais que tu veux une journée fluide, sans retards, sans stress et sans sollicitations permanentes.',
+        `La coordination du jour J est l’une des prestations les plus demandées en wedding planning.
+
+Elle consiste à déléguer la gestion complète de votre mariage le jour de l’événement afin de vivre cette journée sans stress, sans appels à gérer et sans imprévus à résoudre.
+
+Même lorsque tout est bien préparé, le jour du mariage reste un moment complexe : plusieurs prestataires à coordonner, un timing précis à respecter, des imprévus quasi inévitables, et une forte charge émotionnelle.
+
+Dans cet article, vous allez comprendre ce que comprend réellement cette prestation, à qui elle s’adresse et son prix moyen en Île-de-France.`,
       sections: [
         {
-          title: 'Ce qui est inclus (dans une coordination sérieuse)',
-          text: 'Reprise du déroulé, échanges et brief prestataires, point logistique, plan B, et présence le jour J pour piloter le timing et gérer les imprévus.',
+          title: 'Qu’est-ce que la coordination du jour J ?',
+          text: `La coordination du jour J est une prestation où la wedding planner prend le contrôle opérationnel complet du mariage le jour de l’événement.
+
+Elle n’organise pas le mariage à votre place sur plusieurs mois, mais elle garantit que tout ce qui a été prévu se déroule parfaitement.
+
+Concrètement, elle s’occupe de :
+
+- mise en place du planning du jour J
+- coordination de tous les prestataires
+- gestion des imprévus
+- supervision des cérémonies et transitions
+- respect des horaires
+- gestion logistique globale`,
         },
         {
-          title: 'Ce que tu risques sans',
-          text: 'Retards en chaîne, prestataires qui te sollicitent, imprévus sans plan B, et proches qui “travaillent” au lieu de profiter. Résultat : une journée moins vécue, plus gérée.',
+          title: 'Pourquoi c’est indispensable (même si tout est déjà organisé)',
+          text: `Beaucoup de couples pensent :
+
+On a tout prévu, donc on n’a pas besoin d’aide.
+
+Mais dans la réalité, le jour J est imprévisible.
+
+Les problèmes fréquents :
+
+- retard du traiteur ou du DJ
+- problème technique
+- invités difficiles à gérer
+- décalage du planning
+- stress des familles
+- oubli de détails logistiques
+
+La coordination du jour J évite que ces problèmes deviennent visibles ou perturbent votre expérience.`,
         },
         {
-          title: 'Pourquoi c’est rentable',
-          text: 'Parce que ça protège ton énergie et ton expérience. Le jour J, ton rôle est de vivre, pas de résoudre des problèmes.',
+          title: 'Pour qui est faite la coordination du jour J ?',
+          text: `Cette prestation est idéale si :
+
+- votre mariage est déjà organisé
+- vous avez réservé tous vos prestataires
+- vous voulez profiter pleinement du moment
+- vous ne voulez gérer aucun stress logistique
+
+Elle n’est pas faite pour vous si :
+
+- vous n’avez encore rien organisé
+- vous avez besoin d’aide sur le long terme
+- vous cherchez une organisation complète`,
+        },
+        {
+          title: 'Quel est le prix d’une coordination du jour J ?',
+          text: `En Île-de-France, le prix moyen se situe entre :
+
+800 € et 2 000 €
+
+Le tarif dépend de :
+
+- la taille du mariage
+- le nombre d’invités
+- le nombre de prestataires
+- la durée de présence sur place
+- la complexité logistique
+
+Pour comprendre les autres formules et budgets : /blog/prix-wedding-planner-ile-de-france`,
+        },
+        {
+          title: 'Ce que les couples sous-estiment',
+          text: `La coordination du jour J ne sert pas seulement à gérer.
+
+Elle permet surtout de :
+
+- protéger votre expérience émotionnelle
+- éviter que les familles gèrent le stress
+- garantir un déroulement fluide
+- assurer une transition parfaite entre chaque moment`,
+        },
+        {
+          title: 'Coordination du jour J vs organisation complète',
+          text: `Type	Coordination du jour J	Organisation complète
+Périmètre	Intervention uniquement le jour J	Accompagnement sur plusieurs mois
+Objectif	Gestion logistique et optimisation de l’existant	Recherche prestataires et gestion globale du projet
+Temps	Court	Long
+
+Voir les formules : /blog/formules-wedding-planner-jour-j-partiel-complet`,
+        },
+        {
+          title: 'Les erreurs fréquentes des couples',
+          text: `- penser que tout est déjà prêt donc inutile
+- sous-estimer la logistique du jour J
+- demander à des proches de gérer
+- ne pas anticiper les imprévus
+- ne pas structurer le timing`,
+        },
+        {
+          title: 'Pourquoi c’est un investissement rentable',
+          text: `La coordination du jour J permet :
+
+- d’éviter des erreurs coûteuses
+- de protéger votre mariage
+- de réduire drastiquement le stress
+- d’assurer une expérience fluide`,
+        },
+        {
+          title: 'CTA',
+          text: `Votre mariage est déjà organisé mais vous voulez vivre votre journée sans stress ?
+
+Nous assurons la coordination complète du jour J pour que tout se déroule parfaitement.
+
+Planifier mon mariage avec Kathy
+
+Réponse en moins de 30 minutes`,
+        },
+      ],
+    },
+  },
+  'coordination-jour-j-wedding-planner': {
+    title: 'Coordination du Jour J : rôle, prix et pourquoi c’est indispensable',
+    date: '28 Juin 2026',
+    author: 'Le Oui Parfait',
+    image: '/mairie.jpg',
+    category: 'JOUR J',
+    content: {
+      intro:
+        `La coordination du jour J est l’une des prestations les plus demandées en wedding planning.
+
+Elle consiste à déléguer la gestion complète de votre mariage le jour de l’événement afin de vivre cette journée sans stress, sans appels à gérer et sans imprévus à résoudre.
+
+Même lorsque tout est bien préparé, le jour du mariage reste un moment complexe : plusieurs prestataires à coordonner, un timing précis à respecter, des imprévus quasi inévitables, et une forte charge émotionnelle.
+
+Dans cet article, vous allez comprendre ce que comprend réellement cette prestation, à qui elle s’adresse et son prix moyen en Île-de-France.`,
+      sections: [
+        {
+          title: 'Qu’est-ce que la coordination du jour J ?',
+          text: `La coordination du jour J est une prestation où la wedding planner prend le contrôle opérationnel complet du mariage le jour de l’événement.
+
+Elle n’organise pas le mariage à votre place sur plusieurs mois, mais elle garantit que tout ce qui a été prévu se déroule parfaitement.
+
+Concrètement, elle s’occupe de :
+
+- mise en place du planning du jour J
+- coordination de tous les prestataires
+- gestion des imprévus
+- supervision des cérémonies et transitions
+- respect des horaires
+- gestion logistique globale`,
+        },
+        {
+          title: 'Pourquoi c’est indispensable (même si tout est déjà organisé)',
+          text: `Beaucoup de couples pensent :
+
+On a tout prévu, donc on n’a pas besoin d’aide.
+
+Mais dans la réalité, le jour J est imprévisible.
+
+Les problèmes fréquents :
+
+- retard du traiteur ou du DJ
+- problème technique
+- invités difficiles à gérer
+- décalage du planning
+- stress des familles
+- oubli de détails logistiques
+
+La coordination du jour J évite que ces problèmes deviennent visibles ou perturbent votre expérience.`,
+        },
+        {
+          title: 'Pour qui est faite la coordination du jour J ?',
+          text: `Cette prestation est idéale si :
+
+- votre mariage est déjà organisé
+- vous avez réservé tous vos prestataires
+- vous voulez profiter pleinement du moment
+- vous ne voulez gérer aucun stress logistique
+
+Elle n’est pas faite pour vous si :
+
+- vous n’avez encore rien organisé
+- vous avez besoin d’aide sur le long terme
+- vous cherchez une organisation complète`,
+        },
+        {
+          title: 'Quel est le prix d’une coordination du jour J ?',
+          text: `En Île-de-France, le prix moyen se situe entre :
+
+800 € et 2 000 €
+
+Le tarif dépend de :
+
+- la taille du mariage
+- le nombre d’invités
+- le nombre de prestataires
+- la durée de présence sur place
+- la complexité logistique
+
+Pour comprendre les autres formules et budgets : /blog/prix-wedding-planner-ile-de-france`,
+        },
+        {
+          title: 'Ce que les couples sous-estiment',
+          text: `La coordination du jour J ne sert pas seulement à gérer.
+
+Elle permet surtout de :
+
+- protéger votre expérience émotionnelle
+- éviter que les familles gèrent le stress
+- garantir un déroulement fluide
+- assurer une transition parfaite entre chaque moment`,
+        },
+        {
+          title: 'Coordination du jour J vs organisation complète',
+          text: `Type	Coordination du jour J	Organisation complète
+Périmètre	Intervention uniquement le jour J	Accompagnement sur plusieurs mois
+Objectif	Gestion logistique et optimisation de l’existant	Recherche prestataires et gestion globale du projet
+Temps	Court	Long
+
+Voir les formules : /blog/formules-wedding-planner-jour-j-partiel-complet`,
+        },
+        {
+          title: 'Les erreurs fréquentes des couples',
+          text: `- penser que tout est déjà prêt donc inutile
+- sous-estimer la logistique du jour J
+- demander à des proches de gérer
+- ne pas anticiper les imprévus
+- ne pas structurer le timing`,
+        },
+        {
+          title: 'Pourquoi c’est un investissement rentable',
+          text: `La coordination du jour J permet :
+
+- d’éviter des erreurs coûteuses
+- de protéger votre mariage
+- de réduire drastiquement le stress
+- d’assurer une expérience fluide`,
+        },
+        {
+          title: 'CTA',
+          text: `Votre mariage est déjà organisé mais vous voulez vivre votre journée sans stress ?
+
+Nous assurons la coordination complète du jour J pour que tout se déroule parfaitement.
+
+Planifier mon mariage avec Kathy
+
+Réponse en moins de 30 minutes`,
         },
       ],
     },
@@ -1310,10 +1573,18 @@ export default function BlogArticlePage({ params }: { params: { slug: string } }
                 {/* Content Sections */}
                 {article.content.sections.map((section, index) => (
                   <div key={index} className="mb-10">
-                    <h3 className="font-baskerville text-xl lg:text-2xl text-[#4A4A4A] mb-4">
-                      {section.title}
-                    </h3>
-                    {renderRichText(section.text, 'section')}
+                    {section.title.trim().toLowerCase() === 'cta' ||
+                    section.title.trim().toLowerCase() ===
+                      'vérifier la disponibilité de votre date' ? (
+                      <BlogCtaCard />
+                    ) : (
+                      <>
+                        <h3 className="font-baskerville text-xl lg:text-2xl text-[#4A4A4A] mb-4">
+                          {section.title}
+                        </h3>
+                        {renderRichText(section.text, 'section')}
+                      </>
+                    )}
                   </div>
                 ))}
               </div>

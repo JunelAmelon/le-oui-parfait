@@ -14,6 +14,7 @@ const href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
 export function WhatsAppFloatingButton() {
   const [isBubbleHidden, setIsBubbleHidden] = useState(false);
+  const [isBubbleReadyToShow, setIsBubbleReadyToShow] = useState(false);
 
   useEffect(() => {
     try {
@@ -22,6 +23,31 @@ export function WhatsAppFloatingButton() {
       setIsBubbleHidden(false);
     }
   }, []);
+
+  useEffect(() => {
+    if (isBubbleHidden) return;
+
+    let timeoutId: number | undefined;
+
+    const startDelay = () => {
+      timeoutId = window.setTimeout(() => {
+        setIsBubbleReadyToShow(true);
+      }, 5000);
+    };
+
+    if (typeof window !== 'undefined') {
+      if (document.readyState === 'complete') {
+        startDelay();
+      } else {
+        window.addEventListener('load', startDelay, { once: true });
+      }
+    }
+
+    return () => {
+      if (timeoutId) window.clearTimeout(timeoutId);
+      window.removeEventListener('load', startDelay);
+    };
+  }, [isBubbleHidden]);
 
   const hideBubble = () => {
     setIsBubbleHidden(true);
@@ -32,6 +58,7 @@ export function WhatsAppFloatingButton() {
 
   const showBubble = () => {
     setIsBubbleHidden(false);
+    setIsBubbleReadyToShow(true);
     try {
       localStorage.removeItem('lop_whatsapp_bubble_hidden');
     } catch {}
@@ -42,7 +69,7 @@ export function WhatsAppFloatingButton() {
       <div className="group relative flex items-end justify-end rounded-2xl">
         <span className="sr-only">Vérifier ma date de mariage — Réponse en moins de 30 min</span>
 
-        {!isBubbleHidden ? (
+        {!isBubbleHidden && isBubbleReadyToShow ? (
           <div className="absolute bottom-[72px] right-0 w-[290px] sm:w-[320px]">
             <div className="rounded-2xl bg-white p-5 shadow-xl ring-1 ring-black/10">
               <button

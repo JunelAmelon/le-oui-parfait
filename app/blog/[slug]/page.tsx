@@ -822,19 +822,100 @@ Réponse en moins de 30 minutes`,
     category: 'ORGANISATION',
     content: {
       intro:
-        'La clé en main est faite pour les couples qui veulent un mariage élégant sans charge mentale : une méthode, des décisions plus rapides, et une exécution sécurisée.',
+        `L’organisation clé en main est une formule où une wedding planner pilote l’ensemble de votre projet : budget, rétroplanning, sélection des prestataires, coordination, et sécurisation du jour J.
+
+Concrètement, vous gardez la vision (style, priorités, budget cible) et vous prenez les décisions importantes, mais vous n’êtes plus seul face aux dizaines de choix, aux relances, aux contrats, et à la logistique.
+
+Cette formule est particulièrement pertinente en Île-de-France, où les prestataires se réservent tôt et où les écarts de prix peuvent être importants selon la période, le lieu et le niveau de service.
+
+Dans cet article, vous allez comprendre ce qui est réellement inclus dans une organisation clé en main, pourquoi les tarifs varient autant, et comment savoir si c’est la bonne formule pour votre mariage.
+
+Pour comparer avec les autres formules (jour J / partielle / complète), voir : /blog/formules-wedding-planner-jour-j-partiel-complet.`,
       sections: [
         {
-          title: 'Réponse directe',
-          text: 'Le prix dépend du niveau de complexité (budget, invités, lieu, scénographie), du temps restant et du niveau de délégation. En échange : tu gagnes du temps et tu réduis les erreurs.',
+          title: 'Prix d’une organisation clé en main : les fourchettes réalistes',
+          text: `En Île-de-France, une organisation clé en main se situe le plus souvent entre 3 000 € et 6 500 €+.
+
+Prestation\tPrix moyen
+Organisation clé en main\t3 000 € – 6 500 €+
+
+Ce prix varie selon :
+
+- le nombre d’invités
+- le nombre de prestataires à coordonner
+- la complexité du lieu (logistique, contraintes, accès)
+- le niveau de personnalisation (scénographie, design, déroulé)
+- le temps restant avant la date
+
+Pour une vision globale des tarifs (toutes formules) : /blog/prix-wedding-planner-ile-de-france.`,
         },
         {
-          title: 'Les problèmes cachés quand on fait seul',
-          text: 'Prestataires réservés trop tard, budget non piloté, déroulé incohérent, logistique sous-estimée et décisions prises dans l’urgence.',
+          title: 'Ce que comprend vraiment une formule clé en main',
+          text: `Une organisation complète sérieuse inclut généralement :
+
+- cadrage initial (budget cible, style, priorités, contraintes)
+- rétroplanning complet et jalons de décision
+- recherche et sélection des prestataires (shortlist + comparatifs)
+- négociation et sécurisation des contrats
+- suivi budgétaire et arbitrages (pour éviter les dérives)
+- design / cohérence globale (expérience invités, déroulé, ambiance)
+- coordination jusqu’au jour J (briefs prestataires, timings, plan B)
+
+Le point clé : ce n’est pas juste "trouver des prestataires". C’est piloter un projet avec méthode, éviter les erreurs de séquençage, et sécuriser l’exécution.`,
         },
         {
-          title: 'Ce que la clé en main sécurise',
-          text: 'Budget, rétroplanning, sélection prestataires, scénographie, coordination et plan B. Tu gardes la vision, on gère l’exécution.',
+          title: 'Pourquoi les couples se trompent en pensant pouvoir tout gérer seuls',
+          text: `La difficulté n’est pas d’avoir des idées. La difficulté est d’exécuter sans perte de temps, sans surcoûts, et sans stress.
+
+Ce que beaucoup de couples sous-estiment :
+
+- le temps réel de gestion (devis, relances, appels, contrats)
+- la cohérence entre les prestataires (timing, contraintes techniques)
+- les dépenses "invisibles" qui font déraper le budget
+- la logistique du jour J (transitions, installation, imprévus)
+
+Une clé en main évite que la charge mentale s’accumule jusqu’aux dernières semaines, où tout devient urgent.`,
+        },
+        {
+          title: 'Pour qui la clé en main est la meilleure option',
+          text: `Cette formule est idéale si :
+
+- vous manquez de temps (travail, enfants, déplacements)
+- vous voulez un cadre clair et des décisions plus simples
+- vous souhaitez éviter les erreurs coûteuses
+- vous voulez une expérience fluide du début à la fin
+
+Elle est moins adaptée si :
+
+- vous aimez gérer chaque détail et vous avez du temps
+- votre mariage est très simple (peu de prestataires, logistique légère)
+
+Dans ce cas, une organisation partielle ou une coordination jour J peut suffire (voir : /blog/formules-wedding-planner-jour-j-partiel-complet).`,
+        },
+        {
+          title: 'Organisation clé en main vs organisation partielle',
+          text: `Comparaison\tClé en main\tPartielle
+Périmètre\tPilotage complet\tReprise sur une partie du projet
+Objectif\tZéro charge mentale\tDébloquer / sécuriser ce qui manque
+Quand la choisir\tDébut de projet ou besoin de délégation forte\tProjet déjà bien avancé
+
+Si vous hésitez entre les formules : /blog/formules-wedding-planner-jour-j-partiel-complet.`,
+        },
+        {
+          title: 'Comment choisir une wedding planner (et éviter les mauvaises surprises)',
+          text: `Les critères concrets à vérifier :
+
+- périmètre écrit noir sur blanc (ce qui est inclus / non inclus)
+- méthode de pilotage (rétroplanning, points de contrôle, validation)
+- transparence sur les limites (nombre de rendez-vous, horaires jour J)
+- expérience sur des mariages complets comparables au vôtre
+- qualité du contact humain (vous allez collaborer plusieurs mois)
+
+Un bon indicateur : après le 1er échange, vous devez avoir une vision plus claire, pas plus de flou.`,
+        },
+        {
+          title: 'CTA',
+          text: ``,
         },
       ],
     },

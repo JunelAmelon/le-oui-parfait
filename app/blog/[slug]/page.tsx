@@ -928,19 +928,92 @@ Un bon indicateur : après le 1er échange, vous devez avoir une vision plus cla
     category: 'LOCAL',
     content: {
       intro:
-        'En Essonne, les tarifs varient selon la formule (jour J, partielle, clé en main). Le plus important est de choisir une méthode claire et un accompagnement qui te rassure.',
+        `Le tarif d’une wedding planner en Essonne (91) dépend surtout de la formule choisie (coordination jour J, organisation partielle, organisation complète) et de la complexité réelle de votre mariage.
+
+L’objectif n’est pas de “payer une wedding planner”, mais de sécuriser un projet : budget, planning, prestataires et déroulé du jour J. C’est précisément ce qui évite les retards en chaîne, les oublis, les tensions et les surcoûts de dernière minute.
+
+Dans ce guide, vous allez comprendre les fourchettes de prix constatées, les critères qui font varier un devis, et comment choisir la formule la plus adaptée.
+
+Pour une vue d’ensemble des tarifs en Île-de-France : /blog/prix-wedding-planner-ile-de-france.`,
       sections: [
         {
-          title: 'Réponse directe',
-          text: 'Coordination jour J = le plus accessible. Organisation partielle = structure et reprise. Clé en main = pilotage complet. Le bon choix dépend de ton avancement et de ton besoin de délégation.',
+          title: 'Tarifs wedding planner Essonne : fourchettes réalistes',
+          text: `Prestation\tPrix moyen
+Coordination du jour J\t800 € – 2 000 €
+Organisation partielle\t1 500 € – 3 500 €
+Organisation complète\t3 000 € – 6 500 €+
+
+Ces fourchettes varient selon :
+
+- le nombre d’invités
+- le nombre de prestataires à coordonner
+- les contraintes du lieu (horaires, accès, logistique)
+- le niveau de personnalisation (design, scénographie)
+- le temps restant avant la date
+
+Si vous hésitez entre les formules : /blog/formules-wedding-planner-jour-j-partiel-complet.`,
         },
         {
-          title: 'Comment choisir sans se tromper',
-          text: 'Demande une méthode (rétroplanning, points de contrôle), vérifie ce qui est inclus (présence, limites, plan B), et choisis quelqu’un avec qui tu te sens en confiance.',
+          title: 'Pourquoi les devis varient autant (même dans le 91)',
+          text: `Deux mariages peuvent avoir la même date et la même commune, mais une charge de travail très différente.
+
+Les facteurs qui pèsent le plus :
+
+1. Le niveau de délégation
+Plus vous déléguez, plus la wedding planner pilote de sujets (budget, recherche, coordination, décision).
+
+2. La logistique du lieu
+Un lieu avec des contraintes (montage la veille, horaires stricts, prestataires imposés) augmente la coordination.
+
+3. Le nombre de prestataires
+Traiteur, DJ, photo, vidéo, fleuriste, déco, animation… plus il y en a, plus il faut cadrer et synchroniser.
+
+4. Le calendrier
+Plus la date est proche, plus il y a de l’urgence (et donc plus de charge).`,
         },
         {
-          title: 'La vraie différence',
-          text: 'Une organisation plus fluide et moins d’erreurs. Et surtout : une journée vécue pleinement.',
+          title: 'Quelle formule choisir selon votre situation',
+          text: `Coordination du jour J :
+
+- idéale si tout est organisé
+- vous voulez profiter sans gérer
+- vous voulez un pilotage du timing + imprévus
+
+Organisation partielle :
+
+- idéale si vous avez commencé mais vous êtes bloqués
+- vous voulez structurer, corriger, finaliser
+- vous avez besoin de méthode et d’arbitrages
+
+Organisation complète (clé en main) :
+
+- idéale si vous manquez de temps
+- vous voulez une charge mentale minimale
+- vous voulez un pilotage complet de A à Z`,
+        },
+        {
+          title: 'Comment choisir une wedding planner en Essonne',
+          text: `Les critères qui évitent les mauvaises surprises :
+
+- une méthode claire (rétroplanning, jalons, points de contrôle)
+- un périmètre écrit (ce qui est inclus / non inclus)
+- de la transparence sur la présence le jour J (horaires, nombre de personnes)
+- un plan B (météo, retards, imprévus)
+- une communication simple (vous devez vous sentir compris)
+
+Si vous voulez sécuriser le devis : /blog/devis-wedding-planner-contenu.`,
+        },
+        {
+          title: 'Erreurs fréquentes (et comment les éviter)',
+          text: `- choisir uniquement sur le prix
+- attendre trop longtemps pour réserver
+- ne pas clarifier ce qui est inclus
+- sous-estimer la logistique du jour J
+- ne pas prévoir de marge imprévus (budget + timing)`,
+        },
+        {
+          title: 'CTA',
+          text: ``,
         },
       ],
     },
@@ -953,19 +1026,97 @@ Un bon indicateur : après le 1er échange, vous devez avoir une vision plus cla
     category: 'LOCAL',
     content: {
       intro:
-        'La question la plus fréquente : “êtes-vous disponible pour ma date ?”. Ensuite : quelle formule me correspond (jour J, partielle, clé en main) ? Voici une réponse claire.',
+        `À Ris-Orangis, la question la plus fréquente n’est pas seulement le prix : c’est la disponibilité. Les dates se réservent tôt (surtout sur les samedis de haute saison) et le choix de la formule change fortement le niveau d’accompagnement.
+
+Dans cette page, vous allez comprendre :
+
+- les fourchettes de tarifs constatées
+- ce qui fait varier un devis
+- comment vérifier une disponibilité sans perdre de temps
+- quelle formule choisir selon votre avancement
+
+Pour une vision complète des prix en Île-de-France : /blog/prix-wedding-planner-ile-de-france.`,
       sections: [
         {
-          title: 'Réponse directe',
-          text: 'Les tarifs varient selon la formule et le niveau d’accompagnement. Le bon choix est celui qui te retire de la charge mentale et sécurise ton déroulé.',
+          title: 'Tarifs wedding planner à Ris-Orangis : fourchettes réalistes',
+          text: `Prestation\tPrix moyen
+Coordination du jour J\t800 € – 2 000 €
+Organisation partielle\t1 500 € – 3 500 €
+Organisation complète\t3 000 € – 6 500 €+
+
+Ces prix varient selon :
+
+- le nombre d’invités
+- le nombre de prestataires à coordonner
+- la complexité du lieu et de la logistique
+- le niveau de personnalisation
+- le temps restant avant votre date
+
+Pour comparer les formules : /blog/formules-wedding-planner-jour-j-partiel-complet.`,
         },
         {
-          title: 'Pourquoi c’est rentable',
-          text: 'Tu évites les erreurs de timing, tu gagnes du temps sur les relances/décisions, et tu avances avec une méthode et un plan B.',
+          title: 'Disponibilité : comment obtenir une réponse rapide',
+          text: `Pour vérifier une disponibilité efficacement, préparez 4 informations :
+
+- la date (ou 2 à 3 dates possibles)
+- le lieu (ou la zone)
+- le nombre d’invités estimé
+- votre besoin (jour J / partielle / complète)
+
+Cela permet d’avoir une réponse claire sans allers-retours.
+
+Si vous avez un budget cible, le préciser aide aussi à vous orienter vers la formule la plus adaptée.`,
         },
         {
-          title: 'Vérifier la disponibilité',
-          text: 'Le plus simple : nous écrire avec ta date + ton lieu + ton budget approximatif, et on te répond rapidement.',
+          title: 'Pourquoi les devis varient autant',
+          text: `Les variations de prix viennent rarement “d’une ville à l’autre”. Elles viennent surtout de la charge de travail.
+
+Les facteurs principaux :
+
+1. Le niveau de délégation
+Plus vous déléguez, plus la wedding planner pilote le projet.
+
+2. La logistique du jour J
+Trajets, timing multi-lieux, contraintes d’installation, prestataires imposés.
+
+3. Le nombre de prestataires
+Chaque prestataire supplémentaire ajoute du cadrage, du brief et de la coordination.
+
+4. Le délai avant la date
+À date proche, il faut accélérer (donc plus de charge).`,
+        },
+        {
+          title: 'Quelle formule choisir (simple et clair)',
+          text: `Coordination du jour J :
+
+- si tout est organisé
+- si vous voulez vivre la journée sans gérer
+
+Organisation partielle :
+
+- si vous avez commencé mais vous êtes bloqués
+- si vous voulez sécuriser ce qui manque
+
+Organisation complète :
+
+- si vous manquez de temps
+- si vous voulez éviter la charge mentale sur plusieurs mois`,
+        },
+        {
+          title: 'À vérifier avant de signer',
+          text: `Un devis sérieux doit clarifier :
+
+- le périmètre exact
+- le nombre de rendez-vous et échanges
+- les limites (horaires, options)
+- la présence le jour J
+- la gestion des imprévus / plan B
+
+Pour un checklist complet : /blog/devis-wedding-planner-contenu.`,
+        },
+        {
+          title: 'CTA',
+          text: ``,
         },
       ],
     },
@@ -978,19 +1129,90 @@ Un bon indicateur : après le 1er échange, vous devez avoir une vision plus cla
     category: 'BUDGET',
     content: {
       intro:
-        'À 80 invités, le budget dépend surtout du lieu, du traiteur et du niveau de prestation. Le plus important : piloter par priorités et éviter les options ajoutées “au fil de l’eau”.',
+        `À 80 invités, le budget d’un mariage en Île-de-France dépend principalement de trois postes : le lieu, le traiteur (repas + boissons) et la photo/vidéo.
+
+La difficulté n’est pas de “trouver des idées”, mais de piloter les choix sans que les options s’additionnent au fil des rendez-vous (cocktail qui s’allonge, options traiteur, mobilier, éclairage, fleurs…).
+
+Dans ce guide, vous allez avoir des repères chiffrés, comprendre ce qui fait varier la note, et savoir où investir en priorité pour un rendu premium sans exploser le budget.
+
+Pour une vision globale des coûts d’accompagnement : /blog/prix-wedding-planner-ile-de-france.`,
       sections: [
         {
-          title: 'Les postes qui pèsent le plus',
-          text: 'Lieu + traiteur (souvent les plus gros postes), puis photo/vidéo, musique/animation, décoration et logistique (transports, installations).',
+          title: 'Budget moyen pour 80 invités : repères réalistes',
+          text: `Niveau\tBudget total estimatif
+Petit mariage bien maîtrisé\t15 000 € – 22 000 €
+Mariage “moyen” (le plus fréquent)\t22 000 € – 35 000 €
+Mariage premium\t35 000 €+
+
+Ces repères varient surtout selon le lieu, le traiteur, et le niveau de personnalisation.`,
         },
         {
-          title: 'Les pièges qui font exploser le budget',
-          text: 'Options traiteur, déco par petits achats, logistique sous-estimée, réservation tardive et contrats flous.',
+          title: 'Répartition typique du budget (exemple simple)',
+          text: `Poste\tFourchette (80 invités)
+Lieu\t4 000 € – 10 000 €+
+Traiteur + boissons\t8 000 € – 18 000 €+
+Photo / vidéo\t1 500 € – 5 000 €+
+DJ / musique\t800 € – 2 500 €+
+Décoration / fleurs\t800 € – 4 000 €+
+Tenues\t800 € – 3 500 €+
+Papeterie\t150 € – 800 €
+Transports / logistique\t0 € – 1 500 €+
+
+Conseil : gardez une marge imprévus de 10% à 15% pour éviter les décisions prises dans l’urgence.`,
         },
         {
-          title: 'Solution pro',
-          text: 'Une méthode de pilotage : enveloppes par catégorie, marges imprévus, arbitrages et cohérence globale.',
+          title: 'Ce qui fait varier le budget (plus que le nombre d’invités)',
+          text: `À 80 invités, la différence de budget vient souvent de :
+
+1. Le lieu (et ce qu’il inclut)
+Un lieu “clé en main” avec mobilier peut vous faire économiser, mais peut aussi imposer des prestataires.
+
+2. Le format repas
+Cocktail long + dîner assis + open bar augmente très vite la facture.
+
+3. Le niveau de scénographie
+Arche, suspensions, éclairage, compositions florales : c’est le poste le plus variable.
+
+4. La saison et le jour
+Samedi haute saison = prix et disponibilités plus tendus.
+
+5. Le niveau d’exigence sur la photo/vidéo
+Un duo photo + vidéo, ou une prestation premium, pèse fortement.`,
+        },
+        {
+          title: 'Où investir pour un rendu “haut de gamme” (sans surpayer)',
+          text: `Les postes qui changent vraiment l’expérience :
+
+- le traiteur (qualité + service)
+- la photo (souvenirs)
+- la fluidité du déroulé (timing + coordination)
+
+Le reste peut être optimisé : déco plus ciblée, fleurs de saison, papeterie simple, animations sobres mais bien exécutées.`,
+        },
+        {
+          title: 'Les erreurs qui font exploser le budget',
+          text: `- ajouter des options traiteur à chaque rendez-vous
+- acheter la déco “au fil de l’eau” sans enveloppe
+- réserver tard et perdre le pouvoir de négociation
+- signer des contrats flous (horaires, extras, livraison, montage)
+- oublier la logistique (installation, éclairage, mobilier, transport)`,
+        },
+        {
+          title: 'Comment une wedding planner aide (même sur le budget)',
+          text: `Une wedding planner ne sert pas seulement à “organiser”. Elle sert surtout à piloter.
+
+Concrètement :
+
+- rétroplanning clair (évite les décisions tardives)
+- comparatifs prestataires et cohérence des choix
+- enveloppes par poste et arbitrages
+- coordination qui évite les surcoûts de dernière minute
+
+Pour choisir une formule : /blog/formules-wedding-planner-jour-j-partiel-complet.`,
+        },
+        {
+          title: 'CTA',
+          text: ``,
         },
       ],
     },

@@ -28,8 +28,11 @@ export function WhatsAppFloatingButton() {
     if (isBubbleHidden) return;
 
     let timeoutId: number | undefined;
+    let hasStarted = false;
 
     const startDelay = () => {
+      if (hasStarted) return;
+      hasStarted = true;
       timeoutId = window.setTimeout(() => {
         setIsBubbleReadyToShow(true);
       }, 5000);
@@ -40,12 +43,14 @@ export function WhatsAppFloatingButton() {
         startDelay();
       } else {
         window.addEventListener('load', startDelay, { once: true });
+        window.addEventListener('pageshow', startDelay, { once: true });
       }
     }
 
     return () => {
       if (timeoutId) window.clearTimeout(timeoutId);
       window.removeEventListener('load', startDelay);
+      window.removeEventListener('pageshow', startDelay);
     };
   }, [isBubbleHidden]);
 

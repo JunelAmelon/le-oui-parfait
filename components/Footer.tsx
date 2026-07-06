@@ -110,6 +110,17 @@ export function Footer() {
               <br />
               Siège Social : 25 rue de Ponthieu 75008 Paris
             </p>
+            <div className="mb-6 space-y-2 text-sm">
+              <a href="tel:+33687217118" className="block text-gray-600 hover:text-gray-800 transition">
+                +33 6 87 21 71 18
+              </a>
+              <a
+                href="mailto:contact@leouiparfait.fr"
+                className="block text-gray-600 hover:text-gray-800 transition"
+              >
+                contact@leouiparfait.fr
+              </a>
+            </div>
             <div className="flex gap-3">
               <a
                 href="https://www.facebook.com/share/1NRMWajbmP/?mibextid=wwXIfr"

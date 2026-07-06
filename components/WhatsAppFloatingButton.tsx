@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 const phoneNumber = '33687217118';
 
 const message =
-  "Bonjour 👋\nJe souhaite organiser mon mariage et vérifier votre disponibilité.\nDate :\nLieu :\nBudget approximatif :\n";
+  "Bonjour\nJe souhaite organiser mon mariage et vérifier votre disponibilité.\nDate :\nLieu :\nBudget approximatif :\n";
 
 const href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

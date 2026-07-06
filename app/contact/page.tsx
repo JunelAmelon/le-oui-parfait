@@ -31,6 +31,39 @@ export default function ContactPage() {
           backgroundImage="wedding (2).jpg"
         />
 
+        <section className="bg-[#F5F2F0]">
+          <div className="mx-auto max-w-7xl px-6 py-10">
+            <div className="mx-auto max-w-2xl">
+              <div className="bg-white rounded-lg shadow-lg px-10 py-8">
+                <p className="text-[10px] tracking-[0.3em] text-[#88b7b5] uppercase mb-4 font-light">
+                  COORDONNÉES
+                </p>
+                <h2 className="font-baskerville text-[34px] text-[#3B3B3B] leading-[1.15] font-normal">
+                  Nous joindre directement
+                </h2>
+                <p className="mt-3 text-[14px] text-gray-600">
+                  Pour toute question urgente, vous pouvez nous contacter ici.
+                </p>
+
+                <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  <a
+                    href="tel:+33687217118"
+                    className="text-center uppercase tracking-[0.25em] text-[10px] border border-[#88b7b5] text-[#88b7b5] px-6 py-3 rounded-full hover:bg-[#88b7b5] hover:text-white transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#88b7b5]/40"
+                  >
+                    +33 6 87 21 71 18
+                  </a>
+                  <a
+                    href="mailto:contact@leouiparfait.fr"
+                    className="text-center uppercase tracking-[0.25em] text-[10px] border border-[#88b7b5] bg-[#88b7b5] text-white px-6 py-3 rounded-full hover:bg-[#6fa5a3] hover:border-[#6fa5a3] transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#88b7b5]/40"
+                  >
+                    contact@leouiparfait.fr
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <PlanningSection />
       </main>
       <Footer />

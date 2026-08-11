@@ -37,7 +37,7 @@ const animations: AnimationDetail[] = [
     subtitle:
       'Offrez à vos invités un espace orientale élégant, chaleureux et convivial, pensé comme une véritable parenthèse de détente au cœur de votre réception.',
     heroImage: '/COINCHCHA (1).jpg',
-    price: 'À partir de 649€',
+    price: 'À partir de 649€ HT',
     paymentHint: 'Paiement en 3 ou 4 fois sans frais',
     highlights: ['Formats : 2h à 4h', 'Intérieur / extérieur', 'Scénographie chic & orientale'],
     body: [
@@ -75,7 +75,7 @@ const animations: AnimationDetail[] = [
     title: 'Stand Oui Pancake',
     subtitle: 'L’animation gourmande qui fait fondre les invités.',
     heroImage: '/baniere site pancake.png',
-    price: 'À partir de 399€',
+    price: 'À partir de 399€ HT',
     paymentHint: 'Paiement en 3 ou 4 fois sans frais',
     highlights: ['Durée : 2h', 'Jusqu’à 100 personnes', 'Garnitures & nappages au choix'],
     body: [

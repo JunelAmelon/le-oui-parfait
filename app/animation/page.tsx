@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import type { Metadata } from 'next';
+import { Sparkles } from 'lucide-react';
 
 const url = 'https://leouiparfait.com/animation';
 
@@ -26,7 +27,7 @@ const animations = [
   {
     slug: 'coin-chicha',
     title: 'Coin Chicha',
-    price: 'À partir de 649€',
+    price: 'À partir de 649€ HT',
     description:
       'Un espace lounge élégant et convivial, pensé comme une parenthèse de détente au cœur de votre réception.',
     duration: 'Formats disponibles : 2h à 4h',
@@ -35,7 +36,7 @@ const animations = [
   {
     slug: 'stand-oui-pancake',
     title: 'Stand Oui Pancake',
-    price: 'À partir de 399€',
+    price: 'À partir de 399€ HT',
     description:
       'Une animation gourmande sous forme de stand, avec pancakes à personnaliser et toppings pour séduire petits et grands.',
     duration: 'Durée : 2h (jusqu’à 100 personnes)',
@@ -143,7 +144,7 @@ export default function AnimationPage() {
               href="/animation/oui-oui-kids"
               className="group relative block w-full mb-10 overflow-hidden shadow-[0_18px_55px_rgba(25,20,33,0.18)]"
             >
-              <div className="relative h-[420px] sm:h-[480px] lg:h-[520px] w-full">
+              <div className="relative h-[460px] sm:h-[500px] lg:h-[540px] w-full">
                 <video
                   src="/animation%20enfant%20pr%C3%A9sentation.mp4"
                   autoPlay
@@ -153,29 +154,39 @@ export default function AnimationPage() {
                   preload="metadata"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.03]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/40" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30" />
 
-                <div className="absolute inset-0 flex flex-col justify-end p-8 lg:pb-28 lg:py-24">
-                  <p className="text-[11px] uppercase tracking-[0.28em] text-[#88b7b5] mb-3">
+                {/* Badge — Du cocktail jusqu'au soir */}
+                <div className="absolute left-4 top-4 sm:left-5 sm:top-5 z-10 max-w-[calc(100%-2rem)]">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-white/10 text-white ring-1 ring-white/20 backdrop-blur-sm px-3 py-1.5 sm:px-4 sm:py-2 text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.24em] whitespace-nowrap">
+                    Du cocktail jusqu'au soir
+                    <span className="text-sm sm:text-base leading-none">🌙</span>
+                  </span>
+                </div>
+
+                <div className="absolute inset-0 flex flex-col justify-end p-5 sm:p-8 lg:p-12">
+                  <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] sm:tracking-[0.28em] text-[#88b7b5] mb-2 sm:mb-3">
                     Animation &amp; ateliers créatifs pour enfants
                   </p>
-                  <h3 className="font-baskerville text-3xl lg:text-5xl text-white leading-tight mb-4 max-w-2xl">
+                  <h3 className="font-baskerville text-2xl sm:text-3xl lg:text-5xl text-white leading-tight mb-3 sm:mb-4 max-w-2xl">
                     Oui Oui Kids
                   </h3>
-                  <p className="text-white/80 text-[16px] lg:text-[18px] leading-relaxed max-w-2xl mb-5">
-                    Pendant que les grands célèbrent, les petits vivent eux aussi leur propre expérience.
-                    Créativité, jeux, défis et moments de partage : Oui Oui Kids imagine un espace ludique et encadré pour divertir les enfants pendant votre événement.
+                  <p className="text-white/80 text-[14px] sm:text-[16px] lg:text-[18px] leading-relaxed max-w-2xl mb-4 sm:mb-5">
+                    Pendant que les grands célèbrent, les petits vivent eux aussi leur propre expérience. Créativité, jeux, défis et moments de partage : Oui Oui Kids imagine un espace ludique et encadré pour divertir les enfants pendant votre événement.
                   </p>
-                  <div className="flex flex-wrap items-center gap-4 mb-6">
-                    <span className="inline-flex items-center rounded-full bg-white/10 text-white ring-1 ring-white/20 backdrop-blur-sm px-4 py-2 text-[11px] uppercase tracking-[0.22em]">
-                      Jusqu’à 25 enfants • 2 animatrices incluses
+                  <div className="flex items-center gap-3 mb-5 sm:mb-6">
+                    <span className="w-1 h-8 bg-[#88b7b5] flex-shrink-0" />
+                    <span className="text-white/90 text-[12px] sm:text-[14px] leading-snug">
+                      <strong className="text-white">Jusqu'à 25 enfants</strong>
+                      <span className="text-white/40 mx-1.5">•</span>
+                      <strong className="text-white">2 animatrices incluses</strong>
                     </span>
                   </div>
-                  <div className="flex items-center justify-between gap-4 flex-wrap">
-                    <span className="text-white/70 text-[11px] uppercase tracking-[0.22em]">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
+                    <span className="text-white/70 text-[10px] sm:text-[11px] uppercase tracking-[0.2em] sm:tracking-[0.22em]">
                       Le Oui Parfait × Maison des 4A
                     </span>
-                    <span className="inline-flex items-center gap-2 text-white text-[11px] uppercase tracking-[0.2em] font-medium rounded-full border-2 border-[#88b7b5] px-6 py-3 backdrop-blur-sm bg-white/5 group-hover:bg-[#88b7b5] group-hover:text-white transition-all duration-300">
+                    <span className="inline-flex items-center justify-center gap-2 text-white text-[10px] sm:text-[11px] uppercase tracking-[0.18em] sm:tracking-[0.2em] font-medium rounded-full border-2 border-[#88b7b5] px-5 py-2.5 sm:px-6 sm:py-3 backdrop-blur-sm bg-white/5 group-hover:bg-[#88b7b5] group-hover:text-white transition-all duration-300 self-start sm:self-auto">
                       Voir les détails
                       <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
                     </span>

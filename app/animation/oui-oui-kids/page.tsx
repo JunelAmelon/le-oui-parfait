@@ -120,8 +120,11 @@ export default function OuiOuiKidsPage() {
               <p className="text-white/80 text-lg lg:text-xl max-w-2xl leading-relaxed mb-8">
                 Les petits invités aussi ont droit à leur moment parfait.
               </p>
-              <p className="text-white/70 text-base max-w-2xl leading-relaxed mb-6">
+              <p className="text-white/70 text-base max-w-2xl leading-relaxed mb-4">
                 Une animation Le Oui Parfait, en collaboration avec Maison des 4A
+              </p>
+              <p className="text-white/60 text-[15px] max-w-2xl leading-relaxed mb-6">
+                <strong className="text-white/80">Et si les petits invités avaient eux aussi leur propre programme ?</strong> Le Oui Parfait s'associe à Maison des 4A pour créer <strong className="text-white/80">Oui Oui Kids</strong>, une animation pensée spécialement pour faire jouer, créer et s'amuser les enfants pendant votre événement.
               </p>
               <div>
                 <span className="text-white/50 text-sm">à partir de</span>

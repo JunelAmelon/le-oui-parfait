@@ -155,7 +155,7 @@ export default function AnimationPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/40" />
 
-                <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-12">
+                <div className="absolute inset-0 flex flex-col justify-end p-8 lg:pb-28 lg:py-24">
                   <p className="text-[11px] uppercase tracking-[0.28em] text-[#88b7b5] mb-3">
                     Animation &amp; ateliers créatifs pour enfants
                   </p>
@@ -175,7 +175,7 @@ export default function AnimationPage() {
                     <span className="text-white/70 text-[11px] uppercase tracking-[0.22em]">
                       Le Oui Parfait × Maison des 4A
                     </span>
-                    <span className="inline-flex items-center gap-2 text-white text-[11px] uppercase tracking-[0.2em] font-medium group-hover:text-[#88b7b5] transition-colors">
+                    <span className="inline-flex items-center gap-2 text-white text-[11px] uppercase tracking-[0.2em] font-medium rounded-full border-2 border-[#88b7b5] px-6 py-3 backdrop-blur-sm bg-white/5 group-hover:bg-[#88b7b5] group-hover:text-white transition-all duration-300">
                       Voir les détails
                       <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
                     </span>
@@ -207,9 +207,9 @@ export default function AnimationPage() {
                     </div>
                   </div>
 
-                  <div className="p-7">
+                  <div className="p-9">
                     <p className="text-[#5A5A5A] text-[15px] leading-relaxed mb-7">{a.description}</p>
-                    <div className="flex items-center justify-between gap-4">
+                    <div className="flex items-center justify-between gap-2">
                       <span className="text-[11px] uppercase tracking-[0.2em] text-[#4B4456]">Voir le détail</span>
                       <Button
                         variant="outline"

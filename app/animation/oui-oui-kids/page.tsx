@@ -180,10 +180,10 @@ export default function OuiOuiKidsPage() {
                 </h2>
                 <div className="space-y-4 text-[17px] text-[#5A5A5A] leading-relaxed">
                   <p>
-                    Parce qu’un mariage réussi se vit aussi à hauteur d’enfant, Le Oui Parfait s’associe à Maison des 4A pour créer Oui Oui Kids, une expérience spécialement imaginée pour les enfants présents lors de votre événement.
+                   Et si les petits invités avaient eux aussi leur propre programme...? Le Oui Parfait s’associe à Maison des 4A pour créer Oui Oui Kids, une animation pensée spécialement pour faire jouer, créer et s’amuser les enfants pendant votre événement.
                   </p>
                   <p>
-                    L’objectif : leur offrir bien plus qu’un simple espace pour « les occuper ».
+                    L’objectif : leur offrir bien plus qu’un simple espace pour les occuper.
                   </p>
                   <p>
                     Avec Oui Oui Kids, les enfants créent, jouent, imaginent, échangent et participent à des activités adaptées à leur âge et à la dynamique du groupe.

@@ -148,6 +148,28 @@ export default function OuiOuiKidsPage() {
                     className="w-full h-full object-cover"
                   />
                 </div>
+                {/* Logos côte à côte sous la vidéo */}
+                <div className="flex items-center justify-center gap-6 bg-white border border-[#e8e0dc] p-5">
+                  <div className="relative h-20 w-32 flex-shrink-0">
+                    <Image
+                      src="/logo%20methode%20montessori.png"
+                      alt="Logo Méthode Montessori"
+                      fill
+                      className="object-contain"
+                      sizes="128px"
+                    />
+                  </div>
+                  <div className="h-12 w-px bg-[#e8e0dc]" />
+                  <div className="relative h-20 w-32 flex-shrink-0">
+                    <Image
+                      src="/maison%20des%204A.png"
+                      alt="Logo Maison des 4A"
+                      fill
+                      className="object-contain"
+                      sizes="128px"
+                    />
+                  </div>
+                </div>
               </div>
 
               {/* Texte à droite */}

@@ -138,6 +138,52 @@ export default function AnimationPage() {
               </div>
             </div>
 
+            {/* Oui Oui Kids — carte hero avec vidéo */}
+            <Link
+              href="/animation/oui-oui-kids"
+              className="group relative block w-full mb-10 overflow-hidden shadow-[0_18px_55px_rgba(25,20,33,0.18)]"
+            >
+              <div className="relative h-[420px] sm:h-[480px] lg:h-[520px] w-full">
+                <video
+                  src="/animation%20enfant%20pr%C3%A9sentation.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.03]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/40" />
+
+                <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-12">
+                  <p className="text-[11px] uppercase tracking-[0.28em] text-[#88b7b5] mb-3">
+                    Animation &amp; ateliers créatifs pour enfants
+                  </p>
+                  <h3 className="font-baskerville text-3xl lg:text-5xl text-white leading-tight mb-4 max-w-2xl">
+                    Oui Oui Kids
+                  </h3>
+                  <p className="text-white/80 text-[16px] lg:text-[18px] leading-relaxed max-w-2xl mb-5">
+                    Pendant que les grands célèbrent, les petits vivent eux aussi leur propre expérience.
+                    Créativité, jeux, défis et moments de partage : Oui Oui Kids imagine un espace ludique et encadré pour divertir les enfants pendant votre événement.
+                  </p>
+                  <div className="flex flex-wrap items-center gap-4 mb-6">
+                    <span className="inline-flex items-center rounded-full bg-white/10 text-white ring-1 ring-white/20 backdrop-blur-sm px-4 py-2 text-[11px] uppercase tracking-[0.22em]">
+                      Jusqu’à 25 enfants • 2 animatrices incluses
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between gap-4 flex-wrap">
+                    <span className="text-white/70 text-[11px] uppercase tracking-[0.22em]">
+                      Le Oui Parfait × Maison des 4A
+                    </span>
+                    <span className="inline-flex items-center gap-2 text-white text-[11px] uppercase tracking-[0.2em] font-medium group-hover:text-[#88b7b5] transition-colors">
+                      Voir les détails
+                      <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {animations.map((a) => (
                 <Link
@@ -183,7 +229,7 @@ export default function AnimationPage() {
                 <div className="relative h-full">
                   <div className="absolute inset-0">
                     <Image
-                      src="animation-background.jpg"
+                      src="/animation-background.jpg"
                       alt="Réserver une animation"
                       fill
                       className="object-cover opacity-40 transition-transform duration-1000 group-hover:scale-[1.03]"

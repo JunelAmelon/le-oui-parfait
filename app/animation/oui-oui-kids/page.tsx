@@ -327,7 +327,7 @@ export default function OuiOuiKidsPage() {
               </p>
             </div>
 
-            <div className="relative w-full aspect-[16/9] overflow-hidden bg-white border border-[#e8e0dc] shadow-[0_18px_45px_rgba(25,20,33,0.10)]">
+            <div className="relative w-full aspect-[4/3] overflow-hidden bg-white border border-[#e8e0dc] shadow-[0_18px_45px_rgba(25,20,33,0.10)]">
               <Image
                 src="/g%C3%A9rante%20partenaire.jpeg"
                 alt="La gérante de Maison des 4A — partenaire de Le Oui Parfait"

@@ -160,7 +160,7 @@ export default function AnimationPage() {
                 <div className="absolute left-4 top-4 sm:left-5 sm:top-5 z-10 max-w-[calc(100%-2rem)]">
                   <span className="inline-flex items-center gap-2 rounded-full bg-white/10 text-white ring-1 ring-white/20 backdrop-blur-sm px-3 py-1.5 sm:px-4 sm:py-2 text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.24em] whitespace-nowrap">
                     Du cocktail jusqu'au soir
-                    <span className="text-sm sm:text-base leading-none">🌙</span>
+                    <span className="text-sm sm:text-base leading-none">🛌</span>
                   </span>
                 </div>
 

@@ -48,7 +48,7 @@ export default function Conditions() {
         <HeroPage
           title="Conditions Générales de Vente"
           subtitle="L'art de sublimer chaque instant — Wedding planning • coordination • événements • animations • services numériques • formations. Version applicable à compter du 5 août 2026."
-          backgroundImage="https://images.pexels.com/photos/6476778/pexels-photo-6476778.jpeg"
+          backgroundImage="cgv.png"
         />
 
         {/* Important Notice */}

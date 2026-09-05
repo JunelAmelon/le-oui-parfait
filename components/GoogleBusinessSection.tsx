@@ -11,7 +11,7 @@ export function GoogleBusinessSection() {
     <section
       itemScope
       itemType="https://schema.org/LocalBusiness"
-      className="bg-[#F5F2F0] pt-8 pb-12"
+      className="bg-[#F5F2F0] pt-6 pb-10"
     >
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="max-w-4xl mx-auto">
@@ -26,7 +26,7 @@ export function GoogleBusinessSection() {
             en plein cœur de l’Essonne (91).
           </p>
 
-          <div className="bg-white rounded-lg shadow-lg p-2 w-full min-h-[400px] lg:min-h-[480px]">
+          <div className="bg-white rounded-lg shadow-lg p-2 pb-4 w-full min-h-[400px] lg:min-h-[480px] flex flex-col">
             <iframe
               title="Carte Le Oui Parfait - 19 rue Albert-Remy, Ris-Orangis"
               src={googleMapsEmbedSrc}
@@ -38,18 +38,18 @@ export function GoogleBusinessSection() {
               referrerPolicy="no-referrer-when-downgrade"
               className="rounded-md w-full h-full block"
             />
-          </div>
 
-          <div className="mt-6 flex justify-center">
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=48.6536834,2.4111968"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-[#88b7b5] hover:text-[#6fa5a3] transition"
-            >
-              Voir la fiche Google My Business
-              <ExternalLink className="h-4 w-4" />
-            </a>
+            <div className="mt-4 flex justify-center">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=48.6536834,2.4111968"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-[#88b7b5] hover:text-[#6fa5a3] transition"
+              >
+                Voir la fiche Google My Business
+                <ExternalLink className="h-4 w-4" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

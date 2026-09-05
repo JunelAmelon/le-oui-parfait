@@ -41,7 +41,7 @@ export function GoogleBusinessSection() {
 
             <div className="mt-4 flex justify-center">
               <a
-                href="https://www.google.com/maps/search/?api=1&query=48.6536834,2.4111968"
+                href="https://share.google/mfARjnWx5IbjAwhor"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-medium text-[#88b7b5] hover:text-[#6fa5a3] transition"

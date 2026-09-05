@@ -2,6 +2,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { HeroPage } from '@/components/HeroPage';
 import { PlanningSection } from '@/components/PlanningSection';
+import { GoogleBusinessSection } from '@/components/GoogleBusinessSection';
 import type { Metadata } from 'next';
 
 const url = 'https://leouiparfait.com/contact';
@@ -18,6 +19,44 @@ export const metadata: Metadata = {
     url,
     type: 'website',
   },
+};
+
+const contactLocalBusinessJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': 'https://leouiparfait.com/contact#localbusiness',
+  name: 'Le Oui Parfait',
+  url: 'https://leouiparfait.com/contact',
+  image: ['https://leouiparfait.com/logo-horizontal.png'],
+  telephone: '+33 6 87 21 71 18',
+  email: 'contact@leouiparfait.fr',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '19 rue Albert-Remy',
+    addressLocality: 'Ris-Orangis',
+    postalCode: '91130',
+    addressCountry: 'FR',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 48.6536834,
+    longitude: 2.4111968,
+  },
+  hasMap: 'https://www.google.com/maps/search/?api=1&query=48.6536834,2.4111968',
+  openingHours: [
+    'Mo-Fr 09:00-18:00',
+    'Sa 10:00-16:00',
+  ],
+  priceRange: '€€€',
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Île-de-France' },
+    { '@type': 'City', name: 'Paris' },
+    { '@type': 'AdministrativeArea', name: 'Essonne' },
+  ],
+  sameAs: [
+    'https://www.facebook.com/share/1NRMWajbmP/?mibextid=wwXIfr',
+    'https://www.instagram.com/leouiparfait_officiel?igsh=Z2dsZHF2cDJmZmIz',
+  ],
 };
 
 export default function ContactPage() {
@@ -65,6 +104,13 @@ export default function ContactPage() {
         </section>
 
         <PlanningSection />
+
+        <GoogleBusinessSection />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(contactLocalBusinessJsonLd) }}
+        />
       </main>
       <Footer />
     </div>

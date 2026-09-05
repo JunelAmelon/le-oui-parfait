@@ -1,11 +1,11 @@
 import { ExternalLink } from 'lucide-react';
 
 export function GoogleBusinessSection() {
-  // Carte générée à partir des coordonnées reçues de la fiche Google :
-  // 19 Rue Albert Rémy, 91130 Ris-Orangis (48.6536834, 2.4111968)
-  // Iframe Google Maps standard : pas de clé API nécessaire, évite les erreurs Places API.
+  // Carte générée à partir de l'adresse de la fiche Google :
+  // 19 Rue Albert Rémy, 91130 Ris-Orangis
+  // Recherche textuelle plutôt que coordonnées pour éviter les appels Places API.
   const googleMapsEmbedSrc =
-    'https://www.google.com/maps?q=48.6536834,2.4111968&z=15&output=embed&hl=fr&ll=48.6536834,2.4111968';
+    'https://www.google.com/maps?q=19+Rue+Albert+Rémy,+91130+Ris-Orangis&z=15&output=embed&hl=fr&iwloc=near';
 
   return (
     <section

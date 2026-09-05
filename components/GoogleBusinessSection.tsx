@@ -1,3 +1,5 @@
+import { ExternalLink } from 'lucide-react';
+
 export function GoogleBusinessSection() {
   // Carte générée à partir des coordonnées reçues de la fiche Google :
   // 19 Rue Albert Rémy, 91130 Ris-Orangis (48.6536834, 2.4111968)
@@ -10,7 +12,7 @@ export function GoogleBusinessSection() {
     <section
       itemScope
       itemType="https://schema.org/LocalBusiness"
-      className="bg-[#F5F2F0] py-16"
+      className="bg-[#F5F2F0] pt-8 pb-12"
     >
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="max-w-4xl mx-auto">
@@ -37,6 +39,18 @@ export function GoogleBusinessSection() {
               referrerPolicy="no-referrer-when-downgrade"
               className="rounded-md w-full h-full block"
             />
+          </div>
+
+          <div className="mt-6 flex justify-center">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=48.6536834,2.4111968"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-medium text-[#88b7b5] hover:text-[#6fa5a3] transition"
+            >
+              Voir la fiche Google My Business
+              <ExternalLink className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </div>

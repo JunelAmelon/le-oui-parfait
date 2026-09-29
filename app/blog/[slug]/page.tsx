@@ -5,7 +5,8 @@ import { Footer } from '@/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
+import { BLOG_SLUG_REDIRECTS, STANDALONE_ARTICLE_SLUGS } from '@/lib/articles';
 
 function BlogCtaCard(): ReactNode {
   const phoneNumber = '33687217118';
@@ -1819,6 +1820,10 @@ export async function generateMetadata({
 }
 
 export default function BlogArticlePage({ params }: { params: { slug: string } }) {
+  if (STANDALONE_ARTICLE_SLUGS.includes(params.slug)) permanentRedirect(`/${params.slug}`);
+  const mappedSlug = BLOG_SLUG_REDIRECTS[params.slug];
+  if (mappedSlug) permanentRedirect(mappedSlug);
+
   const article = articlesData[params.slug];
   if (!article) return notFound();
 

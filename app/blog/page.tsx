@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Facebook, Instagram, Youtube, Linkedin } from 'lucide-react';
 import { useState } from 'react';
+import { getArticleHref } from '@/lib/articles';
 
 const featuredArticles = [
   {
@@ -251,15 +252,29 @@ const allArticles = [
   },
 ];
 
+const MOIS_FR: Record<string, number> = {
+  janvier: 0, février: 1, fevrier: 1, mars: 2, avril: 3, mai: 4, juin: 5,
+  juillet: 6, août: 7, aout: 7, septembre: 8, octobre: 9, novembre: 10, décembre: 11, decembre: 11,
+};
+
+function parseDateFr(date: string): number {
+  const [day, month, year] = date.trim().toLowerCase().split(/\s+/);
+  return new Date(Number(year), MOIS_FR[month] ?? 0, Number(day)).getTime();
+}
+
+const featuredSorted = [...featuredArticles].sort((a, b) => parseDateFr(b.date) - parseDateFr(a.date));
+const sidebarSorted = [...sidebarArticles].sort((a, b) => parseDateFr(b.date) - parseDateFr(a.date));
+const sortedArticles = [...allArticles].sort((a, b) => parseDateFr(b.date) - parseDateFr(a.date));
+
 export default function BlogPage() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9;
 
-  const totalPages = Math.max(1, Math.ceil(allArticles.length / itemsPerPage));
+  const totalPages = Math.max(1, Math.ceil(sortedArticles.length / itemsPerPage));
   const safePage = Math.min(Math.max(1, currentPage), totalPages);
   const startIndex = (safePage - 1) * itemsPerPage;
-  const paginatedArticles = allArticles.slice(startIndex, startIndex + itemsPerPage);
+  const paginatedArticles = sortedArticles.slice(startIndex, startIndex + itemsPerPage);
 
   return (
     <div className="min-h-screen">
@@ -300,12 +315,12 @@ export default function BlogPage() {
               {/* Featured Article Slider - Left Side */}
               <div className="lg:col-span-2">
                 <div className="relative">
-                  <Link href={`/blog/${featuredArticles[currentSlide].slug}`} className="group block">
+                  <Link href={getArticleHref(featuredSorted[currentSlide].slug)} className="group block">
                     {/* Main Featured Image */}
                     <div className="relative h-[400px] lg:h-[500px] overflow-hidden">
                       <Image
-                        src={featuredArticles[currentSlide].image}
-                        alt={featuredArticles[currentSlide].title}
+                        src={featuredSorted[currentSlide].image}
+                        alt={featuredSorted[currentSlide].title}
                         fill
                         className="object-cover group-hover:scale-[1.02] transition-transform duration-700"
                       />
@@ -323,26 +338,26 @@ export default function BlogPage() {
                     {/* Article Info */}
                     <div className="mt-6">
                       <p className="text-xs uppercase tracking-[0.2em] text-[#88b7b5] mb-2 font-medium">
-                        {featuredArticles[currentSlide].category}
+                        {featuredSorted[currentSlide].category}
                       </p>
                       <h3 className="font-baskerville text-2xl lg:text-3xl text-[#4A4A4A] mb-3 group-hover:text-[#88b7b5] transition-colors">
-                        {featuredArticles[currentSlide].title}
+                        {featuredSorted[currentSlide].title}
                       </h3>
                       <p className="text-sm text-[#5A5A5A] uppercase tracking-wider">
-                        {featuredArticles[currentSlide].date}
+                        {featuredSorted[currentSlide].date}
                       </p>
                     </div>
                   </Link>
 
                   {/* Slider Dots */}
                   <div className="flex gap-2 mt-6">
-                    {featuredArticles.map((_, index) => (
+                    {featuredSorted.map((_, index) => (
                       <button
                         key={index}
                         type="button"
                         onClick={() => setCurrentSlide(index)}
-                        aria-label={`Voir l’article : ${featuredArticles[index].title}`}
-                        title={featuredArticles[index].title}
+                        aria-label={`Voir l’article : ${featuredSorted[index].title}`}
+                        title={featuredSorted[index].title}
                         className={`w-3 h-3 rounded-full transition-all ${
                           currentSlide === index 
                             ? 'bg-[#88b7b5]' 
@@ -356,10 +371,10 @@ export default function BlogPage() {
 
               {/* Sidebar Articles - Right Side */}
               <div className="space-y-6">
-                {sidebarArticles.map((article) => (
+                {sidebarSorted.map((article) => (
                   <Link 
                     key={article.id} 
-                    href={`/blog/${article.slug}`}
+                    href={getArticleHref(article.slug)}
                     className="flex gap-4 group"
                   >
                     <div className="relative w-24 h-24 flex-shrink-0 overflow-hidden">
@@ -424,7 +439,7 @@ export default function BlogPage() {
               {paginatedArticles.map((article) => (
                 <Link 
                   key={article.id} 
-                  href={`/blog/${article.slug}`}
+                  href={getArticleHref(article.slug)}
                   className="group"
                 >
                   <div className="relative h-64 overflow-hidden mb-4">

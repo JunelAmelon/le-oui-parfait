@@ -66,9 +66,9 @@ export const metadata: Metadata = {
       },
     ],
   },
-  verification: {
-    google: 'your-google-verification-code',
-  },
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } }
+    : {}),
   category: 'Wedding Planning',
   icons: {
     icon: [

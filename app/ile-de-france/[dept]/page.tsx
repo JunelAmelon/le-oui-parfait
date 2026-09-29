@@ -7,6 +7,7 @@ import { HeroPage } from '@/components/HeroPage';
 import { PlanningSection } from '@/components/PlanningSection';
 import { ServicesSection } from '@/components/ServicesSection';
 import { getDepartmentBySlug, IDF_DEPARTMENTS } from '../_idfData';
+import { WEDDING_PLANNER_CITIES } from '@/lib/weddingPlannerCities';
 
 type PageProps = {
   params: Promise<{ dept: string }>;
@@ -123,9 +124,18 @@ export default async function IleDeFranceDepartmentPage({ params }: PageProps) {
                 </p>
                 {d.slug === '91-essonne' && (
                   <div className="mt-5">
-                    <Link href="/wedding-planner-ris-orangis" className="text-[#4B4456] underline">
-                      Wedding planner à Ris-Orangis (Essonne)
-                    </Link>
+                    <p className="text-[#4B4456]/80 text-sm mb-2">Wedding planner par ville en Essonne :</p>
+                    <div className="flex flex-wrap gap-2">
+                      {WEDDING_PLANNER_CITIES.map((c) => (
+                        <Link
+                          key={c.slug}
+                          href={`/wedding-planner-${c.slug}`}
+                          className="px-3 py-1.5 rounded-full bg-[#f4f1f7] border border-[#88b7b5]/30 text-[#4B4456] text-xs font-medium hover:border-[#88b7b5] transition"
+                        >
+                          {c.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
                 <div className="mt-6 flex flex-wrap gap-3">

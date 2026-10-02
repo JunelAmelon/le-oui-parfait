@@ -122,22 +122,6 @@ export default async function IleDeFranceDepartmentPage({ params }: PageProps) {
                   organisation partielle, coordination du jour J et prestations complémentaires. Objectif : un mariage fluide,
                   élégant et parfaitement orchestré.
                 </p>
-                {d.slug === '91-essonne' && (
-                  <div className="mt-5">
-                    <p className="text-[#4B4456]/80 text-sm mb-2">Wedding planner par ville en Essonne :</p>
-                    <div className="flex flex-wrap gap-2">
-                      {WEDDING_PLANNER_CITIES.map((c) => (
-                        <Link
-                          key={c.slug}
-                          href={`/wedding-planner-${c.slug}`}
-                          className="px-3 py-1.5 rounded-full bg-[#f4f1f7] border border-[#88b7b5]/30 text-[#4B4456] text-xs font-medium hover:border-[#88b7b5] transition"
-                        >
-                          {c.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Link
                     href="/tarifs"
@@ -153,6 +137,25 @@ export default async function IleDeFranceDepartmentPage({ params }: PageProps) {
                   </Link>
                 </div>
               </div>
+
+              {d.slug === '91-essonne' && (
+                <div className="mt-10 rounded-3xl bg-white border border-[#88b7b5]/30 p-6 md:p-8">
+                  <h2 className="text-lg font-baskerville text-[#4B4456] mb-3">
+                    Wedding planner dans les villes d’Essonne
+                  </h2>
+                  <div className="flex flex-wrap gap-2">
+                    {WEDDING_PLANNER_CITIES.map((c) => (
+                      <Link
+                        key={c.slug}
+                        href={`/wedding-planner-${c.slug}`}
+                        className="px-3 py-1.5 rounded-full bg-[#f4f1f7] border border-[#88b7b5]/30 text-[#4B4456] text-xs font-medium hover:border-[#88b7b5] transition"
+                      >
+                        {c.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div className="mt-10 rounded-3xl bg-white border border-[#88b7b5]/30 p-6 md:p-8">
                 <h2 className="text-xl font-baskerville text-[#4B4456] mb-3">Pourquoi choisir Le Oui Parfait ?</h2>

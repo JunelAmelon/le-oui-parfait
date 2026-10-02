@@ -21,7 +21,7 @@ export const WEDDING_PLANNER_CITIES: WeddingPlannerCity[] = [
     zonesAround:
       'Ris-Orangis, Évry-Courcouronnes, Viry-Châtillon, Grigny, Draveil, Juvisy-sur-Orge, Sainte-Geneviève-des-Bois, Brétigny-sur-Orge, Corbeil-Essonnes, Massy… et plus largement toute l’Île-de-France.',
     nearbyChips: ['Ris-Orangis', 'Évry-Courcouronnes', 'Viry-Châtillon', 'Sainte-Geneviève-des-Bois', 'Grigny', 'Corbeil-Essonnes'],
-    image: '/wedding%20(3).jpg',
+    image: '/moment-mariage%20(1).jpg',
     badgeText: 'Notre showroom est basé ici — à Ris-Orangis',
   },
   {

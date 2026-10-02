@@ -5,11 +5,12 @@ import { ChevronRight } from 'lucide-react';
 interface HeroPageProps {
   title: string;
   subtitle?: string;
+  eyebrow?: string;
   backgroundImage?: string;
   children?: React.ReactNode;
 }
 
-export function HeroPage({ title, subtitle, backgroundImage, children }: HeroPageProps) {
+export function HeroPage({ title, subtitle, eyebrow, backgroundImage, children }: HeroPageProps) {
   const normalizedBackgroundImage =
     backgroundImage && (backgroundImage.startsWith('http') || backgroundImage.startsWith('/'))
       ? backgroundImage
@@ -43,6 +44,12 @@ export function HeroPage({ title, subtitle, backgroundImage, children }: HeroPag
             <span className={`${backgroundImage ? 'text-white/40' : 'text-[#88b7b5]'}`}>/</span>
             <span className={`${backgroundImage ? 'text-white' : 'text-[#88b7b5]'} font-medium`}>{title}</span>
           </nav>
+
+          {eyebrow && (
+            <p className={`text-[11px] uppercase tracking-[0.25em] font-medium mb-4 ${normalizedBackgroundImage ? 'text-[#88b7b5]' : 'text-[#88b7b5]'}`}>
+              {eyebrow}
+            </p>
+          )}
 
           <h1 className={`font-baskerville text-4xl lg:text-6xl mb-6 leading-tight ${normalizedBackgroundImage ? 'text-white' : 'text-[#4B4456]'}`}>
             {title}

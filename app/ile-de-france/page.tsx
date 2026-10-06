@@ -97,6 +97,15 @@ export default function IleDeFrancePage() {
                 Le Oui Parfait accompagne les couples à Paris et dans toute l’Île-de-France : organisation clé en main,
                 organisation partielle, coordination du jour J et expériences sur mesure.
               </p>
+              <p className="mt-4 text-[#4B4456]/80 leading-relaxed">
+                Basés à Ris-Orangis, notre cœur d’activité :{' '}
+                <Link
+                  href="/ile-de-france/91-essonne"
+                  className="text-[#88b7b5] font-medium hover:underline"
+                >
+                  Wedding Planner Essonne (91) →
+                </Link>
+              </p>
             </div>
           </div>
         </section>

@@ -5,7 +5,6 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { HeroPage } from '@/components/HeroPage';
 import { PlanningSection } from '@/components/PlanningSection';
-import { ServicesSection } from '@/components/ServicesSection';
 import { WEDDING_PLANNER_CITIES, type WeddingPlannerCity } from '@/lib/weddingPlannerCities';
 
 type Props = {
@@ -218,9 +217,24 @@ export function WeddingPlannerCityPage({ city }: Props) {
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {[
-                    { name: 'Offre Signature', detail: 'Organisation clé en main', href: '/tarifs/offre-signature' },
-                    { name: 'Offre Élégance', detail: 'Organisation partielle', href: '/tarifs/offre-elegance' },
-                    { name: 'Offre Harmonie', detail: 'Coordination du jour J', href: '/tarifs/offre-harmonie' },
+                    {
+                      name: 'Offre Signature',
+                      detail: 'Organisation clé en main',
+                      href: '/tarifs/offre-signature',
+                      points: ['Recherche du lieu et des prestataires', 'Budget et rétroplanning', 'Rendez-vous et visites', 'Scénographie', 'Coordination Jour J'],
+                    },
+                    {
+                      name: 'Offre Élégance',
+                      detail: 'Organisation partielle',
+                      href: '/tarifs/offre-elegance',
+                      points: ['Analyse & cadrage de votre organisation', 'Accompagnement prestataires sur pôles définis', 'Coordination sur 3 à 5 pôles de votre choix'],
+                    },
+                    {
+                      name: 'Offre Harmonie',
+                      detail: 'Coordination du jour J',
+                      href: '/tarifs/offre-harmonie',
+                      points: ['Reprise de votre organisation existante', 'Planning détaillé du jour J', 'Pilotage & gestion des imprévus'],
+                    },
                   ].map((offre) => (
                     <Link
                       key={offre.href}
@@ -229,12 +243,26 @@ export function WeddingPlannerCityPage({ city }: Props) {
                     >
                       <h3 className="font-baskerville text-[17px] text-[#4B4456] mb-1 group-hover:text-[#88b7b5] transition">{offre.name}</h3>
                       <p className="text-[13px] text-[#5A5A5A] mb-3">{offre.detail}</p>
+                      <ul className="space-y-1.5 mb-4">
+                        {offre.points.map((point) => (
+                          <li key={point} className="flex items-start gap-2 text-[12px] text-[#5A5A5A]">
+                            <Check className="w-3.5 h-3.5 text-[#88b7b5] flex-shrink-0 mt-0.5" />
+                            {point}
+                          </li>
+                        ))}
+                      </ul>
                       <span className="text-[11px] uppercase tracking-[0.15em] text-[#88b7b5] font-medium">
                         Découvrir →
                       </span>
                     </Link>
                   ))}
                 </div>
+                <p className="mt-5 text-[13px] text-[#5A5A5A]">
+                  Découvrez aussi :{' '}
+                  <Link href="/services/shooting-tour" className="text-[#88b7b5] hover:underline">Shooting Tour (EVJF/EVG)</Link>
+                  {' • '}
+                  <Link href="/services/demande-en-mariage" className="text-[#88b7b5] hover:underline">Demande en mariage</Link>
+                </p>
               </div>
             </div>
           </div>
@@ -290,8 +318,6 @@ export function WeddingPlannerCityPage({ city }: Props) {
             </div>
           </div>
         </section>
-
-        <ServicesSection />
 
         <section className="py-10 bg-[#f4f1f7]">
           <div className="container mx-auto px-4 sm:px-6">

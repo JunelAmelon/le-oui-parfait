@@ -7,7 +7,6 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { HeroPage } from '@/components/HeroPage';
 import { PlanningSection } from '@/components/PlanningSection';
-import { ServicesSection } from '@/components/ServicesSection';
 import { getDepartmentBySlug, IDF_DEPARTMENTS } from '../_idfData';
 import { WEDDING_PLANNER_CITIES } from '@/lib/weddingPlannerCities';
 
@@ -43,7 +42,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-function buildFaq(deptName: string) {
+function buildFaq(deptName: string): { q: string; a: string; links?: { label: string; href: string }[] }[] {
   return [
     {
       q: `Intervenez-vous partout en ${deptName} ?`,
@@ -243,9 +242,24 @@ export default async function IleDeFranceDepartmentPage({ params }: PageProps) {
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {[
-                    { name: 'Offre Signature', detail: 'Organisation clé en main', href: '/tarifs/offre-signature' },
-                    { name: 'Offre Élégance', detail: 'Organisation partielle', href: '/tarifs/offre-elegance' },
-                    { name: 'Offre Harmonie', detail: 'Coordination du jour J', href: '/tarifs/offre-harmonie' },
+                    {
+                      name: 'Offre Signature',
+                      detail: 'Organisation clé en main',
+                      href: '/tarifs/offre-signature',
+                      points: ['Recherche du lieu et des prestataires', 'Budget et rétroplanning', 'Rendez-vous et visites', 'Scénographie', 'Coordination Jour J'],
+                    },
+                    {
+                      name: 'Offre Élégance',
+                      detail: 'Organisation partielle',
+                      href: '/tarifs/offre-elegance',
+                      points: ['Analyse & cadrage de votre organisation', 'Accompagnement prestataires sur pôles définis', 'Coordination sur 3 à 5 pôles de votre choix'],
+                    },
+                    {
+                      name: 'Offre Harmonie',
+                      detail: 'Coordination du jour J',
+                      href: '/tarifs/offre-harmonie',
+                      points: ['Reprise de votre organisation existante', 'Planning détaillé du jour J', 'Pilotage & gestion des imprévus'],
+                    },
                   ].map((offre) => (
                     <Link
                       key={offre.href}
@@ -254,12 +268,26 @@ export default async function IleDeFranceDepartmentPage({ params }: PageProps) {
                     >
                       <h3 className="font-baskerville text-[17px] text-[#4B4456] mb-1 group-hover:text-[#88b7b5] transition">{offre.name}</h3>
                       <p className="text-[13px] text-[#5A5A5A] mb-3">{offre.detail}</p>
+                      <ul className="space-y-1.5 mb-4">
+                        {offre.points.map((point) => (
+                          <li key={point} className="flex items-start gap-2 text-[12px] text-[#5A5A5A]">
+                            <Check className="w-3.5 h-3.5 text-[#88b7b5] flex-shrink-0 mt-0.5" />
+                            {point}
+                          </li>
+                        ))}
+                      </ul>
                       <span className="text-[11px] uppercase tracking-[0.15em] text-[#88b7b5] font-medium">
                         Découvrir →
                       </span>
                     </Link>
                   ))}
                 </div>
+                <p className="mt-5 text-[13px] text-[#5A5A5A]">
+                  Découvrez aussi :{' '}
+                  <Link href="/services/shooting-tour" className="text-[#88b7b5] hover:underline">Shooting Tour (EVJF/EVG)</Link>
+                  {' • '}
+                  <Link href="/services/demande-en-mariage" className="text-[#88b7b5] hover:underline">Demande en mariage</Link>
+                </p>
               </div>
             </div>
           </div>
@@ -269,9 +297,11 @@ export default async function IleDeFranceDepartmentPage({ params }: PageProps) {
           <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-[#f4f1f7] border border-[#88b7b5]/30 rounded-3xl p-6 md:p-8">
-                <h2 className="text-lg font-baskerville text-[#4B4456] mb-3">Zones desservies en {d.name}</h2>
+                <h2 className="text-lg font-baskerville text-[#4B4456] mb-3">
+                  {d.zonesTitle ?? `Zones desservies en ${d.name}`}
+                </h2>
                 <p className="text-[14px] text-[#5A5A5A] leading-relaxed">
-                  {d.cities.join(', ')}… et plus largement toute l’Île-de-France.
+                  {d.zonesText ?? `${d.cities.join(', ')}… et plus largement toute l’Île-de-France.`}
                 </p>
               </div>
 
@@ -379,8 +409,6 @@ export default async function IleDeFranceDepartmentPage({ params }: PageProps) {
           </div>
         </section>
 
-        <ServicesSection />
-
         <section className="py-10 bg-[#f4f1f7]">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-4xl mx-auto">
@@ -390,6 +418,15 @@ export default async function IleDeFranceDepartmentPage({ params }: PageProps) {
                   <div key={item.q} className="rounded-2xl bg-white border border-[#88b7b5]/30 p-5">
                     <p className="font-semibold text-[#4B4456]">{item.q}</p>
                     <p className="mt-2 text-[#4B4456]/80">{item.a}</p>
+                    {item.links && (
+                      <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
+                        {item.links.map((l) => (
+                          <Link key={l.href} href={l.href} className="text-sm text-[#88b7b5] hover:underline">
+                            {l.label} →
+                          </Link>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>

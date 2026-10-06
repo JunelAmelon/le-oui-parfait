@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { HeroPage } from '@/components/HeroPage';
@@ -33,6 +34,20 @@ export default function TarifsPage() {
         />
 
         <PricingSection />
+
+        <section className="py-10 bg-[#f4f1f7]">
+          <div className="container mx-auto px-4 sm:px-6 text-center">
+            <p className="text-[15px] text-[#4B4456]">
+              Basés à Ris-Orangis :{' '}
+              <Link
+                href="/ile-de-france/91-essonne"
+                className="text-[#88b7b5] font-medium hover:underline"
+              >
+                découvrez nos prestations de Wedding Planner en Essonne →
+              </Link>
+            </p>
+          </div>
+        </section>
 
         <FAQSection />
       </main>

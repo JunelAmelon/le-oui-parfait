@@ -11,7 +11,9 @@ export type IdFDepartment = {
   introTitle?: string;
   intro?: string[];
   offersTitle?: string;
-  faq?: { q: string; a: string }[];
+  zonesTitle?: string;
+  zonesText?: string;
+  faq?: { q: string; a: string; links?: { label: string; href: string }[] }[];
 };
 
 export const IDF_DEPARTMENTS: IdFDepartment[] = [
@@ -54,10 +56,17 @@ export const IDF_DEPARTMENTS: IdFDepartment[] = [
       'Depuis notre showroom de Ris-Orangis, nous intervenons notamment à Évry-Courcouronnes, Massy, Palaiseau, Corbeil-Essonnes, Arpajon, Viry-Châtillon, Sainte-Geneviève-des-Bois, Draveil, Étampes et dans l’ensemble du 91.',
     ],
     offersTitle: 'Nos prestations de Wedding Planner dans le 91',
+    zonesTitle: 'Organisation de mariage partout en Essonne',
+    zonesText:
+      'Le Oui Parfait accompagne les futurs mariés dans l’ensemble du département de l’Essonne. Notre implantation à Ris-Orangis nous permet d’intervenir facilement sur les principaux secteurs du 91 : Évry-Courcouronnes, Corbeil-Essonnes, Massy, Palaiseau, Viry-Châtillon, Sainte-Geneviève-des-Bois, Savigny-sur-Orge, Draveil, Yerres, Arpajon, Étampes et les communes voisines.',
     faq: [
       {
         q: 'Combien coûte une wedding planner en Essonne (91) ?',
-        a: 'Le tarif dépend de la formule : coordination du jour J, organisation partielle ou organisation clé en main. Consultez notre page tarifs ou demandez un devis gratuit — nous répondons rapidement.',
+        a: 'Le tarif dépend de la formule : coordination du jour J, organisation partielle ou organisation clé en main.',
+        links: [
+          { label: 'Voir nos tarifs', href: '/tarifs' },
+          { label: 'Prix d’une wedding planner en Essonne', href: '/wedding-planner-essonne-91-tarifs' },
+        ],
       },
       {
         q: 'Dans quelles villes de l’Essonne intervenez-vous ?',

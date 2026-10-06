@@ -1,16 +1,17 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ArticleLandingPage, ArticleSection } from '@/components/ArticleLanding';
 
 const url = 'https://leouiparfait.com/wedding-planner-essonne-91-tarifs';
 
 export const metadata: Metadata = {
-  title: 'Wedding planner Essonne (91) : tarifs + comment choisir la bonne',
+  title: 'Prix d’une wedding planner en Essonne (91) : tarifs et formules',
   description:
-    'Wedding planner en Essonne (91) : comprendre les tarifs, les formules (jour J, partielle, clé en main) et choisir sans se tromper.',
+    'Tarifs d’une wedding planner en Essonne (91) : coordination du jour J, organisation partielle ou clé en main. Comprendre les prix et choisir la bonne formule.',
   alternates: { canonical: url },
   openGraph: {
-    title: 'Wedding planner Essonne (91) : tarifs',
-    description: 'Tarifs, erreurs à éviter, et vérification de disponibilité.',
+    title: 'Prix d’une wedding planner en Essonne (91)',
+    description: 'Tarifs, formules et erreurs à éviter — vérification de disponibilité.',
     url,
     type: 'article',
   },
@@ -19,9 +20,9 @@ export const metadata: Metadata = {
 export default function WeddingPlannerEssonneTarifsPage() {
   return (
     <ArticleLandingPage
-      eyebrow="Essonne (91)"
-      title="Wedding planner Essonne (91) : tarifs + comment choisir la bonne"
-      intro="En Essonne, beaucoup de couples commencent seuls… puis se retrouvent bloqués (planning, budget, prestataires, pression). Si tu veux une organisation claire et un mariage fluide, le bon accompagnement change tout."
+      eyebrow="Tarifs Essonne (91)"
+      title="Prix d’une wedding planner en Essonne (91) : tarifs et formules"
+      intro="Combien coûte une wedding planner en Essonne ? Le prix dépend surtout de la formule choisie : coordination du jour J, organisation partielle ou organisation clé en main. Ici, on vous aide à comprendre les tarifs et à choisir sans vous tromper."
       image="/couple.jpg"
     >
       <ArticleSection title="Réponse directe" highlight>
@@ -37,6 +38,17 @@ export default function WeddingPlannerEssonneTarifsPage() {
           <li>Vérifie ce qui est inclus (présence, rendez-vous, prestataires, plan B).</li>
           <li>Choisis quelqu’un avec qui tu te sens en confiance (communication claire).</li>
         </ul>
+      </ArticleSection>
+
+      <ArticleSection title="Vous cherchez une wedding planner en Essonne ?">
+        <p>
+          Basée à Ris-Orangis, l’agence Le Oui Parfait accompagne les futurs mariés dans tout le département — organisation complète, partielle ou coordination du jour J.
+        </p>
+        <p>
+          <Link href="/ile-de-france/91-essonne" className="text-[#88b7b5] font-medium underline underline-offset-4 hover:text-[#6fa3a1] transition">
+            Découvrez notre accompagnement de wedding planner en Essonne (91) →
+          </Link>
+        </p>
       </ArticleSection>
     </ArticleLandingPage>
   );

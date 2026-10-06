@@ -25,13 +25,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!d) return {};
 
   const url = `https://leouiparfait.com/ile-de-france/${d.slug}`;
+  const seoTitle = d.seoTitle ?? `Wedding planner ${d.name} (${d.code}) | Organisation de mariage`;
+  const seoDescription =
+    d.seoDescription ??
+    `Organisatrice de mariage en ${d.name} (${d.code}). Organisation clé en main, organisation partielle et coordination du jour J. Intervention partout en Île-de-France. Devis sur demande.`;
 
   return {
-    title: `Wedding planner ${d.name} (${d.code}) | Organisation de mariage`,
-    description: `Organisatrice de mariage en ${d.name} (${d.code}). Organisation clé en main, organisation partielle et coordination du jour J. Intervention partout en Île-de-France. Devis sur demande.`,
+    title: seoTitle,
+    description: seoDescription,
     alternates: { canonical: url },
     openGraph: {
-      title: `Wedding planner ${d.name} (${d.code}) | Le Oui Parfait`,
+      title: seoTitle,
       description: `Organisation de mariage en ${d.name} : clé en main, organisation partielle, coordination du jour J.`,
       url,
       type: 'website',
@@ -61,7 +65,7 @@ export default async function IleDeFranceDepartmentPage({ params }: PageProps) {
   const d = getDepartmentBySlug(dept);
   if (!d) notFound();
 
-  const faq = buildFaq(d.name);
+  const faq = d.faq ?? buildFaq(d.name);
   const faqJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -82,8 +86,8 @@ export default async function IleDeFranceDepartmentPage({ params }: PageProps) {
       <Header />
       <main>
         <HeroPage
-          title={`Wedding planner ${d.name} (${d.code})`}
-          subtitle={`Organisation & coordination de mariage en ${d.name} — Île-de-France`}
+          title={d.h1 ?? `Wedding planner ${d.name} (${d.code})`}
+          subtitle={d.heroSubtitle ?? `Organisation & coordination de mariage en ${d.name} — Île-de-France`}
           backgroundImage="https://media.abcsalles.com/images/1/articles/960x640/840709/comment-trouver-ses-prestataires-de-mariage.jpg"
         >
           <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:items-center">
@@ -137,16 +141,19 @@ export default async function IleDeFranceDepartmentPage({ params }: PageProps) {
                   {d.name} ({d.code}) • Île-de-France
                 </p>
                 <h2 className="font-baskerville text-3xl lg:text-4xl text-[#4B4456] leading-tight mb-5">
-                  Une organisatrice de mariage en {d.name}
+                  {d.introTitle ?? `Une organisatrice de mariage en ${d.name}`}
                 </h2>
-                <p className="text-[16px] sm:text-[17px] text-[#5A5A5A] leading-relaxed mb-4">
-                  Le Oui Parfait accompagne les couples en {d.name} ({d.code}) avec une organisation sur mesure : clé en main,
-                  organisation partielle, coordination du jour J et prestations complémentaires. Objectif : un mariage fluide,
-                  élégant et parfaitement orchestré.
-                </p>
-                <p className="text-[16px] sm:text-[17px] text-[#5A5A5A] leading-relaxed mb-7">
-                  Notre approche : une direction claire, des prestataires fiables et une expérience fluide, du premier rendez-vous au jour J.
-                </p>
+                {(d.intro ?? [
+                  `Le Oui Parfait accompagne les couples en ${d.name} (${d.code}) avec une organisation sur mesure : clé en main, organisation partielle, coordination du jour J et prestations complémentaires. Objectif : un mariage fluide, élégant et parfaitement orchestré.`,
+                  'Notre approche : une direction claire, des prestataires fiables et une expérience fluide, du premier rendez-vous au jour J.',
+                ]).map((p, i, arr) => (
+                  <p
+                    key={i}
+                    className={`text-[16px] sm:text-[17px] text-[#5A5A5A] leading-relaxed ${i === arr.length - 1 ? 'mb-7' : 'mb-4'}`}
+                  >
+                    {p}
+                  </p>
+                ))}
 
                 <ul className="space-y-3 mb-8">
                   {[
@@ -216,15 +223,23 @@ export default async function IleDeFranceDepartmentPage({ params }: PageProps) {
                   ))}
                 </div>
                 <p className="font-baskerville text-4xl text-[#4B4456] mb-2">5,0<span className="text-2xl text-[#4B4456]/60">/5</span></p>
-                <p className="text-[15px] text-[#5A5A5A] leading-relaxed">
+                <p className="text-[15px] text-[#5A5A5A] leading-relaxed mb-4">
                   Note moyenne de nos mariés — 16 avis sur mariages.net, l’annuaire de référence des professionnels du mariage.
                 </p>
+                <a
+                  href="https://www.mariages.net/organisation-mariage/le-oui-parfait--e422129"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[11px] uppercase tracking-[0.15em] text-[#88b7b5] font-medium hover:underline"
+                >
+                  Découvrir nos avis →
+                </a>
               </div>
 
               <div>
                 <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Nos offres</p>
                 <h2 className="font-baskerville text-2xl lg:text-3xl text-[#4B4456] mb-6">
-                  Choisissez votre niveau d’accompagnement
+                  {d.offersTitle ?? 'Choisissez votre niveau d’accompagnement'}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {[
@@ -300,6 +315,44 @@ export default async function IleDeFranceDepartmentPage({ params }: PageProps) {
             </div>
           </div>
         </section>
+
+        {d.slug === '91-essonne' && (
+          <section className="pb-16 lg:pb-20 bg-white">
+            <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+              <div className="max-w-2xl mb-10">
+                <p className="text-[11px] uppercase tracking-[0.25em] text-[#88b7b5] mb-3">Réalisations</p>
+                <h2 className="font-baskerville text-3xl lg:text-4xl text-[#4B4456] leading-tight">
+                  Nos mariages et réalisations en Essonne
+                </h2>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {[
+                  { src: '/mariage-r%C3%A9alis%C3%A9s%20(2).jpg', alt: 'Organisation et coordination d’un mariage en Essonne — Le Oui Parfait' },
+                  { src: '/mariage-r%C3%A9alis%C3%A9s%20(3).jpg', alt: 'Scénographie de mariage en Essonne — Le Oui Parfait' },
+                  { src: '/mariage-r%C3%A9alis%C3%A9s%20(4).jpg', alt: 'Coordination du jour J d’un mariage dans le 91 — Le Oui Parfait' },
+                ].map((photo) => (
+                  <figure key={photo.src} className="group">
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_10px_30px_rgba(25,20,33,0.08)]">
+                      <Image
+                        src={photo.src}
+                        alt={photo.alt}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 1024px) 100vw, 33vw"
+                      />
+                    </div>
+                    <figcaption className="mt-3 text-[13px] text-[#5A5A5A]">{photo.alt}</figcaption>
+                  </figure>
+                ))}
+              </div>
+              <div className="mt-8">
+                <Link href="/portfolio" className="text-[#4B4456] underline underline-offset-4 hover:text-[#88b7b5] transition">
+                  Voir tous nos mariages réalisés
+                </Link>
+              </div>
+            </div>
+          </section>
+        )}
 
         <section className="py-14 lg:py-16 bg-[#4B4456]">
           <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">

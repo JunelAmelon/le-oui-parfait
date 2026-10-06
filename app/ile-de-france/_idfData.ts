@@ -4,6 +4,14 @@ export type IdFDepartment = {
   slug: string;
   cities: string[];
   image: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  h1?: string;
+  heroSubtitle?: string;
+  introTitle?: string;
+  intro?: string[];
+  offersTitle?: string;
+  faq?: { q: string; a: string }[];
 };
 
 export const IDF_DEPARTMENTS: IdFDepartment[] = [
@@ -34,6 +42,44 @@ export const IDF_DEPARTMENTS: IdFDepartment[] = [
     slug: '91-essonne',
     cities: ['Évry-Courcouronnes', 'Massy', 'Palaiseau', 'Arpajon', 'Étampes'],
     image: '/moment-mariage%20(4).jpg',
+    seoTitle: 'Wedding Planner Essonne (91) | Organisation de Mariage',
+    seoDescription:
+      'Wedding planner en Essonne (91) : Le Oui Parfait organise et coordonne votre mariage de A à Z. Showroom à Ris-Orangis, organisation complète, partielle et Jour J.',
+    h1: 'Wedding Planner en Essonne (91)',
+    heroSubtitle: 'Organisation et coordination de mariage sur mesure en Essonne',
+    introTitle: 'Votre wedding planner en Essonne, basée à Ris-Orangis',
+    intro: [
+      'Vous recherchez une wedding planner en Essonne pour organiser votre mariage avec sérénité ? Basée à Ris-Orangis, l’agence Le Oui Parfait accompagne les futurs mariés dans tout le département de l’Essonne (91), de la conception du mariage jusqu’à la coordination du Jour J.',
+      'Organisation complète, accompagnement partiel ou coordination : notre équipe construit avec vous un mariage personnalisé, structuré et fidèle à votre histoire. Nous vous accompagnons dans la recherche des prestataires, la gestion du budget et du planning, la scénographie, les rendez-vous techniques et toute la coordination de votre réception.',
+      'Depuis notre showroom de Ris-Orangis, nous intervenons notamment à Évry-Courcouronnes, Massy, Palaiseau, Corbeil-Essonnes, Arpajon, Viry-Châtillon, Sainte-Geneviève-des-Bois, Draveil, Étampes et dans l’ensemble du 91.',
+    ],
+    offersTitle: 'Nos prestations de Wedding Planner dans le 91',
+    faq: [
+      {
+        q: 'Combien coûte une wedding planner en Essonne (91) ?',
+        a: 'Le tarif dépend de la formule : coordination du jour J, organisation partielle ou organisation clé en main. Consultez notre page tarifs ou demandez un devis gratuit — nous répondons rapidement.',
+      },
+      {
+        q: 'Dans quelles villes de l’Essonne intervenez-vous ?',
+        a: 'Ris-Orangis, Évry-Courcouronnes, Corbeil-Essonnes, Massy, Palaiseau, Viry-Châtillon, Sainte-Geneviève-des-Bois, Savigny-sur-Orge, Draveil, Yerres, Arpajon, Étampes… et l’ensemble du département.',
+      },
+      {
+        q: 'Quelle est la différence entre organisation complète et coordination du Jour J ?',
+        a: 'L’organisation complète (clé en main) couvre toute la préparation de A à Z, tandis que la coordination du jour J reprend votre organisation existante pour piloter la journée : prestataires, timing et imprévus.',
+      },
+      {
+        q: 'Quand faut-il réserver sa wedding planner ?',
+        a: 'Idéalement 12 à 18 mois avant le mariage pour une organisation complète. Pour la coordination du jour J, quelques mois suffisent — mais plus tôt est toujours mieux pour sécuriser votre date.',
+      },
+      {
+        q: 'Pouvez-vous reprendre un mariage déjà partiellement organisé ?',
+        a: 'Oui, c’est exactement l’objet de notre offre d’organisation partielle : nous reprenons votre dossier, structurons le planning et complétons ce qui manque.',
+      },
+      {
+        q: 'Peut-on vous confier uniquement la coordination du Jour J ?',
+        a: 'Absolument. Notre offre Harmonie est dédiée à la coordination du jour J : déroulé, brief prestataires, gestion des imprévus — vous profitez, nous pilotons.',
+      },
+    ],
   },
   {
     code: '92',

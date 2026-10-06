@@ -145,8 +145,8 @@ const allArticles = [
   {
     id: 10,
     category: 'LOCAL',
-    title: 'Wedding planner Essonne (91) : tarifs + comment choisir la bonne',
-    excerpt: 'Tarifs, formules, et critères concrets pour choisir une wedding planner qui te sécurise et te rassure.',
+    title: 'Prix d’une wedding planner en Essonne (91) : tarifs 2026',
+    excerpt: 'Combien coûte une wedding planner en Essonne ? Tarifs par formule : coordination Jour J, organisation partielle ou complète.',
     date: '28 Juin 2026',
     image: '/couple.jpg',
     slug: 'wedding-planner-essonne-91-tarifs',

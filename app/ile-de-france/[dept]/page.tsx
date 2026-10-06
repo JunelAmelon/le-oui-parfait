@@ -9,6 +9,7 @@ import { HeroPage } from '@/components/HeroPage';
 import { PlanningSection } from '@/components/PlanningSection';
 import { getDepartmentBySlug, IDF_DEPARTMENTS } from '../_idfData';
 import { WEDDING_PLANNER_CITIES } from '@/lib/weddingPlannerCities';
+import { EssonneDeptPage } from '@/components/EssonneDeptPage';
 
 type PageProps = {
   params: Promise<{ dept: string }>;
@@ -63,6 +64,8 @@ export default async function IleDeFranceDepartmentPage({ params }: PageProps) {
   const { dept } = await params;
   const d = getDepartmentBySlug(dept);
   if (!d) notFound();
+
+  if (d.slug === '91-essonne') return <EssonneDeptPage dept={d} />;
 
   const faq = d.faq ?? buildFaq(d.name);
   const faqJsonLd = {

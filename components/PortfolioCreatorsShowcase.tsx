@@ -213,9 +213,9 @@ function CreatorBlock(props: {
                         <div className="relative aspect-video">
                           <PortfolioVideo
                             src={v.src}
-                            className="h-full w-full object-cover pointer-events-none"
+                            className="h-full w-full object-cover scale-[1.34] pointer-events-none"
                           />
-                          <div className="absolute inset-0 bg-black/50" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-black/10" />
                           <div className="absolute inset-0 flex flex-col items-center justify-center">
                             <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/20 backdrop-blur-sm transition-all duration-300 group-hover:bg-white/15">
                               <Play className="h-5 w-5 text-white" fill="currentColor" />

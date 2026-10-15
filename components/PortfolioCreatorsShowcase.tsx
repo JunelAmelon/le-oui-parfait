@@ -1,7 +1,9 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Hls from 'hls.js';
 import { AnimatedSection } from './AnimatedSection';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { Play } from 'lucide-react';
@@ -14,6 +16,46 @@ type VideoItem = {
   poster: string;
 };
 
+function PortfolioVideo({ src, poster }: { src: string; poster: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    let hls: Hls | null = null;
+    const isHls = src.endsWith('.m3u8');
+
+    if (isHls && Hls.isSupported()) {
+      hls = new Hls({ capLevelToPlayerSize: true });
+      hls.loadSource(src);
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, () => {
+        video.play().catch(() => {});
+      });
+    } else {
+      video.src = src;
+      video.play().catch(() => {});
+    }
+
+    return () => {
+      hls?.destroy();
+    };
+  }, [src]);
+
+  return (
+    <video
+      ref={videoRef}
+      poster={poster}
+      controls
+      autoPlay
+      playsInline
+      preload="metadata"
+      className="h-full w-full object-cover"
+    />
+  );
+}
+
 type PhotoItem = {
   id: string;
   src: string;
@@ -24,19 +66,19 @@ const romainVideos: VideoItem[] = [
   {
     id: 'romain-1',
     title: 'Diane et Théo',
-    src: 'https://res.cloudinary.com/dffvv8zgk/video/upload/v1769771764/Teaser_Diane_et_The%CC%81o_720p_jnlpi8.mp4',
+    src: 'https://customer-wqxo6nzwlwy95bai.cloudflarestream.com/a00e816dae9311baaae42bb055745731/manifest/video.m3u8',
     poster: 'https://21gproduction.com/images/Weddings/Photos/MariageM%26J-121_resultat.webp',
   },
   {
     id: 'romain-2',
     title: 'Manon et Alex',
-    src: 'https://res.cloudinary.com/dffvv8zgk/video/upload/v1769770971/Manon_et_Alex_720pmp4_fnasb6.mp4',
+    src: 'https://customer-wqxo6nzwlwy95bai.cloudflarestream.com/874c278c1a8513ac004e62cb93aa76fd/manifest/video.m3u8',
     poster: 'https://21gproduction.com/images/Weddings/Photos/53138182747_1c5d118fbd_o_resultat.webp',
   },
   {
     id: 'romain-3',
     title: 'Manon et Alex — Highlights',
-    src: 'https://res.cloudinary.com/dffvv8zgk/video/upload/v1769770971/Manon_et_Alex_720pmp4_fnasb6.mp4',
+    src: 'https://customer-wqxo6nzwlwy95bai.cloudflarestream.com/874c278c1a8513ac004e62cb93aa76fd/manifest/video.m3u8',
     poster: 'https://21gproduction.com/images/Weddings/Photos/G%26J-276_resultat.webp',
   },
   {
@@ -52,28 +94,28 @@ const samPhotoOnlyVideos: VideoItem[] = [];
 const romainPhotos: PhotoItem[] = [
   {
     id: 'romain-photo-1',
-    src: 'https://21gproduction.com/images/Weddings/Photos/MariageM%26J-121_resultat.webp',
-    alt: 'Reportage photo de mariage — Romain — Le Oui Parfait — Photo 1',
+    src: '/portfolio-mariages/audrey-abdel.webp',
+    alt: 'Reportage photo de mariage — Audrey & Abdel — Romain — Le Oui Parfait — Photo 1',
   },
   {
     id: 'romain-photo-2',
-    src: 'https://21gproduction.com/images/Weddings/Photos/53138182747_1c5d118fbd_o_resultat.webp',
-    alt: 'Reportage photo de mariage — Romain — Le Oui Parfait — Photo 2',
+    src: '/portfolio-mariages/thomas-renia.webp',
+    alt: 'Reportage photo de mariage — Thomas & Rénia — Romain — Le Oui Parfait — Photo 2',
   },
   {
     id: 'romain-photo-3',
-    src: 'https://21gproduction.com/images/Weddings/Photos/G%26J-276_resultat.webp',
-    alt: 'Reportage photo de mariage — Romain — Le Oui Parfait — Photo 3',
+    src: '/portfolio-mariages/david-charlotte.webp',
+    alt: 'Reportage photo de mariage — David & Charlotte — Romain — Le Oui Parfait — Photo 3',
   },
   {
     id: 'romain-photo-4',
-    src: 'https://21gproduction.com/images/Weddings/Photos/52162314996_820e7640e7_o_resultat.webp',
-    alt: 'Reportage photo de mariage — Romain — Le Oui Parfait — Photo 4',
+    src: '/portfolio-mariages/gwendolyn-jerome.webp',
+    alt: 'Reportage photo de mariage — Gwendolyn & Jérôme — Romain — Le Oui Parfait — Photo 4',
   },
   {
     id: 'romain-photo-5',
-    src: 'https://21gproduction.com/images/Weddings/Photos/MariageM%26A-441_resultat.webp',
-    alt: 'Reportage photo de mariage — Romain — Le Oui Parfait — Photo 5',
+    src: '/portfolio-mariages/justine-jerome.webp',
+    alt: 'Reportage photo de mariage — Justine & Jérôme — Romain — Le Oui Parfait — Photo 5',
   },
 ];
 
@@ -179,15 +221,7 @@ function CreatorBlock(props: {
 
                   <DialogContent className="max-w-5xl border-0 bg-black p-0 overflow-hidden">
                     <div className="relative aspect-video w-full">
-                      <video
-                        src={v.src}
-                        poster={v.poster}
-                        controls
-                        autoPlay
-                        playsInline
-                        preload="metadata"
-                        className="h-full w-full object-cover"
-                      />
+                      <PortfolioVideo src={v.src} poster={v.poster} />
                     </div>
                   </DialogContent>
                 </Dialog>

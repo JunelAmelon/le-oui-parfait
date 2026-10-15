@@ -38,7 +38,7 @@ type ServiceItem = {
   link: string;
 };
 
-function OffersServicesCarouselDesktop(props: { offers: ServiceItem[] }) {
+function OffersServicesCarousel(props: { offers: ServiceItem[] }) {
   const { offers } = props;
   const [paused, setPaused] = useState(false);
   const [api, setApi] = useState<any>(null);
@@ -63,36 +63,46 @@ function OffersServicesCarouselDesktop(props: { offers: ServiceItem[] }) {
   }, [api, paused, inView]);
 
   return (
-    <div ref={ref} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+    <div
+      ref={ref}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onTouchStart={() => setPaused(true)}
+      onTouchEnd={() => setPaused(false)}
+    >
       <Carousel opts={{ loop: true, align: 'start' }} setApi={(emblaApi) => setApi(emblaApi)}>
         <CarouselContent>
           {offers.map((offer, index) => (
             <CarouselItem key={index} className="basis-full">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div className="lg:col-span-5 relative h-[400px] lg:h-[450px] overflow-hidden">
-                  <Image src={offer.image} alt={offer.alt} fill className="object-cover" />
-                </div>
-                <div className="lg:col-span-7 lg:pl-8">
-                  <h3 className="font-baskerville text-[30px] text-[#5A5A5A] mb-5 leading-tight font-normal">
-                    {offer.title}
-                  </h3>
-                  <p className="text-[#5A5A5A] leading-relaxed mb-6 text-[17px]">{offer.description}</p>
-                  <ul className="space-y-3 mb-8">
-                    {offer.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#5A5A5A] text-[16px]">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link href={offer.link}>
-                    <Button
-                      variant="outline"
-                      className="uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-8 py-6 font-medium transition-all"
-                    >
-                      Voir les Détails
-                    </Button>
-                  </Link>
+              <div className="px-2 md:px-0">
+                <div className="bg-white rounded-lg overflow-hidden shadow-lg md:shadow-none md:rounded-none md:bg-transparent">
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+                    <div className="lg:col-span-5 relative h-[250px] md:h-[400px] lg:h-[450px] overflow-hidden">
+                      <Image src={offer.image} alt={offer.alt} fill className="object-cover" />
+                    </div>
+                    <div className="lg:col-span-7 lg:pl-8 p-6 md:p-0">
+                      <h3 className="font-baskerville text-[24px] md:text-[30px] text-[#5A5A5A] mb-3 md:mb-5 leading-tight font-normal">
+                        {offer.title}
+                      </h3>
+                      <p className="text-[#5A5A5A] leading-relaxed mb-4 md:mb-6 text-[16px] md:text-[17px]">{offer.description}</p>
+                      <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8">
+                        {offer.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-start gap-2 md:gap-3">
+                            <Check className="h-4 w-4 md:h-5 md:w-5 text-[#88b7b5] flex-shrink-0 mt-0.5" />
+                            <span className="text-[#5A5A5A] text-[15px] md:text-[16px]">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <Link href={offer.link}>
+                        <Button
+                          variant="outline"
+                          className="w-full md:w-auto uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-6 md:px-8 py-5 md:py-6 font-medium transition-all"
+                        >
+                          Voir les Détails
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </CarouselItem>
@@ -100,7 +110,7 @@ function OffersServicesCarouselDesktop(props: { offers: ServiceItem[] }) {
         </CarouselContent>
       </Carousel>
 
-      <div className="flex justify-center gap-2 mt-8">
+      <div className="flex justify-center gap-2 mt-6 md:mt-8">
         {offers.map((_, index) => (
           <button
             key={index}
@@ -187,46 +197,6 @@ export function ServicesSection() {
     },
   ];
 
-  const servicesMobileCarousel: ServiceItem[] = offers;
-  const servicesMobileGrid: ServiceItem[] = otherServices;
-
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const [api, setApi] = useState<any>(null);
-  const { ref: mobileCarouselRef, inView: mobileInView } = useInView({ threshold: 0.2 });
-
-  const [otherCurrentSlide, setOtherCurrentSlide] = useState(0);
-  const [otherPaused, setOtherPaused] = useState(false);
-  const [otherApi, setOtherApi] = useState<any>(null);
-  const { ref: otherMobileCarouselRef, inView: otherMobileInView } = useInView({ threshold: 0.2 });
-
-  useEffect(() => {
-    if (!api) return;
-    setCurrentSlide(api.selectedScrollSnap());
-    api.on('select', () => setCurrentSlide(api.selectedScrollSnap()));
-    api.on('reInit', () => setCurrentSlide(api.selectedScrollSnap()));
-  }, [api]);
-
-  useEffect(() => {
-    if (!api) return;
-    if (paused) return;
-    if (!mobileInView) return;
-    const timer = setInterval(() => {
-      api.scrollNext();
-    }, 4000);
-    return () => clearInterval(timer);
-  }, [api, paused, mobileInView]);
-
-  useEffect(() => {
-    if (!otherApi) return;
-    if (otherPaused) return;
-    if (!otherMobileInView) return;
-    const timer = setInterval(() => {
-      otherApi.scrollNext();
-    }, 4000);
-    return () => clearInterval(timer);
-  }, [otherApi, otherPaused, otherMobileInView]);
-
   return (
     <section
       id="services"
@@ -257,163 +227,38 @@ export function ServicesSection() {
           </AnimatedSection>
         </div>
 
-        {/* Mobile: Auto Carousel */}
-        <div
-          ref={mobileCarouselRef}
-          className="md:hidden relative"
-          onTouchStart={() => setPaused(true)}
-          onTouchEnd={() => setPaused(false)}
-        >
-          <Carousel
-            opts={{ loop: true, align: 'start' }}
-            setApi={(emblaApi) => setApi(emblaApi)}
-          >
-            <CarouselContent>
-              {servicesMobileCarousel.map((service, index) => (
-                <CarouselItem key={index} className="basis-full">
-                  <div className="px-2">
-                    <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-                      <div className="relative h-[250px] w-full">
-                        <Image
-                          src={service.image}
-                          alt={service.alt}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <div className="p-6">
-                        <h3 className="font-baskerville text-[24px] text-[#5A5A5A] mb-3 leading-tight font-normal">
-                          {service.title}
-                        </h3>
-                        <p className="text-[#5A5A5A] leading-relaxed mb-4 text-[16px]">
-                          {service.description}
-                        </p>
-                        <ul className="space-y-2 mb-6">
-                          {service.features.map((feature, idx) => (
-                            <li key={idx} className="flex items-start gap-2">
-                              <Check className="h-4 w-4 text-[#88b7b5] flex-shrink-0 mt-0.5" />
-                              <span className="text-[#5A5A5A] text-[15px]">{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                        <Link href={service.link}>
-                          <Button
-                            variant="outline"
-                            className="w-full uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-6 py-5 font-medium transition-all"
-                          >
-                            Voir les Détails
-                          </Button>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
-
-          <div className="flex justify-center gap-2 mt-6">
-            {servicesMobileCarousel.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => api?.scrollTo(index)}
-                className={`transition-all duration-300 rounded-full ${
-                  currentSlide === index
-                    ? 'w-10 h-2 bg-[#88b7b5]'
-                    : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'
-                }`}
-                aria-label={`Aller au service ${index + 1}`}
-              />
-            ))}
-          </div>
-
-          <div
-            ref={otherMobileCarouselRef}
-            className="mt-10"
-            onTouchStart={() => setOtherPaused(true)}
-            onTouchEnd={() => setOtherPaused(false)}
-          >
-            <Carousel opts={{ loop: true, align: 'start' }} setApi={(emblaApi) => setOtherApi(emblaApi)}>
-              <CarouselContent>
-                {servicesMobileGrid.map((service, index) => (
-                  <CarouselItem key={index} className="basis-full">
-                    <div className="px-2">
-                      <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-                        <div className="relative h-[220px] w-full">
-                          <Image src={service.image} alt={service.alt} fill className="object-cover" />
-                        </div>
-                        <div className="p-5">
-                          <h3 className="font-baskerville text-[20px] text-[#5A5A5A] mb-2 leading-tight font-normal">
-                            {service.title}
-                          </h3>
-                          <p className="text-[#5A5A5A] leading-relaxed mb-4 text-[15px]">
-                            {service.description}
-                          </p>
-                          <Link href={service.link}>
-                            <Button
-                              variant="outline"
-                              className="w-full uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-6 py-5 font-medium transition-all"
-                            >
-                              Voir les Détails
-                            </Button>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-            </Carousel>
-
-            <div className="flex justify-center gap-2 mt-6">
-              {servicesMobileGrid.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => otherApi?.scrollTo(index)}
-                  className={`transition-all duration-300 rounded-full ${
-                    otherCurrentSlide === index
-                      ? 'w-10 h-2 bg-[#88b7b5]'
-                      : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'
-                  }`}
-                  aria-label={`Aller au service ${index + 1}`}
-                  type="button"
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Tablet/Desktop: Stacked List */}
-        <div className="hidden md:block space-y-16">
+        <div className="space-y-10 md:space-y-16">
           <AnimatedSection delay={0.1} direction="up">
-            <OffersServicesCarouselDesktop offers={offers} />
+            <OffersServicesCarousel offers={offers} />
           </AnimatedSection>
 
           {otherServices.map((service, index) => (
             <AnimatedSection key={index} delay={0.2 * (index + 1)} direction="up">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div className="lg:col-span-5 relative h-[400px] lg:h-[450px] overflow-hidden">
-                  <Image src={service.image} alt={service.alt} fill className="object-cover" />
-                </div>
-                <div className="lg:col-span-7 lg:pl-8">
-                  <h3 className="font-baskerville text-[30px] text-[#5A5A5A] mb-5 leading-tight font-normal">{service.title}</h3>
-                  <p className="text-[#5A5A5A] leading-relaxed mb-6 text-[17px]">{service.description}</p>
-                  <ul className="space-y-3 mb-8">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <Check className="h-5 w-5 text-[#88b7b5] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#5A5A5A] text-[16px]">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link href={service.link}>
-                    <Button
-                      variant="outline"
-                      className="uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-8 py-6 font-medium transition-all"
-                    >
-                      Voir les Détails
-                    </Button>
-                  </Link>
+              <div className="bg-white md:bg-transparent rounded-lg md:rounded-none overflow-hidden shadow-lg md:shadow-none">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+                  <div className="lg:col-span-5 relative h-[220px] md:h-[400px] lg:h-[450px] overflow-hidden">
+                    <Image src={service.image} alt={service.alt} fill className="object-cover" />
+                  </div>
+                  <div className="lg:col-span-7 lg:pl-8 p-5 md:p-0">
+                    <h3 className="font-baskerville text-[20px] md:text-[30px] text-[#5A5A5A] mb-2 md:mb-5 leading-tight font-normal">{service.title}</h3>
+                    <p className="text-[#5A5A5A] leading-relaxed mb-4 md:mb-6 text-[15px] md:text-[17px]">{service.description}</p>
+                    <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-2 md:gap-3">
+                          <Check className="h-4 w-4 md:h-5 md:w-5 text-[#88b7b5] flex-shrink-0 mt-0.5" />
+                          <span className="text-[#5A5A5A] text-[15px] md:text-[16px]">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Link href={service.link}>
+                      <Button
+                        variant="outline"
+                        className="w-full md:w-auto uppercase tracking-[0.15em] text-xs border-2 border-[#88b7b5] text-[#5A5A5A] hover:bg-[#88b7b5] hover:text-white rounded-full px-6 md:px-8 py-5 md:py-6 font-medium transition-all"
+                      >
+                        Voir les Détails
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </AnimatedSection>

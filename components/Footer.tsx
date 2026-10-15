@@ -94,7 +94,7 @@ export function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           <div className="lg:col-span-2">
             <div className="mb-4">
               <Image
@@ -196,6 +196,32 @@ export function Footer() {
               <li>
                 <Link href="/contact" className="text-gray-600 hover:text-gray-800 transition text-sm">
                   Travailler Avec Nous
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-medium text-gray-800 mb-4 text-lg">Wedding Planner</h4>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/ile-de-france/91-essonne" className="text-gray-600 hover:text-gray-800 transition text-sm">
+                  Wedding Planner Essonne (91)
+                </Link>
+              </li>
+              <li>
+                <Link href="/wedding-planner-ris-orangis" className="text-gray-600 hover:text-gray-800 transition text-sm">
+                  Wedding Planner Ris-Orangis
+                </Link>
+              </li>
+              <li>
+                <Link href="/wedding-planner-evry-courcouronnes" className="text-gray-600 hover:text-gray-800 transition text-sm">
+                  Wedding Planner Évry
+                </Link>
+              </li>
+              <li>
+                <Link href="/wedding-planner-massy" className="text-gray-600 hover:text-gray-800 transition text-sm">
+                  Wedding Planner Massy
                 </Link>
               </li>
             </ul>

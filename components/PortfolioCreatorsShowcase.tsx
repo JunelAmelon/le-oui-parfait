@@ -13,10 +13,19 @@ type VideoItem = {
   id: string;
   title: string;
   src: string;
-  poster: string;
 };
 
-function PortfolioVideo({ src, poster }: { src: string; poster: string }) {
+function PortfolioVideo({
+  src,
+  controls = false,
+  muted = true,
+  className,
+}: {
+  src: string;
+  controls?: boolean;
+  muted?: boolean;
+  className?: string;
+}) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -46,12 +55,13 @@ function PortfolioVideo({ src, poster }: { src: string; poster: string }) {
   return (
     <video
       ref={videoRef}
-      poster={poster}
-      controls
+      controls={controls}
       autoPlay
+      muted={muted}
+      loop={!controls}
       playsInline
       preload="metadata"
-      className="h-full w-full object-cover"
+      className={className}
     />
   );
 }
@@ -65,27 +75,23 @@ type PhotoItem = {
 const romainVideos: VideoItem[] = [
   {
     id: 'romain-1',
-    title: 'Diane et Théo',
-    src: 'https://customer-wqxo6nzwlwy95bai.cloudflarestream.com/a00e816dae9311baaae42bb055745731/manifest/video.m3u8',
-    poster: 'https://21gproduction.com/images/Weddings/Photos/MariageM%26J-121_resultat.webp',
+    title: 'Raumane et Maxime',
+    src: 'https://customer-wqxo6nzwlwy95bai.cloudflarestream.com/83686a13e5f54899f950158f72c8c32e/manifest/video.m3u8',
   },
   {
     id: 'romain-2',
-    title: 'Manon et Alex',
-    src: 'https://customer-wqxo6nzwlwy95bai.cloudflarestream.com/874c278c1a8513ac004e62cb93aa76fd/manifest/video.m3u8',
-    poster: 'https://21gproduction.com/images/Weddings/Photos/53138182747_1c5d118fbd_o_resultat.webp',
+    title: 'Thomas & Rénia',
+    src: 'https://customer-wqxo6nzwlwy95bai.cloudflarestream.com/880252c1927223f2c511570fde7cfd9b/manifest/video.m3u8',
   },
   {
     id: 'romain-3',
-    title: 'Manon et Alex — Highlights',
-    src: 'https://customer-wqxo6nzwlwy95bai.cloudflarestream.com/874c278c1a8513ac004e62cb93aa76fd/manifest/video.m3u8',
-    poster: 'https://21gproduction.com/images/Weddings/Photos/G%26J-276_resultat.webp',
+    title: 'Alan et Daria',
+    src: 'https://customer-wqxo6nzwlwy95bai.cloudflarestream.com/2a68f7c8e4fef5885e20a312dc823620/manifest/video.m3u8',
   },
   {
     id: 'romain-4',
-    title: 'Anaïs et Aurélien',
-    src: 'https://res.cloudinary.com/dffvv8zgk/video/upload/v1769771186/Teaser_Anai%CC%82s_et_Aure%CC%81lien_720p_u5udbr.mp4',
-    poster: 'https://21gproduction.com/images/Weddings/Photos/52162314996_820e7640e7_o_resultat.webp',
+    title: 'Aurelien et Angelique',
+    src: 'https://customer-wqxo6nzwlwy95bai.cloudflarestream.com/771360ab3673da41460d3eeb0dc444e3/manifest/video.m3u8',
   },
 ];
 
@@ -198,14 +204,16 @@ function CreatorBlock(props: {
               <AnimatedSection key={v.id} direction="up" delay={0.06 * index}>
                 <Dialog>
                   <DialogTrigger asChild>
-                    <button type="button" className="group w-full text-left">
+                    <button
+                      type="button"
+                      className="group w-full text-left"
+                      aria-label={`Film de mariage — ${v.title} — vidéaste Romain — Le Oui Parfait — Vidéo ${index + 1}`}
+                    >
                       <div className="relative overflow-hidden bg-black shadow-[0_18px_45px_rgba(25,20,33,0.12)]">
                         <div className="relative aspect-video">
-                          <Image
-                            src={v.poster}
-                            alt={`Film de mariage — ${v.title} — vidéaste Romain — Le Oui Parfait — Vidéo ${index + 1}`}
-                            fill
-                            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                          <PortfolioVideo
+                            src={v.src}
+                            className="h-full w-full object-cover pointer-events-none"
                           />
                           <div className="absolute inset-0 bg-black/50" />
                           <div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -221,7 +229,7 @@ function CreatorBlock(props: {
 
                   <DialogContent className="max-w-5xl border-0 bg-black p-0 overflow-hidden">
                     <div className="relative aspect-video w-full">
-                      <PortfolioVideo src={v.src} poster={v.poster} />
+                      <PortfolioVideo src={v.src} controls muted={false} className="h-full w-full object-cover" />
                     </div>
                   </DialogContent>
                 </Dialog>
@@ -290,10 +298,10 @@ export function PortfolioCreatorsShowcase() {
             <div className="lg:col-span-6">
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { src: 'mariage-moment.jpg', alt: 'Portfolio — image 1' },
-                  { src: 'mariage-réalisés (3).jpg', alt: 'Portfolio — image 2' },
-                  { src: 'mariage moment.jpg', alt: 'Portfolio — image 3' },
-                  { src: 'photoboot-mirror-rendu (1).JPG', alt: 'Portfolio — image 4' },
+                  { src: '/mariage-moment.jpg', alt: 'Portfolio — image 1' },
+                  { src: '/mariage-r%C3%A9alis%C3%A9s%20(3).jpg', alt: 'Portfolio — image 2' },
+                  { src: '/mariage%20moment.jpg', alt: 'Portfolio — image 3' },
+                  { src: '/photoboot-mirror-rendu%20(1).JPG', alt: 'Portfolio — image 4' },
                  
                 ].map((img, i) => (
                   <div key={i} className="relative aspect-[4/5] overflow-hidden bg-white shadow-[0_18px_45px_rgba(25,20,33,0.10)]">

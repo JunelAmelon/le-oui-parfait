@@ -68,23 +68,23 @@ const lieux: Lieu[] = [
     images: [
 
       {
-        src: 'azur/azur (1).png',
+        src: '/azur/azur (1).png',
         alt: 'Azure Beach Resort — plage',
       },
       {
-        src: 'azur/azur (3).png',
+        src: '/azur/azur (3).png',
         alt: 'Azure Beach Resort — cérémonie',
       },
             {
-        src: 'azur/azur (1).jpg',
+        src: '/azur/azur (1).jpg',
         alt: 'Azure Beach Resort — cérémonie',
       },
             {
-        src: 'azur/azur (2).jpg',
+        src: '/azur/azur (2).jpg',
         alt: 'Azure Beach Resort — cérémonie',
       },
             {
-        src: 'azur/azur (3).jpg',
+        src: '/azur/azur (3).jpg',
         alt: 'Azure Beach Resort — cérémonie',
       },
     ],

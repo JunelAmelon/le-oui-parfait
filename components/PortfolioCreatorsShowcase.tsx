@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Hls from 'hls.js';
@@ -27,6 +27,11 @@ function PortfolioVideo({
   className?: string;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) video.muted = muted;
+  }, [muted]);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -186,6 +191,7 @@ function CreatorBlock(props: {
   photos: PhotoItem[];
 }) {
   const { eyebrow, title, subtitle, videos, photos } = props;
+  const [hoveredVideoId, setHoveredVideoId] = useState<string | null>(null);
 
   return (
     <section className="py-14 bg-white">
@@ -202,17 +208,20 @@ function CreatorBlock(props: {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {videos.map((v, index) => (
               <AnimatedSection key={v.id} direction="up" delay={0.06 * index}>
-                <Dialog>
+                <Dialog onOpenChange={(open) => open && setHoveredVideoId(null)}>
                   <DialogTrigger asChild>
                     <button
                       type="button"
                       className="group w-full text-left"
                       aria-label={`Film de mariage — ${v.title} — vidéaste Romain — Le Oui Parfait — Vidéo ${index + 1}`}
+                      onMouseEnter={() => setHoveredVideoId(v.id)}
+                      onMouseLeave={() => setHoveredVideoId(null)}
                     >
                       <div className="relative overflow-hidden bg-black shadow-[0_18px_45px_rgba(25,20,33,0.12)]">
                         <div className="relative aspect-video">
                           <PortfolioVideo
                             src={v.src}
+                            muted={hoveredVideoId !== v.id}
                             className="h-full w-full object-cover scale-[1.34] pointer-events-none"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-black/10" />
@@ -227,7 +236,11 @@ function CreatorBlock(props: {
                     </button>
                   </DialogTrigger>
 
-                  <DialogContent className="max-w-5xl border-0 bg-black p-0 overflow-hidden">
+                  <DialogContent
+                    overlayClassName="bg-black"
+                    closeClassName="right-3 top-3 z-20 rounded-full bg-white/10 p-2 text-white opacity-100 ring-1 ring-white/25 backdrop-blur-sm hover:bg-white/20 focus:ring-white/40 data-[state=open]:bg-white/10 data-[state=open]:text-white"
+                    className="max-w-5xl border-0 bg-black p-0 overflow-hidden"
+                  >
                     <div className="relative aspect-video w-full">
                       <PortfolioVideo src={v.src} controls muted={false} className="h-full w-full object-cover" />
                     </div>
@@ -257,7 +270,10 @@ function CreatorBlock(props: {
                   </button>
                 </DialogTrigger>
 
-                <DialogContent className="max-w-5xl border-0 bg-black p-0 overflow-hidden">
+                <DialogContent
+                  closeClassName="right-3 top-3 z-20 rounded-full bg-white/10 p-2 text-white opacity-100 ring-1 ring-white/25 backdrop-blur-sm hover:bg-white/20 focus:ring-white/40 data-[state=open]:bg-white/10 data-[state=open]:text-white"
+                  className="max-w-5xl border-0 bg-black p-0 overflow-hidden"
+                >
                   <div className="relative w-full max-h-[85vh]">
                     <div className="relative w-full aspect-[4/5] sm:aspect-[16/10]">
                       <Image src={p.src} alt={p.alt} fill className="object-contain bg-black" />

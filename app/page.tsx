@@ -38,15 +38,15 @@ export default function Home() {
       <main>
         <HeroSection />
         <ServicesSection />
-        <section className="py-8 bg-white border-b border-[#e8e0dc]">
+        <section className="py-5 bg-white">
           <div className="container mx-auto px-4 sm:px-6 text-center">
-            <p className="text-[15px] text-[#4B4456]">
-              Basés à Ris-Orangis :{' '}
+            <p className="text-[13px] text-[#4B4456]/60">
+              Basés à Ris-Orangis (91) —{' '}
               <Link
                 href="/ile-de-france/91-essonne"
-                className="text-[#88b7b5] font-medium hover:underline"
+                className="text-[#88b7b5]/80 hover:text-[#6fa3a1] hover:underline transition"
               >
-                Wedding Planner en Essonne →
+                Wedding Planner en Essonne
               </Link>
             </p>
           </div>

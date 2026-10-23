@@ -38,6 +38,16 @@ export default function Home() {
       <main>
         <HeroSection />
         <ServicesSection />
+        <AboutSection />
+     
+        <VideoPresentationSection />
+        <PortfolioSection />
+        <TeamSection />
+        <TestimonialsSection />
+        <PricingSection />
+        <FAQSection />
+        <PlanningSection />
+
         <section className="py-5 bg-white">
           <div className="container mx-auto px-4 sm:px-6 text-center">
             <p className="text-[13px] text-[#4B4456]/60">
@@ -51,15 +61,6 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <AboutSection />
-     
-        <VideoPresentationSection />
-        <PortfolioSection />
-        <TeamSection />
-        <TestimonialsSection />
-        <PricingSection />
-        <FAQSection />
-        <PlanningSection />
  
       </main>
       <Footer />
